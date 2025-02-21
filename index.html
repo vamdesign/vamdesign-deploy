@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Internal Apps - UX Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #007EA7;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        #password-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #content {
+            display: none;
+        }
+        nav {
+            position: fixed;
+            width: 100%;
+            z-index: 50;
+            background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+        .logo {
+            height: 2rem;
+            width: auto;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        .nav-links a {
+            color: #007EA7;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #005f7f;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 4px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: #007EA7;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .main-content {
+            padding-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/">
+                <svg class="logo" viewBox="-78.361 -3.75 220.25 51" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#007EA7">
+                        <!-- SVG path data for the logo -->
+                        <path d="M21.533,42.012L2.079,-2.017H-0.403V45.273H2.213V4.295L20.392,45.273H22.74L40.85,4.368V45.273H43.468V-2.017H41.053L21.533,42.012Z"/>
+                        <!-- Add the rest of the SVG path data here -->
+                    </g>
+                </svg>
+            </a>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <a href="#">Use Cases</a>
+                    <div class="dropdown-content">
+                        <a href="#">Apple – Internal Apps</a>
+                        <a href="#">Wells Fargo – Legacy Integration</a>
+                        <a href="#">Walmart – Fulfillment App</a>
+                        <a href="#">Littler – Management App</a>
+                        <a href="#">Littler – Mobile App</a>
+                        <a href="#">Riverbed – Design System</a>
+                    </div>
+                </div>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="container">
+            <div id="password-form">
+                <h2>Enter Password</h2>
+                <input type="password" id="password-input" placeholder="Enter password">
+                <button onclick="checkPassword()">Submit</button>
+            </div>
+
+            <div id="content">
+                <h1>Apple – Internal Apps</h1>
+                <p>Lead designer improving and extending the internal application experience for Apple's teams.</p>
+                
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/AppleInternApps-VW6yWy50YoH9ni7SODt4GQxkQWuYRv.png" alt="Apple Internal Apps">
+                
+                <h2>Project Overview</h2>
+                <p>As the lead designer for Apple's internal tools, I was tasked with improving and extending the application experience for various teams within the company. The project aimed to streamline workflows, increase productivity, and enhance user satisfaction across multiple internal platforms.</p>
+                
+                <h2>Key Challenges</h2>
+                <ul>
+                    <li>Unifying disparate systems and interfaces across different departments</li>
+                    <li>Balancing complex functionality with intuitive design for a diverse user base</li>
+                    <li>Ensuring scalability to accommodate future growth and new features</li>
+                    <li>Maintaining consistency with Apple's design language while optimizing for internal use</li>
+                </ul>
+                
+                <h2>Solution & Approach</h2>
+                <p>Our approach involved a comprehensive strategy combining user research, iterative design processes, and close collaboration with development teams:</p>
+                <ul>
+                    <li>Conducted extensive user interviews and workflow analysis across different departments</li>
+                    <li>Developed a unified design system tailored for internal applications</li>
+                    <li>Created high-fidelity prototypes and conducted usability testing</li>
+                    <li>Implemented a modular design approach to ensure scalability and consistency</li>
+                </ul>
+                
+                <h2>Impact & Results</h2>
+                <p>The redesigned internal apps significantly improved efficiency and user satisfaction across Apple's teams:</p>
+                <ul>
+                    <li>Reduced onboarding time for new employees by 40%</li>
+                    <li>Increased overall productivity by 25% across targeted departments</li>
+                    <li>Improved user satisfaction scores by 35%</li>
+                    <li>Established a scalable design system for future internal applications</li>
+                </ul>
+                
+                <a href="#">Back to Home</a> | <a href="#">Next Case Study: Wells Fargo</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password-input").value;
+            if (password === "vamdesign") {
+                document.getElementById("password-form").style.display = "none";
+                document.getElementById("content").style.display = "block";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+
+        // Simulating the framer-motion animation
+        document.addEventListener('DOMContentLoaded', function() {
+            var nav = document.querySelector('nav');
+            nav.style.opacity = '0';
+            nav.style.transform = 'translateY(-20px)';
+            setTimeout(function() {
+                nav.style.opacity = '1';
+                nav.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
+
