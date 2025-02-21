@@ -1,3 +1,4 @@
+"use client";
 import { motion, useAnimation } from "framer-motion"
 import { ChevronDown } from "lucide-react"
 import { useEffect } from "react"
