@@ -1,27 +1,44 @@
-"use client";
-import { motion, useAnimation } from "framer-motion"
+"use client"
+
+import { motion } from "framer-motion"
 import { ChevronDown } from "lucide-react"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
-const Blob = ({ color, initialX, initialY }) => {
-  const controls = useAnimation()
+interface BlobProps {
+  color: string;
+  initialX: string;
+  initialY: string;
+}
 
+const Blob = ({ color, initialX, initialY }: BlobProps) => {
+  // Define position as string values for percentage-based positioning
+  const [position, setPosition] = useState<{ x: string | number, y: string | number }>({ x: 0, y: 0 })
+  
   useEffect(() => {
-    const animateBlob = async () => {
-      while (true) {
-        await controls.start({
-          x: `${Math.random() * 120 - 10}%`, // Range from -10% to 110%
-          y: `${Math.random() * 120 - 10}%`, // Range from -10% to 110%
-          transition: {
-            duration: (Math.random() * 10 + 5) * 0.8, // 20% faster: multiply by 0.8
-            ease: "easeInOut",
-          },
-        })
-      }
+    let isMounted = true
+    
+    const updatePosition = () => {
+      if (!isMounted) return
+      
+      setPosition({
+        x: `${Math.random() * 120 - 10}%`, // Range from -10% to 110%
+        y: `${Math.random() * 120 - 10}%`, // Range from -10% to 110%
+      })
+      
+      // Schedule next update
+      const duration = Math.floor((Math.random() * 10 + 5) * 0.8 * 1000) // Convert to milliseconds
+      setTimeout(updatePosition, duration)
     }
-    animateBlob()
-  }, [controls])
-
+    
+    // Start the animation loop
+    updatePosition()
+    
+    // Clean up on unmount
+    return () => {
+      isMounted = false
+    }
+  }, [])
+  
   return (
     <motion.div
       className="absolute rounded-full mix-blend-multiply filter blur-3xl opacity-[0.18]"
@@ -32,14 +49,23 @@ const Blob = ({ color, initialX, initialY }) => {
         left: initialX,
         top: initialY,
       }}
-      animate={controls}
+      animate={position}
+      transition={{
+        duration: (Math.random() * 10 + 5) * 0.8,
+        ease: "easeInOut",
+      }}
     />
   )
 }
 
+interface NavItem {
+  text: string;
+  href: string;
+}
+
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center relative bg-white overflow-hidden">
+    <section className="h-[96vh] flex items-center relative bg-white overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Blob color="#FF6700" initialX="-5%" initialY="-10%" />
         <Blob color="#EF036C" initialX="60%" initialY="0%" />
@@ -68,7 +94,7 @@ export default function Hero() {
             {[
               { text: "Innovative UX Design", href: "work" },
               { text: "Measurable Impact", href: "impact" },
-            ].map((item) => (
+            ].map((item: NavItem) => (
               <motion.a
                 key={item.text}
                 href={`#${item.href}`}
@@ -85,4 +111,3 @@ export default function Hero() {
     </section>
   )
 }
-

@@ -1,3 +1,5 @@
+"use client"
+
 import { motion } from "framer-motion"
 
 const achievements = [
@@ -26,27 +28,18 @@ const achievements = [
 export default function Impact() {
   return (
     <section
-      className="pt-16 pb-20 px-6 relative"
+      className="pt-24 pb-20 px-6 relative" /* Changed pt-4 to pt-40 and fixed pb-320 to pb-20 */
       id="impact"
       style={{
         backgroundColor: "#f8f9fa",
-        position: "relative",
       }}
     >
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/repeatDiamond-WpmwCLyhZVObRmHrITznpAXRDU2vpP.png)`,
-          backgroundRepeat: "repeat",
-          opacity: "0.15",
-        }}
-      />
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16 mt-12"
+          className="text-center mb-12"
         >
           <h2 className="font-bold text-4xl mb-4 text-[#007EA7]">Impact Through Design</h2>
           <p className="text-xl text-[#007EA7]/70">Measurable results that drive business growth</p>
@@ -56,7 +49,7 @@ export default function Impact() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12 -mt-4 max-w-3xl mx-auto"
+          className="mb-16 -mt-4 max-w-3xl mx-auto"
         >
           <p className="text-lg text-[#007EA7] text-center font-montserrat font-light">
             As a Senior UX/UI designer, I specialize in creating innovative enterprise solutions and comprehensive
@@ -66,7 +59,7 @@ export default function Impact() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 -mt-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {achievements.map((achievement, index) => (
             <motion.div
               key={achievement.label}
@@ -75,7 +68,8 @@ export default function Impact() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+              {/* NOTE: Removed hover:shadow-lg and transition-all duration-300 from the div below to eliminate rollover effects */}
+              <div className="p-6 bg-white rounded-lg shadow-md">
                 <div className="flex items-start">
                   <div className="font-bold text-6xl text-[#FF6700] mr-4 leading-none">{achievement.metric}</div>
                   <div>
@@ -97,4 +91,3 @@ export default function Impact() {
     </section>
   )
 }
-

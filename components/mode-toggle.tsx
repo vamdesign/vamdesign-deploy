@@ -24,4 +24,3 @@ export function ModeToggle({ className }: { className?: string }) {
     </DropdownMenu>
   )
 }
-
