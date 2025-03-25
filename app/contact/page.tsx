@@ -29,6 +29,9 @@ export default function ContactPage() {
   
   // Background opacity (0-1 scale for CSS)
   const [bgOpacity, setBgOpacity] = useState(0.2)
+  
+  // Track image loading state
+  const [isImageLoaded, setIsImageLoaded] = useState(false)
 
   // Form validation function
   const validateForm = () => {
@@ -87,13 +90,23 @@ export default function ContactPage() {
   const handleOpacityChange = (value: number) => {
     setBgOpacity(value)
   }
+  
+  // Handle image load complete
+  const handleImageLoad = () => {
+    setIsImageLoaded(true)
+  }
 
   return (
     <main className="min-h-screen bg-[#F0F6F9] relative">
-      {/* Background Image */}
+      {/* Simple placeholder gradient while the image loads */}
       <div 
-        className="absolute inset-0 z-0"
-        style={{ opacity: bgOpacity }}
+        className={`absolute inset-0 z-0 bg-gradient-to-b from-[#E0F0F7] to-[#F0F6F9] transition-opacity duration-500 ${isImageLoaded ? 'opacity-0' : 'opacity-100'}`}
+      ></div>
+      
+      {/* Background Image with improved loading */}
+      <div 
+        className={`absolute inset-0 z-0 transition-opacity duration-500 ${isImageLoaded ? 'opacity-' + Math.round(bgOpacity * 100) : 'opacity-0'}`}
+        style={{ opacity: isImageLoaded ? bgOpacity : 0 }}
       >
         <Image
           src="/images/backgrounds/vam_design_contact.png"
@@ -102,6 +115,8 @@ export default function ContactPage() {
           className="object-cover"
           priority
           sizes="100vw"
+          onLoad={handleImageLoad}
+          loading="eager"
         />
       </div>
 

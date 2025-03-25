@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ChevronDown } from "lucide-react"
+import { ArrowDown } from "lucide-react"
 import { useEffect, useState } from "react"
 
 interface BlobProps {
@@ -92,7 +92,7 @@ export default function Hero() {
 
           <div className="mt-12 space-y-6 flex flex-col items-start">
             {[
-              { text: "Innovative UX Design", href: "work" },
+              { text: "Innovative UX Design", href: "ux-portfolio" },
               { text: "Measurable Impact", href: "impact" },
             ].map((item: NavItem) => (
               <motion.a
@@ -102,7 +102,7 @@ export default function Hero() {
                 whileHover={{ y: 5 }}
               >
                 <span>{item.text}</span>
-                <ChevronDown className="ml-2 h-6 w-6 text-[#007EA7] group-hover:text-[#005f7f]" />
+                <ArrowDown className="ml-2 h-6 w-6 text-[#007EA7] group-hover:text-[#005f7f]" />
               </motion.a>
             ))}
           </div>

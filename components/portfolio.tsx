@@ -9,16 +9,16 @@ const projects = [
     id: "apple",
     title: "Apple Internal Tools",
     description:
-      "Leading UX design for Apple's internal customer support tools, optimizing workflows for efficiency and usability. Designed and enhanced internal applications to improve customer support interactions and agent productivity.",
-    achievement: "Increased agent task efficiency through intuitive design and streamlined workflows.",
+      "Leading UX design for Apple's internal customer support tools, optimizing for efficiency and usability. Designed and enhanced internal applications to improve customer support interactions and agent productivity.",
+    achievement: "Increased agent task efficiency through intuitive design and clear interaction patterns.",
     image: "/images/landing/AppleInternApps.png",
   },
   {
     id: "wells-fargo",
     title: "Wells Fargo CRM",
     description:
-      "Transforming legacy systems into modern, scalable Salesforce solutions. Led UX strategy, ensuring an intuitive experience for business users.",
-    achievement: "Reduced user-reported errors and improved workflow efficiency.",
+      "Transforming legacy systems into modern Salesforce solutions. Led UX strategy, ensuring an intuitive experience for business users.",
+    achievement: "Decreased user error rates and simplified task execution for business users.",
     image: "/images/landing/WellsFargoCRM.png",
   },
   {
@@ -26,7 +26,7 @@ const projects = [
     title: "Walmart Labs",
     description:
       "Advanced Walmart Fulfillment Service UX with research, prototyping, and design systems. Conducted comparative analysis, identified key opportunities, and developed an atomic design system to enhance third-party seller integration and usability.",
-    achievement: "Conducted competitor research and developed a scalable atomic design system.",
+    achievement: "Defined foundational UX architecture and delivered a design system that improved seller clarity and adoption.",
     image:
       "/images/landing/WalmartFulfillment.png",
   },
@@ -35,7 +35,7 @@ const projects = [
     title: "Designing with AI",
     description:
       "This portfolio is the result of an exploration into AI-powered design, blending human imagination with AI-assisted tools. From initial concepts to final execution, I leveraged AI for ideation, prototyping, and visual storytelling, pushing the boundaries of UX/UI design.",
-    achievement: "Enhanced design efficiency by incorporating AI-assisted workflows, enabling faster iteration and a refined user experience.",
+    achievement: "Enhanced design efficiency by incorporating AI-assisted content and structure, enabling faster iteration and a refined user experience.",
     image: "/images/landing/Portfolio.png",
   },
 ]
@@ -44,7 +44,7 @@ export default function Portfolio() {
   return (
     <section
       className="pt-12 pb-12 px-6 text-[#007EA7]"
-      id="work"
+      id="ux-portfolio"
       style={{
         backgroundColor: "#D5DCE1",
         backgroundImage: "linear-gradient(135deg, rgba(213, 220, 225, 0.9), rgba(213, 220, 225, 0.9))",
@@ -79,7 +79,7 @@ export default function Portfolio() {
                     <span className="font-medium">Key Achievement:</span> {project.achievement}
                   </p>
                   <div className="text-right">
-                    <motion.a
+                    <Link 
                       href={`/uc/${
                         project.id === "apple" 
                           ? "apple" 
@@ -89,14 +89,13 @@ export default function Portfolio() {
                           ? "walmart" 
                           : "ai"
                       }`}
-                      className="text-xl font-medium text-[#007EA7] hover:text-[#005f7f] transition-colors inline-block"
-                      whileHover={{ y: 5 }}
-                      transition={{ duration: 0.3 }}
+                      className="text-xl font-medium text-[#007EA7] hover:text-[#005f7f] transition-colors inline-block transform hover:translate-y-1"
                     >
                       View Case Study
-                    </motion.a>
+                    </Link>
                   </div>
                 </div>
+
                 <Link
                   href={`/uc/${
                     project.id === "apple" 

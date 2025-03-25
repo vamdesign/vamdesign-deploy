@@ -1,0 +1,7 @@
+AuthUserFile /home1/vickimor/public_htlm/.htbluevam
+AuthType Basic
+AuthName "Guest"
+
+<Files "portfolio-littr_NCM.html">
+  Require valid-user
+</Files>
