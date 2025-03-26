@@ -97,19 +97,19 @@ export default function Portfolio() {
                 </div>
 
                 <Link
-                  href={`/uc/${
-                    project.id === "apple" 
-                      ? "apple" 
-                      : project.id === "wells-fargo" 
-                      ? "wellsf" 
-                      : project.id === "walmart" 
-                      ? "walmart" 
-                      : "ai"
-                  }`}
-                  className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-lg shadow-black/30 hover:shadow-xl hover:shadow-black/50 flex items-center justify-center transition-shadow duration-300"
-                >
-                  <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
-                </Link>
+  href={`/uc/${
+    project.id === "apple" 
+      ? "apple/" 
+      : project.id === "wells-fargo" 
+      ? "wellsf/" 
+      : project.id === "walmart" 
+      ? "walmart/" 
+      : "ai/"
+  }`}
+  className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-lg shadow-black/30 hover:shadow-xl hover:shadow-black/50 flex items-center justify-center transition-shadow duration-300"
+>
+  <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+</Link>
               </div>
             </motion.div>
           ))}
