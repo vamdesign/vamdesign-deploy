@@ -61,7 +61,7 @@ export default function AboutPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
   <button className="rounded-[100px] border border-white bg-white/30 hover:bg-white/60 text-[#007ea7] px-8 py-2.5 transition-all duration-300">
-    <a href="/assets/vicki-morawietz-resume.pdf" download>
+    <a href="/assets/VMorawietz_2025_CV.pdf" download>
       Download CV
     </a>
   </button>
