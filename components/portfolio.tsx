@@ -79,37 +79,37 @@ export default function Portfolio() {
                     <span className="font-medium">Key Achievement:</span> {project.achievement}
                   </p>
                   <div className="text-right">
-                  <Link 
-  href={`/uc/${
-    project.id === "apple" 
-      ? "apple/" 
-      : project.id === "wells-fargo" 
-      ? "wellsf/" 
-      : project.id === "walmart" 
-      ? "walmart/" 
-      : "ai/"
-  }`}
-  className="text-xl font-medium text-[#007EA7] hover:text-[#005f7f] transition-colors inline-block transform hover:translate-y-1"
->
-  View Case Study
-</Link>
+                    <Link 
+                      href={`/uc/${
+                        project.id === "apple" 
+                          ? "apple/details/" 
+                          : project.id === "wells-fargo" 
+                          ? "wellsf/details/" 
+                          : project.id === "walmart" 
+                          ? "walmart/details/" 
+                          : "ai/details/"
+                      }`}
+                      className="text-xl font-medium text-[#007EA7] hover:text-[#005f7f] transition-colors inline-block transform hover:translate-y-1"
+                    >
+                      View Case Study
+                    </Link>
                   </div>
                 </div>
 
                 <Link
-  href={`/uc/${
-    project.id === "apple" 
-      ? "apple/" 
-      : project.id === "wells-fargo" 
-      ? "wellsf/" 
-      : project.id === "walmart" 
-      ? "walmart/" 
-      : "ai/"
-  }`}
-  className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-lg shadow-black/30 hover:shadow-xl hover:shadow-black/50 flex items-center justify-center transition-shadow duration-300"
->
-  <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
-</Link>
+                  href={`/uc/${
+                    project.id === "apple" 
+                      ? "apple/details/" 
+                      : project.id === "wells-fargo" 
+                      ? "wellsf/details/" 
+                      : project.id === "walmart" 
+                      ? "walmart/details/" 
+                      : "ai/details/"
+                  }`}
+                  className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-lg shadow-black/30 hover:shadow-xl hover:shadow-black/50 flex items-center justify-center transition-shadow duration-300"
+                >
+                  <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+                </Link>
               </div>
             </motion.div>
           ))}
