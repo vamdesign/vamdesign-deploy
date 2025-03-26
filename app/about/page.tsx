@@ -16,7 +16,7 @@ export default function AboutPage() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/beta/images/backgrounds/GoldenGate_5.png"
+          src="/images/backgrounds/GoldenGate_5.png"
           alt="San Francisco Golden Gate Bridge Illustration"
           fill
           className="object-cover"
@@ -31,7 +31,7 @@ export default function AboutPage() {
           <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
             <div className="relative aspect-square w-48">
               <Image
-                src="/beta/images/backgrounds/human01.jpg"
+                src="/images/backgrounds/human01.jpg"
                 alt="Senior UX Designer human photo"
                 fill
                 className="rounded-full object-cover"

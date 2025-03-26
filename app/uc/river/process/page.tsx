@@ -164,7 +164,7 @@ export default function RiverbedProcessPage() {
             {/* Riverbed Logo */}
             <div className="relative w-32 h-32 flex-shrink-0">
               <Image
-                src="/images/river/Logo_RIverbed.svg"
+                src="/images/river/Logo_Riverbed.svg"
                 alt="Riverbed Logo"
                 fill
                 className="object-contain"
