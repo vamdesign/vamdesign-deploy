@@ -4,7 +4,7 @@ const nextConfig = {
   // Only use static export for production builds
   ...(process.env.NODE_ENV === 'production' && {
     output: 'export',
-    assetPrefix: '/', // Must start with a leading slash for next/font compatibility
+    // Remove assetPrefix completely as it's causing the /beta/ path
     trailingSlash: true, // Helps with GitHub Pages compatibility
     basePath: '', // Empty for root domain deployment
   }),
