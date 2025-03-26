@@ -60,15 +60,15 @@ export default function AboutPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <button className="rounded-[100px] border border-white bg-white/30 hover:bg-white/60 text-[#007ea7] px-8 py-2.5 transition-all duration-300">
-                <a href="/assets/vicki-morawietz-resume.pdf" download>
-                  Download CV
-                </a>
-              </button>
-              <button className="rounded-[100px] border border-white bg-white/30 hover:bg-white/60 text-[#007ea7] px-8 py-2.5 transition-all duration-300">
-                <a href="/contact">Let's Chat</a>
-              </button>
-            </div>
+  <button className="rounded-[100px] border border-white bg-white/30 hover:bg-white/60 text-[#007ea7] px-8 py-2.5 transition-all duration-300">
+    <a href="/assets/vicki-morawietz-resume.pdf" download>
+      Download CV
+    </a>
+  </button>
+  <button className="rounded-[100px] border border-white bg-white/30 hover:bg-white/60 text-[#007ea7] px-8 py-2.5 transition-all duration-300">
+    <a href="/contact/">Let's Chat</a>
+  </button>
+</div>
           </div>
           <p className="text-[10px] font-montserrat text-white/70 text-center mt-8">
             Image created with the aid of MidJourney AI.
