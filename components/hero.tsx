@@ -84,7 +84,7 @@ export default function Hero() {
         >
           <h1 className="mb-8">
             <span className="block text-3xl md:text-4xl lg:text-5xl text-[#007EA7] leading-tight mb-2 font-light">
-              Hello, I'm Vicki, I design Intuitive UX<span className="text-[#007EA7]/30">*</span> that transforms
+              Hello, I'm Vicki, I design intuitive UX<span className="text-[#007EA7]/30">*</span> that transforms
               complexity into simplicity.
             </span>
           </h1>

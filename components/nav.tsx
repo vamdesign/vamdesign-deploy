@@ -8,6 +8,7 @@ import { UseCasesDropdown } from "./use-cases-dropdown"
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [dropdownItems, setDropdownItems] = useState([])
   
   return (
     <nav className="fixed w-full z-50 bg-white/70 backdrop-blur-md shadow-md">
@@ -29,18 +30,37 @@ export default function Nav() {
           </a>
         </div>
         
-        <button 
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden text-[#007EA7]"
-        >
-          {isMenuOpen ? "✕" : "☰"}
-        </button>
+        <div className="md:hidden flex flex-col items-center text-[#007EA7]">
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="flex flex-col items-center"
+          >
+            <div className="w-8 h-0.5 bg-[#007EA7] mb-1.5"></div>
+            <div className="w-8 h-0.5 bg-[#007EA7] mb-1.5"></div>
+            <div className="w-8 h-0.5 bg-[#007EA7] mb-1"></div>
+            <span className="text-xs font-medium">Menu</span>
+          </button>
+        </div>
       </div>
 
       {isMenuOpen && (
         <div className="md:hidden bg-white p-4">
           <div className="flex flex-col space-y-4">
-            <UseCasesDropdown />
+            <div className="space-y-3">
+              <h3 className="font-medium text-[#007EA7] border-b border-[#007EA7] pb-1">Use Cases</h3>
+              <Link href="/uc/apple/details/" className="block pl-3 text-[#007EA7] hover:text-[#005f7f]">
+                Apple Internal Tools
+              </Link>
+              <Link href="/uc/wellsf/details/" className="block pl-3 text-[#007EA7] hover:text-[#005f7f]">
+                Wells Fargo CRM
+              </Link>
+              <Link href="/uc/walmart/details/" className="block pl-3 text-[#007EA7] hover:text-[#005f7f]">
+                Walmart Labs
+              </Link>
+              <Link href="/uc/ai/details/" className="block pl-3 text-[#007EA7] hover:text-[#005f7f]">
+                Designing with AI
+              </Link>
+            </div>
             <Link href="/about" className="text-[#007EA7] font-medium">
               About
             </Link>
