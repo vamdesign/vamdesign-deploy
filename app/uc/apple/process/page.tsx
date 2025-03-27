@@ -11,7 +11,7 @@ export default function AppleProcessPage() {
     <>
       <main className="min-h-screen bg-white">
         <Nav />
-        <div className="sticky top-16 mt-0 z-20 w-full bg-white/50 backdrop-blur-sm border-y border-[#007EA7]/10">
+        <div className="sticky top-16 mt-0 z-20 w-full bg-[rgba(247,218,196,0.7) backdrop-blur-sm border-y border-[#007EA7]/10">
           <div className="max-w-6xl mx-auto px-4 py-2 flex items-center">
             <Link
               href="/uc/apple/details"
