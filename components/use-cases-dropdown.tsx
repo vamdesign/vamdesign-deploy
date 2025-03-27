@@ -75,24 +75,24 @@ export function UseCasesDropdown() {
 
   return (
     <div className="relative" onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>
-      <button className="flex items-center text-[#007EA7] hover:text-[#005f7f] hover:underline transition-colors font-medium">
-        Use Cases
-        <ChevronDown className="ml-1 h-4 w-4" />
-      </button>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="absolute z-10 mt-2 w-64 rounded-md bg-white/90 backdrop-blur-sm shadow-lg"
-          >
-            <div className="py-1">{useCases.map((useCase, index) => renderLink(useCase, index))}</div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+  <button className="flex items-center text-[#007EA7] hover:text-[#005f7f] hover:underline transition-colors font-medium">
+    Use Cases
+    <ChevronDown className="ml-1 h-4 w-4" />
+  </button>
+  <AnimatePresence>
+    {isOpen && (
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -10 }}
+        transition={{ duration: 0.2 }}
+        className="absolute z-50 mt-2 w-64 rounded-md bg-white/90 backdrop-blur-sm shadow-lg"
+      >
+        <div className="py-1">{useCases.map((useCase, index) => renderLink(useCase, index))}</div>
+      </motion.div>
+    )}
+  </AnimatePresence>
+</div>
   )
 }
 
