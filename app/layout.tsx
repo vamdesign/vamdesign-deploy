@@ -15,10 +15,12 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 })
 
+// app/layout.tsx
 export const metadata = {
   title: "VAM Design Portfolio",
   description: "VAM Design, Vicki Morawietz's cutting-edge UX portfolio showcasing innovative designs",
-  generator: 'v0.dev'
+  generator: 'v0.dev',
+  viewport: "width=device-width, initial-scale=1, maximum-scale=5"
 }
 
 export default function RootLayout({

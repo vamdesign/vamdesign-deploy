@@ -27,8 +27,7 @@ const projects = [
     description:
       "Advanced Walmart Fulfillment Service UX with research, prototyping, and design systems. Conducted comparative analysis, identified key opportunities, and developed an atomic design system to enhance third-party seller integration and usability.",
     achievement: "Defined foundational UX architecture and delivered a design system that improved seller clarity and adoption.",
-    image:
-      "/images/landing/WalmartFulfillment.png",
+    image: "/images/landing/WalmartFulfillment.png",
   },
   {
     id: "ai-design",
@@ -71,11 +70,13 @@ export default function Portfolio() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
             >
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div className="space-y-6">
-                  <h3 className="font-bold text-3xl">{project.title}</h3>
-                  <p className="text-[#5f5f5f] text-lg font-montserrat font-light">{project.description}</p>
-                  <p className="text-[#5f5f5f] text-base font-montserrat font-light">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div className="space-y-6 order-2 md:order-1">
+                  <h3 className="font-bold text-2xl md:text-3xl">{project.title}</h3>
+                  <p className="text-[#5f5f5f] text-base md:text-lg font-montserrat font-light">
+                    {project.description}
+                  </p>
+                  <p className="text-[#5f5f5f] text-sm md:text-base font-montserrat font-light">
                     <span className="font-medium">Key Achievement:</span> {project.achievement}
                   </p>
                   <div className="text-right">
@@ -89,7 +90,7 @@ export default function Portfolio() {
                           ? "walmart/details/" 
                           : "ai/details/"
                       }`}
-                      className="text-xl font-medium text-[#007EA7] hover:text-[#005f7f] transition-colors inline-block transform hover:translate-y-1"
+                      className="text-lg md:text-xl font-medium text-[#007EA7] hover:text-[#005f7f] transition-colors inline-block"
                     >
                       View Case Study
                     </Link>
@@ -106,9 +107,14 @@ export default function Portfolio() {
                       ? "walmart/details/" 
                       : "ai/details/"
                   }`}
-                  className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-lg shadow-black/30 hover:shadow-xl hover:shadow-black/50 flex items-center justify-center transition-shadow duration-300"
+                  className="relative aspect-[4/3] w-full overflow-hidden rounded-lg shadow-lg order-1 md:order-2"
                 >
-                  <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+                  <Image 
+                    src={project.image || "/placeholder.svg"} 
+                    alt={project.title} 
+                    fill 
+                    className="object-cover" 
+                  />
                 </Link>
               </div>
             </motion.div>
