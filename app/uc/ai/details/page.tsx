@@ -85,7 +85,7 @@ export default function AIDetailsPage() {
 
       {/* Content Section - Moved up to replace hero */}
       <div className="max-w-6xl mx-auto px-4 py-12 mt-16">
-        <h1 className="font-space-grotesk text-5xl font-bold text-[#007EA7] mb-8 text-left">
+      <h1 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold text-[#007EA7] mb-4 sm:mb-8 text-left">
           Building, Learning & Innovating with AI UX
         </h1>
         <h3 className="font-montserrat text-xl text-[#2C3D4D] mt-8 mb-12 text-left">

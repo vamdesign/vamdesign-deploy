@@ -33,7 +33,7 @@ export default function WalmartDetailsPage() {
                 className="object-contain"
               />
             </div>
-            <h1 className="font-space-grotesk text-5xl font-bold text-[#007EA7] mb-8 text-left">
+            <h1 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold text-[#007EA7] mb-4 sm:mb-8 text-left">
               Walmart Fulfillment Services, the UX Journey
             </h1>
           </div>

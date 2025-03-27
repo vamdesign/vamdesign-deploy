@@ -43,7 +43,7 @@ export default function WellsFargoDetailsPage() {
                 style={{ objectFit: "contain" }}
               />
             </div>
-            <h1 className="font-space-grotesk text-5xl font-bold text-[#007EA7] text-left">
+            <h1 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold text-[#007EA7] mb-4 sm:mb-8 text-left">
               Migrating Small Business Banking Legacy Tools to Salesforce
             </h1>
           </div>
