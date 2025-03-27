@@ -28,26 +28,25 @@ export default function AboutPage() {
 
       <section className="relative pt-24 pb-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
-            <div className="relative aspect-square w-48">
-              <Image
-                src="/images/backgrounds/human01.jpg"
-                alt="Senior UX Designer human photo"
-                fill
-                className="rounded-full object-cover"
-              />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white text-center md:text-left">
-              Creating Seamless Experiences. No User Manual Required.
-            </h1>
-          </div>
+        <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
+  <div className="relative aspect-square w-32 sm:w-40 md:w-48">
+    <Image
+      src="/images/backgrounds/human01.jpg"
+      alt="Senior UX Designer human photo"
+      fill
+      className="rounded-full object-cover"
+    />
+  </div>
+  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center md:text-left">
+    Creating Seamless Experiences. No User Manual Required.
+  </h1>
+</div>
 
           <div className="space-y-6 text-lg text-[#007EA7] bg-white/80 p-8 rounded-md shadow-2xl">
             <h2 className="text-2xl font-bold text-[#007EA7] mb-4">Why You'll Want Me on Your Team</h2>
 
             <p className="font-montserrat">
-              I'm a Senior UX/UI Product Designer based in the San Francisco Bay Area, with experience ranging from
-              startups to Fortune 500 companies. I thrive in collaborative teams as well as working independently,
+            I’ve built UX for companies where the stakes were high, the systems were messy, and the outcomes had to be measurable. Usability is my superpower, and I wield it with intent. I’ve delivered thoughtful, high-impact design for companies of every scale—from startups to Fortune 500s. I thrive in collaborative teams as well as working independently,
               quickly adapting to new challenges. Whether it's leading a product from inception or optimizing an
               existing one, I approach each project with a strategic mindset to deliver impactful solutions.
             </p>
