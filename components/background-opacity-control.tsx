@@ -27,16 +27,14 @@ export function BackgroundOpacityControl({
   }
   
   return (
-    <div className="fixed bg-white/80 p-3 rounded-lg shadow-md z-50 flex items-center gap-3
-                    bottom-28 left-1/2 -translate-x-1/2 w-auto
-                    md:bottom-6 md:right-6 md:left-auto md:-translate-x-0">
+    <div className="fixed bottom-6 right-6 bg-white/80 p-3 rounded-lg shadow-md z-50 flex items-center gap-3 hidden md:flex">
       <span className="text-xs font-medium text-gray-700">Background</span>
       <Slider
         defaultValue={[opacity]}
         max={100}
         step={5}
         onValueChange={handleOpacityChange}
-        className="w-28 md:w-32"
+        className="w-32"
       />
     </div>
   )
