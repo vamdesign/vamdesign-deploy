@@ -10,15 +10,15 @@ export default function AppleDetailsPage() {
   return (
     <main className="min-h-screen bg-white pb-16">
       <Nav />
-      <div className="sticky top-16 mt-0 z-20 w-full bg-[#FFE6F5]/50 backdrop-blur-sm border-y border-[#007EA7]/10">
+      <div className="sticky top-16 mt-0 z-20 w-full bg-[#C7F6EA]/50 backdrop-blur-sm border-y border-[#007EA7]/10">
   <div className="max-w-6xl mx-auto px-4 py-3 flex items-center">
     <Link 
-      href="/uc/ai/process" 
+      href="/uc/apple/process" 
       className="text-[#007EA7] hover:text-[#005f7f] font-medium text-sm flex items-center gap-2 transition-transform hover:translate-x-1"
     >
       <div className="flex items-center bg-white/70 px-3 py-1.5 rounded-full shadow-sm">
         <ArrowLeft className="w-4 h-4 mr-1" />
-        <span>Deep dive the UX process that shaped this project.</span>
+        <span>Curious about the thinking behind this Use Case? Let's walk through the process.</span>
       </div>
     </Link>
   </div>
