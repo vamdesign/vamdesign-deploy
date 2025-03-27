@@ -10,12 +10,9 @@ export default function AppleDetailsPage() {
   return (
     <main className="min-h-screen bg-white pb-16">
       <Nav />
-      <div className="sticky top-16 mt-0 z-20 w-full bg-[rgba(247,218,196,0.7) backdrop-blur-sm border-y border-[#007EA7]/10">
-        <div className="max-w-6xl mx-auto px-4 py-2 flex items-center">
-          <Link
-            href="/uc/apple/process"
-            className="text-[#6E6E73] hover:text-[#000000] text-sm flex items-center gap-2"
-          >
+      <div className="sticky top-16 mt-0 z-20 w-full bg-[#C7F6EA]/50 backdrop-blur-sm border-y border-[#007EA7]/10">
+  <div className="max-w-6xl mx-auto px-4 py-2 flex items-center">
+    <Link href="/uc/apple/process" className="text-[#007EA7] hover:text-[#005f7f] font-medium text-sm flex items-center gap-2">
             <ArrowLeft className="w-4 h-4" />
             Curious about the thinking behind this Use Case? Let’s walk through the process.
           </Link>
