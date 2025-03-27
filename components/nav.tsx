@@ -8,7 +8,6 @@ import { UseCasesDropdown } from "./use-cases-dropdown"
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [dropdownItems, setDropdownItems] = useState([])
   
   return (
     <nav className="fixed w-full z-50 bg-white/70 backdrop-blur-md shadow-md">
@@ -52,10 +51,16 @@ export default function Nav() {
                 Apple Internal Tools
               </Link>
               <Link href="/uc/wellsf/details/" className="block pl-3 text-[#007EA7] hover:text-[#005f7f]">
-                Wells Fargo CRM
+                Wells Fargo CRM <span className="inline-block ml-1">🔒</span>
               </Link>
               <Link href="/uc/walmart/details/" className="block pl-3 text-[#007EA7] hover:text-[#005f7f]">
                 Walmart Labs
+              </Link>
+              <Link href="/uc/litman/details/" className="block pl-3 text-[#007EA7] hover:text-[#005f7f]">
+                Littler Mendelson <span className="inline-block ml-1">🔒</span>
+              </Link>
+              <Link href="/uc/river/details/" className="block pl-3 text-[#007EA7] hover:text-[#005f7f]">
+                Riverbed Technology
               </Link>
               <Link href="/uc/ai/details/" className="block pl-3 text-[#007EA7] hover:text-[#005f7f]">
                 Designing with AI
