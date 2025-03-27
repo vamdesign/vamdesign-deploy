@@ -1,30 +1,42 @@
 "use client"
 
-import React from "react"
+import { useState } from "react"
 import { Slider } from "@/components/ui/slider"
-import { SunIcon } from "lucide-react"
 
 interface BackgroundOpacityControlProps {
-  defaultOpacity: number
-  onChange: (value: number) => void
+  defaultOpacity?: number
+  onChange?: (value: number) => void
 }
 
-export function BackgroundOpacityControl({ defaultOpacity = 20, onChange }: BackgroundOpacityControlProps) {
-  const handleChange = (value: number[]) => {
-    onChange(value[0] / 100)
+export function BackgroundOpacityControl({ 
+  defaultOpacity = 20, 
+  onChange 
+}: BackgroundOpacityControlProps) {
+  const [opacity, setOpacity] = useState(defaultOpacity)
+  
+  const handleOpacityChange = (value: number[]) => {
+    const newOpacity = value[0]
+    setOpacity(newOpacity)
+    
+    // Convert percentage to decimal for CSS opacity (0-1)
+    const decimalOpacity = newOpacity / 100
+    
+    if (onChange) {
+      onChange(decimalOpacity)
+    }
   }
-
+  
   return (
-    <div className="fixed bottom-8 right-8 flex items-center gap-2 p-3 bg-white/80 backdrop-blur-sm rounded-lg shadow-md 
-                    md:bottom-8 md:right-8
-                    sm:bottom-24 sm:right-4">
-      <SunIcon className="h-4 w-4 text-[#007EA7]" />
+    <div className="fixed bg-white/80 p-3 rounded-lg shadow-md z-50 flex items-center gap-3
+                    bottom-28 left-1/2 -translate-x-1/2 w-auto
+                    md:bottom-6 md:right-6 md:left-auto md:-translate-x-0">
+      <span className="text-xs font-medium text-gray-700">Background</span>
       <Slider
-        defaultValue={[defaultOpacity]}
+        defaultValue={[opacity]}
         max={100}
         step={5}
-        className="w-24"
-        onValueChange={handleChange}
+        onValueChange={handleOpacityChange}
+        className="w-28 md:w-32"
       />
     </div>
   )
