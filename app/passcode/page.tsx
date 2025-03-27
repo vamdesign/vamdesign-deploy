@@ -188,10 +188,10 @@ export default function PasswordProtect() {
       <Nav />
       <main className="container mx-auto px-4 pt-24 relative z-10">
         <div className="flex min-h-[calc(100vh-200px)] flex-col items-center justify-center">
-          <h1
-            className="mb-4 text-center text-[5rem] leading-tight font-bold whitespace-nowrap"
-            style={{ color: theme.primaryColor }}
-          >
+        <h1
+  className="mb-4 text-center text-3xl sm:text-4xl md:text-5xl lg:text-[5rem] leading-tight font-bold"
+  style={{ color: theme.primaryColor }}
+>
             {theme.title}
           </h1>
           <div className="w-full max-w-md p-8">
