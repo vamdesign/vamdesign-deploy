@@ -151,17 +151,19 @@ export default function RiverbedDetailsPage() {
   return (
     <main className="min-h-screen bg-white pb-16">
       <Nav />
-      <div className="sticky top-16 mt-0 z-20 w-full bg-white/50 backdrop-blur-sm border-y border-[#F2581A]/10">
-        <div className="max-w-6xl mx-auto px-4 py-2 flex items-center">
-          <Link
-            href="/uc/river/process"
-            className="text-[#F2581A] hover:text-[#C04310] text-sm flex items-center gap-2"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Take a closer look at how it was built.
-          </Link>
-        </div>
+      <div className="sticky top-16 mt-0 z-20 w-full bg-[#FFE8CC]/50 backdrop-blur-sm border-y border-[#F2581A]/10">
+  <div className="max-w-6xl mx-auto px-4 py-3 flex items-center">
+    <Link
+      href="/uc/river/process"
+      className="text-[#F2581A] hover:text-[#C04310] font-medium text-sm flex items-center gap-2 transition-transform hover:translate-x-1"
+    >
+      <div className="flex items-center bg-white/70 px-3 py-1.5 rounded-full shadow-sm">
+        <ArrowLeft className="w-4 h-4 mr-1" />
+        <span>Take a closer look at how it was built.</span>
       </div>
+    </Link>
+  </div>
+</div>
 
       {/* Mobile Logo & Header */}
       <div className={`md:hidden bg-[#FFE8CC] px-4 py-6 mb-6 w-full`}>
