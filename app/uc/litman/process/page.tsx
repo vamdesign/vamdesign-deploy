@@ -1,5 +1,5 @@
 "use client"
-
+{/* BEGIN SECTION 1*/}
 import Nav from "@/components/nav"
 import Image from "next/image"
 import Link from "next/link"
@@ -167,7 +167,8 @@ export default function LittlerProcessPage() {
           </ul>
         </section>
       </div>
-
+{/* END SECTION 1*/}
+{/* BEGIN SECTION 2*/}
       {/* UX Process */}
       <section className="mb-0 mt-8 max-w-6xl mx-auto px-8 border-t border-[#007EA7]/10 pb-8">
         <div className="flex justify-center mb-8">
@@ -294,7 +295,8 @@ export default function LittlerProcessPage() {
                 collaboration.
               </p>
             </div>
-
+{/* END SECTION 2*/}
+{/* BEGIN SECTION 3*/}
             {/* Images row - will be aligned at the same level */}
             <div className="grid md:grid-cols-2 gap-8">
               <div className="relative w-full h-auto pt-8 mb-8 shadow-md">
@@ -404,7 +406,8 @@ export default function LittlerProcessPage() {
             </div>
           </section>
         </div>
-
+{/* END SECTION 3*/}
+{/* BEGIN SECTION 4*/}
         {/* Mobile App Section */}
         <div className="mt-4">
           <section className="mb-8 mt-8">
@@ -520,3 +523,4 @@ export default function LittlerProcessPage() {
   )
 }
 
+{/* END SECTION 4*/}

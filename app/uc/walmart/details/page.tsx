@@ -1,3 +1,5 @@
+"use client"
+
 import Nav from "@/components/nav"
 import Image from "next/image"
 import Link from "next/link"
@@ -9,8 +11,8 @@ export default function WalmartDetailsPage() {
     <main className="min-h-screen bg-white pb-16">
       <Nav />
 
-      {/* Navigation banner - Only this has the blue background */}
-      <div className="sticky top-16 mt-0 z-20 w-full bg-[#E6F0FF]/50 backdrop-blur-sm border-y border-[#007EA7]/10">
+      {/* Navigation banner - ONLY this section has the light blue background */}
+      <div className="sticky top-16 mt-0 z-20 w-full bg-[#E6F0FF] backdrop-blur-sm border-y border-[#FFC220]/10">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center">
           <Link
             href="/uc/walmart/process"
@@ -72,7 +74,7 @@ export default function WalmartDetailsPage() {
             </div>
           </div>
 
-          <div className="mt-8 md:mt-12 pt-8 md:pt-12 border-t border-[#007EA7]/10">
+          <div className="mt-8 md:mt-12 pt-8 md:pt-12 border-t border-[#FFC220]/10">
             <h2 className="font-space-grotesk text-2xl md:text-3xl font-semibold text-[#007EA7] mb-4 md:mb-8 text-center md:text-left">The Challenge</h2>
             <p className="font-montserrat text-base md:text-lg text-[#5f5f5f]/80 mb-6 text-center md:text-left">
               The UX lead needed to present competitive findings to stakeholders to justify key decisions and align
@@ -85,7 +87,7 @@ export default function WalmartDetailsPage() {
             </p>
           </div>
 
-          <div className="mt-8 md:mt-12 pt-8 md:pt-12 border-t border-[#007EA7]/10">
+          <div className="mt-8 md:mt-12 pt-8 md:pt-12 border-t border-[#FFC220]/10">
             <h2 className="font-space-grotesk text-2xl md:text-3xl font-semibold text-[#007EA7] mb-4 md:mb-8 text-center md:text-left">What I Did</h2>
 
             <h3 className="font-space-grotesk text-xl md:text-2xl font-medium text-[#007EA7] mb-4 md:mb-6 text-center md:text-left">UX Research</h3>
@@ -137,7 +139,7 @@ export default function WalmartDetailsPage() {
           </div>
         </section>
 
-        <section className="mb-8 md:mb-16 pt-8 md:pt-12 border-t border-[#007EA7]/10">
+        <section className="mb-8 md:mb-16 pt-8 md:pt-12 border-t border-[#FFC220]/10">
           <h2 className="font-space-grotesk text-2xl md:text-3xl font-semibold text-[#007EA7] mb-4 md:mb-8 text-center md:text-left">Role</h2>
           <p className="font-montserrat text-base md:text-lg text-[#5f5f5f]/80 text-center md:text-left">
             Senior UX Designer, UX Research, Competitive Analysis, and Design System Integration
@@ -145,12 +147,13 @@ export default function WalmartDetailsPage() {
         </section>
 
         <div className="mt-12 md:mt-16 text-center pb-8 md:pb-12">
-          <a
+          {/* CHANGE 11: Used Link component instead of button with nested anchor */}
+          <Link 
             href="/contact"
-            className="rounded-[100px] border border-[#F7F6F6] bg-white/30 hover:bg-white/60 text-[#007EA7] px-8 py-2.5 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0.5"
+            className="rounded-[100px] border border-[#F7F6F6] bg-white/30 hover:bg-white/60 text-[#007EA7] px-6 sm:px-8 py-2 sm:py-2.5 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0.5"
           >
-            Let's Chat
-          </a>
+            Let&apos;s Chat
+          </Link>
         </div>
       </div>
       <Footer />  
