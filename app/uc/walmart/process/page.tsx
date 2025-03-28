@@ -334,17 +334,13 @@ export default function WalmartFulfillmentAppPage() {
         </section>
 
         {/* Call to Action */}
-        <section className="mb-8 sm:mb-16 flex flex-col items-center">
-          <p className="font-montserrat text-sm sm:text-md text-[#FFC220]/80 max-w-full sm:max-w-xl mb-6 sm:mb-8 text-center">
-            Interested in more details about this project or my approach to UX design?
-          </p>
+          {/* CHANGE 11: Used Link component instead of button with nested anchor */}
           <Link 
             href="/contact"
-            className="rounded-[100px] border border-[#F7F6F6] bg-[#E6F0FF] hover:bg-[#D5E6FF] text-[#FFC220] px-6 sm:px-8 py-2 sm:py-2.5 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0.5"
+            className="rounded-[100px] border border-[#F7F6F6] bg-white/30 hover:bg-white/60 text-[#007EA7] px-6 sm:px-8 py-2 sm:py-2.5 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0.5"
           >
-            Let's Chat
+            Let&apos;s Chat
           </Link>
-        </section>
       </div>
 
       {/* Image Modal */}

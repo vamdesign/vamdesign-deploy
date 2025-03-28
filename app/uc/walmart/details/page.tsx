@@ -147,11 +147,12 @@ export default function WalmartDetailsPage() {
         </section>
 
         <div className="mt-12 md:mt-16 text-center pb-8 md:pb-12">
-          <Link
+          {/* CHANGE 11: Used Link component instead of button with nested anchor */}
+          <Link 
             href="/contact"
-            className="rounded-[100px] border border-[#F7F6F6] bg-[#E6F0FF] hover:bg-[#D5E6FF] text-[#FFC220] px-8 py-2.5 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0.5"
+            className="rounded-[100px] border border-[#F7F6F6] bg-white/30 hover:bg-white/60 text-[#007EA7] px-6 sm:px-8 py-2 sm:py-2.5 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0.5"
           >
-            Let's Chat
+            Let&apos;s Chat
           </Link>
         </div>
       </div>
