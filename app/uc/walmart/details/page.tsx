@@ -5,33 +5,14 @@ import Image from "next/image"
 import Link from "next/link"
 import Footer from "@/components/footer"
 import { ArrowLeft } from "lucide-react"
-import Head from "next/head" // Added for resource hints
 
 export default function WalmartDetailsPage() {
   return (
     <main className="min-h-screen bg-white pb-16">
-      {/* Added Head component with resource hints */}
-      <Head>
-        {/* Preload critical images that appear above the fold */}
-        <link 
-          rel="preload" 
-          href="/images/walmart/Logo_Walmart.svg" 
-          as="image" 
-          type="image/svg+xml"
-        />
-        
-        {/* Prefetch other important images that will be needed soon */}
-        <link 
-          rel="prefetch" 
-          href="/images/walmart/Walmart_WFS_image.png" 
-          as="image"
-        />
-      </Head>
-      
       <Nav />
 
-      {/* Updated sub-navigation with Walmart colors */}
-      <div className="sticky top-16 mt-0 z-20 w-full bg-[#E6F0FF]/50 backdrop-blur-sm border-y border-[#FFC220]/10">
+      {/* Navigation banner - ONLY this section has the light blue background */}
+      <div className="sticky top-16 mt-0 z-20 w-full bg-[#E6F0FF] backdrop-blur-sm border-y border-[#FFC220]/10">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center">
           <Link
             href="/uc/walmart/process"
@@ -44,19 +25,19 @@ export default function WalmartDetailsPage() {
         </div>
       </div>
 
-      {/* Content Section - Main heading and intro */}
+      {/* Content Section - Plain white background, NO colored background */}
       <div className="max-w-6xl mx-auto px-4 py-12 mt-16">
         <div>
-          {/* Made logo responsive with different sizes based on screen width */}
+          {/* Logo and title section */}
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12 mb-8">
-            {/* Walmart Logo - Added responsive sizing and loading priority */}
+            {/* Walmart Logo */}
             <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 flex-shrink-0">
               <Image
                 src="/images/walmart/Logo_Walmart.svg"
                 alt="Walmart Logo"
                 fill
+                priority
                 className="object-contain"
-                priority // Critical above-the-fold image
               />
             </div>
             <h1 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold text-[#007EA7] mb-4 sm:mb-8 text-center md:text-left">

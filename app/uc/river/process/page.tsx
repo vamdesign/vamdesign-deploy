@@ -215,14 +215,7 @@ export default function RiverbedProcessPage() {
               infrastructure and application performance. Riverbed needed a cohesive UX strategy to unify its tools,
               improve the expereince for IT administrators, and ensure consistent UI patterns across its platform.
             </p>
-            <div className="relative w-full aspect-video md:hidden mb-4">
-              <Image
-                src="/placeholder.svg?height=300&width=500"
-                alt="Inconsistent UI components across Riverbed products"
-                fill
-                className="object-contain rounded-lg"
-              />
-            </div>
+            
             <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-4">
               My role was to lead the UX strategy for key enterprise applications, focusing on:
             </p>
