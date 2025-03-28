@@ -125,9 +125,7 @@ export default function WellsFargoProcessPage() {
               Wells Fargo&apos;s small business bankers relied on outdated applications with disconnected tools, making
               client relationship management inefficient and time-consuming.
             </p>
-            <div className="relative w-full aspect-video md:hidden mb-4 bg-gray-200 rounded-lg flex items-center justify-center">
-              <span className="text-gray-500">Placeholder Image</span>
-            </div>
+            
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80">
               Collaborating with stakeholders, the Salesforce architect, and UX researchers, my challenge as a Senior
               Product Designer was to create a Salesforce solution that streamlined workflows, reduced errors, and
