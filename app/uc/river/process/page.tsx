@@ -144,18 +144,19 @@ export default function RiverbedProcessPage() {
   return (
     <main className="min-h-screen bg-white">
       <Nav />
-
-      <div className="sticky top-16 mt-0 z-20 w-full bg-white/50 backdrop-blur-sm border-y border-[#007EA7]/10">
-        <div className="max-w-6xl mx-auto px-4 py-2 flex items-center">
-          <Link
-            href="/uc/river/details"
-            className="text-[#F2581A] hover:text-[#C04310] text-sm flex items-center gap-2"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Return to the deconstruction.
-          </Link>
-        </div>
+      <div className="sticky top-16 mt-0 z-20 w-full bg-[#FFE8CC] backdrop-blur-sm border-y border-[#F2581A]/10">
+  <div className="max-w-6xl mx-auto px-4 py-5 flex items-center">
+    <Link
+      href="/uc/river/details"
+      className="text-[#F2581A] hover:text-[#C04310] font-medium text-sm flex items-center gap-2 transition-transform hover:translate-x-1"
+    >
+      <div className="flex items-center bg-white/70 px-4 py-2 rounded-full shadow-sm">
+        <ArrowLeft className="w-4 h-4 mr-1" />
+        <span>Return to the deconstruction.</span>
       </div>
+    </Link>
+  </div>
+</div>
 
       {/* Content Section - Moved up to replace hero */}
       <div className="max-w-6xl mx-auto px-4 py-12 mt-16">
@@ -206,33 +207,34 @@ export default function RiverbedProcessPage() {
 
 
       <div className="max-w-6xl mx-auto px-4 pt-4 pb-0">
-        {/* Use Case */}
-        <section className="mb-16 mt-8">
-          <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-4 text-left">Use Case</h2>
+           {/* Use Case */}
+           <section className="mb-8 md:mb-16 mt-4 md:mt-8">
+          <h2 className="font-space-grotesk text-2xl md:text-3xl font-semibold text-[#007EA7] mb-4 text-center md:text-left">Use Case</h2>
           <div className="w-full">
-            <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-4">
+            <p className="font-montserrat text-base md:text-lg text-[#5f5f5f]/80 mb-4 text-center md:text-left">
               Riverbed Technology provides network performance management and SD-WAN solutions to optimize IT
               infrastructure and application performance. Riverbed needed a cohesive UX strategy to unify its tools,
-              improve the expereince for IT administrators, and ensure consistent UI patterns across its platform.
+              improve the experience for IT administrators, and ensure consistent UI patterns across its platform.
             </p>
             <div className="relative w-full aspect-video md:hidden mb-4">
               <Image
                 src="/placeholder.svg?height=300&width=500"
                 alt="Inconsistent UI components across Riverbed products"
                 fill
+                loading="lazy"
                 className="object-contain rounded-lg"
               />
             </div>
-            <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-4">
+            <p className="font-montserrat text-base md:text-lg text-[#5f5f5f]/80 mb-4 text-center md:text-left">
               My role was to lead the UX strategy for key enterprise applications, focusing on:
             </p>
-            <ul className="font-montserrat text-md text-[#5f5f5f]/80 list-disc pl-6 space-y-2 mb-4 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
+            <ul className="font-montserrat text-base md:text-md text-[#5f5f5f]/80 list-disc pl-6 space-y-2 mb-4 [--bullet-color:#F2581A] [&>li]:marker:text-[--bullet-color]">
               <li>
                 Conducting a UX audit to identify inconsistencies and inefficiencies across Riverbed's applications
               </li>
-              <li>Partnering with engineering, product, and UX teams to create a adaptive, reusable design system.</li>
+              <li>Partnering with engineering, product, and UX teams to create an adaptive, reusable design system.</li>
               <li>
-                Led the UX integration for Xirrus after its acquisition, ensuring a seamless transition to Riverbed's
+                Leading the UX integration for Xirrus after its acquisition, ensuring a seamless transition to Riverbed's
                 branding, UX principles, and design standards.
               </li>
               <li>Improving navigation and information architecture for faster, more intuitive IT workflows.</li>
@@ -241,23 +243,23 @@ export default function RiverbedProcessPage() {
         </section>
 
         {/* The UX Process section */}
-        <section className="mb-16 mt-16 pt-8 pb-8 mx-auto">
-          <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-4 text-left">The UX Process</h2>
-          {/* sub section: Scalable desgin system */}
-          <h3 className="font-space-grotesk text-2xl font-medium text-[#007EA7] mb-4 text-left">
+        <section className="mb-8 md:mb-16 mt-8 md:mt-16 pt-8 pb-8 mx-auto">
+          <h2 className="font-space-grotesk text-2xl md:text-3xl font-semibold text-[#007EA7] mb-4 text-center md:text-left">The UX Process</h2>
+          {/* sub section: Scalable design system */}
+          <h3 className="font-space-grotesk text-xl md:text-2xl font-medium text-[#007EA7] mb-4 text-center md:text-left">
             Scalable Design System & UI Standardization
           </h3>
-          <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-4">
+          <p className="font-montserrat text-base md:text-lg text-[#5f5f5f]/80 mb-4 text-center md:text-left">
             Collaborating with the UX team, developers, and stakeholders, I created a design system that
             unified Riverbed's enterprise applications. By refining information architecture and establishing a new
             visual language, I ensured consistency across multiple tools. My focus was on designing reusable components,
             optimizing performance, and aligning branding to create a cohesive user experience while streamlining the
             design-to-development process.
           </p>
-          <ul className="font-montserrat text-md text-[#5f5f5f]/80 list-disc pl-6 space-y-2 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
+          <ul className="font-montserrat text-base md:text-md text-[#5f5f5f]/80 list-disc pl-6 space-y-2 [--bullet-color:#F2581A] [&>li]:marker:text-[--bullet-color]">
             <li>
               The comprehensive design system was implemented across applications, ensuring the UI was cohesive and
-              scalabile.
+              scalable.
             </li>
             <li>
               The component-based system increased developer efficiency by reducing redundant
@@ -273,19 +275,20 @@ export default function RiverbedProcessPage() {
             </li>
           </ul>
 
-          {/* Images row - will be aligned at the same level */}
-          <div className="grid md:grid-cols-2 gap-8 mt-6">
-            <div className="relative w-full h-auto mb-8 shadow-md">
+          {/* Images row - responsive grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mt-6">
+            <div className="relative w-full h-auto mb-4 md:mb-8 shadow-md">
               <div className="relative">
                 <Image
                   src="/images/river/Riverbed_Page1.png"
                   alt="Riverbed network management dashboard showing traffic distribution, path selection, and optimization metrics"
                   width={600}
                   height={300}
+                  loading="lazy"
                   className="object-contain w-full h-auto"
                 />
 
-                {/* Hotspot areas */}
+                {/* Hotspot areas - same functionality but with updated colors */}
                 {hotspots.map((hotspot) => (
                   <div
                     key={hotspot.id}
@@ -295,14 +298,14 @@ export default function RiverbedProcessPage() {
                       left: hotspot.area.left,
                       width: hotspot.area.width,
                       height: hotspot.area.height,
-                      border: activeHotspot === hotspot.id ? "2px solid #007EA7" : "none",
+                      border: activeHotspot === hotspot.id ? "2px solid #F2581A" : "none",
                       borderRadius: "50%",
                       zIndex: 10,
                     }}
                     onClick={() => setActiveHotspot(hotspot.id)}
                     onMouseEnter={() => setActiveHotspot(hotspot.id)}
                   >
-                    <div className="absolute inset-0 bg-[#00E676] opacity-50 rounded-full animate-pulse"></div>
+                    <div className="absolute inset-0 bg-[#F2581A] opacity-50 rounded-full animate-pulse"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
                       <span className="sr-only">{hotspot.title}</span>
                     </div>
@@ -310,11 +313,11 @@ export default function RiverbedProcessPage() {
                 ))}
               </div>
               <p className="text-xs text-[#5f5f5f]/60 mt-2 text-center">
-                Hover over or click the 7 green circles to explore detailed design system specifications
+                Hover over or tap the orange circles to explore detailed design system specifications
               </p>
             </div>
 
-            <div className="relative w-full h-auto mb-8 shadow-md">
+            <div className="relative w-full h-auto mb-4 md:mb-8 shadow-md">
               <div className="relative">
                 <Image
                   src={
@@ -329,6 +332,7 @@ export default function RiverbedProcessPage() {
                   }
                   width={600}
                   height={300}
+                  loading="lazy"
                   className="object-contain w-full h-auto"
                 />
               </div>
@@ -336,16 +340,16 @@ export default function RiverbedProcessPage() {
           </div>
 
           {/* Info arch opt */}
-          <h3 className="font-space-grotesk text-2xl font-medium text-[#007EA7] mb-4 mt-12 text-left">
+          <h3 className="font-space-grotesk text-xl md:text-2xl font-medium text-[#007EA7] mb-4 mt-8 md:mt-12 text-center md:text-left">
             Data-Driven UX & IA Optimization
           </h3>
-          <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-4">
+          <p className="font-montserrat text-base md:text-lg text-[#5f5f5f]/80 mb-4 text-center md:text-left">
             I collaborated with UX researchers and IT administrators to identify workflow inefficiencies, ensuring our
             Information Architecture improvements directly addressed business needs. Through usability testing and
             stakeholder input, I refined navigation and data structures, making critical insights more accessible for IT
             teams.
           </p>
-          <ul className="font-montserrat text-md text-[#5f5f5f]/80 list-disc pl-6 space-y-2 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
+          <ul className="font-montserrat text-base md:text-md text-[#5f5f5f]/80 list-disc pl-6 space-y-2 [--bullet-color:#F2581A] [&>li]:marker:text-[--bullet-color]">
             <li>
               Refined SCM navigation flows, improving how IT admins access system configurations and performance data.
             </li>
@@ -356,24 +360,26 @@ export default function RiverbedProcessPage() {
             <li>Enhanced data tables and filtering systems, making network data more actionable and intuitive.</li>
           </ul>
 
-          {/* Images row - will be aligned at the same level */}
-          <div className="grid md:grid-cols-2 gap-8 mt-6">
+          {/* Images row - responsive grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mt-6">
             {/* Left side - Carousel */}
-            <div className="relative w-full h-auto shadow-md">
+            <div className="relative w-full h-auto mb-4 md:mb-0 shadow-md">
               <div className="relative">
-                <div className="relative h-[400px] overflow-hidden">
+                <div className="relative h-[250px] sm:h-[300px] md:h-[400px] overflow-hidden">
                   <Image
                     src={onPremImages[leftCurrentImage] || "/placeholder.svg"}
                     alt={`SCM On-Prem provisioning interface ${leftCurrentImage + 1}`}
                     width={600}
                     height={250}
-                    className="object-contain w-full h-full"
+                    loading="lazy"
+                    className="object-contain w-full h-full cursor-pointer"
+                    onClick={() => openImageModal(onPremImages[leftCurrentImage])}
                   />
 
                   {/* Navigation arrows */}
                   <button
                     onClick={prevLeftImage}
-                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-[#007EA7] hover:bg-[#005f7f] text-white !border-0 !shadow-md !rounded-full w-8 h-8 flex items-center justify-center z-10"
+                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-[#F2581A] hover:bg-[#C04310] text-white !border-0 !shadow-md !rounded-full w-8 h-8 flex items-center justify-center z-10"
                     aria-label="Previous image"
                   >
                     <ChevronLeft className="w-5 h-5" />
@@ -381,7 +387,7 @@ export default function RiverbedProcessPage() {
 
                   <button
                     onClick={nextLeftImage}
-                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#007EA7] hover:bg-[#005f7f] text-white !border-0 !shadow-md !rounded-full w-8 h-8 flex items-center justify-center z-10"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#F2581A] hover:bg-[#C04310] text-white !border-0 !shadow-md !rounded-full w-8 h-8 flex items-center justify-center z-10"
                     aria-label="Next image"
                   >
                     <ChevronRight className="w-5 h-5" />
@@ -395,31 +401,33 @@ export default function RiverbedProcessPage() {
                       key={index}
                       onClick={() => setLeftCurrentImage(index)}
                       className={`w-2 h-2 rounded-full transition-colors ${
-                        leftCurrentImage === index ? "bg-[#007EA7]" : "bg-gray-300"
+                        leftCurrentImage === index ? "bg-[#F2581A]" : "bg-gray-300"
                       }`}
                       aria-label={`Show image ${index + 1}`}
                     />
                   ))}
                 </div>
               </div>
-              <p className="text-xs text-[#5f5f5f]/80 pb-5 text-center">SCM On-Prem</p>
+              <p className="text-xs text-[#5f5f5f]/80 py-2 text-center">SCM On-Prem</p>
             </div>
 
             <div className="relative w-full h-auto shadow-md">
               <div className="relative">
-                <div className="relative h-[400px] overflow-hidden">
+                <div className="relative h-[250px] sm:h-[300px] md:h-[400px] overflow-hidden">
                   <Image
                     src={tableImages[rightCurrentImage] || "/placeholder.svg"}
                     alt={`SCM Actionable Tables interface ${rightCurrentImage + 1}`}
                     width={600}
                     height={250}
-                    className="object-contain w-full h-full"
+                    loading="lazy"
+                    className="object-contain w-full h-full cursor-pointer"
+                    onClick={() => openImageModal(tableImages[rightCurrentImage])}
                   />
 
                   {/* Navigation arrows */}
                   <button
                     onClick={prevRightImage}
-                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-[#007EA7] hover:bg-[#005f7f] text-white !border-0 !shadow-md !rounded-full w-8 h-8 flex items-center justify-center z-10"
+                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-[#F2581A] hover:bg-[#C04310] text-white !border-0 !shadow-md !rounded-full w-8 h-8 flex items-center justify-center z-10"
                     aria-label="Previous image"
                   >
                     <ChevronLeft className="w-5 h-5" />
@@ -427,7 +435,7 @@ export default function RiverbedProcessPage() {
 
                   <button
                     onClick={nextRightImage}
-                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#007EA7] hover:bg-[#005f7f] text-white !border-0 !shadow-md !rounded-full w-8 h-8 flex items-center justify-center z-10"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#F2581A] hover:bg-[#C04310] text-white !border-0 !shadow-md !rounded-full w-8 h-8 flex items-center justify-center z-10"
                     aria-label="Next image"
                   >
                     <ChevronRight className="w-5 h-5" />
@@ -441,27 +449,27 @@ export default function RiverbedProcessPage() {
                       key={index}
                       onClick={() => setRightCurrentImage(index)}
                       className={`w-2 h-2 rounded-full transition-colors ${
-                        rightCurrentImage === index ? "bg-[#007EA7]" : "bg-gray-300"
+                        rightCurrentImage === index ? "bg-[#F2581A]" : "bg-gray-300"
                       }`}
                       aria-label={`Show image ${index + 1}`}
                     />
                   ))}
                 </div>
               </div>
-              <p className="text-xs text-[#5f5f5f]/80 pb-5 text-center">SCM Actionable Tables</p>
+              <p className="text-xs text-[#5f5f5f]/80 py-2 text-center">SCM Actionable Tables</p>
             </div>
           </div>
 
           {/* Xirrus section*/}
-          <h3 className="font-space-grotesk text-2xl font-medium text-[#007EA7] mb-4 mt-12 text-left">
+          <h3 className="font-space-grotesk text-xl md:text-2xl font-medium text-[#007EA7] mb-4 mt-8 md:mt-12 text-center md:text-left">
             Xirrus Rebranding & UX Integration
           </h3>
-          <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-4">
+          <p className="font-montserrat text-base md:text-lg text-[#5f5f5f]/80 mb-4 text-center md:text-left">
             After Riverbed's acquisition of Xirrus, I led the UX rebranding efforts to ensure visual consistency and
             enhance the network management experience. My role was to unify Xirrus' UI with Riverbed's ecosystem while
             improving usability and workflow efficiency.
           </p>
-          <ul className="font-montserrat text-md text-[#5f5f5f]/80 list-disc pl-6 space-y-2 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
+          <ul className="font-montserrat text-base md:text-md text-[#5f5f5f]/80 list-disc pl-6 space-y-2 [--bullet-color:#F2581A] [&>li]:marker:text-[--bullet-color]">
             <li>
               Redesigned Xirrus Management System (XMS) to integrate seamlessly with Riverbed's brand and design system,
               improving usability.
@@ -479,23 +487,25 @@ export default function RiverbedProcessPage() {
             </li>
           </ul>
 
-          {/* Images row - will be aligned at the same level */}
-          <div className="grid md:grid-cols-2 gap-8 mt-6">
-            <div className="relative w-full h-auto shadow-md">
+          {/* Images row - responsive grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mt-6">
+            <div className="relative w-full h-auto mb-4 md:mb-0 shadow-md">
               <div className="relative">
-                <div className="relative h-[400px] overflow-hidden">
+                <div className="relative h-[250px] sm:h-[300px] md:h-[400px] overflow-hidden">
                   <Image
                     src={xirrusImprovementsImages[leftXirrusImage] || "/placeholder.svg"}
                     alt={`Xirrus interface improvements and UX enhancements ${leftXirrusImage + 1}`}
                     width={600}
                     height={250}
-                    className="object-contain w-full h-full"
+                    loading="lazy"
+                    className="object-contain w-full h-full cursor-pointer"
+                    onClick={() => openImageModal(xirrusImprovementsImages[leftXirrusImage])}
                   />
 
                   {/* Navigation arrows */}
                   <button
                     onClick={prevLeftXirrusImage}
-                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-[#007EA7] hover:bg-[#005f7f] text-white !border-0 !shadow-md !rounded-full w-8 h-8 flex items-center justify-center z-10"
+                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-[#F2581A] hover:bg-[#C04310] text-white !border-0 !shadow-md !rounded-full w-8 h-8 flex items-center justify-center z-10"
                     aria-label="Previous image"
                   >
                     <ChevronLeft className="w-5 h-5" />
@@ -503,7 +513,7 @@ export default function RiverbedProcessPage() {
 
                   <button
                     onClick={nextLeftXirrusImage}
-                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#007EA7] hover:bg-[#005f7f] text-white !border-0 !shadow-md !rounded-full w-8 h-8 flex items-center justify-center z-10"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#F2581A] hover:bg-[#C04310] text-white !border-0 !shadow-md !rounded-full w-8 h-8 flex items-center justify-center z-10"
                     aria-label="Next image"
                   >
                     <ChevronRight className="w-5 h-5" />
@@ -517,31 +527,33 @@ export default function RiverbedProcessPage() {
                       key={index}
                       onClick={() => setLeftXirrusImage(index)}
                       className={`w-2 h-2 rounded-full transition-colors ${
-                        leftXirrusImage === index ? "bg-[#007EA7]" : "bg-gray-300"
+                        leftXirrusImage === index ? "bg-[#F2581A]" : "bg-gray-300"
                       }`}
                       aria-label={`Show image ${index + 1}`}
                     />
                   ))}
                 </div>
               </div>
-              <p className="text-xs text-[#5f5f5f]/80 pb-5 text-center">Xirrus Scheduling for Configuration Push</p>
+              <p className="text-xs text-[#5f5f5f]/80 py-2 text-center">Xirrus Scheduling for Configuration Push</p>
             </div>
 
             <div className="relative w-full h-auto shadow-md">
               <div className="relative">
-                <div className="relative h-[400px] overflow-hidden">
+                <div className="relative h-[250px] sm:h-[300px] md:h-[400px] overflow-hidden">
                   <Image
                     src={xirrusPushImages[rightXirrusImage] || "/placeholder.svg"}
                     alt={`Xirrus configuration push interface ${rightXirrusImage + 1}`}
                     width={600}
                     height={250}
-                    className="object-contain w-full h-full"
+                    loading="lazy"
+                    className="object-contain w-full h-full cursor-pointer"
+                    onClick={() => openImageModal(xirrusPushImages[rightXirrusImage])}
                   />
 
                   {/* Navigation arrows */}
                   <button
                     onClick={prevRightXirrusImage}
-                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-[#007EA7] hover:bg-[#005f7f] text-white !border-0 !shadow-md !rounded-full w-8 h-8 flex items-center justify-center z-10"
+                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-[#F2581A] hover:bg-[#C04310] text-white !border-0 !shadow-md !rounded-full w-8 h-8 flex items-center justify-center z-10"
                     aria-label="Previous image"
                   >
                     <ChevronLeft className="w-5 h-5" />
@@ -549,7 +561,7 @@ export default function RiverbedProcessPage() {
 
                   <button
                     onClick={nextRightXirrusImage}
-                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#007EA7] hover:bg-[#005f7f] text-white !border-0 !shadow-md !rounded-full w-8 h-8 flex items-center justify-center z-10"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#F2581A] hover:bg-[#C04310] text-white !border-0 !shadow-md !rounded-full w-8 h-8 flex items-center justify-center z-10"
                     aria-label="Next image"
                   >
                     <ChevronRight className="w-5 h-5" />
@@ -563,14 +575,14 @@ export default function RiverbedProcessPage() {
                       key={index}
                       onClick={() => setRightXirrusImage(index)}
                       className={`w-2 h-2 rounded-full transition-colors ${
-                        rightXirrusImage === index ? "bg-[#007EA7]" : "bg-gray-300"
+                        rightXirrusImage === index ? "bg-[#F2581A]" : "bg-gray-300"
                       }`}
                       aria-label={`Show image ${index + 1}`}
                     />
                   ))}
                 </div>
               </div>
-              <p className="text-xs text-[#5f5f5f]/80 pb-5 text-center">Xirrus Application/Category Rules</p>
+              <p className="text-xs text-[#5f5f5f]/80 py-2 text-center">Xirrus Application/Category Rules</p>
             </div>
           </div>
         </section>
@@ -579,37 +591,36 @@ export default function RiverbedProcessPage() {
       {/* Outcome & Impact Section */}
       <div className="max-w-6xl mx-auto px-4 pt-4 pb-8">
         <section className="mb-8">
-          <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-4 text-left">Outcome & Impact</h2>
-          <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-6">
+          <h2 className="font-space-grotesk text-2xl md:text-3xl font-semibold text-[#007EA7] mb-4 text-center md:text-left">Outcome & Impact</h2>
+          <p className="font-montserrat text-base md:text-lg text-[#5f5f5f]/80 mb-6 text-center md:text-left">
             This structured approach highlights my leadership in design system development, IA improvements, and UX
             integration, ensuring enterprise-grade usability across Riverbed's B2B applications. By implementing a
             scalable design system, and enhancing usability, Riverbed saw measurable improvements
             across efficiency, consistency, and product adoption:
           </p>
-          <ul className="space-y-4 list-disc pl-6 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
-            <li className="font-montserrat text-md text-[#5f5f5f]/80">
+          <ul className="space-y-4 list-disc pl-6 [--bullet-color:#F2581A] [&>li]:marker:text-[--bullet-color]">
+            <li className="font-montserrat text-base md:text-md text-[#5f5f5f]/80">
               Achieved a 40% reduction in design inconsistencies, creating a seamless and intuitive experience across
               SCM, Xirrus, and other Riverbed applications.
             </li>
-            <li className="font-montserrat text-md text-[#5f5f5f]/80">
+            <li className="font-montserrat text-base md:text-md text-[#5f5f5f]/80">
               Accelerated feature development by 25% through standardized UI components and an optimized
               design-to-development process.
             </li>
-            <li className="font-montserrat text-md text-[#5f5f5f]/80">
+            <li className="font-montserrat text-base md:text-md text-[#5f5f5f]/80">
               Elevated data visualization and dashboard usability, allowing IT administrators to monitor network
               performance more effectively.
             </li>
-            <li className="font-montserrat text-md text-[#5f5f5f]/80">
+            <li className="font-montserrat text-base md:text-md text-[#5f5f5f]/80">
               Led the Xirrus UX redesign, aligning it with Riverbed's design system and streamlining workflow navigation
               for IT teams.
             </li>
-            <li className="font-montserrat text-md text-[#5f5f5f]/80">
+            <li className="font-montserrat text-base md:text-md text-[#5f5f5f]/80">
               Ensured design decisions were user-centered by validating improvements through iterative usability testing
               and feedback.
             </li>
           </ul>
         </section>
-
         {/* Call to Action */}
         <section className="mb-0 mt-8 text-center">
           <button className="rounded-[100px] border border-[#F7F6F6] white bg-white/30 hover:bg-white/60 text-[#007EA7] px-8 py-2.5 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0.5">
