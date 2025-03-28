@@ -144,31 +144,35 @@ export default function RiverbedProcessPage() {
   return (
     <main className="min-h-screen bg-white">
       <Nav />
-      <div className="sticky top-16 mt-0 z-20 w-full bg-[#FFE8CC] backdrop-blur-sm border-y border-[#F2581A]/10">
-  <div className="max-w-6xl mx-auto px-4 py-5 flex items-center">
-    <Link
-      href="/uc/river/details"
-      className="text-[#F2581A] hover:text-[#C04310] font-medium text-sm flex items-center gap-2 transition-transform hover:translate-x-1"
-    >
-      <div className="flex items-center bg-white/70 px-4 py-2 rounded-full shadow-sm">
+
+{/* CHANGE 2: Updated navigation banner with improved styling */}
+<div className="sticky top-16 mt-0 z-20 w-full bg-[#FFE8CC]/50 backdrop-blur-sm border-y border-[#007EA7]/10">
+        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center">
+          <Link 
+             href="/uc/river/details"
+             className="text-[#F2581A] hover:text-[#C04310] font-medium text-sm flex items-center gap-2 transition-transform hover:translate-x-1"
+             >
+            <div className="flex items-center bg-white/70 px-4 py-2 rounded-full shadow-sm">
         <ArrowLeft className="w-4 h-4 mr-1" />
         <span>Return to the deconstruction.</span>
+            </div>
+          </Link>
+        </div>
       </div>
-    </Link>
-  </div>
-</div>
 
-      {/* Content Section - Moved up to replace hero */}
+       {/* Content Section - Moved up to replace hero */}
       <div className="max-w-6xl mx-auto px-4 py-12 mt-16">
-        <div className="w-full">
-          <div className="flex items-center gap-12 mb-8">
-            {/* Riverbed Logo */}
-            <div className="relative w-32 h-32 flex-shrink-0">
+        <div>
+          {/* CHANGE 3: Made logo responsive with different sizes based on screen width */}
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12 mb-8">
+            {/* Apple Logo - Added responsive sizing and loading priority */}
+            <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 flex-shrink-0">
               <Image
-                src="/images/river/Logo_Riverbed.svg"
+               src="/images/river/Logo_Riverbed.svg"
                 alt="Riverbed Logo"
                 fill
                 className="object-contain"
+                priority // Critical above-the-fold image
               />
             </div>
             <h1 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold text-[#007EA7] mb-4 sm:mb-8 text-left">
