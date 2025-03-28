@@ -7,6 +7,7 @@ import Footer from "@/components/footer"
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react"
 import { useState } from "react"
 import { Dialog, DialogContent, DialogClose, DialogTitle } from "@/components/ui/dialog"
+import Head from "next/head" // Added for resource hints
 
 export default function RiverbedDetailsPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
@@ -140,37 +141,70 @@ export default function RiverbedDetailsPage() {
 
   return (
     <main className="min-h-screen bg-white pb-16">
+      {/* CHANGE 1: Added Head component with resource hints */}
+      <Head>
+        {/* Preload critical images that appear above the fold */}
+        <link 
+          rel="preload" 
+          href="/images/river/Logo_Riverbed.svg" 
+          as="image" 
+          type="image/svg+xml"
+        />
+        
+        {/* Prefetch other important images that will be needed soon */}
+        <link 
+          rel="prefetch" 
+          href="/images/river/Riverbed_Page1.png" 
+          as="image"
+        />
+        
+        <link 
+          rel="prefetch" 
+          href="/images/river/Riverbed_header.png" 
+          as="image"
+        />
+      </Head>
+      
       <Nav />
-      <div className="sticky top-16 mt-0 z-20 w-full bg-white/50 backdrop-blur-sm border-y border-[#007EA7]/10">
-        <div className="max-w-6xl mx-auto px-4 py-2 flex items-center">
-          <Link
-            href="/uc/river/process"
-            className="text-[#F2581A] hover:text-[#C04310] text-sm flex items-center gap-2"
+      
+      {/* CHANGE 2: Updated navigation banner with Riverbed's light orange color */}
+      <div className="sticky top-16 mt-0 z-20 w-full bg-[#FFE8CC]/50 backdrop-blur-sm border-y border-[#007EA7]/10">
+        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center">
+          <Link 
+            href="/uc/river/process" 
+            className="text-[#F2581A] hover:text-[#C04310] font-medium text-sm flex items-center gap-2 transition-transform hover:translate-x-1"
           >
-            <ArrowLeft className="w-4 h-4" />
-            Take a closer look at how it was built.
+            <div className="flex items-center bg-white/70 px-3 py-1.5 rounded-full shadow-sm">
+              <ArrowLeft className="w-4 h-4 mr-1" />
+              <span>Take a closer look at how it was built.</span>
+            </div>
           </Link>
         </div>
       </div>
 
-       {/* Content Section - Moved up to replace hero */}
-       <div className="max-w-6xl mx-auto px-4 py-12 mt-16">
+      {/* CHANGE 3: Made title and logo section responsive */}
+      <div className="max-w-6xl mx-auto px-4 py-12 mt-16">
         <div>
-          <div className="flex items-center gap-12 mb-8">
-            {/* Riverbed Logo */}
-            <div className="relative w-32 h-32 flex-shrink-0">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12 mb-8">
+            {/* Riverbed Logo - Added responsive sizing */}
+            <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 flex-shrink-0">
               <Image
                 src="/images/river/Logo_Riverbed.svg"
                 alt="Riverbed Logo"
                 fill
                 className="object-contain"
+                priority // CHANGE 4: Added priority to preload this important image
               />
             </div>
-            <h1 className="font-space-grotesk text-5xl font-bold text-[#007EA7] text-left">
+
+            {/* Title - Improved responsiveness */}
+            <h1 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold text-[#007EA7] mb-4 sm:mb-8 text-center md:text-left">
               Designing Scalable Enterprise UX for Riverbed Technology
             </h1>
           </div>
-          <h3 className="font-space-grotesk text-xl text-[#2C3D4D] mb-12 text-left">
+
+          {/* CHANGE 5: Made subtitle responsive */}
+          <h3 className="font-space-grotesk text-lg sm:text-xl text-[#2C3D4D] mt-6 sm:mt-8 mb-8 sm:mb-12 text-center md:text-left">
             As a Senior UX Designer, I led UX improvements across multiple B2B applications and enhancing IT workflows
             through user-centered design solutions.
           </h3>
@@ -179,16 +213,17 @@ export default function RiverbedDetailsPage() {
 
       <div className="max-w-6xl mx-auto px-4 py-8">
         <section className="mb-16">
-          <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-8 text-left">Background</h2>
+          <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">Background</h2>
+          {/* CHANGE 6: Improved paragraph responsiveness */}
           <div>
-            <p className="font-montserrat text-lg text-[#5f5f5f]/80 text-left">
-             Riverbed Technology provides network performance management and SD-WAN solutions to optimize IT infrastructure and application performance. Riverbed needed a cohesive UX strategy to unify its tools, improve the process for IT administrators, and ensure consistent UI patterns across its platform.
+            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 text-left">
+              Riverbed Technology provides network performance management and SD-WAN solutions to optimize IT infrastructure and application performance. Riverbed needed a cohesive UX strategy to unify its tools, improve the process for IT administrators, and ensure consistent UI patterns across its platform.
             </p>
           </div>
 
-          <div className="mt-12 pt-12 border-t border-[#007EA7]/10">
-            <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-8 text-left">The Challenge</h2>
-            <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-6 text-left">
+          <div className="mt-8 sm:mt-12 pt-8 sm:pt-12 border-t border-[#007EA7]/10">
+            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">The Challenge</h2>
+            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-6 text-left">
               Riverbed's product suite had evolved over time with different teams creating unique UI components and
               visual styles. This resulted in an inconsistent user experience, increased design and development time,
               and challenges in maintaining the growing product ecosystem. The challenge was to create a unified design
@@ -197,13 +232,14 @@ export default function RiverbedDetailsPage() {
             </p>
           </div>
 
-          <div className="mt-12 pt-12 border-t border-[#007EA7]/10">
-            <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-8 text-left">What I Did</h2>
-            <h3 className="font-space-grotesk text-2xl font-medium text-[#007EA7] mb-6 text-left">
+          <div className="mt-8 sm:mt-12 pt-8 sm:pt-12 border-t border-[#007EA7]/10">
+            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">What I Did</h2>
+            <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-4 sm:mb-6 text-left">
               Scalable Design System & UI Standardization
             </h3>
         
-            <ul className="font-montserrat text-md text-[#5f5f5f]/80 list-disc pl-6 space-y-2 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
+            {/* CHANGE 7: Improved list responsiveness */}
+            <ul className="font-montserrat text-sm sm:text-md text-[#5f5f5f]/80 list-disc pl-4 sm:pl-6 space-y-2 sm:space-y-3 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
               <li>
                 The comprehensive design system was implemented across applications, ensuring UI consistency and
                 scalability.
@@ -222,9 +258,9 @@ export default function RiverbedDetailsPage() {
               </li>
             </ul>
 
-            {/* Images row - will be aligned at the same level */}
-            <div className="grid md:grid-cols-2 gap-8 mt-6">
-              <div className="relative w-full h-auto mb-8 shadow-md">
+            {/* CHANGE 8: Made image grid responsive */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mt-6 sm:mt-8">
+              <div className="relative w-full h-auto mb-4 sm:mb-8 shadow-md">
                 <div className="relative">
                   <Image
                     src="/images/river/Riverbed_Page1.png"
@@ -232,11 +268,8 @@ export default function RiverbedDetailsPage() {
                     width={600}
                     height={300}
                     className="object-contain w-full h-auto cursor-pointer"
-                    onClick={() =>
-                      openImageModal(
-                        "/images/river/Riverbed_Page1.png",
-                      )
-                    }
+                    onClick={() => openImageModal("/images/river/Riverbed_Page1.png")}
+                    loading="eager" // CHANGE 9: Prioritize loading of important images
                   />
 
                   {/* Hotspot areas */}
@@ -268,7 +301,7 @@ export default function RiverbedDetailsPage() {
                 </p>
               </div>
 
-              <div className="relative w-full h-auto mb-8 shadow-md">
+              <div className="relative w-full h-auto mb-4 sm:mb-8 shadow-md">
                 <div className="relative">
                   <Image
                     src={
@@ -296,11 +329,12 @@ export default function RiverbedDetailsPage() {
               </div>
             </div>
 
-            <h3 className="font-space-grotesk text-2xl font-medium text-[#007EA7] mb-6 mt-12 text-left">
+            <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-4 sm:mb-6 mt-8 sm:mt-12 text-left">
               Data-Driven UX & IA Optimization
             </h3>
         
-            <ul className="font-montserrat text-md text-[#5f5f5f]/80 list-disc pl-6 space-y-2 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
+            {/* CHANGE 10: Improved list responsiveness */}
+            <ul className="font-montserrat text-sm sm:text-md text-[#5f5f5f]/80 list-disc pl-4 sm:pl-6 space-y-2 sm:space-y-3 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
               <li>
                 Refined SCM navigation flows, improving how IT admins access system configurations and performance data.
               </li>
@@ -311,12 +345,12 @@ export default function RiverbedDetailsPage() {
               <li>Enhanced data tables and filtering systems, making network data more actionable and intuitive.</li>
             </ul>
 
-            {/* Images row - will be aligned at the same level */}
-            <div className="grid md:grid-cols-2 gap-8 mt-6">
+            {/* CHANGE 11: Made carousel containers responsive */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mt-6 sm:mt-8">
               {/* Left side - Carousel */}
               <div className="relative w-full h-auto shadow-md">
                 <div className="relative">
-                  <div className="relative h-[400px] overflow-hidden">
+                  <div className="relative h-[300px] sm:h-[400px] overflow-hidden">
                     <Image
                       src={onPremImages[leftCurrentImage] || "/placeholder.svg"}
                       alt={`SCM On-Prem provisioning interface ${leftCurrentImage + 1}`}
@@ -324,6 +358,7 @@ export default function RiverbedDetailsPage() {
                       height={250}
                       className="object-contain w-full h-full cursor-pointer"
                       onClick={() => openImageModal(onPremImages[leftCurrentImage])}
+                      sizes="(max-width: 768px) 100vw, 50vw" // CHANGE 12: Added responsive image sizing
                     />
 
                     {/* Navigation arrows */}
@@ -363,7 +398,7 @@ export default function RiverbedDetailsPage() {
 
               <div className="relative w-full h-auto shadow-md">
                 <div className="relative">
-                  <div className="relative h-[400px] overflow-hidden">
+                  <div className="relative h-[300px] sm:h-[400px] overflow-hidden">
                     <Image
                       src={tableImages[rightCurrentImage] || "/placeholder.svg"}
                       alt={`SCM Actionable Tables interface ${rightCurrentImage + 1}`}
@@ -371,6 +406,7 @@ export default function RiverbedDetailsPage() {
                       height={250}
                       className="object-contain w-full h-full cursor-pointer"
                       onClick={() => openImageModal(tableImages[rightCurrentImage])}
+                      sizes="(max-width: 768px) 100vw, 50vw" // CHANGE 13: Added responsive image sizing
                     />
 
                     {/* Navigation arrows */}
@@ -409,11 +445,12 @@ export default function RiverbedDetailsPage() {
               </div>
             </div>
 
-            <h3 className="font-space-grotesk text-2xl font-medium text-[#007EA7] mb-6 mt-12 text-left">
+            <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-4 sm:mb-6 mt-8 sm:mt-12 text-left">
               Xirrus Rebranding & UX Integration
             </h3>
          
-            <ul className="font-montserrat text-md text-[#5f5f5f]/80 list-disc pl-6 space-y-2 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
+            {/* CHANGE 14: Improved list responsiveness */}
+            <ul className="font-montserrat text-sm sm:text-md text-[#5f5f5f]/80 list-disc pl-4 sm:pl-6 space-y-2 sm:space-y-3 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
               <li>
                 Redesigned Xirrus Management System (XMS) to integrate seamlessly with Riverbed's brand and design
                 system, improving usability and consistency.
@@ -431,11 +468,11 @@ export default function RiverbedDetailsPage() {
               </li>
             </ul>
 
-            {/* Images row - will be aligned at the same level */}
-            <div className="grid md:grid-cols-2 gap-8 mt-6">
+            {/* CHANGE 15: Made Xirrus carousel containers responsive */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mt-6 sm:mt-8">
               <div className="relative w-full h-auto shadow-md">
                 <div className="relative">
-                  <div className="relative h-[400px] overflow-hidden">
+                  <div className="relative h-[300px] sm:h-[400px] overflow-hidden">
                     <Image
                       src={xirrusImprovementsImages[leftXirrusImage] || "/placeholder.svg"}
                       alt={`Xirrus interface improvements and UX enhancements ${leftXirrusImage + 1}`}
@@ -443,6 +480,7 @@ export default function RiverbedDetailsPage() {
                       height={250}
                       className="object-contain w-full h-full cursor-pointer"
                       onClick={() => openImageModal(xirrusImprovementsImages[leftXirrusImage])}
+                      sizes="(max-width: 768px) 100vw, 50vw" // Added responsive image sizing
                     />
 
                     {/* Navigation arrows */}
@@ -482,7 +520,7 @@ export default function RiverbedDetailsPage() {
 
               <div className="relative w-full h-auto shadow-md">
                 <div className="relative">
-                  <div className="relative h-[400px] overflow-hidden">
+                  <div className="relative h-[300px] sm:h-[400px] overflow-hidden">
                     <Image
                       src={xirrusPushImages[rightXirrusImage] || "/placeholder.svg"}
                       alt={`Xirrus configuration push interface ${rightXirrusImage + 1}`}
@@ -490,6 +528,7 @@ export default function RiverbedDetailsPage() {
                       height={250}
                       className="object-contain w-full h-full cursor-pointer"
                       onClick={() => openImageModal(xirrusPushImages[rightXirrusImage])}
+                      sizes="(max-width: 768px) 100vw, 50vw" // Added responsive image sizing
                     />
 
                     {/* Navigation arrows */}
@@ -531,11 +570,13 @@ export default function RiverbedDetailsPage() {
         </section>
 
         <section className="mb-16 pt-12 border-t border-[#007EA7]/10">
-          <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-8 text-left">Role</h2>
-          <p className="font-montserrat text-lg text-[#5f5f5f]/80 text-left">
+          <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">Role</h2>
+          <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 text-left">
             Senior UX Designer, Information Architecture, Data Visualization, and Design Systems
           </p>
         </section>
+
+       
 
         <div className="mt-16 text-center pb-12">
           <a
