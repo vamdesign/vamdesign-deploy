@@ -7,6 +7,7 @@ import Footer from "@/components/footer"
 import { ArrowLeft } from "lucide-react"
 import { useState } from "react"
 import { Dialog, DialogContent, DialogClose, DialogTitle } from "@/components/ui/dialog"
+import Head from "next/head" // Added for resource hints
 
 export default function WalmartFulfillmentAppPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
@@ -17,65 +18,94 @@ export default function WalmartFulfillmentAppPage() {
 
   return (
     <main className="min-h-screen bg-white">
+      {/* Added Head component with resource hints */}
+      <Head>
+        {/* Preload critical images that appear above the fold */}
+        <link 
+          rel="preload" 
+          href="/images/walmart/Logo_Walmart.svg" 
+          as="image" 
+          type="image/svg+xml"
+        />
+        
+        {/* Prefetch other important images that will be needed soon */}
+        <link 
+          rel="prefetch" 
+          href="/images/walmart/Walmart_WFS_image.png" 
+          as="image"
+        />
+      </Head>
+      
       <Nav />
 
-      <div className="sticky top-16 mt-0 z-20 w-full bg-white/50 backdrop-blur-sm border-y border-[#007EA7]/10">
-        <div className="max-w-6xl mx-auto px-4 py-2 flex items-center">
+      {/* Updated navigation banner with improved styling */}
+      <div className="sticky top-16 mt-0 z-20 w-full bg-[#E6F0FF]/50 backdrop-blur-sm border-y border-[#FFC220]/10">
+        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center">
           <Link
             href="/uc/walmart/details"
-            className="text-[#FFC220] hover:text-[#C29009] text-sm flex items-center gap-2">
-            <ArrowLeft className="w-4 h-4" />I only want the highlights.
+            className="text-[#FFC220] hover:text-[#C29009] font-medium text-sm flex items-center gap-2 transition-transform hover:translate-x-1"
+          >
+            <div className="flex items-center bg-white/70 px-4 py-2 rounded-full shadow-sm">
+              <ArrowLeft className="w-4 h-4 mr-1" />
+              <span>I only want the highlights.</span>
+            </div>
           </Link>
         </div>
       </div>
 
-      {/* Content Section - Moved up to replace hero */}
+      {/* Content Section - Main heading and intro */}
       <div className="max-w-6xl mx-auto px-4 py-12 mt-16">
         <div>
-          <div className="flex items-center gap-12 mb-8">
-            {/* Walmart Logo */}
-            <div className="relative w-32 h-32 flex-shrink-0">
+          {/* Made logo responsive with different sizes based on screen width */}
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12 mb-8">
+            {/* Walmart Logo - Added responsive sizing and loading priority */}
+            <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 flex-shrink-0">
               <Image
                 src="/images/walmart/Logo_Walmart.svg"
                 alt="Walmart Logo"
                 fill
                 className="object-contain"
+                priority // Critical above-the-fold image
               />
             </div>
-            <h1 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold text-[#007EA7] mb-4 sm:mb-8 text-left">
+            <h1 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold text-[#007EA7] mb-4 sm:mb-8 text-center md:text-left">
               Walmart Fulfillment Services, the UX Journey
             </h1>
           </div>
-          <p className="font-montserrat text-lg text-[#2C3D4D] mt-8 text-left">
+          
+          {/* Improved text responsiveness */}
+          <p className="font-montserrat text-base sm:text-lg text-[#2C3D4D] mt-4 sm:mt-8 text-center md:text-left">
             At Walmart Labs, I was brought on to help design and refine the Walmart Fulfillment Services (WFS) platform.
             This initiative was Walmart's effort to enable third-party sellers to store, ship, and manage inventory
             through Walmart's logistics network, giving their customers the same seamless experience as purchasing
             directly from Walmart.
           </p>
-          <ul className="font-montserrat text-sm text-[#2C3D4D] mt-4 text-left list-none space-y-2 max-w-[90%]">
+          
+          {/* Added responsive width for list container */}
+          <ul className="font-montserrat text-sm sm:text-base text-[#2C3D4D] mt-4 text-left list-none space-y-2 max-w-full sm:max-w-[95%] md:max-w-[90%] mx-auto md:mx-0">
             <li className="flex items-start">
-              <span className="mr-2">•</span>
+              <span className="mr-2 text-[#FFC220]">•</span>
               <span>Developed UX strategies to improve seller adoption, reduce errors, and enhance usability</span>
             </li>
             <li className="flex items-start">
-              <span className="mr-2">•</span>
+              <span className="mr-2 text-[#FFC220]">•</span>
               <span>
-                Conducted competitor research on Amazon's Fulfilmint By Amazon (FBA) model to identify usability gaps
+                Conducted competitor research on Amazon's Fulfillment By Amazon (FBA) model to identify usability gaps
                 and opportunities
               </span>
             </li>
             <li className="flex items-start">
-              <span className="mr-2">•</span>
+              <span className="mr-2 text-[#FFC220]">•</span>
               <span>
                 Streamlined the onboarding process for new and existing sellers, making product listing and inventory
                 management more intuitive
               </span>
             </li>
             <li className="flex items-start">
-              <span className="mr-2">•</span>
+              <span className="mr-2 text-[#FFC220]">•</span>
               <span>
                 Created an atomic design system for WFS to ensure consistency and scalability across the Seller Center
-                platform.
+                platform
               </span>
             </li>
           </ul>
@@ -83,47 +113,65 @@ export default function WalmartFulfillmentAppPage() {
       </div>
 
       {/* Use Case */}
-      <div className="max-w-6xl mx-auto px-4 py-4">
-        <section className="mb-16 mt-8">
-          <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-2 text-left">Use Case</h2>
-          <h3 className="font-space-grotesk text-2xl font-medium text-[#007EA7] mb-4 text-left">
+      <div className="max-w-6xl mx-auto px-4 py-8 sm:py-12">
+        <section className="mb-12 sm:mb-16">
+          <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-2 text-center md:text-left">Use Case</h2>
+          <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-4 text-center md:text-left">
             Researching Gaps and Designing Strategies for
-            <br />
+            {/* Made subtitle responsive with linebreak only on larger screens */}
+            <span className="hidden sm:inline"><br /></span>
+            <span className="sm:hidden"> </span>
             the Seller Experience
           </h3>
-          <div className="grid md:grid-cols-2 gap-8 items-start">
+          
+          {/* Improved grid layout for better responsiveness */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
             <div>
-              <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-4">
+              <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4 text-center md:text-left">
                 Walmart's WFS initiative was designed to expand opportunities for third-party sellers by streamlining
                 fulfillment services, ensuring a seamless and efficient experience that delivers the same ease and
                 convenience as purchasing directly from Walmart.
               </p>
-              <p className="font-montserrat text-lg text-[#5f5f5f]/80">
+              
+              {/* Improved responsive image display strategy with loading="eager" */}
+              <div className="relative w-full aspect-square md:hidden mb-4">
+                <Image
+                  src="/images/walmart/Walmart_WFS_image.png"
+                  alt="Hands placing shipping label on a Walmart.com branded box"
+                  fill
+                  className="object-cover rounded-md object-top"
+                  loading="eager" // Load early since it appears on mobile
+                />
+              </div>
+              <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 text-center md:text-left">
                 As the senior UX designer, I conducted extensive research to identify usability gaps, uncover pain
                 points, and improve adoption and efficiency. I also developed a scalable atomic design system.
               </p>
             </div>
-            <div className="relative w-full md:w-3/4 lg:w-2/3 aspect-square overflow-hidden rounded-md md:-mt-16 mx-auto">
+            
+            {/* Adjusted responsive image alignment */}
+            <div className="relative w-full md:w-3/4 lg:w-2/3 aspect-square overflow-hidden rounded-md hidden md:block md:mt-0 lg:-mt-16 mx-auto">
               <Image
                 src="/images/walmart/Walmart_WFS_image.png"
                 alt="Hands placing shipping label on a Walmart.com branded box"
                 fill
                 className="object-cover rounded-md object-top"
+                loading="eager" // Load early since it appears on desktop
               />
             </div>
           </div>
         </section>
 
-        {/* Objectives and Goals */}
-        <section className="mb-16 mt-16">
-          <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-4 text-left">
+        {/* Objectives and Goals - Added responsive text sizing throughout */}
+        <section className="mb-12 sm:mb-16">
+          <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-4 text-center md:text-left">
             Context & Business Challenge
           </h2>
-          <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-4">
+          <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4 text-center md:text-left">
             In order for Walmart to implement a streamlined, seller-friendly fulfillment system that improved efficiency
             and competitiveness they set about to solve for these challenges:
           </p>
-          <ul className="font-montserrat text-md text-[#5f5f5f]/80 list-disc pl-6 space-y-2 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
+          <ul className="font-montserrat text-sm sm:text-md text-[#5f5f5f]/80 list-disc pl-4 sm:pl-6 space-y-2 mb-4 [--bullet-color:#FFC220] [&>li]:marker:text-[--bullet-color]">
             <li>Sellers faced difficulty transitioning into WFS due to unclear processes and limited guidance.</li>
             <li>
               Inconsistencies in inventory tracking and shipment labeling made it harder for sellers to manage their
@@ -135,10 +183,10 @@ export default function WalmartFulfillmentAppPage() {
             </li>
             <li>Sellers had limited visibility into fulfillment fees, performance metrics, and shipment tracking.</li>
           </ul>
-          <p className="font-montserrat text-lg text-[#5f5f5f]/80 mt-8 mb-4">
+          <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mt-6 sm:mt-8 mb-4 text-center md:text-left">
             To address these challenges, we focused on designing a UX strategy that prioritized:
           </p>
-          <ul className="font-montserrat text-md text-[#5f5f5f]/80 list-disc pl-6 space-y-2 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
+          <ul className="font-montserrat text-sm sm:text-md text-[#5f5f5f]/80 list-disc pl-4 sm:pl-6 space-y-2 [--bullet-color:#FFC220] [&>li]:marker:text-[--bullet-color]">
             <li>Seamless onboarding experiences with clear step-by-step guidance.</li>
             <li>An intuitive inventory management system that improved product tracking and labeling.</li>
             <li>
@@ -149,20 +197,20 @@ export default function WalmartFulfillmentAppPage() {
         </section>
 
         {/* My Role & Key Contributions */}
-        <section className="mb-16 mt-16">
-          <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-4 text-left">
+        <section className="mb-12 sm:mb-16">
+          <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-4 text-center md:text-left">
             My Role & Key Contributions
           </h2>
-          <h3 className="font-space-grotesk text-2xl font-medium text-[#007EA7] mb-6 mt-8">
+          <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-4 md:mb-6 mt-6 md:mt-8 text-center md:text-left">
             UX Research & Competitive Analysis
           </h3>
-          <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-4">
-            I was responsible for collecting and organizing UX research for WFS labeling and inventory workflows, as as
+          <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4 text-center md:text-left">
+            I was responsible for collecting and organizing UX research for WFS labeling and inventory workflows, as well as
             other critical areas of the fulfillment experience. My research informed the team lead and stakeholders,
             helping to define the early development strategy for WFS. This work supported the foundational decisions
             that shaped the beta release, ensuring we had a baseline for improvement. Key contributions included:
           </p>
-          <ul className="font-montserrat text-md text-[#5f5f5f]/80 list-disc pl-6 space-y-2 mb-8 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
+          <ul className="font-montserrat text-sm sm:text-md text-[#5f5f5f]/80 list-disc pl-4 sm:pl-6 space-y-2 mb-6 md:mb-8 [--bullet-color:#FFC220] [&>li]:marker:text-[--bullet-color]">
             <li>
               Conducted a competitive analysis of Amazon's FBA and Shopify's fulfillment services, identifying and
               usability gaps and inefficiencies.
@@ -178,13 +226,15 @@ export default function WalmartFulfillmentAppPage() {
               for WFS development.
             </li>
           </ul>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8 mb-8">
             <div className="relative aspect-video">
               <Image
                 src="/images/walmart/WFS_Labeling_Research2_gapsinWFS_008.jpeg"
                 alt="Amazon's three-step process for shipping and tracking products"
                 fill
-                className="object-contain rounded-lg"
+                loading="lazy"
+                className="object-contain rounded-lg cursor-pointer"
+                onClick={() => openImageModal("/images/walmart/WFS_Labeling_Research2_gapsinWFS_008.jpeg")}
               />
             </div>
             <div className="relative aspect-video">
@@ -192,7 +242,9 @@ export default function WalmartFulfillmentAppPage() {
                 src="/images/walmart/WFS_Labeling_Research2_gapsinWFS_009.jpeg"
                 alt="Amazon's packaging requirements interface showing how to pack boxes and compliance information"
                 fill
-                className="object-contain rounded-lg"
+                loading="lazy"
+                className="object-contain rounded-lg cursor-pointer"
+                onClick={() => openImageModal("/images/walmart/WFS_Labeling_Research2_gapsinWFS_009.jpeg")}
               />
             </div>
             <div className="relative aspect-video">
@@ -200,7 +252,9 @@ export default function WalmartFulfillmentAppPage() {
                 src="/images/walmart/WFS_Labeling_Research2_gapsinWFS_010.jpeg"
                 alt="Amazon Seller Central interface for printing shipping labels"
                 fill
-                className="object-contain rounded-lg"
+                loading="lazy"
+                className="object-contain rounded-lg cursor-pointer"
+                onClick={() => openImageModal("/images/walmart/WFS_Labeling_Research2_gapsinWFS_010.jpeg")}
               />
             </div>
             <div className="relative aspect-video">
@@ -208,18 +262,20 @@ export default function WalmartFulfillmentAppPage() {
                 src="/images/walmart/WFS_Labeling_Research2_gapsinWFS011.jpeg"
                 alt="Gaps in unit shipping labels comparison between WFS and Amazon FBA"
                 fill
-                className="object-contain rounded-lg"
+                loading="lazy"
+                className="object-contain rounded-lg cursor-pointer"
+                onClick={() => openImageModal("/images/walmart/WFS_Labeling_Research2_gapsinWFS011.jpeg")}
               />
             </div>
           </div>
-          <p className="font-montserrat text-sm italic text-[#5f5f5f]/80 mt-8">
-            Presenation used my reseach and findings for upper management and stakeholders, helping define the early
+          <p className="font-montserrat text-xs sm:text-sm italic text-[#5f5f5f]/80 mt-4 md:mt-8 text-center md:text-left">
+            Presentation used my research and findings for upper management and stakeholders, helping define the early
             development strategy for WFS, setting the foundation for the beta release, and establishing a baseline for
             future improvements.
           </p>
 
-          <h3 className="font-space-grotesk text-2xl font-medium text-[#007EA7] mb-6 mt-8">Atomic Design System</h3>
-          <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-4">
+          <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-4 md:mb-6 mt-6 md:mt-8 text-center md:text-left">Atomic Design System</h3>
+          <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4 text-center md:text-left">
             The WFS app required a new design system that was built upon the existing Seller Center design system. The
             goal was to evolve the current design system in a way that maintained alignment with established patterns
             while enhancing flexibility for future growth. I worked closely with the design system team to ensure
@@ -227,9 +283,9 @@ export default function WalmartFulfillmentAppPage() {
             establish a seamless transition between the two systems, making it easier for designers and developers to
             integrate new elements while maintaining a unified experience for sellers.
           </p>
-          <ul className="font-montserrat text-md text-[#5f5f5f]/80 list-disc pl-6 space-y-2 mb-8 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
+          <ul className="font-montserrat text-sm sm:text-md text-[#5f5f5f]/80 list-disc pl-4 sm:pl-6 space-y-2 mb-6 md:mb-8 [--bullet-color:#FFC220] [&>li]:marker:text-[--bullet-color]">
             <li>
-              Developed a scalable atomic design system for WFS based on eveolving components and patterns, improving UI
+              Developed a scalable atomic design system for WFS based on evolving components and patterns, improving UI
               consistency and seller efficiency.
             </li>
             <li>
@@ -243,43 +299,51 @@ export default function WalmartFulfillmentAppPage() {
               fulfillment mistakes and enhance seller confidence.
             </li>
           </ul>
-          <div className="relative aspect-video mt-8">
+          <div className="relative aspect-video mt-6 md:mt-8">
             <Image
               src="/images/walmart/Walmart_design_system.png"
               alt="WFS Design System button component documentation showing states, variations, and specifications"
               fill
-              className="object-contain rounded-lg"
+              loading="lazy"
+              className="object-contain rounded-lg cursor-pointer"
+              onClick={() => openImageModal("/images/walmart/Walmart_design_system.png")}
             />
           </div>
         </section>
 
         {/* Outcome & Impact */}
-        <section className="mb-16 mt-16">
-          <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-4 text-left">Outcome & Impact</h2>
-          <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-6">
+        <section className="mb-12 sm:mb-16">
+          <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-4 text-center md:text-left">Outcome & Impact</h2>
+          <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-6 text-center md:text-left">
             While quantifiable metrics were not available at the time of completion, our UX strategies aimed to:
           </p>
-          <ul className="space-y-4 list-disc pl-6 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
-            <li className="font-montserrat text-md text-[#5f5f5f]/80">
+          <ul className="space-y-2 sm:space-y-4 list-disc pl-4 sm:pl-6 [--bullet-color:#FFC220] [&>li]:marker:text-[--bullet-color]">
+            <li className="font-montserrat text-sm sm:text-md text-[#5f5f5f]/80">
               Increase seller adoption rates by reducing onboarding friction
             </li>
-            <li className="font-montserrat text-md text-[#5f5f5f]/80">
+            <li className="font-montserrat text-sm sm:text-md text-[#5f5f5f]/80">
               Minimize errors in inventory and shipping through automated labeling & tracking.
             </li>
-            <li className="font-montserrat text-md text-[#5f5f5f]/80">
+            <li className="font-montserrat text-sm sm:text-md text-[#5f5f5f]/80">
               Enhance seller satisfaction by making fulfillment processes intuitive and efficient.
             </li>
-            <li className="font-montserrat text-md text-[#5f5f5f]/80">
+            <li className="font-montserrat text-sm sm:text-md text-[#5f5f5f]/80">
               Position Walmart as a competitive fulfillment provider against Amazon FBA.
             </li>
           </ul>
         </section>
 
         {/* Call to Action */}
-        <section className="mb-16 mt-16 text-center">
-          <button className="rounded-[100px] border border-[#F7F6F6] white bg-white/30 hover:bg-white/60 text-[#007ea7] px-8 py-2.5 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0.5">
-            <a href="/contact">Let's Chat</a>
-          </button>
+        <section className="mb-8 sm:mb-16 flex flex-col items-center">
+          <p className="font-montserrat text-sm sm:text-md text-[#FFC220]/80 max-w-full sm:max-w-xl mb-6 sm:mb-8 text-center">
+            Interested in more details about this project or my approach to UX design?
+          </p>
+          <Link 
+            href="/contact"
+            className="rounded-[100px] border border-[#F7F6F6] bg-[#E6F0FF] hover:bg-[#D5E6FF] text-[#FFC220] px-6 sm:px-8 py-2 sm:py-2.5 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0.5"
+          >
+            Let's Chat
+          </Link>
         </section>
       </div>
 
@@ -323,4 +387,3 @@ export default function WalmartFulfillmentAppPage() {
     </main>
   )
 }
-
