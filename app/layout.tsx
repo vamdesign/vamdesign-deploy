@@ -3,6 +3,7 @@ import "./globals.css"
 import { Space_Grotesk, Montserrat } from 'next/font/google'
 import type React from "react"
 import { ClientLayout } from './client-layout'
+import Script from 'next/script'
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -32,6 +33,13 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className="bg-white">
       <body className={`${spaceGrotesk.className} ${montserrat.variable} bg-white`}>
         <ClientLayout>{children}</ClientLayout>
+        
+        {/* GoatCounter Analytics */}
+        <Script
+          data-goatcounter="https://vamdesign.goatcounter.com/count"
+          src="//gc.zgo.at/count.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
