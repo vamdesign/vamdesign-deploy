@@ -74,54 +74,7 @@ export default function AIDetailsPage() {
             </h1>
           </div>
 
-          {/* Made subtitle responsive */}
-          <h3 className="font-space-grotesk text-lg sm:text-xl text-[#2C3D4D] mt-6 sm:mt-8 mb-8 sm:mb-12 text-center md:text-left">
-            As a Senior UX Designer, I explored AI-powered tools to enhance my design and development workflow,
-            streamlining processes and pushing beyond conventional UX approaches.
-          </h3>
-
-          {/* Made bullet list responsive */}
-          <ul className="font-montserrat text-sm sm:text-base text-[#2C3D4D] mt-4 sm:mt-6 text-center md:text-left list-none space-y-2 max-w-full md:max-w-[90%]">
-            <li className="flex items-start justify-center md:justify-start">
-              <span className="mr-2">•</span>
-              <span>
-                Developed this UX portfolio using AI-driven tools, integrating automation and iterative problem-solving
-                while maintaining ethical AI practices
-              </span>
-            </li>
-            <li className="flex items-start justify-center md:justify-start">
-              <span className="mr-2">•</span>
-              <span>
-                Refined development workflows using Claude to optimize Vercel's codebase while simultaneously learning
-                React and working in Github, terminal and localhost3000
-              </span>
-            </li>
-            <li className="flex items-start justify-center md:justify-start">
-              <span className="mr-2">•</span>
-              <span>
-                Leveraged AI for UI design and content generation, utilizing MidJourney, ChatGPT, and Claude to enhance
-                efficiency
-              </span>
-            </li>
-            <li className="flex items-start justify-center md:justify-start">
-              <span className="mr-2">•</span>
-              <span>Built an AI-powered chatbot, experimenting with AI-assisted interactions and automation</span>
-            </li>
-            <li className="flex items-start justify-center md:justify-start">
-              <span className="mr-2">•</span>
-              <span>
-                Earned the AI Upgrade for Creative Pros certification, mastering AI-driven UX workflows to enhance
-                creativity and adapt to AI-powered design, UX strategy, and storytelling
-              </span>
-            </li>
-            <li className="flex items-start justify-center md:justify-start">
-              <span className="mr-2">•</span>
-              <span>
-                Ensuring AI-assisted decisions support accessibility, inclusivity, and human creativity, to maintain
-                ethical oversight at every stage
-              </span>
-            </li>
-          </ul>
+          
         </div>
       </div>
 
