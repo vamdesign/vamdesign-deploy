@@ -7,6 +7,7 @@ import Footer from "@/components/footer"
 import { ArrowLeft } from "lucide-react"
 import { useState } from "react"
 import { Dialog, DialogContent, DialogClose, DialogTitle } from "@/components/ui/dialog"
+import Head from "next/head" // Added for resource hints
 
 export default function AIProcessPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
@@ -69,60 +70,102 @@ export default function AIProcessPage() {
 
   return (
     <main className="min-h-screen bg-white">
+      {/* Added Head component with resource hints */}
+      <Head>
+        {/* Preload critical images that appear above the fold */}
+        <link 
+          rel="preload" 
+          href="/images/vam_ai/Logo_VAM_AI.svg" 
+          as="image" 
+          type="image/svg+xml"
+        />
+        
+        {/* Prefetch other important images that will be needed soon */}
+        <link 
+          rel="prefetch" 
+          href="/images/vam_ai/AI_Ven_Diagram.png" 
+          as="image"
+        />
+      </Head>
+      
       <Nav />
 
-      <div className="sticky top-16 mt-0 z-20 w-full bg-white/50 backdrop-blur-sm border-y border-[#007EA7]/10">
-        <div className="max-w-6xl mx-auto px-4 py-2 flex items-center">
-          <Link href="/uc/ai/details" className="text-[#7209B7] hover:text-[#470672] text-sm flex items-center gap-2">
-            <ArrowLeft className="w-4 h-4" />
-            Done with the deep dive? Go back to the summary.
+      {/* Updated navigation banner with AI's light purple color */}
+      <div className="sticky top-16 mt-0 z-20 w-full bg-[#F0E6FF]/50 backdrop-blur-sm border-y border-[#007EA7]/10">
+        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center">
+          <Link 
+            href="/uc/ai/details" 
+            className="text-[#7209B7] hover:text-[#470672] font-medium text-sm flex items-center gap-2 transition-transform hover:translate-x-1"
+          >
+            <div className="flex items-center bg-white/70 px-3 py-1.5 rounded-full shadow-sm">
+              <ArrowLeft className="w-4 h-4 mr-1" />
+              <span>Done with the deep dive? Go back to the summary.</span>
+            </div>
           </Link>
         </div>
       </div>
 
-      {/* Building, Learning & Innovating with AI UX */}
+      {/* Added logo to title section and made it responsive */}
       <div className="max-w-6xl mx-auto px-4 py-12 mt-16">
-      <h1 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold text-[#007EA7] mb-4 sm:mb-8 text-left">
-          Building, Learning & Innovating with AI UX
-        </h1>
-        <p className="font-montserrat text-lg text-[#2C3D4D] mt-6 text-left">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12 mb-8">
+          {/* AI Logo - Added responsive sizing */}
+          <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 flex-shrink-0">
+            <Image
+              src="/images/vam_ai/Logo_VAM_AI.svg"
+              alt="AI Design Logo"
+              fill
+              className="object-contain"
+              priority // Added priority to preload this important image
+            />
+          </div>
+
+          {/* Title - Improved responsiveness */}
+          <h1 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold text-[#007EA7] mb-4 sm:mb-8 text-center md:text-left">
+            Building, Learning & Innovating with AI UX
+          </h1>
+        </div>
+        
+        {/* Made description paragraph responsive */}
+        <p className="font-montserrat text-base sm:text-lg text-[#2C3D4D] mt-6 sm:mt-8 text-center md:text-left">
           As a Senior UX Designer, I explored AI-powered tools to enhance my design and development workflow,
           streamlining processes and pushing beyond conventional UX approaches.
         </p>
-        <ul className="font-montserrat text-sm text-[#2C3D4D] mt-4 text-left list-none space-y-2 max-w-[90%]">
-          <li className="flex items-start">
+        
+        {/* Made bullet list responsive */}
+        <ul className="font-montserrat text-sm sm:text-base text-[#2C3D4D] mt-4 sm:mt-6 text-center md:text-left list-none space-y-2 max-w-full md:max-w-[90%]">
+          <li className="flex items-start justify-center md:justify-start">
             <span className="mr-2">•</span>
             <span>
               Developed this UX portfolio using AI-driven tools, integrating automation and iterative problem-solving
               while maintaining ethical AI practices
             </span>
           </li>
-          <li className="flex items-start">
+          <li className="flex items-start justify-center md:justify-start">
             <span className="mr-2">•</span>
             <span>
               Refined development workflows using Claude to optimize Vercel's codebase while simultaneously learning
               React and working in Github, terminal and localhost3000
             </span>
           </li>
-          <li className="flex items-start">
+          <li className="flex items-start justify-center md:justify-start">
             <span className="mr-2">•</span>
             <span>
               Leveraged AI for UI design and content generation, utilizing MidJourney, ChatGPT, and Claude to enhance
               efficiency
             </span>
           </li>
-          <li className="flex items-start">
+          <li className="flex items-start justify-center md:justify-start">
             <span className="mr-2">•</span>
             <span>Built an AI-powered chatbot, experimenting with AI-assisted interactions and automation</span>
           </li>
-          <li className="flex items-start">
+          <li className="flex items-start justify-center md:justify-start">
             <span className="mr-2">•</span>
             <span>
               Earned the AI Upgrade for Creative Pros certification, mastering AI-driven UX workflows to enhance
               creativity and adapt to AI-powered design, UX strategy, and storytelling
             </span>
           </li>
-          <li className="flex items-start">
+          <li className="flex items-start justify-center md:justify-start">
             <span className="mr-2">•</span>
             <span>
               Ensuring AI-assisted decisions support accessibility, inclusivity, and human creativity, to maintain
@@ -133,27 +176,31 @@ export default function AIProcessPage() {
       </div>
 
       <section className="max-w-6xl mx-auto px-4">
-        {/* Use Case */}
-        <section className="mb-8 mt-6 max-w-[95%] mx-auto">
-          <h2 id="use-case" className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-4 text-left">
+        {/* Use Case - Made responsive */}
+        <section className="mb-6 sm:mb-8 mt-6 sm:mt-8 max-w-full sm:max-w-[95%] mx-auto">
+          <h2 id="use-case" className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-left">
             Use Case
           </h2>
           <div className="w-full">
-            <p className="font-montserrat text-lg text-[#5f5f5f]/80 mt-6 mb-6">
+            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mt-4 sm:mt-6 mb-4 sm:mb-6">
               The rapid advancement of AI technologies has created new opportunities to enhance the UX design process.
               From generating initial concepts to conducting user research and testing, AI tools can augment human
               creativity and improve efficiency. As a designer who embraces innovation, I've developed a framework for
               integrating AI into the design workflow to deliver better results for clients and users.
             </p>
+            
+            {/* Made mobile image responsive */}
             <div className="relative w-full aspect-video md:hidden mb-4">
               <Image
                 src="/placeholder.svg?height=300&width=500"
                 alt="AI-enhanced UX design process diagram"
                 fill
                 className="object-contain rounded-lg"
+                sizes="100vw" // Added responsive image sizing
               />
             </div>
-            <p className="font-montserrat text-lg text-[#5f5f5f]/80">
+            
+            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80">
               This case study explores how I've implemented AI tools to create this portfolio explaining the different
               stages of the design process, from research and ideation to testing and optimization. By finding the right
               balance between AI capabilities and human expertise, I've created a more efficient and effective approach
@@ -162,16 +209,18 @@ export default function AIProcessPage() {
           </div>
         </section>
 
-        {/* Context & Challenge */}
-        <section className="mb-8 mt-10 pt-6 max-w-[95%] mx-auto border-t border-[#007EA7]/10">
-          <h2 id="context" className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-4 text-left">
+        {/* Context & Challenge - Made responsive */}
+        <section className="mb-6 sm:mb-8 mt-8 sm:mt-10 pt-6 max-w-full sm:max-w-[95%] mx-auto border-t border-[#007EA7]/10">
+          <h2 id="context" className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-left">
             Context & Challenge
           </h2>
-          <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-4">
+          <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
             The UX industry demands faster, data-driven, and more innovative solutions. AI offers new opportunities to
             tackle common design challenges, including:
           </p>
-          <ul className="font-montserrat text-md text-[#5f5f5f]/80 list-disc pl-6 space-y-2 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
+          
+          {/* Made list responsive */}
+          <ul className="font-montserrat text-sm sm:text-md text-[#5f5f5f]/80 list-disc pl-4 sm:pl-6 space-y-2 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
             <li>Processing large volumes of user data can impact decision-making with data overload.</li>
             <li>Delivering high-quality designs under tight deadlines can create pressure and limit exploration.</li>
             <li>
@@ -185,14 +234,17 @@ export default function AIProcessPage() {
               Limited research and testing resources can restrict the depth of insights available for decision-making.
             </li>
           </ul>
-          <p className="font-montserrat text-lg text-[#5f5f5f]/80 mt-6 mb-4">
+          
+          <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mt-4 sm:mt-6 mb-4">
             To address these challenges, I integrated AI into my workflow to enhance creativity, speed, and
             problem-solving by focusing on:
           </p>
-          <ul className="font-montserrat text-md text-[#5f5f5f]/80 list-disc pl-6 space-y-2 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
+          
+          {/* Made list responsive */}
+          <ul className="font-montserrat text-sm sm:text-md text-[#5f5f5f]/80 list-disc pl-4 sm:pl-6 space-y-2 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
             <li>Leveraging ChatGPT and Otter.ai to extract key data trends and reduce bias in user research.</li>
             <li>
-              Streamlined development by using Claude to refine Vercel’s codebase while learning React through
+              Streamlined development by using Claude to refine Vercel's codebase while learning React through
               iterative, AI-assisted problem-solving.
             </li>
             <li>
@@ -204,18 +256,19 @@ export default function AIProcessPage() {
               ethical oversight at every stage.
             </li>
           </ul>
-          <p className="font-montserrat text-lg text-[#5f5f5f]/80 mt-6 mb-0">
+          
+          <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mt-4 sm:mt-6 mb-0">
             By embracing AI as a strategic partner, I optimized my portfolio-building process while maintaining
             thoughtful, user-centered design decisions.
           </p>
         </section>
       </section>
 
-      {/* AI-Enhanced UX Design Process */}
-      <section id="process" className="max-w-6xl mx-auto px-4">
-        <div className="my-10 pt-6 max-w-[95%] mx-auto border-t border-[#007EA7]/10">
-          <div className="flex flex-col items-center mb-6">
-            <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-4 text-center">
+{/* AI-Enhanced UX Design Process - Made responsive */}
+<section id="process" className="max-w-6xl mx-auto px-4">
+        <div className="my-8 sm:my-10 pt-6 max-w-full sm:max-w-[95%] mx-auto border-t border-[#007EA7]/10">
+          <div className="flex flex-col items-center mb-4 sm:mb-6">
+            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-center">
               AI-Enhanced UX Design Process
             </h2>
             <Image
@@ -224,17 +277,19 @@ export default function AIProcessPage() {
               width={600}
               height={300}
               className="w-full max-w-3xl"
+              priority // Important diagram
+              sizes="(max-width: 768px) 100vw, 768px" // Added responsive image sizing
             />
           </div>
 
-          {/* AI-Enhanced UX Design Process Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 mb-2 max-w-[95%] mx-auto">
-            {/* Card 1 - Content & Layout (ChatGPT & Vercel)*/}
-            <div className="bg-white p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
-              <h3 className="font-space-grotesk text-xl font-semibold text-[#007EA7] mb-4 text-center">
+          {/* AI-Enhanced UX Design Process Cards - Made responsive */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mt-6 sm:mt-8 mb-2 max-w-full sm:max-w-[95%] mx-auto">
+            {/* Card 1 - Content & Layout (ChatGPT & Vercel) */}
+            <div className="bg-white p-4 sm:p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
+              <h3 className="font-space-grotesk text-lg sm:text-xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-center">
                 Content & Layout (ChatGPT & Vercel)
               </h3>
-              <ul className="font-montserrat text-sm text-[#5f5f5f]/80 list-disc pl-4 space-y-2 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
+              <ul className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80 list-disc pl-4 space-y-2 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
                 <li>Used AI to augment content, improving hierarchy and eliminating redundancy.</li>
                 <li>
                   Utilized Vercel to refine and learn code, automate tasks, and optimize problem-solving to improve
@@ -247,12 +302,12 @@ export default function AIProcessPage() {
               </ul>
             </div>
 
-            {/* Card 4 - Data Research & Analysis (ChatGPT & Otter.ai) */}
-            <div className="bg-white p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
-              <h3 className="font-space-grotesk text-xl font-semibold text-[#007EA7] mb-4 text-center">
+            {/* Card 2 - Data Research & Analysis (ChatGPT & Otter.ai) */}
+            <div className="bg-white p-4 sm:p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
+              <h3 className="font-space-grotesk text-lg sm:text-xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-center">
                 Data Research & Analysis (ChatGPT & Otter.ai)
               </h3>
-              <ul className="font-montserrat text-sm text-[#5f5f5f]/80 list-disc pl-4 space-y-2 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
+              <ul className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80 list-disc pl-4 space-y-2 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
                 <li>Integrated AI-driven user research to identify patterns and enhance UX strategies.</li>
                 <li>
                   Used Otter.ai to summarize classes and conversations, extracting key insights to refine information
@@ -265,12 +320,12 @@ export default function AIProcessPage() {
               </ul>
             </div>
 
-            {/* Card 3 - UX Work Visualization (Figma & ChatGPT)*/}
-            <div className="bg-white p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
-              <h3 className="font-space-grotesk text-xl font-semibold text-[#007EA7] mb-4 text-center">
+            {/* Card 3 - UX Work Visualization (Figma & ChatGPT) */}
+            <div className="bg-white p-4 sm:p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
+              <h3 className="font-space-grotesk text-lg sm:text-xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-center">
                 UX Work Visualization (Figma & ChatGPT)
               </h3>
-              <ul className="font-montserrat text-sm text-[#5f5f5f]/80 list-disc pl-4 space-y-2 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
+              <ul className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80 list-disc pl-4 space-y-2 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
                 <li>
                   Designed Figma graphics and process diagrams, blending research insights for compelling UX narratives.
                 </li>
@@ -278,16 +333,15 @@ export default function AIProcessPage() {
                   Used ChatGPT to generate content suggestions for graphs and charts, refining ideas through
                   brainstorming and visualizing insights in Figma.
                 </li>
-               
               </ul>
             </div>
 
-            {/* Card 2 - Visual Enhancement (MidJourney) */}
-            <div className="bg-white p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
-              <h3 className="font-space-grotesk text-xl font-semibold text-[#007EA7] mb-4 text-center">
+            {/* Card 4 - Visual Enhancement (MidJourney) */}
+            <div className="bg-white p-4 sm:p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
+              <h3 className="font-space-grotesk text-lg sm:text-xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-center">
                 Visual Enhancement (MidJourney)
               </h3>
-              <ul className="font-montserrat text-sm text-[#5f5f5f]/80 list-disc pl-4 space-y-2 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
+              <ul className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80 list-disc pl-4 space-y-2 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
                 <li>
                   Refined AI-generated visuals using iterative prompting to align with portfolio branding and design
                   tone.
@@ -301,27 +355,29 @@ export default function AIProcessPage() {
           </div>
         </div>
       </section>
-      {/* WHAT I DID */}
+      
+      {/* WHAT I DID - Made responsive */}
       <section id="what-i-did" className="max-w-6xl mx-auto px-4">
-        <div className="mb-6 mt-8 pt-6 max-w-[95%] mx-auto border-t border-[#007EA7]/10">
-          <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-4 text-left">What I Did</h2>
+        <div className="mb-4 sm:mb-6 mt-6 sm:mt-8 pt-6 max-w-full sm:max-w-[95%] mx-auto border-t border-[#007EA7]/10">
+          <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-left">What I Did</h2>
 
           <div className="w-full">
-            <p className="font-montserrat text-base text-[#5f5f5f]/80 mb-4">
+            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
               I applied an iterative UX design process to build this portfolio, integrating AI-driven tools,
               user-centered workflows, and continuous testing to refine both functionality and experience.
             </p>
           </div>
         </div>
-        {/* Portfolio Development Through Problem-Solving & Iteration */}
-        <div className="mt-4 mb-8 max-w-[95%] mx-auto">
-          <h3 className="font-space-grotesk text-2xl font-medium text-[#007EA7] mb-4 text-left">
+        
+        {/* Portfolio Development Through Problem-Solving & Iteration - Made responsive */}
+        <div className="mt-4 mb-6 sm:mb-8 max-w-full sm:max-w-[95%] mx-auto">
+          <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-3 sm:mb-4 text-left">
             Portfolio Development Through Problem-Solving & Iteration
           </h3>
 
-          {/* Product-style Carousel with Sliding Animations */}
-          <div className="relative w-full p-8 bg-white rounded-lg shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff] mb-8">
-            <div className="relative h-[350px] md:h-[400px] overflow-hidden">
+          {/* Made carousel responsive */}
+          <div className="relative w-full p-4 sm:p-8 bg-white rounded-lg shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff] mb-6 sm:mb-8">
+            <div className="relative h-[280px] sm:h-[350px] md:h-[400px] overflow-hidden">
               {portfolioDesigns.map((design, index) => {
                 // Calculate position relative to current index
                 let position = index - currentIndex
@@ -351,9 +407,15 @@ export default function AIProcessPage() {
                     }}
                   >
                     <div className="relative w-full h-full">
-                      <Image src={design.src || "/placeholder.svg"} alt={design.alt} fill className="object-contain" />
+                      <Image 
+                        src={design.src || "/placeholder.svg"} 
+                        alt={design.alt} 
+                        fill 
+                        className="object-contain"
+                        sizes="(max-width: 768px) 100vw, 33vw" // Added responsive image sizing
+                      />
                     </div>
-                    <div className="absolute bottom-0 left-0 right-0 bg-white text-[#007EA7] text-center py-1">
+                    <div className="absolute bottom-0 left-0 right-0 bg-white text-[#007EA7] text-center py-1 text-xs sm:text-sm">
                       {design.version}
                     </div>
                   </div>
@@ -361,8 +423,8 @@ export default function AIProcessPage() {
               })}
             </div>
 
-            {/* Navigation arrows centered below */}
-            <div className="flex justify-center mt-6 space-x-12">
+            {/* Navigation arrows centered below - Made responsive */}
+            <div className="flex justify-center mt-4 sm:mt-6 space-x-8 sm:space-x-12">
               <button
                 className="text-[#007EA7] hover:text-[#005f7f] transition-colors"
                 onClick={prevSlide}
@@ -396,20 +458,22 @@ export default function AIProcessPage() {
               </button>
             </div>
           </div>
-          {/* Problem Solving & Iteration Paragraph*/}
-          <div className="w-full mt-6">
-            <p className="font-montserrat text-base text-[#5f5f5f]/80 mb-6">
+          
+          {/* Problem Solving & Iteration Paragraph - Made responsive */}
+          <div className="w-full mt-4 sm:mt-6">
+            <p className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 mb-4 sm:mb-6">
               Developing a custom AI-powered UX portfolio in Vercel required continuous testing and refinement to
               balance AI efficiency with design integrity. I combined AI-generated outputs with hands-on UX adjustments
               to resolve limitations and ensure seamless integration. This adaptive process strengthened my ability to
               guide AI workflows, enhance usability, and push creative boundaries.
             </p>
-            <ul className="font-montserrat text-base text-[#5f5f5f]/80 list-disc pl-6 space-y-2 mb-6 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
+            
+            {/* Made list responsive */}
+            <ul className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 list-disc pl-4 sm:pl-6 space-y-2 mb-4 sm:mb-6 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
               <li>
                 Iterated through hundreds of design and code versions in V0, refining AI-generated layouts for usability
                 and visual consistency.
               </li>
-             
               <li>
                 Solved challenges with V0's machine learning, version control conflicts, and AI's handling of complex
                 design inputs.
@@ -421,14 +485,16 @@ export default function AIProcessPage() {
             </ul>
           </div>
         </div>
-        {/* Ethical Considerations in AI-Assisted Design */}
-        <div className="mb-8 mt-10 pt-6 max-w-[95%] mx-auto border-t border-[#007EA7]/10">
-          <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-4 text-left">
+
+        
+        {/* Ethical Considerations in AI-Assisted Design - Made responsive */}
+        <div className="mb-6 sm:mb-8 mt-8 sm:mt-10 pt-6 max-w-full sm:max-w-[95%] mx-auto border-t border-[#007EA7]/10">
+          <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-left">
             Ethical Considerations in AI-Assisted Design
           </h2>
 
           <div className="w-full">
-            <p className="font-montserrat text-base text-[#5f5f5f]/80 mb-4">
+            <p className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 mb-4">
               AI's role in design continues to spark debate, particularly around its impact on creative integrity. While
               some view AI as a threat to originality, others, like design strategist Mia Blume, see it as a shift in
               process rather than a replacement for human creativity. AI can replicate design elements but lacks the
@@ -437,12 +503,12 @@ export default function AIProcessPage() {
               by maintaining transparency, evaluating ethical implications, and ensuring AI-assisted decisions support
               rather than replace human creativity.
             </p>
-            <p className="font-montserrat text-base text-[#5f5f5f]/80 mb-4">
+            <p className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 mb-4">
               Throughout my work, I've focused on responsible AI use by:
             </p>
-            <ul className="font-montserrat text-base text-[#5f5f5f]/80 list-disc pl-6 space-y-2 mb-6 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
+            {/* Made list responsive */}
+            <ul className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 list-disc pl-4 sm:pl-6 space-y-2 mb-4 sm:mb-6 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
               <li>Maintaining transparency in AI-assisted design workflows.</li>
-           
               <li>
                 Evaluating ethical implications of AI-generated designs, ensuring they align with accessibility and
                 inclusivity.
@@ -455,38 +521,40 @@ export default function AIProcessPage() {
           </div>
         </div>
 
-        {/* Outcome & Impact */}
-        <div id="outcome" className="mb-8 mt-10 pt-6 max-w-[95%] mx-auto border-t border-[#007EA7]/10">
-          <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-4 text-left">Outcome & Impact</h2>
-          <p className="font-montserrat text-lg text-[#5f5f5f]/80 mt-6 mb-6">
+        {/* Outcome & Impact - Made responsive */}
+        <div id="outcome" className="mb-6 sm:mb-8 mt-8 sm:mt-10 pt-6 max-w-full sm:max-w-[95%] mx-auto border-t border-[#007EA7]/10">
+          <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-left">Outcome & Impact</h2>
+          <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mt-4 sm:mt-6 mb-4 sm:mb-6">
             The integration of AI into the UX design process has yielded significant improvements across multiple
             dimensions while setting the stage for future enhancements.
           </p>
-          <ul className="space-y-3 list-disc pl-6 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
-            <li className="font-montserrat text-md text-[#5f5f5f]/80">
+          {/* Made list responsive */}
+          <ul className="space-y-2 sm:space-y-3 list-disc pl-4 sm:pl-6 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
+            <li className="font-montserrat text-sm sm:text-md text-[#5f5f5f]/80">
               Increased design efficiency by allowing faster iteration and exploration of more design concepts.
             </li>
-            <li className="font-montserrat text-md text-[#5f5f5f]/80">
+            <li className="font-montserrat text-sm sm:text-md text-[#5f5f5f]/80">
               Enhanced creativity and innovation by introducing novel design directions that might not have been
               considered through traditional methods.
             </li>
-            <li className="font-montserrat text-md text-[#5f5f5f]/80">
+            <li className="font-montserrat text-sm sm:text-md text-[#5f5f5f]/80">
               Improved user research insights by analyzing larger datasets and identifying patterns that human
               researchers might miss.
             </li>
-            <li className="font-montserrat text-md text-[#5f5f5f]/80">
+            <li className="font-montserrat text-sm sm:text-md text-[#5f5f5f]/80">
               Expanded AI-assisted workflows, refining automation processes for content generation and problem-solving.
             </li>
-            <li className="font-montserrat text-md text-[#5f5f5f]/80">
+            <li className="font-montserrat text-sm sm:text-md text-[#5f5f5f]/80">
               Streamlined development cycles, ensuring AI-driven design principles can be effectively applied in future
               roles.
             </li>
           </ul>
-          <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-6 mt-8">
+          <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4 sm:mb-6 mt-6 sm:mt-8">
             This portfolio serves as an evolving example of AI-human collaboration in UX design, demonstrating how AI
             can complement creativity, strategy, and problem-solving to create more effective user experiences.
           </p>
         </div>
+
 
         {/* Call to Action */}
         <div className="mb-0 mt-8 text-center max-w-[95%] mx-auto py-6">
@@ -547,23 +615,26 @@ export default function AIProcessPage() {
         </div>
       </section>
 
-      {/* Image Modal */}
-      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+      {/* Image Modal - Fixed implementation for better UX */}
+      <Dialog 
+        open={selectedImage !== null} 
+        onOpenChange={(isOpen) => {
+          if (!isOpen) setSelectedImage(null);
+        }}
+      >
         <DialogContent className="max-w-[90vw] max-h-[90vh] p-0 overflow-hidden bg-transparent border-none shadow-none">
           <DialogTitle className="sr-only">Image Preview</DialogTitle>
           {selectedImage && (
             <div className="relative w-full h-full flex items-center justify-center">
               <Image
-                src={selectedImage || "/placeholder.svg"}
+                src={selectedImage}
                 alt="Enlarged view"
                 width={1200}
                 height={800}
                 className="max-w-full max-h-[85vh] object-contain rounded-lg"
+                sizes="100vw" // Added responsive image sizing
               />
-              <DialogClose
-                className="absolute top-2 right-2 bg-[#007EA7]/80 hover:bg-[#007EA7] text-white rounded-full w-8 h-8 flex items-center justify-center transition-colors"
-                aria-label="Close"
-              >
+              <DialogClose className="absolute top-2 right-2 bg-[#007EA7]/80 hover:bg-[#007EA7] text-white rounded-full w-8 h-8 flex items-center justify-center transition-colors">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -587,4 +658,3 @@ export default function AIProcessPage() {
     </main>
   )
 }
-

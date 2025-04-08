@@ -5,17 +5,25 @@ import Image from "next/image"
 import Link from "next/link"
 import Footer from "@/components/footer"
 import { ArrowLeft } from "lucide-react"
+import { useState } from "react"
+import { Dialog, DialogContent, DialogClose, DialogTitle } from "@/components/ui/dialog"
 import Head from "next/head" // Added for resource hints
 
-export default function AppleDetailsPage() {
+export default function AIDetailsPage() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+
+  const openImageModal = (imageSrc: string) => {
+    setSelectedImage(imageSrc)
+  }
+
   return (
     <main className="min-h-screen bg-white pb-16">
-      {/* CHANGE 1: Added Head component with resource hints */}
+      {/* Added Head component with resource hints */}
       <Head>
         {/* Preload critical images that appear above the fold */}
         <link 
           rel="preload" 
-          href="/images/apple/Logo_Apple.svg" 
+          href="/images/vam_ai/Logo_VAM_AI.svg" 
           as="image" 
           type="image/svg+xml"
         />
@@ -23,156 +31,250 @@ export default function AppleDetailsPage() {
         {/* Prefetch other important images that will be needed soon */}
         <link 
           rel="prefetch" 
-          href="/images/apple/Apple300px.png" 
+          href="/images/vam_ai/AI_Ven_Diagram.png" 
           as="image"
-        />
-        
-        <link 
-          rel="prefetch" 
-          href="/images/apple/Challnge_Solutions.svg" 
-          as="image" 
-          type="image/svg+xml"
         />
       </Head>
       
       <Nav />
       
-      {/* CHANGE 2: Updated navigation banner with improved styling */}
-      <div className="sticky top-16 mt-0 z-20 w-full bg-[#C7F6EA]/50 backdrop-blur-sm border-y border-[#007EA7]/10">
+      {/* Updated navigation banner with AI's light purple color */}
+      <div className="sticky top-16 mt-0 z-20 w-full bg-[#F0E6FF]/50 backdrop-blur-sm border-y border-[#007EA7]/10">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center">
           <Link 
-            href="/uc/apple/process" 
-            className="text-[#007EA7] hover:text-[#005f7f] font-medium text-sm flex items-center gap-2 transition-transform hover:translate-x-1"
+            href="/uc/ai/process" 
+            className="text-[#7209B7] hover:text-[#470672] font-medium text-sm flex items-center gap-2 transition-transform hover:translate-x-1"
           >
             <div className="flex items-center bg-white/70 px-3 py-1.5 rounded-full shadow-sm">
               <ArrowLeft className="w-4 h-4 mr-1" />
-              <span>Curious about the thinking behind this Use Case? Let&apos;s walk through the process.</span>
+              <span>Curious about AI UX? Let's explore the process.</span>
             </div>
           </Link>
         </div>
       </div>
 
-      {/* Content Section with Logo and Header */}
+      {/* Added logo to title section and made it responsive */}
       <div className="max-w-6xl mx-auto px-4 py-12 mt-16">
         <div>
-          {/* CHANGE 3: Made title and logo section responsive */}
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12 mb-8">
-            {/* Apple Logo - Added responsive sizing */}
+            {/* AI Logo - Added responsive sizing */}
             <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 flex-shrink-0">
               <Image
-                src="/images/apple/Logo_Apple.svg"
-                alt="Apple Logo"
+                src="/images/vam_ai/Logo_VAM_AI.svg"
+                alt="AI Design Logo"
                 fill
                 className="object-contain"
-                priority // CHANGE 4: Added priority to preload this important image
+                priority // Added priority to preload this important image
               />
             </div>
 
             {/* Title - Improved responsiveness */}
             <h1 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold text-[#007EA7] mb-4 sm:mb-8 text-center md:text-left">
-              Driving UX Innovation in Customer Support Applications
+              Building, Learning & Innovating with AI UX
             </h1>
           </div>
 
-          {/* CHANGE 5: Made subtitle responsive */}
-          <h3 className="font-montserrat text-lg sm:text-xl text-[#2C3D4D] mt-6 sm:mt-8 mb-8 sm:mb-12 text-center md:text-left">
-            The quick overview of my role in revolutionizing Apple&apos;s internal customer support platform.
+          {/* Made subtitle responsive */}
+          <h3 className="font-space-grotesk text-lg sm:text-xl text-[#2C3D4D] mt-6 sm:mt-8 mb-8 sm:mb-12 text-center md:text-left">
+            As a Senior UX Designer, I explored AI-powered tools to enhance my design and development workflow,
+            streamlining processes and pushing beyond conventional UX approaches.
           </h3>
+
+          {/* Made bullet list responsive */}
+          <ul className="font-montserrat text-sm sm:text-base text-[#2C3D4D] mt-4 sm:mt-6 text-center md:text-left list-none space-y-2 max-w-full md:max-w-[90%]">
+            <li className="flex items-start justify-center md:justify-start">
+              <span className="mr-2">•</span>
+              <span>
+                Developed this UX portfolio using AI-driven tools, integrating automation and iterative problem-solving
+                while maintaining ethical AI practices
+              </span>
+            </li>
+            <li className="flex items-start justify-center md:justify-start">
+              <span className="mr-2">•</span>
+              <span>
+                Refined development workflows using Claude to optimize Vercel's codebase while simultaneously learning
+                React and working in Github, terminal and localhost3000
+              </span>
+            </li>
+            <li className="flex items-start justify-center md:justify-start">
+              <span className="mr-2">•</span>
+              <span>
+                Leveraged AI for UI design and content generation, utilizing MidJourney, ChatGPT, and Claude to enhance
+                efficiency
+              </span>
+            </li>
+            <li className="flex items-start justify-center md:justify-start">
+              <span className="mr-2">•</span>
+              <span>Built an AI-powered chatbot, experimenting with AI-assisted interactions and automation</span>
+            </li>
+            <li className="flex items-start justify-center md:justify-start">
+              <span className="mr-2">•</span>
+              <span>
+                Earned the AI Upgrade for Creative Pros certification, mastering AI-driven UX workflows to enhance
+                creativity and adapt to AI-powered design, UX strategy, and storytelling
+              </span>
+            </li>
+            <li className="flex items-start justify-center md:justify-start">
+              <span className="mr-2">•</span>
+              <span>
+                Ensuring AI-assisted decisions support accessibility, inclusivity, and human creativity, to maintain
+                ethical oversight at every stage
+              </span>
+            </li>
+          </ul>
         </div>
       </div>
 
+      {/* Remaining content with responsive improvements */}
       <div className="max-w-6xl mx-auto px-4 py-8">
         <section className="mb-12 sm:mb-16">
           <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">Background</h2>
-          
-          {/* CHANGE 6: Improved responsive grid for better mobile layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <div>
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 text-left">
-              Apple is constantly innovating to enhance customer interactions. To take their customer service experience
-              to the next level, they integrated a video-guided shopping feature into their internal support platform,
-              Prism. The goal was to bring the in-store Genius Bar experience online via video chat, enabling
-              specialists to assist customers in real-time with product recommendations and purchasing decisions.
+              The rapid advancement of AI technologies has created new opportunities to enhance the UX design process.
+              From generating initial concepts to conducting user research and testing, AI tools can augment human
+              creativity and improve efficiency. As a designer who embraces innovation, I've developed a framework for
+              integrating AI into the design workflow to deliver better results for clients and users.
             </p>
-            
-            {/* CHANGE 7: Made image container responsive */}
-            <div className="relative aspect-square w-full max-w-[250px] sm:max-w-[300px] mx-auto md:ml-[50px] lg:ml-[100px]">
-              <Image
-                src="/images/apple/Apple300px.png"
-                alt="Apple Specialist ready to provide one-on-one shopping assistance online or in store"
-                fill
-                className="object-contain"
-                loading="eager" // Important image
-              />
-            </div>
           </div>
 
           <div className="mt-8 sm:mt-12 pt-8 sm:pt-12 border-t border-[#007EA7]/10">
             <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">The Challenge</h2>
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-6 text-left">
-              Apple&apos;s specialists needed a seamless way to adopt a new component within their existing internal
-              application with minimal onboarding. Their key goals were to increase close rates, drive upsells, and
-              improve user satisfaction while ensuring a frictionless experience. The challenge was to integrate an
-              existing API into their current interface, enabling specialists to video chat with customers and guide
-              them through online shopping. The solution also had to be adaptive across devices, scalable for future
-              enhancements, and compliant with privacy and security standards.
+              The UX industry demands faster, data-driven, and more innovative solutions. AI offers new opportunities to
+              tackle common design challenges, including processing large volumes of user data, delivering high-quality designs 
+              under tight deadlines, overcoming cognitive biases, balancing innovation with usability, and working with limited 
+              research and testing resources.
             </p>
+          </div>
+
+          <div className="mt-8 sm:mt-12 pt-8 sm:pt-12 border-t border-[#007EA7]/10">
+            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">What I Did</h2>
             
-            {/* CHANGE 8: Added responsive image attributes */}
-            <div className="relative w-full aspect-video mb-6 sm:mb-8">
-              <Image
-                src="/images/apple/Challnge_Solutions.svg"
-                alt="Challenges and Solutions Diagram"
-                fill
-                className="object-contain rounded-lg"
-                sizes="(max-width: 1200px) 100vw, 1200px"
-              />
+            {/* AI-Enhanced UX Design Process section with responsive image */}
+            <div className="mb-8 sm:mb-12">
+              <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-4 sm:mb-6 text-left">
+                AI-Enhanced UX Design Process
+              </h3>
+              <div className="flex justify-center mb-6">
+                <Image
+                  src="/images/vam_ai/AI_Ven_Diagram.png"
+                  alt="AI-Enhanced UX Design Process Diagram showing the interconnection between Vercel, Claude, ChatGPT, Figma, and Midjourney"
+                  width={600}
+                  height={300}
+                  className="w-full max-w-3xl"
+                  loading="eager" // Important image
+                  sizes="(max-width: 768px) 100vw, 768px" // Added responsive image sizing
+                />
+              </div>
+              
+              {/* Made grid responsive */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mt-4 sm:mt-6">
+                {/* Card 1 - Content & Layout */}
+                <div className="bg-white p-4 sm:p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
+                  <h4 className="font-space-grotesk text-lg sm:text-xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-center">
+                    Content & Layout (ChatGPT & Vercel)
+                  </h4>
+                  <ul className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80 list-disc pl-4 space-y-2 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
+                    <li>Used AI to augment content, improving hierarchy and eliminating redundancy.</li>
+                    <li>
+                      Utilized Vercel to refine and learn code, automate tasks, and optimize problem-solving to improve
+                      efficiency and save time.
+                    </li>
+                    <li>
+                      Refined AI-assisted content generation workflows to maintain a cohesive narrative
+                      across the portfolio.
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Card 2 - Data Research & Analysis */}
+                <div className="bg-white p-4 sm:p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
+                  <h4 className="font-space-grotesk text-lg sm:text-xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-center">
+                    Data Research & Analysis (ChatGPT & Otter.ai)
+                  </h4>
+                  <ul className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80 list-disc pl-4 space-y-2 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
+                    <li>Integrated AI-driven user research to identify patterns and enhance UX strategies.</li>
+                    <li>
+                      Used Otter.ai to summarize classes and conversations, extracting key insights to refine information
+                      architecture and improve UX strategies.
+                    </li>
+                    <li>
+                      Cross-referenced AI-generated research with traditional UX methodologies to ensure balanced,
+                      data-driven decision-making.
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Card 3 - UX Work Visualization */}
+                <div className="bg-white p-4 sm:p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
+                  <h4 className="font-space-grotesk text-lg sm:text-xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-center">
+                    UX Work Visualization (Figma & ChatGPT)
+                  </h4>
+                  <ul className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80 list-disc pl-4 space-y-2 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
+                    <li>
+                      Designed Figma graphics and process diagrams, blending research insights for compelling UX narratives.
+                    </li>
+                    <li>
+                      Used ChatGPT to generate content suggestions for graphs and charts, refining ideas through
+                      brainstorming and visualizing insights in Figma.
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Card 4 - Visual Enhancement */}
+                <div className="bg-white p-4 sm:p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
+                  <h4 className="font-space-grotesk text-lg sm:text-xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-center">
+                    Visual Enhancement (MidJourney)
+                  </h4>
+                  <ul className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80 list-disc pl-4 space-y-2 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
+                    <li>
+                      Refined AI-generated visuals using iterative prompting to align with portfolio branding and design
+                      tone.
+                    </li>
+                    <li>
+                      Overcame AI hallucinations in Midjourney by developing creative prompt strategies that allowed me to
+                      guide the tool toward specific, intentional visual outcomes.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Ethical Considerations section */}
+            <div className="mt-8 sm:mt-12">
+              <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-4 sm:mb-6 text-left">
+                Ethical Considerations in AI-Assisted Design
+              </h3>
+              <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4 text-left">
+                Throughout my work, I've focused on responsible AI use by maintaining transparency, evaluating ethical implications, 
+                and ensuring AI-assisted decisions support accessibility, inclusivity, and human creativity rather than replacing 
+                the creative aspects that only humans can provide.
+              </p>
+              <ul className="font-montserrat text-sm sm:text-md text-[#5f5f5f]/80 list-disc pl-4 sm:pl-6 space-y-2 sm:space-y-3 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
+                <li>Maintaining transparency in AI-assisted design workflows.</li>
+                <li>
+                  Evaluating ethical implications of AI-generated designs, ensuring they align with accessibility and
+                  inclusivity.
+                </li>
+                <li>
+                  Documenting AI-driven design choices, highlighting where human oversight refined AI output for better UX
+                  outcomes.
+                </li>
+              </ul>
             </div>
           </div>
         </section>
 
         <section className="mb-12 sm:mb-16 pt-8 sm:pt-12 border-t border-[#007EA7]/10">
-          <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">What I Did</h2>
-          <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4 sm:mb-6 text-left">
-            I led the UX strategy and design for this initiative, ensuring a frictionless, intuitive experience by:
-          </p>
-          
-          {/* CHANGE 9: Made list text responsive */}
-          <ul className="font-montserrat text-sm sm:text-md text-[#5f5f5f]/80 list-disc pl-4 sm:pl-6 space-y-2 sm:space-y-4 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
-            <li>
-              Designing a seamless UI that integrated video chat, guided shopping, and live customer engagement.
-            </li>
-            <li>
-              Collaborating closely with Apple PMs, engineers, and stakeholders to iterate based on feedback and refine
-              the experience.
-            </li>
-            <li>
-              Ensuring easy adoption by leveraging Apple&apos;s existing UI patterns and minimizing new learning curves.
-            </li>
-            <li>
-              Building scalable interactions to maintain privacy, handle customer interactions smoothly, and optimize
-              purchase conversions.
-            </li>
-          </ul>
-        </section>
-
-        <section className="mb-12 sm:mb-16 pt-8 sm:pt-12 border-t border-[#007EA7]/10">
           <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-4 sm:mb-8 text-left">Role</h2>
           <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 text-left">
-            Senior UX Designer, led UX Strategy, Interaction Design, and Design Systems
+            Senior UX Designer, AI Integration, Portfolio Development, UI Design
           </p>
         </section>
 
-        {/* CHANGE 10: Made CTA section more responsive */}
+        {/* Made CTA section responsive */}
         <div className="mt-12 sm:mt-16 flex flex-col items-center pb-8 sm:pb-12">
-          <p className="font-montserrat text-sm sm:text-md text-[#007EA7]/80 max-w-full sm:max-w-xl mb-4 sm:mb-8 text-center sm:text-left">
-            Interested in a behind-the-scenes look and detailed presentation?{" "}
-            <Link href="/contact" className="text-[#007EA7] hover:text-[#005f7f] underline">
-              Contact me
-            </Link>{" "}
-            to schedule a portfolio review. Due to Apple&apos;s NDA, the actual work is only available to view in person.
-          </p>
-          
-          {/* CHANGE 11: Used Link component instead of button with nested anchor */}
           <Link 
             href="/contact"
             className="rounded-[100px] border border-[#F7F6F6] bg-white/30 hover:bg-white/60 text-[#007EA7] px-6 sm:px-8 py-2 sm:py-2.5 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0.5"
@@ -181,6 +283,46 @@ export default function AppleDetailsPage() {
           </Link>
         </div>
       </div>
+
+      {/* Fixed Image Modal implementation */}
+      <Dialog 
+        open={selectedImage !== null} 
+        onOpenChange={(isOpen) => {
+          if (!isOpen) setSelectedImage(null);
+        }}
+      >
+        <DialogContent className="max-w-[90vw] max-h-[90vh] p-0 overflow-hidden bg-transparent border-none shadow-none">
+          <DialogTitle className="sr-only">Image Preview</DialogTitle>
+          {selectedImage && (
+            <div className="relative w-full h-full flex items-center justify-center">
+              <Image
+                src={selectedImage}
+                alt="Enlarged view"
+                width={1200}
+                height={800}
+                className="max-w-full max-h-[85vh] object-contain rounded-lg"
+                sizes="100vw"
+              />
+              <DialogClose className="absolute top-2 right-2 bg-[#007EA7]/80 hover:bg-[#007EA7] text-white rounded-full w-8 h-8 flex items-center justify-center transition-colors">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </DialogClose>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
       <Footer />
     </main>
   )
