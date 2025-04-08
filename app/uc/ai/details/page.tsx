@@ -58,7 +58,7 @@ export default function AIDetailsPage() {
         <div>
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12 mb-8">
             {/* AI Logo - Added responsive sizing */}
-            <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 flex-shrink-0">
+            <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 flex-shrink-0">
               <Image
                 src="/images/vam_ai/Logo_VAM_AI.svg"
                 alt="AI Design Logo"
