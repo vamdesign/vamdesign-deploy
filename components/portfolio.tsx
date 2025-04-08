@@ -72,6 +72,22 @@ export default function Portfolio() {
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6 order-2 md:order-1">
+                {project.id === "ai-design" && (
+  <div className="flex items-center space-x-4 bg-white p-3 rounded-lg shadow-md border border-[#E6EAF0] mb-4">
+    <div className="relative w-12 h-12 flex-shrink-0">
+      <Image
+        src="/images/landing/Vicki-Morawietz-ea17.png" // Make sure this file is placed in the public folder
+        alt="The Upgrade Badge"
+        fill
+        className="object-contain"
+      />
+    </div>
+    <p className="text-sm text-[#2C3D4D] font-medium">
+      Featured in <a href="https://www.theupgrade.ai/blog/breaking-the-template-ai-assisted-portfolio" target="_blank" rel="noopener noreferrer" className="text-[#007EA7] underline hover:text-[#005f7f]">The Upgrade blog</a> as a successful capstone project
+    </p>
+  </div>
+)}
+
                   <h3 className="font-bold text-2xl md:text-3xl">{project.title}</h3>
                   <p className="text-[#5f5f5f] text-base md:text-lg font-montserrat font-light">
                     {project.description}
