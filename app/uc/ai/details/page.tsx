@@ -56,7 +56,7 @@ export default function AIDetailsPage() {
       {/* Added logo to title section and made it responsive */}
       <div className="max-w-6xl mx-auto px-4 py-12 mt-16">
         <div>
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12 mb-8">
+        <div className="flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-12 mb-8">
             {/* AI Logo - Added responsive sizing */}
             <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 flex-shrink-0">
               <Image
