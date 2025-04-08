@@ -74,6 +74,12 @@ export default function AIDetailsPage() {
             </h1>
           </div>
 
+          {/* Made subtitle responsive */}
+          <h3 className="font-space-grotesk text-lg sm:text-xl text-[#2C3D4D] mt-6 sm:mt-8 mb-8 sm:mb-12 text-center md:text-left">
+            As a Senior UX Designer, I explored AI-powered tools to enhance my design and development workflow,
+            streamlining processes and pushing beyond conventional UX approaches.
+          </h3>
+
           
         </div>
       </div>
