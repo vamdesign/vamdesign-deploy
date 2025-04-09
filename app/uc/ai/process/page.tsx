@@ -108,7 +108,7 @@ export default function AIProcessPage() {
       {/* Added logo to title section and made it responsive */}
       <div className="max-w-6xl mx-auto px-4 py-12 mt-16">
       <div className="flex items-center justify-center gap-3 mb-6">
-  <div className="relative w-8 h-8 flex-shrink-0">
+  <div className="relative w-12 h-12 flex-shrink-0">
     <Image
       src="/images/landing/Vicki-Morawietz-ea17.png"
       alt="The Upgrade Badge"
@@ -125,7 +125,7 @@ export default function AIProcessPage() {
     >
       Featured by The Upgrade blog
     </a>{" "}
-    for reimagining what an AI-powered UX portfolio can be.
+    for breaking the mold of AI-assisted portfolios.
   </p>
 </div>
 
