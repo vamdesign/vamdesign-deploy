@@ -67,6 +67,27 @@ export default function AIDetailsPage() {
                 priority // Added priority to preload this important image
               />
             </div>
+            <div className="flex items-center justify-center gap-3 mb-6">
+  <div className="relative w-8 h-8 flex-shrink-0">
+    <Image
+      src="/images/landing/Vicki-Morawietz-ea17.png"
+      alt="The Upgrade Badge"
+      fill
+      className="object-contain"
+    />
+  </div>
+  <p className="text-sm text-[#2C3D4D] font-medium text-center">
+    <a
+      href="https://www.theupgrade.ai/blog/breaking-the-template-ai-assisted-portfolio"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-[#007EA7] font-semibold hover:underline"
+    >
+      Featured by The Upgrade blog
+    </a>{" "}
+    for reimagining what an AI-powered UX portfolio can be.
+  </p>
+</div>
 
             {/* Title - Improved responsiveness */}
             <h1 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold text-[#007EA7] mb-4 sm:mb-8 text-center md:text-left">
