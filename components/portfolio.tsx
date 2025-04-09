@@ -98,7 +98,7 @@ export default function Portfolio() {
 
                   {project.id === "ai-design" && (
                     <div className="flex items-center gap-3 mt-3">
-                      <div className="relative w-10 h-10 flex-shrink-0">
+                      <div className="relative w-12 h-12 flex-shrink-0">
                         <Image
                           src="/images/landing/Vicki-Morawietz-ea17.png"
                           alt="The Upgrade Badge"
@@ -115,7 +115,7 @@ export default function Portfolio() {
                         >
                           Featured by The Upgrade blog
                         </a>{" "}
-                        for breaking the mold of AI-assisted portfolios.
+                        for creating an innovative UX Porfolio using AI.
                       </p>
                     </div>
                   )}

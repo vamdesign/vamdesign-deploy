@@ -125,7 +125,7 @@ export default function AIProcessPage() {
     >
       Featured by The Upgrade blog
     </a>{" "}
-    for breaking the mold of AI-assisted portfolios.
+    for creating an innovative UX Porfolio using AI.
   </p>
 </div>
 
