@@ -56,18 +56,7 @@ export default function AIDetailsPage() {
       {/* Added logo to title section and made it responsive */}
       <div className="max-w-6xl mx-auto px-4 py-12 mt-16">
         <div>
-        <div className="flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-12 mb-8">
-            {/* AI Logo - Added responsive sizing */}
-            <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 flex-shrink-0">
-              <Image
-                src="/images/vam_ai/Logo_VAM_AI.svg"
-                alt="AI Design Logo"
-                fill
-                className="object-contain"
-                priority // Added priority to preload this important image
-              />
-            </div>
-            <div className="flex items-center justify-center gap-3 mb-6">
+        <div className="flex items-center justify-center gap-3 mb-6">
   <div className="relative w-8 h-8 flex-shrink-0">
     <Image
       src="/images/landing/Vicki-Morawietz-ea17.png"
@@ -88,6 +77,18 @@ export default function AIDetailsPage() {
     for reimagining what an AI-powered UX portfolio can be.
   </p>
 </div>
+
+        <div className="flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-12 mb-8">
+            {/* AI Logo - Added responsive sizing */}
+            <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 flex-shrink-0">
+              <Image
+                src="/images/vam_ai/Logo_VAM_AI.svg"
+                alt="AI Design Logo"
+                fill
+                className="object-contain"
+                priority // Added priority to preload this important image
+              />
+            </div>
 
             {/* Title - Improved responsiveness */}
             <h1 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold text-[#007EA7] mb-4 sm:mb-8 text-center md:text-left">
