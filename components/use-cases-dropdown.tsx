@@ -18,6 +18,7 @@ const useCases = [
   { name: "Walmart – Fulfillment App", href: "/uc/walmart/details", isProtected: false },
   { name: "Littler – Management App", href: "/uc/litman/details", isProtected: true, cookieName: "auth-litman" },
   { name: "Riverbed – B2B UX Strategies", href: "/uc/river/details", isProtected: false },
+  { name: "Clara – Ethical Enterprise AI", href: "/uc/clara/details", isProtected: false },
   { name: "Designing with AI - UX Portfolio", href: "/uc/ai/details", isProtected: false },
 ]
 
