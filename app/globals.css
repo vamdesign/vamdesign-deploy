@@ -16,22 +16,15 @@
   }
 }
 
-html,
-body {
-  background-color: white;
-  min-height: 100%;
-}
-
 body {
   color: #ffffff;
 }
 
-/* Font families - from new file */
 .font-verdana {
   font-family: Verdana, Geneva, sans-serif;
 }
 
-/* Reference number styling - from new file with updated font size */
+/* Updated font size from 4pt to 7pt for better readability */
 .reference-number {
   font-family: Verdana, Geneva, sans-serif;
   font-size: 7pt !important;
@@ -40,45 +33,16 @@ body {
 .gradient-text {
   background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent;
 }
 
-/* Button styles - converted from @apply to regular CSS */
+/* Button styles */
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.375rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  transition: all 0.2s;
-  outline: none;
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.btn:focus-visible {
-  outline: 2px solid var(--ring);
-  outline-offset: 2px;
-}
-
-.btn:disabled {
-  opacity: 0.5;
-  pointer-events: none;
+  @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none;
 }
 
 .btn-outline {
-  border: 2px solid white;
-  color: white;
-  transition: all 0.2s;
-}
-
-.btn-outline:hover {
-  background-color: white;
-  color: #f97316;
-  transform: scale(1.05);
+  @apply border-2 border-white text-white hover:bg-white hover:text-orange-500 hover:scale-105;
 }
 
 @keyframes gradientAnimation {
@@ -93,7 +57,7 @@ body {
   }
 }
 
-/* bounceRight animation for Clara hotspot arrows - from new file */
+/* Added bounceRight animation for Clara hotspot arrows */
 @keyframes bounceRight {
   0%,
   10%,
@@ -117,40 +81,4 @@ body {
 
 .animate-bounce-right {
   animation: bounceRight 3s ease-in-out infinite;
-}
-
-/* Chrome, Safari, Edge autofill overrides - from original file */
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-textarea:-webkit-autofill:active,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus,
-select:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px white inset !important;
-  -webkit-text-fill-color: #666666 !important;
-  transition: background-color 5000s ease-in-out 0s;
-  background-color: white !important;
-}
-
-/* Firefox autofill overrides - from original file */
-input:autofill,
-textarea:autofill,
-select:autofill {
-  background-color: white !important;
-  color: #666666 !important;
-}
-
-/* Modern browsers using appearance property - from original file */
-@supports (-webkit-appearance: none) or (appearance: none) {
-  input:-webkit-autofill::first-line,
-  textarea:-webkit-autofill::first-line,
-  select:-webkit-autofill::first-line {
-    color: #666666 !important;
-  }
 }
