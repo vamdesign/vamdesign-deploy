@@ -6,10 +6,12 @@ import Image from "next/image"
 
 export default function ClaraProcessPage() {
   return (
-    <>
-      <main className="min-h-screen bg-white">
+    <>  {/* Sticky Navigation - only for this page */}
+      <div className="sticky top-0 z-50 bg-white shadow-sm">
         <Nav />
-        <div className="max-w-6xl mx-auto px-4 py-12 mt-16 pt-20">
+      </div>
+     <main className="min-h-screen bg-white">        
+        <div className="max-w-6xl mx-auto px-4 py-12 pt-8">
           <div>
             <div className="flex items-center gap-12 mb-8">
               {/* Clara Logo Placeholder */}
