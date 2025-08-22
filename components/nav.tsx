@@ -5,7 +5,8 @@ import { useState } from "react"
 import { Lock } from "lucide-react" // Import Lock from lucide-react
 import { Logo } from "./logo"
 import { LinkedInIcon } from "./linkedin-icon" 
-import { UseCasesDropdown } from "./use-cases-dropdown"
+import UseCasesDropdown from "./use-cases-dropdown"
+
 import Cookies from "js-cookie" // Import Cookies to check authentication
 
 export default function Nav() {
@@ -20,11 +21,12 @@ export default function Nav() {
       isProtected: true,
       cookieName: "auth-wellsf",
     },
-    { name: "Walmart – Fulfillment App", href: "/uc/walmart/details", isProtected: false },
-    { name: "Littler – Management App", href: "/uc/litman/details", isProtected: true, cookieName: "auth-litman" },
-    { name: "Riverbed – B2B UX Strategies", href: "/uc/river/details", isProtected: false },
-    { name: "Designing with AI - UX Portfolio", href: "/uc/ai/details", isProtected: false },
-  ]
+  { name: "Walmart – Fulfillment App", href: "/uc/walmart/details", isProtected: false },
+  { name: "Littler – Management App", href: "/uc/litman/details", isProtected: true, cookieName: "auth-litman" },
+  { name: "Riverbed – B2B UX Strategies", href: "/uc/river/details", isProtected: false },
+  { name: "Clara – Ethical Enterprise AI", href: "/uc/clara/process", isProtected: false },
+  { name: "Designing with AI - UX Portfolio", href: "/uc/ai/details", isProtected: false },
+]
   
   return (
     <nav className="fixed w-full z-50 bg-white/70 backdrop-blur-md shadow-md">
