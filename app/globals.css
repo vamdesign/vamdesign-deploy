@@ -16,14 +16,18 @@
   }
 }
 
-html,
-body {
-  background-color: white;
-  min-height: 100%;
-}
-
 body {
   color: #ffffff;
+}
+
+.font-verdana {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+/* Updated font size from 4pt to 7pt for better readability */
+.reference-number {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 7pt !important;
 }
 
 .gradient-text {
@@ -53,38 +57,28 @@ body {
   }
 }
 
-/* Chrome, Safari, Edge autofill overrides */
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-textarea:-webkit-autofill:active,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus,
-select:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px white inset !important;
-  -webkit-text-fill-color: #666666 !important;
-  transition: background-color 5000s ease-in-out 0s;
-  background-color: white !important;
-}
-
-/* Firefox autofill overrides */
-input:autofill,
-textarea:autofill,
-select:autofill {
-  background-color: white !important;
-  color: #666666 !important;
-}
-
-/* Modern browsers using appearance property */
-@supports (-webkit-appearance: none) or (appearance: none) {
-  input:-webkit-autofill::first-line,
-  textarea:-webkit-autofill::first-line,
-  select:-webkit-autofill::first-line {
-    color: #666666 !important;
+/* Added bounceRight animation for Clara hotspot arrows */
+@keyframes bounceRight {
+  0%,
+  10%,
+  20%,
+  30%,
+  40%,
+  50%,
+  60%,
+  70%,
+  80%,
+  90%,
+  100% {
+    transform: translateX(0);
   }
+  5%,
+  15%,
+  25% {
+    transform: translateX(8px);
+  }
+}
+
+.animate-bounce-right {
+  animation: bounceRight 3s ease-in-out infinite;
 }
