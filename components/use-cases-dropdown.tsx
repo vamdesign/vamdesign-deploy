@@ -30,7 +30,7 @@ const useCases: UseCase[] = [
     cookieName: "auth-litman",
   },
   { name: "Riverbed – B2B UX Strategies", href: "/uc/river/details" },
-  { name: "Clara – Ethical Enterprise AI", href: "/uc/clara/process" }, // Clara entry
+  { name: "Clara – Ethical Enterprise AI", href: "/uc/clara/" }, // Clara entry
   { name: "Designing with AI – UX Portfolio", href: "/uc/ai/details" },
 ]
 
