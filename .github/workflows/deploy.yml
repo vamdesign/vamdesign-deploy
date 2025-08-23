@@ -1,0 +1,30 @@
+name: Deploy static site to docs
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build   # with output:'export' this also exports to /out
+
+      - name: Publish to docs branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: docs       # target branch Porkbun will serve
+          folder: out        # the static export folder
+          clean: true
