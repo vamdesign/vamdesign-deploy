@@ -1,37 +1,59 @@
 "use client";
 
-import React, { useState } from "react";
+import * as React from "react";
 import Link from "next/link";
 import { ChevronDown, Lock } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 import Cookies from "js-cookie";
 
-// Use your list here (same names/links as you have now)
-const useCases = [
+export type UseCase = {
+  name: string;
+  href: string;
+  isProtected?: boolean;
+  cookieName?: string;
+};
+
+export const useCases: UseCase[] = [
   { name: "Apple – Internal Apps", href: "/uc/apple/details" },
   { name: "Wells Fargo – Legacy Integration", href: "/uc/wellsf/details", isProtected: true, cookieName: "auth-wellsf" },
   { name: "Walmart – Fulfillment App", href: "/uc/walmart/details" },
   { name: "Littler – Management App", href: "/uc/litman/details", isProtected: true, cookieName: "auth-litman" },
   { name: "Riverbed – B2B UX Strategies", href: "/uc/river/details" },
-  { name: "Clara – Ethical Enterprise AI", href: "/uc/clara/details" },
+  { name: "Clara – Ethical Enterprise AI", href: "/uc/clara" }, // no /details
   { name: "Designing with AI – UX Portfolio", href: "/uc/ai/details" },
 ];
 
-export default function UseCasesDropdown() {
-  const [open, setOpen] = useState(false);
+export function UseCasesDropdown() {
+  const [open, setOpen] = React.useState(false);
+  const pathname = usePathname();
+  const rootRef = React.useRef<HTMLDivElement | null>(null);
+
+  // close when focus leaves
+  const onBlur: React.FocusEventHandler<HTMLDivElement> = () => {
+    setTimeout(() => {
+      const el = rootRef.current;
+      if (el && document.activeElement && !el.contains(document.activeElement)) {
+        setOpen(false);
+      }
+    }, 0);
+  };
 
   return (
     <div
+      ref={rootRef}
       className="relative"
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
+      onBlur={onBlur}
     >
-      {/* Match other nav links; underline on hover; arrow flips */}
+      {/* trigger matches other links; underline on hover; arrow flips */}
       <button
         onClick={() => setOpen(v => !v)}
-        className="flex items-center bg-transparent p-0 rounded-none text-[#007EA7] font-medium hover:underline underline-offset-4 hover:text-[#005f7f] focus:outline-none focus:ring-0"
+        className="flex items-center bg-transparent p-0 rounded-none text-[#007EA7] font-medium hover:underline underline-offset-4 hover:text-[#005f7f] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#007EA7]/40"
         aria-haspopup="menu"
         aria-expanded={open}
+        aria-controls="use-cases-menu"
       >
         Use Cases
         <motion.span
@@ -44,8 +66,10 @@ export default function UseCasesDropdown() {
       </button>
 
       <AnimatePresence>
-        {open && (
+        {open ? (
           <motion.div
+            id="use-cases-menu"
+            role="menu"
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
@@ -53,34 +77,35 @@ export default function UseCasesDropdown() {
             className="absolute left-0 mt-2 w-80 rounded-xl bg-white/95 backdrop-blur-sm shadow-lg ring-1 ring-black/5 overflow-hidden z-50"
           >
             <ul className="py-2">
-              {useCases.map((uc) => {
+              {useCases.map((uc, index) => {
                 const authed = uc.cookieName ? Cookies.get(uc.cookieName) === "authenticated" : true;
                 const href =
                   uc.isProtected && !authed
                     ? `/passcode?returnUrl=${encodeURIComponent(uc.href)}&uc=${uc.href.split("/")[2]}`
                     : uc.href;
+                const active = pathname === uc.href;
 
                 return (
-                  <li key={uc.name}>
-                    {/* FULL-WIDTH row + lock on FAR RIGHT */}
+                  <li key={`usecase-${index}`} role="none">
                     <Link
                       href={href}
-                      className="flex items-center justify-between px-4 py-2 text-[#007EA7] hover:bg-[#007EA7]/10 hover:text-[#005f7f]"
+                      role="menuitem"
+                      className={`block px-4 py-2 transition-colors ${
+                        active ? "bg-[#007EA7]/10" : "hover:bg-[#007EA7]/10"
+                      }`}
                     >
-                      <span>{uc.name}</span>
-                      {/* show a lock or an invisible spacer so every row has same width */}
-                      {uc.isProtected ? (
-                        <Lock className="h-[14px] w-[14px] opacity-70" aria-label="Locked" />
-                      ) : (
-                        <span className="w-[14px] h-[14px]" aria-hidden />
-                      )}
+                      {/* small text, blue; lock inline right after text */}
+                      <span className="inline-flex items-center gap-2 text-sm text-[#007EA7] hover:text-[#005f7f]">
+                        {uc.name}
+                        {uc.isProtected ? <Lock className="h-[14px] w-[14px]" aria-hidden="true" /> : null}
+                      </span>
                     </Link>
                   </li>
                 );
               })}
             </ul>
           </motion.div>
-        )}
+        ) : null}
       </AnimatePresence>
     </div>
   );
