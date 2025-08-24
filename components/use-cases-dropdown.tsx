@@ -27,7 +27,6 @@ export const useCases: UseCase[] = [
 export function UseCasesDropdown() {
   const [open, setOpen] = React.useState(false);
   const pathname = usePathname();
-  const underUseCases = pathname?.startsWith("/uc");
 
   return (
     <div
@@ -35,12 +34,10 @@ export function UseCasesDropdown() {
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
-      {/* Match the other nav links: same size, color, and underline on hover */}
+      {/* EXACT same look/size/color as your other nav links + underline on hover */}
       <button
         onClick={() => setOpen(v => !v)}
-        className={`flex items-center font-medium hover:underline underline-offset-4 ${
-          underUseCases ? "text-[#005f7f]" : "text-[#007EA7]"
-        }`}
+        className="flex items-center bg-transparent p-0 rounded-none text-[#007EA7] font-medium hover:underline underline-offset-4 hover:text-[#005f7f] focus:outline-none focus:ring-0"
         aria-haspopup="menu"
         aria-expanded={open}
       >
@@ -61,7 +58,7 @@ export function UseCasesDropdown() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.15 }}
-            className="absolute left-0 mt-2 w-80 rounded-xl bg-white shadow-lg ring-1 ring-black/5 overflow-hidden z-50"
+            className="absolute left-0 mt-2 w-80 rounded-xl bg-white/95 backdrop-blur-sm shadow-lg ring-1 ring-black/5 overflow-hidden z-50"
           >
             <ul className="py-2">
               {useCases.map((uc) => {
@@ -76,11 +73,9 @@ export function UseCasesDropdown() {
                   <li key={uc.name}>
                     <Link
                       href={href}
-                      className={`flex items-center justify-between px-4 py-2 hover:bg-[#007EA7]/10 ${
-                        active ? "bg-[#007EA7]/10" : ""
-                      }`}
+                      className={`flex items-center justify-between px-4 py-2 text-slate-700 hover:bg-[#007EA7]/10 hover:text-[#005f7f] ${active ? "bg-[#007EA7]/10" : ""}`}
                     >
-                      <span className="text-[#007EA7]">{uc.name}</span>
+                      <span>{uc.name}</span>
                       {uc.isProtected && <Lock className="h-3.5 w-3.5 opacity-70" />}
                     </Link>
                   </li>
