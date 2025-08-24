@@ -64,7 +64,7 @@ export default function ClaraProcessPage() {
         meetings, Jira AI for planning, while simultaneously being monitored by systems like Microsoft Viva
         Insights, Salesforce Einstein Analytics, and productivity scoring platforms. This creates a
         surveillance paradox: AI assistants help you work while other AI systems judge how you work, leaving
-        teams overwhelmed by fragmented workflows, inconsistent interfaces, and mental fatigue..
+        teams overwhelmed by fragmented workflows, inconsistent interfaces, and mental fatigue.
       </p>
       <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
         These tools rarely connect with each other or with the people using them. Increasingly, AI systems do
