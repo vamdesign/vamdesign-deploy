@@ -7,9 +7,10 @@ import Image from "next/image"
 export default function ClaraProcessPage() {
   return (
     <>
-      <main className="min-h-screen bg-white clara-page">
-        <Nav />
-        <div className="max-w-6xl mx-auto px-4 py-12 mt-16 pt-20">
+      <Nav />
+  <main className="min-h-screen pt-24">
+
+        <div className="max-w-6xl mx-auto px-4 py-12">
           <div>
             <div className="flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-12 mb-8">
   {/* Clara Logo - Added responsive sizing */}
