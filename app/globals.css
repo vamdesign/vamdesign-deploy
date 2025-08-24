@@ -80,3 +80,12 @@
 .animate-bounce-right {
   animation: bounceRight 3s ease-in-out infinite;
 }
+.clara-page nav,
+.clara-page header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 50 !important;
+  background: white !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: box-shadow 0.2s ease;
+}

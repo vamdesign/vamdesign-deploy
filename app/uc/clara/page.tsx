@@ -7,7 +7,7 @@ import Image from "next/image"
 export default function ClaraProcessPage() {
   return (
     <>
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen bg-white clara-page">
         <Nav />
         <div className="max-w-6xl mx-auto px-4 py-12 mt-16 pt-20">
           <div>
