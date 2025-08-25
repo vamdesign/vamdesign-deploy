@@ -162,7 +162,7 @@ export default function ClaraProcessPage() {
                   </span>
                 </div>
                 <p className="font-montserrat text-sm text-[#5f5f5f]/80 mb-3">
-                  44% of employees say they had no idea whether their employer uses biometric surveillance methods.
+                  44% of employees say they had no idea whether their employer uses surveillance methods.
                 </p>
                 <p className="font-montserrat text-xs text-[#5f5f5f]/60">
                   Source:{" "}
