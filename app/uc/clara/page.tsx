@@ -888,24 +888,23 @@ export default function ClaraProcessPage() {
 
             {/* LLMs: The Dark Side of AI & Applied UX Design Principles */}
             <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mt-16 mb-4 text-left">
-              LLMs: The Dark Side of AI & Applied UX Design Principles
+              The Ethics of AI & Applied UX Design Principles
             </h2>
 
             <div className="mb-6 sm:mb-8">
               <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-                As AI embeds itself deeper into daily work, the ethical stakes rise. Many current systems favor
-                surveillance over support and manipulation over assistance. Workplace monitoring tools, performance
+                As AI embeds itself deeper into daily work, the ethical stakes rise. Workplace monitoring tools, performance
                 trackers, and AI-driven nudges often extract data without building trust, eroding privacy and culture.
               </p>
               <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
                 Every design choice encodes values about what work should feel like. Prioritizing productivity metrics
-                over employee well-being shapes a future where efficiency trumps dignity. Ignoring transparency in favor
+                over employee well-being shapes a future of efficiency over dignity. Ignoring transparency in favor
                 of engagement "optimizations" turns AI into a one-way observer rather than a collaborative partner.
               </p>
               <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-8">
                 For UX designers, this is both a warning and an opportunity. We can design AI that explains itself, asks
-                permission, and adapts to people's needs. Ethical AI is not only morally better—it's more effective,
-                building the trust that makes adoption and long-term value possible.
+                permission, and adapts to people's needs. Ethical AI is more effective as it 
+                builds trust that makes adoption and long-term value possible.
               </p>
             </div>
 
@@ -996,7 +995,7 @@ export default function ClaraProcessPage() {
 
             {/* Strategic Outcomes */}
             <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mt-16 mb-4 text-left">
-              Strategic Outcomes: If Clara Enterprise Software Was Reality
+              Strategic Outcome, What If Clara Enterprise Software Was Reality
             </h2>
 
             <div className="flex flex-col lg:flex-row gap-8 mb-8">
@@ -1155,14 +1154,14 @@ export default function ClaraProcessPage() {
               </a>
             </p>
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              But change is inevitable—and closer than we think. As designers, researchers, and human-centered
+              Change is inevitable and closer than we think. As designers, researchers, and human-centered
               technologists push for ethical AI development, concepts like Clara's empathetic intelligence architecture
               will evolve from speculative design to practical reality. The question isn't whether humane AI will
-              emerge, but whether we'll demand it before surveillance systems become so normalized that we forget what
+              emerge, but whether we'll demand it before surveillance systems and basic tool interfaces become so normalized that we forget what
               respectful technology looks like.
             </p>
             <p className="font-montserrat text-lg text-[#5f5f5f]/80">
-              Clara isn't just a design concept. She's a reminder that AI should serve human flourishing, not exploit
+              Clara is a reminder that AI should serve human flourishing, not exploit
               human vulnerability. And that future is coming sooner than we know.
             </p>
           </section>
