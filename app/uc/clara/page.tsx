@@ -60,17 +60,17 @@ export default function ClaraProcessPage() {
     <div>
       <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
         Enterprise AI adoption is accelerating, but instead of offering meaningful support, it is trending
-        toward surveillance. Workers are being handed fragmented AI tools like ChatGPT for copy, Copilot for
+        AI Bloat. Workers are being handed fragmented AI tools like ChatGPT for copy, Copilot for
         meetings, Jira AI for planning, while simultaneously being monitored by systems like Microsoft Viva
         Insights, Salesforce Einstein Analytics, and productivity scoring platforms. This creates a
-        surveillance paradox: AI assistants help you work while other AI systems judge how you work, leaving
+         paradox: AI assistants help you work while other AI systems judge how you work, leaving
         teams overwhelmed by fragmented workflows, inconsistent interfaces, and mental fatigue.
       </p>
       <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
         These tools rarely connect with each other or with the people using them. Increasingly, AI systems do
         more than assist. They observe, score, and predict behavior in ways that often feel opaque and
         one-sided. While leadership gains insight from these systems, employees are left feeling monitored
-        rather than supported, and many are beginning to push back.
+        rather than supported.
       </p>
     </div>
     <div className="flex justify-center">
@@ -101,8 +101,7 @@ export default function ClaraProcessPage() {
               user gets left behind.
             </p>
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              I've witnessed this firsthand. While designing enterprise software at Apple, Wells Fargo, and Walmart,
-              I've seen how tools are launched for speed, not clarity. More bells and whistles with less thought given
+              I've witnessed this firsthand. While designing enterprise software I've seen how tools are launched for speed, not clarity. More bells and whistles with less thought given
               to user research. Onboarding is rushed, transparency is low, and support is rarely built in. When AI
               enters that kind of environment, it amplifies the trust gap rather than bridging it.
             </p>
