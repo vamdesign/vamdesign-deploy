@@ -134,7 +134,7 @@ export default function ClaraProcessPage() {
                 <div className="mb-3">
                   <span className="font-montserrat text-5xl font-bold text-[#007EA7]">78%</span>
                   <span className="font-montserrat text-lg font-normal text-[#007EA7] ml-2">
-                    of companies now use AI-powered employee monitoring tools
+                    of companies now use AI-powered employee tools
                   </span>
                 </div>
                 <p className="font-montserrat text-sm text-[#5f5f5f]/80 mb-3">
