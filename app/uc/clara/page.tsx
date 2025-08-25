@@ -156,13 +156,13 @@ export default function ClaraProcessPage() {
 
               <div className="bg-white p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
                 <div className="mb-3">
-                  <span className="font-montserrat text-5xl font-bold text-[#007EA7]">61%</span>
+                  <span className="font-montserrat text-5xl font-bold text-[#007EA7]">74%</span>
                   <span className="font-montserrat text-lg font-normal text-[#007EA7] ml-2">
-                    use AI for productivity, 51% for emotional analysis
+                    use online tracking tools to monitor work activities
                   </span>
                 </div>
                 <p className="font-montserrat text-sm text-[#5f5f5f]/80 mb-3">
-                  Biometric surveillance is also on the rise, including facial recognition and fingerprint tracking.
+                  44% of employees say they had no idea whether their employer uses biometric surveillance methods.
                 </p>
                 <p className="font-montserrat text-xs text-[#5f5f5f]/60">
                   Source:{" "}
