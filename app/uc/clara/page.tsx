@@ -337,10 +337,13 @@ export default function ClaraProcessPage() {
           </section>
 
           {/* Personas */}
-          <section className="pt-14 mb-16">
-            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-left">
-              Understanding the Users: Four Enterprise Archetypes
+          <section className="mb-8 sm:mb-16">
+            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-2 text-left">
+              Understanding the Users
             </h2>
+            <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-3 sm:mb-4 text-left">
+              Four Enterprise Archetypes
+            </h3>
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
               To design the conceptual large language model for an AI that builds trust across enterprise environments,
               I created four representative personas using a combination of web research, AI-assisted synthesis, and
@@ -686,6 +689,60 @@ export default function ClaraProcessPage() {
               </div>
             </div>
           </section>
+ {/* Prototype testing */}
+          <section className="mb-8 sm:mb-16">
+  <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-3 sm:mb-4 text-left">
+    Testing Speculative AI Concepts
+  </h3>
+  <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-6">
+    While Clara represents emerging AI capabilities, the validation methodology demonstrates how these
+    concepts would be tested in real enterprise environments:
+  </p>
+ 
+  <div className="space-y-6">
+    <div>
+      <div className="flex flex-col lg:flex-row gap-8">
+        <div className="lg:w-1/2">
+          <h4 className="font-space-grotesk text-lg font-semibold text-[#007EA7] mb-4">
+            Prototype Testing Strategy
+          </h4>
+          <p className="font-montserrat text-base text-[#5f5f5f]/80 mb-4">
+            Beginning broadly with prototype testing, the process leverages Wizard of Oz simulations where
+            Clara would be assertively interacting with the user, active journey mapping, and A/B timing
+            experiments to understand how Clara's interventions would land across diverse personas.
+          </p>
+          <p className="font-montserrat text-base text-[#5f5f5f]/80 mb-4">
+            Critical validation questions guide the inquiry: Does Clara's communication style feel supportive
+            or intrusive? When do users begin relying on her insights? How do different personality types
+            respond to adaptive behavior?
+          </p>
+          <p className="font-montserrat text-base text-[#5f5f5f]/80 mb-4">
+            Drawing from comparable enterprise AI studies, I anticipate 70% positive reception for contextual
+            insights, 45% initial skepticism regarding emotional intelligence, and significant variance based
+            on role autonomy levels - patterns that would validate Clara as teammate rather than tool.
+          </p>
+          <p className="font-montserrat text-base text-[#5f5f5f]/80">
+            This approach embodies core UX principles: empathy through user-centered trust measurement,
+            transparency via explainable AI behaviors, and adaptability across roles and workflows. While
+            speculative, this framework demonstrates how evidence-based design ensures AI augments human
+            capability rather than overwhelming it.
+          </p>
+        </div>
+
+        <div className="lg:w-1/2 flex justify-center lg:justify-end">
+          <Image
+            src="/images/clara/Testing.png"
+            alt="Testing Framework diagram showing broad to narrow approach with Prototype Testing Strategy, Key Validation Questions, and Results Framework"
+            width={600}
+            height={400}
+            className="w-full max-w-lg object-contain"
+            sizes="(max-width: 768px) 100vw, 600px"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
           {/* Clara’s Architecture */}
           <section className="mb-8 sm:mb-16">
@@ -738,6 +795,72 @@ export default function ClaraProcessPage() {
               </div>
             </div>
           </section>
+ {/* Clara’s Future */}
+         <section className="mb-8 sm:mb-16">
+  <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-left">
+    Designing for Tomorrow
+  </h2>
+  <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
+    Clara represents the convergence of emerging AI capabilities that are evolving rapidly but remain
+    disconnected across enterprise ecosystems. Positioned here through a UX-forward lens, this section frames
+    Clara not as another tool but as a strategic experience orchestrator aligning technical capabilities
+    with human goals, adaptive workflows, and trust-driven interactions.
+  </p>
+
+  <h3 className="font-space-grotesk text-lg sm:text-xl font-semibold text-[#007EA7] mb-3 mt-6">
+    Current AI Landscape
+  </h3>
+  <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
+    Today's LLMs are powerful but highly siloed. While each technology is maturing rapidly, their lack of
+    integration limits their impact on real workflows:
+  </p>
+
+  <ul className="font-montserrat text-base text-[#5f5f5f]/80 space-y-3 list-disc pl-6 mb-6 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
+    <li>
+      <strong>Advanced Language Models (GPT-4, Claude, Gemini):</strong>  Provide deep contextual
+      understanding but lack seamless enterprise orchestration.
+    </li>
+    <li>
+      <strong>Behavioral Analytics:</strong> Track work patterns, detect stress indicators, and measure
+      engagement, yet remain underutilized by end users.
+    </li>
+    <li>
+      <strong>Sentiment Analysis:</strong> Identifies emotional states in text-based communication but rarely
+      adapts responses accordingly.
+    </li>
+    <li>
+      <strong>Multi-Modal AI:</strong> Combines voice, video, text, and activity streams, unlocking more
+      holistic support scenarios.
+    </li>
+    <li>
+      <strong>Enterprise Copilot Systems:</strong> Increasingly common but still reactive, designed for task
+      execution rather than adaptive collaboration.
+    </li>
+  </ul>
+
+  <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-6 italic">
+    UX Insight: Clara's vision goes beyond "smart tools" by designing adaptive interaction layers where these
+    capabilities are orchestrated around the user, not the enterprise.
+  </p>
+
+  <div className="w-full mb-6">
+    <div className="relative w-full">
+      <Image
+        src="/images/clara/AI_Timeline.png"
+        alt="AI Timeline showing the evolution of AI from 2020 to 2033+, including key milestones like DALL-E launch, ChatGPT releases, and future predictions about emotional intelligence, multi-agent systems, and privacy-preserving AI"
+        width={1200}
+        height={400}
+        className="w-full h-auto"
+        sizes="(max-width: 768px) 100vw, 1200px"
+      />
+    </div>
+  </div>
+
+  <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
+    Clara would require federated learning systems, privacy-preserving analytics, and robust ethical
+    guardrails, that are constantly monitored, providing a complex but increasingly feasible mature AI infrastructure.
+  </p>
+</section>
 
           {/* UX Strategy & Core Flows*/}
           <section className="mb-8 sm:mb-16">
@@ -1154,12 +1277,13 @@ export default function ClaraProcessPage() {
                 [29]
               </a>
             </p>
+            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">Change is</p>
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              Change is inevitable and closer than we think. As designers, researchers, and human-centered technologists
-              push for ethical AI development, concepts like Clara's empathetic intelligence architecture will evolve
-              from speculative design to practical reality. The question isn't whether humane AI will emerge, but
-              whether we'll demand it before surveillance systems and basic tool interfaces become so normalized that we
-              forget what respectful technology looks like.
+              inevitable and closer than we think. As designers, researchers, and human-centered technologists push for
+              ethical AI development, concepts like Clara's empathetic intelligence architecture will evolve from
+              speculative design to practical reality. The question isn't whether humane AI will emerge, but whether
+              we'll demand it before surveillance systems and basic tool interfaces become so normalized that we forget
+              what respectful technology looks like.
             </p>
             <p className="font-montserrat text-lg text-[#5f5f5f]/80">
               Clara is a reminder that AI should serve human flourishing, not exploit human vulnerability. And that
