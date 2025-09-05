@@ -808,7 +808,7 @@ export default function ClaraProcessPage() {
   </p>
 
   <h3 className="font-space-grotesk text-lg sm:text-xl font-semibold text-[#007EA7] mb-3 mt-6">
-    Current AI Landscape
+    Current AI Landscape... and Beyond
   </h3>
   <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
     Today's LLMs are powerful but highly siloed. While each technology is maturing rapidly, their lack of
@@ -838,10 +838,10 @@ export default function ClaraProcessPage() {
     </li>
   </ul>
 
-  <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-6 italic">
+ {/* <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-6 italic">
     UX Insight: Clara's vision goes beyond "smart tools" by designing adaptive interaction layers where these
     capabilities are orchestrated around the user, not the enterprise.
-  </p>
+  </p>*/}
 
   <div className="w-full mb-6">
     <div className="relative w-full">
