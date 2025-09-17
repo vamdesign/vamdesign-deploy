@@ -690,47 +690,45 @@ export default function ClaraProcessPage() {
             </div>
           </section>
  {/* Prototype testing */}
-          <section className="mb-8 sm:mb-16">
+<section className="mb-8 sm:mb-16">
   <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-3 sm:mb-4 text-left">
     Prototype Testing
   </h3>
   <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-6">
     The broad-to-narrow funnel builds on user research foundations to prove and document solutions that users actually adopt. By casting a wide net initially, we surface hidden friction points, cultural resistance, and workflow disruptions that enlighten and build on UX discovery. Starting broad with testing, validation, and iteration using qualitative results ensures we're not optimizing for edge cases or designer assumptions about how work actually happens.
- </p>
+  </p>
   <div className="space-y-6">
     <div>
-      <div className="flex flex-col lg:flex-row gap-8">
-        <div className="lg:w-1/2">
-          <h4 className="font-space-grotesk text-lg font-semibold text-[#007EA7] mb-4">
-            Prototype Testing Strategy
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+        <div className="lg:w-1/2 space-y-4">
+          <h4 className="font-space-grotesk text-lg sm:text-xl font-semibold text-[#007EA7] mb-3 sm:mb-4">
+            Broad to Narrow Testing
           </h4>
-          <p className="font-montserrat text-base text-[#5f5f5f]/80 mb-4">
-           The three-tier funnel structure validates Clara's adaptive approach across diverse workplace relationships with technology. Prototype Testing Strategy uses Wizard of Oz methodology because authentic responses emerge when people interact naturally, revealing whether Clara feels genuinely supportive rather than manipulative.</p>
-          <p className="font-montserrat text-base text-[#5f5f5f]/80 mb-4">
+          <p className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 mb-3 sm:mb-4">
+            The three-tier funnel structure validates Clara's adaptive approach across diverse workplace relationships with technology. Prototype Testing Strategy uses Wizard of Oz methodology because authentic responses emerge when people interact naturally, revealing whether Clara feels genuinely supportive rather than manipulative.
+          </p>
+          <p className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 mb-3 sm:mb-4">
             Key Validation Questions focus on critical adoption moments: Does Clara's communication style feel helpful or intrusive? When do users shift from consuming Clara's insights to actively relying on them? These behavioral shifts indicate sustainable integration versus temporary novelty.
           </p>
-          <p className="font-montserrat text-base text-[#5f5f5f]/80 mb-4">
-            Results Framework targets realistic enterprise adoption patterns. The 70% positive reception benchmark for contextual insights reflects established enterprise AI adoption trends where 78% of organizations now use AI in at least one business function <a href="#ref29" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                [30]
-              </a> however only successful implementations show sustained user engagement. This threshold indicates Clara provides relevant intelligence rather than generic responses. As a UX designer, I want to see this number because it demonstrates users find genuine value, not just initial curiosity. </p>
-          <p className="font-montserrat text-base text-[#5f5f5f]/80">
-            The 45% initial skepticism around emotional intelligence reflects documented workplace reality: 37% of employees identify as "Gloomers" who are skeptical about AI <a href="#ref29" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                [31]
-              </a> while 23% are not confident their organization puts employee interests first when implementing AI <a href="#ref29" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                [32]
-              </a>. This benchmark acknowledges professional boundaries while showing majority openness to deeper integration, validating that Clara respects workplace culture while offering meaningful support.
+          <p className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 mb-3 sm:mb-4">
+            Results Framework targets realistic enterprise adoption patterns. The 70% positive reception benchmark for contextual insights reflects established enterprise AI adoption trends where 78% of organizations now use AI in at least one business function <a href="#ref30" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">[30]</a>, however only successful implementations show sustained user engagement. This threshold indicates Clara provides relevant intelligence rather than generic responses. As a UX designer, I want to see this number because it demonstrates users find genuine value, not just initial curiosity.
+          </p>
+          <p className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80">
+            The 45% initial skepticism around emotional intelligence reflects documented workplace reality: 37% of employees identify as "Gloomers" who are skeptical about AI <a href="#ref31" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">[31]</a> while 23% are not confident their organization puts employee interests first when implementing AI <a href="#ref32" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">[32]</a>. This benchmark acknowledges professional boundaries while showing majority openness to deeper integration, validating that Clara respects workplace culture while offering meaningful support.
           </p>
         </div>
 
-        <div className="lg:w-1/2 flex justify-center lg:justify-end">
-          <Image
-            src="/images/clara/Testing.png"
-            alt="Testing Framework diagram showing broad to narrow approach with Prototype Testing Strategy, Key Validation Questions, and Results Framework"
-            width={600}
-            height={400}
-            className="w-full max-w-lg object-contain"
-            sizes="(max-width: 768px) 100vw, 600px"
-          />
+        <div className="lg:w-1/2 flex justify-center lg:justify-end mt-4 lg:mt-0">
+          <div className="w-full max-w-sm lg:max-w-lg">
+            <Image
+              src="/images/clara/Testing.png"
+              alt="Testing Framework diagram showing broad to narrow approach with Prototype Testing Strategy, Key Validation Questions, and Results Framework"
+              width={600}
+              height={400}
+              className="w-full h-auto object-contain"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+            />
+          </div>
         </div>
       </div>
     </div>
