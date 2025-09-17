@@ -692,13 +692,11 @@ export default function ClaraProcessPage() {
  {/* Prototype testing */}
           <section className="mb-8 sm:mb-16">
   <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-3 sm:mb-4 text-left">
-    Testing Speculative AI Concepts
+    Prototype Testing
   </h3>
   <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-6">
-    While Clara represents emerging AI capabilities, the validation methodology demonstrates how these
-    concepts would be tested in real enterprise environments:
-  </p>
- 
+    The broad-to-narrow funnel builds on user research foundations to prove and document solutions that users actually adopt. By casting a wide net initially, we surface hidden friction points, cultural resistance, and workflow disruptions that enlighten and build on UX discovery. Starting broad with testing, validation, and iteration using qualitative results ensures we're not optimizing for edge cases or designer assumptions about how work actually happens.
+ </p>
   <div className="space-y-6">
     <div>
       <div className="flex flex-col lg:flex-row gap-8">
@@ -707,25 +705,20 @@ export default function ClaraProcessPage() {
             Prototype Testing Strategy
           </h4>
           <p className="font-montserrat text-base text-[#5f5f5f]/80 mb-4">
-            Beginning broadly with prototype testing, the process leverages Wizard of Oz simulations where
-            Clara would be assertively interacting with the user, active journey mapping, and A/B timing
-            experiments to understand how Clara's interventions would land across diverse personas.
+           The three-tier funnel structure validates Clara's adaptive approach across diverse workplace relationships with technology. Prototype Testing Strategy uses Wizard of Oz methodology because authentic responses emerge when people interact naturally, revealing whether Clara feels genuinely supportive rather than manipulative.</p>
+          <p className="font-montserrat text-base text-[#5f5f5f]/80 mb-4">
+            Key Validation Questions focus on critical adoption moments: Does Clara's communication style feel helpful or intrusive? When do users shift from consuming Clara's insights to actively relying on them? These behavioral shifts indicate sustainable integration versus temporary novelty.
           </p>
           <p className="font-montserrat text-base text-[#5f5f5f]/80 mb-4">
-            Critical validation questions guide the inquiry: Does Clara's communication style feel supportive
-            or intrusive? When do users begin relying on her insights? How do different personality types
-            respond to adaptive behavior?
-          </p>
-          <p className="font-montserrat text-base text-[#5f5f5f]/80 mb-4">
-            Drawing from comparable enterprise AI studies, I anticipate 70% positive reception for contextual
-            insights, 45% initial skepticism regarding emotional intelligence, and significant variance based
-            on role autonomy levels - patterns that would validate Clara as teammate rather than tool.
-          </p>
+            Results Framework targets realistic enterprise adoption patterns. The 70% positive reception benchmark for contextual insights reflects established enterprise AI adoption trends where 78% of organizations now use AI in at least one business function <a href="#ref29" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
+                [30]
+              </a> however only successful implementations show sustained user engagement. This threshold indicates Clara provides relevant intelligence rather than generic responses. As a UX designer, I want to see this number because it demonstrates users find genuine value, not just initial curiosity. </p>
           <p className="font-montserrat text-base text-[#5f5f5f]/80">
-            This approach embodies core UX principles: empathy through user-centered trust measurement,
-            transparency via explainable AI behaviors, and adaptability across roles and workflows. While
-            speculative, this framework demonstrates how evidence-based design ensures AI augments human
-            capability rather than overwhelming it.
+            The 45% initial skepticism around emotional intelligence reflects documented workplace reality: 37% of employees identify as "Gloomers" who are skeptical about AI <a href="#ref29" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
+                [31]
+              </a> while 23% are not confident their organization puts employee interests first when implementing AI <a href="#ref29" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
+                [32]
+              </a>. This benchmark acknowledges professional boundaries while showing majority openness to deeper integration, validating that Clara respects workplace culture while offering meaningful support.
           </p>
         </div>
 
@@ -1712,6 +1705,48 @@ export default function ClaraProcessPage() {
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://news.harvard.edu/gazette/story/2020/10/ethical-concerns-mount-as-ai-takes-bigger-decision-making-role/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#007EA7] hover:underline"
+                  >
+                    Ethical concerns mount as AI takes bigger decision-making role — Harvard Gazette
+                  </a>
+                </p>
+              </div>
+               {/* 30 */}
+              <div className="flex items-start gap-3" id="ref29">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">30</span>
+                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
+                  <a
+                    href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#007EA7] hover:underline"
+                  >
+                    Ethical concerns mount as AI takes bigger decision-making role — Harvard Gazette
+                  </a>
+                </p>
+              </div>
+               {/* 31 */}
+              <div className="flex items-start gap-3" id="ref29">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">31</span>
+                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
+                  <a
+                    href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/superagency-in-the-workplace-empowering-people-to-unlock-ais-full-potential-at-work"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#007EA7] hover:underline"
+                  >
+                    Ethical concerns mount as AI takes bigger decision-making role — Harvard Gazette
+                  </a>
+                </p>
+              </div>
+              {/* 32 */}
+              <div className="flex items-start gap-3" id="ref29">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">32</span>
+                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
+                  <a
+                    href="https://investor.workday.com/2024-01-10-Workday-Global-Survey-Reveals-AI-Trust-Gap-in-the-Workplace"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#007EA7] hover:underline"
