@@ -1711,7 +1711,7 @@ export default function ClaraProcessPage() {
                   </a>
                 </p>
               </div>
-               {/* 30 */}
+              {/* 30 */}
               <div className="flex items-start gap-3" id="ref30">
                 <span className="font-verdana text-sm text-[#007EA7] font-medium">30</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
@@ -1721,11 +1721,11 @@ export default function ClaraProcessPage() {
                     rel="noopener noreferrer"
                     className="text-[#007EA7] hover:underline"
                   >
-                     The state of AI: How organizations are rewiring to capture value  
+                    The state of AI: How organizations are rewiring to capture value
                   </a>
                 </p>
               </div>
-               {/* 31 */}
+              {/* 31 */}
               <div className="flex items-start gap-3" id="ref31">
                 <span className="font-verdana text-sm text-[#007EA7] font-medium">31</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
@@ -1735,7 +1735,7 @@ export default function ClaraProcessPage() {
                     rel="noopener noreferrer"
                     className="text-[#007EA7] hover:underline"
                   >
-                    Superagency in the workplace: Empowering people to unlock AI’s full potential
+                    Superagency in the workplace: Empowering people to unlock AI's full potential
                   </a>
                 </p>
               </div>
@@ -1749,7 +1749,7 @@ export default function ClaraProcessPage() {
                     rel="noopener noreferrer"
                     className="text-[#007EA7] hover:underline"
                   >
-                   Workday Global Survey Reveals AI Trust Gap in the Workplace 
+                    Workday Global Survey Reveals AI Trust Gap in the Workplace
                   </a>
                 </p>
               </div>
