@@ -1712,7 +1712,7 @@ export default function ClaraProcessPage() {
                 </p>
               </div>
                {/* 30 */}
-              <div className="flex items-start gap-3" id="ref29">
+              <div className="flex items-start gap-3" id="ref30">
                 <span className="font-verdana text-sm text-[#007EA7] font-medium">30</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
@@ -1721,12 +1721,12 @@ export default function ClaraProcessPage() {
                     rel="noopener noreferrer"
                     className="text-[#007EA7] hover:underline"
                   >
-                    Ethical concerns mount as AI takes bigger decision-making role — Harvard Gazette
+                     The state of AI: How organizations are rewiring to capture value  
                   </a>
                 </p>
               </div>
                {/* 31 */}
-              <div className="flex items-start gap-3" id="ref29">
+              <div className="flex items-start gap-3" id="ref31">
                 <span className="font-verdana text-sm text-[#007EA7] font-medium">31</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
@@ -1735,12 +1735,12 @@ export default function ClaraProcessPage() {
                     rel="noopener noreferrer"
                     className="text-[#007EA7] hover:underline"
                   >
-                    Ethical concerns mount as AI takes bigger decision-making role — Harvard Gazette
+                    Superagency in the workplace: Empowering people to unlock AI’s full potential
                   </a>
                 </p>
               </div>
               {/* 32 */}
-              <div className="flex items-start gap-3" id="ref29">
+              <div className="flex items-start gap-3" id="ref32">
                 <span className="font-verdana text-sm text-[#007EA7] font-medium">32</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
@@ -1749,7 +1749,7 @@ export default function ClaraProcessPage() {
                     rel="noopener noreferrer"
                     className="text-[#007EA7] hover:underline"
                   >
-                    Ethical concerns mount as AI takes bigger decision-making role — Harvard Gazette
+                   Workday Global Survey Reveals AI Trust Gap in the Workplace 
                   </a>
                 </p>
               </div>
