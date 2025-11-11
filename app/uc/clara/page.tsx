@@ -478,7 +478,7 @@ export default function ClaraProcessPage() {
               <div className="flex-1 space-y-4">
                 <ul className="font-montserrat text-base text-[#5f5f5f]/80 space-y-2 list-disc pl-6 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
                   <li>Clara makes ethical decisions, not just rule-based responses</li>
-                  <li>Understands team dynamics and organizational context naturally</li>
+                  <li>Understands team dynamics and organizational context natrually</li>
                   <li>Personalizes approach based on individual needs and moments</li>
                   <li>Knows the difference between helpful intervention and overreach</li>
                   <li>Learns through experience while maintaining core values</li>
