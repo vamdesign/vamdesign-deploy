@@ -598,13 +598,14 @@ export default function ClaraProcessPage() {
                 </ul>
               </div>
               <div className="md:col-span-2">
-                <div className="relative w-full aspect-[4/3] group">
-                  <Image
-                    src="/images/clara/Clara_1.png"
-                    alt="Clara dashboard interface showing team insights and workflow suggestions"
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 768px) 100vw, 600px"
+                <div className="relative w-full h-auto group">
+    <Image
+      src="/images/clara/Clara_1.png"
+      alt="Clara dashboard interface showing team insights and workflow suggestions"
+      width={1200}
+      height={900}
+      className="w-full h-auto"
+      sizes="(max-width: 768px) 100vw, 600px"
                   />
                   <div className="absolute bottom-[10%] right-[10%] w-6 h-6">
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -828,7 +829,7 @@ export default function ClaraProcessPage() {
               MCP accelerates feasibility. It gives Clara a clean way to request the right context, connect to approved systems, and make every action explainable and reviewable. That lets UX specify consent flows, boundaries, and evaluation plans alongside the interaction model. </p>
 
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-           Clara demonstrates a repeatable approach: define consent first, carry context across steps, design for corrections, measure trust, and orchestrate through protocols rather than surveillance. AI is arriving fast. With MCP, the path from ethical concept to production reality is clearer than ever.</p>
+           Clara demonstrates a repeatable approach: define consent first, carry context across steps, design for corrections, measure trust, and orchestrate through protocols rather than monitoring. AI is arriving fast. With MCP, the path from ethical concept to production reality is clearer than ever.</p>
           </section>
 
           {/* Call to Action */}
