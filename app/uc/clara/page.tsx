@@ -26,7 +26,7 @@ export default function ClaraProcessPage() {
 
               {/* Title - Improved responsiveness */}
               <h1 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold text-[#007EA7] mb-4 sm:mb-8 text-center md:text-left">
-                Clara: UX for an AI Teammate You'll Want to Work With
+                Clara: Designing AI as a Trusted Teammate, Not a Monitor
               </h1>
             </div>
             <p className="font-montserrat text-lg text-[#2C3D4D] mt-8 text-left">
@@ -51,25 +51,17 @@ export default function ClaraProcessPage() {
           <section className="mb-8 sm:mb-16">
             <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-2 text-left">The Problem</h2>
             <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-3 sm:mb-4 text-left">
-              Enterprise AI Is Drifting Toward Control,
+              AI is Moving Too Fast Without Ethical Guardrails
               <br />
-              Not Collaboration
+              Creating a Surveillance Experience
             </h3>
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div>
                 <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-                  Enterprise AI adoption is accelerating, but instead of offering meaningful support, it is trending AI
-                  Bloat. Workers are being handed fragmented AI tools like ChatGPT for copy, Copilot for meetings, Jira
-                  AI for planning, while simultaneously being monitored by systems like Microsoft Viva Insights,
-                  Salesforce Einstein Analytics, and productivity scoring platforms. This creates a paradox: AI
-                  assistants help you work while other AI systems judge how you work, leaving teams overwhelmed by
-                  fragmented workflows, inconsistent interfaces, and mental fatigue.
+                  Enterprise AI adoption is accelerating while trust for it lags behind. For example, teams use separate tools like ChatGPT, Claude, and Copilot, each AI operating in isolation. This causes lack of shared context, resulting in fractured workflows, cognitive overload, and tools that feel like friction instead of help.
                 </p>
                 <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-                  These tools rarely connect with each other or with the people using them. Increasingly, AI systems do
-                  more than assist. They observe, score, and predict behavior in ways that often feel opaque and
-                  one-sided. While leadership gains insight from these systems, employees are left feeling monitored
-                  rather than supported.
+                  AI is quietly shifting from assistant to observer. Systems track behavior, score productivity, and surface insights to leadership often without employee consent or transparency. What's pitched as "support" lands as surveillance. The gap between what AI promises and what people experience is eroding trust faster than adoption can build it.
                 </p>
               </div>
               <div className="flex justify-center">
@@ -85,255 +77,34 @@ export default function ClaraProcessPage() {
             </div>
           </section>
 
-          {/* business challenge */}
+          {/* Teammate Philosophy */}
           <section className="mb-8 sm:mb-16">
             <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-left">
-              The Business Challenge
+              The Teammate Philosophy
             </h2>
             <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-3 sm:mb-4 text-left">
-              Designing Enterprise AI for an Inevitable Future
+              Why Clara Works—For Everyone
             </h3>
+            
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              AI integration is accelerating across industries. Leaders are under pressure to scale tools, automate
-              workflows, and prove ROI through measurable productivity gains. But as AI expands into daily operations,
-              most implementations ignore the humans using the product. It's about new updates, more releases, and the
-              user gets left behind.
+              Most workplace AI operates at extremes: passive chatbots that wait for commands, or surveillance systems that monitor without consent. Clara represents a third path: collaborative intelligence that builds trust through boundaries, transparency, and respect for expertise.
             </p>
+
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              I've witnessed this firsthand. While designing enterprise software I've seen how tools are launched for
-              speed, not clarity. More bells and whistles with less thought given to user research. Onboarding is
-              rushed, transparency is low, and support is rarely built in. When AI enters that kind of environment, it
-              amplifies the trust gap rather than bridging it.
+              <strong>For employees:</strong> Context without intrusion. Clara understands your project and workflow without reading personal communications or tracking off-hours activity.
             </p>
+
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              This AI is my response to that dilemma, a well-thought-out, human-centered concept for how large language
-              models could reduce friction, build trust, and act as truly supportive teammates instead of adding to
-              cognitive overload.
+              <strong>For teams:</strong> Connection without surveillance. Clara spots redundant work across departments and surfaces knowledge gaps by understanding workflow context, not monitoring individuals.
             </p>
-          </section>
 
-          {/* Reseach Insights */}
-          <section className="mb-6 sm:mb-8">
-            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-left">
-              Research Insights
-            </h2>
-            <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-8">
-              The research presented here is built from analysis and integration of leading industry insights. As AI
-              rapidly transforms workplaces, I see a fundamental gap: companies are deploying AI for productivity and
-              surveillance, while employees crave genuine support and understanding. My UX experience tells me we're
-              solving for the wrong problem. The data below illustrates why this human-centered approach isn't just nice
-              to have, it's a must have.
+            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
+              <strong>For leadership:</strong> Progress without micromanagement. Clara measures what matters—Are blockers resolving? Are handoffs improving?—instead of vanity metrics like clicks or time-in-seat.
             </p>
-          </section>
 
-          {/* Cards */}
-          <section className="mb-8 sm:mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Concept */}
-              <div className="bg-white p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
-                <div className="mb-3">
-                  <span className="font-montserrat text-5xl font-bold text-[#007EA7]">78%</span>
-                  <span className="font-montserrat text-lg font-normal text-[#007EA7] ml-2">
-                    of companies now use AI-powered employee tools
-                  </span>
-                </div>
-                <p className="font-montserrat text-sm text-[#5f5f5f]/80 mb-3">
-                  Employers are increasingly relying on AI analytics to track productivity, behavior, and engagement
-                  across teams.
-                </p>
-                <p className="font-montserrat text-xs text-[#5f5f5f]/60">
-                  Source:{" "}
-                  <a
-                    href="https://www.expressvpn.com/blog/workplace-surveillance-trends-us/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    ExpressVPN Workplace Surveillance Trends 2025 (US)
-                  </a>
-                </p>
-              </div>
-
-              <div className="bg-white p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
-                <div className="mb-3">
-                  <span className="font-montserrat text-5xl font-bold text-[#007EA7]">74%</span>
-                  <span className="font-montserrat text-lg font-normal text-[#007EA7] ml-2">
-                    use online tracking tools to monitor work activities
-                  </span>
-                </div>
-                <p className="font-montserrat text-sm text-[#5f5f5f]/80 mb-3">
-                  44% of employees say they had no idea whether their employer uses surveillance methods.
-                </p>
-                <p className="font-montserrat text-xs text-[#5f5f5f]/60">
-                  Source:{" "}
-                  <a
-                    href="https://www.expressvpn.com/blog/workplace-surveillance-trends-us/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    ExpressVPN Workplace Surveillance Trends 2025 (US)
-                  </a>
-                </p>
-              </div>
-
-              <div className="bg-white p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
-                <div className="mb-3">
-                  <span className="font-montserrat text-5xl font-bold text-[#007EA7]">71%</span>
-                  <span className="font-montserrat text-lg font-normal text-[#007EA7] ml-2">
-                    of organizations regularly use generative AI in at least one business function
-                  </span>
-                </div>
-                <p className="font-montserrat text-sm text-[#5f5f5f]/80 mb-3">
-                  AI is now embedded in core functions like marketing, product, and IT.
-                </p>
-                <p className="font-montserrat text-xs text-[#5f5f5f]/60">
-                  Source:{" "}
-                  <a
-                    href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/superagency-in-the-workplace-empowering-people-to-unlock-ais-full-potential-at-work"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    McKinsey State of AI 2025
-                  </a>
-                </p>
-              </div>
-
-              <div className="bg-white p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
-                <div className="mb-3">
-                  <span className="font-montserrat text-5xl font-bold text-[#007EA7]">68%</span>
-                  <span className="font-montserrat text-lg font-normal text-[#007EA7] ml-2">
-                    of employees oppose AI-powered surveillance
-                  </span>
-                </div>
-                <p className="font-montserrat text-sm text-[#5f5f5f]/80 mb-3">
-                  Most workers are not comfortable with AI systems that monitor or predict behavior. The trust gap is
-                  growing.
-                </p>
-                <p className="font-montserrat text-xs text-[#5f5f5f]/60">
-                  Source:{" "}
-                  <a
-                    href="https://apploye.com/blog/employee-monitoring-statistics/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    Apploye: Future of AI Employee Monitoring (2025)
-                  </a>
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* LLMs: The Dark Side of AI & Applied UX Design Principles */}
-          <section className="mb-8 sm:mb-16">
-            <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-4 text-left">
-              The Ethics of AI & Applied UX Design Principles
-            </h2>
-
-            <div className="mb-6 sm:mb-8">
-              <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-                As AI embeds itself deeper into daily work, the ethical stakes rise. Workplace monitoring tools,
-                performance trackers, and AI-driven nudges often extract data without building trust, eroding privacy
-                and culture.
-              </p>
-              <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-                Every design choice encodes values about what work should feel like. Prioritizing productivity metrics
-                over employee well-being shapes a future of efficiency over dignity. Ignoring transparency in favor of
-                engagement "optimizations" turns AI into a one-way observer rather than a collaborative partner.
-              </p>
-              <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-8">
-                For UX designers, this is both a warning and an opportunity. We can design AI that explains itself, asks
-                permission, and adapts to people's needs. Ethical AI is more effective as it builds trust that makes
-                adoption and long-term value possible.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
-                <h3 className="font-space-grotesk text-lg sm:text-xl font-semibold text-[#007EA7] mb-3 sm:mb-4">
-                  The False Praise Epidemic
-                </h3>
-                <p className="font-montserrat text-sm text-[#5f5f5f]/80 mb-4">
-                  Current AI systems have been trained to flatter rather than help, creating feedback loops where
-                  neither humans nor machines improve.
-                  <a href="#ref5" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                    [5]
-                  </a>
-                </p>
-                <p className="font-montserrat text-sm text-[#5f5f5f]/80 mb-3">
-                  <strong>Research Excerpts:</strong>
-                </p>
-                <ul className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80 list-disc pl-4 sm:pl-6 space-y-1 mb-4">
-                  <li>
-                    OpenAI rolled back GPT-4o after users complained it became "too agreeable" and a "flattering
-                    yes-man"
-                    <a href="#ref6" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                      [6]
-                    </a>
-                  </li>
-                  <li>
-                    Generic AI-generated recognition messages fail because employees become suspicious when words are
-                    too generic or irrelevant
-                    <a href="#ref7" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                      [7]
-                    </a>
-                  </li>
-                  <li>
-                    Users train themselves to crave AI flattery while AI optimizes for positive responses rather than
-                    accuracy
-                    <a href="#ref8" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                      [8]
-                    </a>
-                  </li>
-                </ul>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <strong>The Problem:</strong> AI systems optimized for engagement rather than growth create stagnation
-                  disguised as support.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
-                <h3 className="font-space-grotesk text-lg sm:text-xl font-semibold text-[#007EA7] mb-3 sm:mb-4">
-                  The Surveillance Problem
-                </h3>
-                <p className="font-montserrat text-sm text-[#5f5f5f]/80 mb-4">
-                  Algorithmic worker surveillance and productivity scoring tools are becoming prevalent across white and
-                  blue-collar jobs, with workers in an imbalanced power position to challenge these practices.
-                  <a href="#ref9" className="reference-number text-[#007EA7] hover:text-[#005f7f] no-underline">
-                    [9]
-                  </a>
-                </p>
-                <p className="font-montserrat text-sm text-[#5f5f5f]/80 mb-3">
-                  <strong>Research Excerpts:</strong>
-                </p>
-                <ul className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80 list-disc pl-4 sm:pl-6 space-y-1 mb-4">
-                  <li>
-                    Sapience Analytics monitors computer usage for 100+ companies, with Barclays initially using it
-                    anonymously but later deanonymizing employees for detailed productivity measurement
-                    <a href="#ref10" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                      [10]
-                    </a>
-                  </li>
-                  <li>
-                    Prodoscore assigns workers daily productivity scores out of 100 based on emails sent, phone calls
-                    made, and database activity
-                    <a href="#ref11" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                      [11]
-                    </a>
-                  </li>
-                </ul>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <strong>Human Impact:</strong> Constant tracking makes employees feel under a microscope, leading to
-                  decreased morale and creativity. Hypervigilance about surveillance demoralizes workers and forces
-                  quicker decision-making without time for deeper analysis.
-                  <a href="#ref12" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                    [12]
-                  </a>
-                </p>
-              </div>
-            </div>
+            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
+              <strong>The technical foundation:</strong> Model Context Protocol (MCP) makes this buildable. MCP enables scoped, auditable AI interactions. Clara can request project context while maintaining clear boundaries. What started as a speculative design exercise now has a real-world implementation path.
+            </p>
           </section>
 
           {/* Personas */}
@@ -345,10 +116,7 @@ export default function ClaraProcessPage() {
               Four Enterprise Archetypes
             </h3>
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              To design the conceptual large language model for an AI that builds trust across enterprise environments,
-              I created four representative personas using a combination of web research, AI-assisted synthesis, and
-              behavioral pattern analysis. Drawing from published studies on team dynamics, customer service, enterprise
-              UX, and AI skepticism, I identified recurring themes and shaped them into clear user archetypes.{" "}
+              To design Clara's adaptive intelligence across different workplace mindsets, I developed four enterprise archetypes. Using behavioral research on team dynamics, AI adoption patterns, and workplace stress, I created four personas representing different relationships with AI, support needs, and work styles. Each archetype shaped how Clara adjusts her communication, timing, and level of intervention.{" "}
               <a href="#ref1" className="reference-number text-[#007EA7] hover:text-[#005f7f] no-underline">
                 [1]
               </a>
@@ -363,10 +131,6 @@ export default function ClaraProcessPage() {
               </a>
             </p>
 
-            <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-8">
-              Each persona represents a different user mindset toward AI, which helped define how the system adapts her
-              support, communication style, and presence within complex workflows.
-            </p>
             <div
               className="grid grid-cols-1 md:grid-cols-2 gap-8"
               style={{ gridTemplateRows: "auto auto", alignItems: "start" }}
@@ -689,53 +453,8 @@ export default function ClaraProcessPage() {
               </div>
             </div>
           </section>
- {/* Prototype testing */}
-<section className="mb-8 sm:mb-16">
-  <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-3 sm:mb-4 text-left">
-    Prototype Testing
-  </h3>
-  <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-6">
-    The broad-to-narrow funnel builds on user research foundations to prove and document solutions that users actually adopt. By casting a wide net initially, we surface hidden friction points, cultural resistance, and workflow disruptions that enlighten and build on UX discovery. Starting broad with testing, validation, and iteration using qualitative results ensures we're not optimizing for edge cases or designer assumptions about how work actually happens.
-  </p>
-  <div className="space-y-6">
-    <div>
-      <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
-        <div className="lg:w-1/2 space-y-4">
-          <h4 className="font-space-grotesk text-lg sm:text-xl font-semibold text-[#007EA7] mb-3 sm:mb-4">
-            Broad to Narrow Testing
-          </h4>
-          <p className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 mb-3 sm:mb-4">
-            The three-tier funnel structure validates Clara's adaptive approach across diverse workplace relationships with technology. Prototype Testing Strategy uses Wizard of Oz methodology because authentic responses emerge when people interact naturally, revealing whether Clara feels genuinely supportive rather than manipulative.
-          </p>
-          <p className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 mb-3 sm:mb-4">
-            Key Validation Questions focus on critical adoption moments: Does Clara's communication style feel helpful or intrusive? When do users shift from consuming Clara's insights to actively relying on them? These behavioral shifts indicate sustainable integration versus temporary novelty.
-          </p>
-          <p className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 mb-3 sm:mb-4">
-            Results Framework targets realistic enterprise adoption patterns. The 70% positive reception benchmark for contextual insights reflects established enterprise AI adoption trends where 78% of organizations now use AI in at least one business function <a href="#ref30" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">[30]</a>, however only successful implementations show sustained user engagement. This threshold indicates Clara provides relevant intelligence rather than generic responses. As a UX designer, I want to see this number because it demonstrates users find genuine value, not just initial curiosity.
-          </p>
-          <p className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80">
-            The 45% initial skepticism around emotional intelligence reflects documented workplace reality: 37% of employees identify as "Gloomers" who are skeptical about AI <a href="#ref31" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">[31]</a> while 23% are not confident their organization puts employee interests first when implementing AI <a href="#ref32" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">[32]</a>. This benchmark acknowledges professional boundaries while showing majority openness to deeper integration, validating that Clara respects workplace culture while offering meaningful support.
-          </p>
-        </div>
 
-        <div className="lg:w-1/2 flex justify-center lg:justify-end mt-4 lg:mt-0">
-          <div className="w-full max-w-sm lg:max-w-lg">
-            <Image
-              src="/images/clara/Testing.png"
-              alt="Testing Framework diagram showing broad to narrow approach with Prototype Testing Strategy, Key Validation Questions, and Results Framework"
-              width={600}
-              height={400}
-              className="w-full h-auto object-contain"
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-          {/* Clara’s Architecture */}
+          {/* Clara's Architecture */}
           <section className="mb-8 sm:mb-16">
             <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-left">
               Clara's Architecture
@@ -752,12 +471,11 @@ export default function ClaraProcessPage() {
               adaptive AI systems, not a technical blueprint.
             </p>
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              Ths system scales with organizational growth while remaining context-aware as a trusted colleague who
+              This system scales with organizational growth while remaining context-aware as a trusted colleague who
               knows when to engage, when to listen, and how to adapt her support.
             </p>
             <div className="flex flex-col lg:flex-row gap-8 items-start mb-6">
               <div className="flex-1 space-y-4">
-                {/* Adding blue bullet points to Clara's capabilities list */}
                 <ul className="font-montserrat text-base text-[#5f5f5f]/80 space-y-2 list-disc pl-6 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
                   <li>Clara makes ethical decisions, not just rule-based responses</li>
                   <li>Understands team dynamics and organizational context naturally</li>
@@ -786,85 +504,52 @@ export default function ClaraProcessPage() {
               </div>
             </div>
           </section>
- {/* Clara’s Future */}
-         <section className="mb-8 sm:mb-16">
-  <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-left">
-    Designing for Tomorrow
-  </h2>
-  <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-    Clara represents the convergence of emerging AI capabilities that are evolving rapidly but remain
-    disconnected across enterprise ecosystems. Positioned here through a UX-forward lens, this section frames
-    Clara not as another tool but as a strategic experience orchestrator aligning technical capabilities
-    with human goals, adaptive workflows, and trust-driven interactions.
-  </p>
 
-  <h3 className="font-space-grotesk text-lg sm:text-xl font-semibold text-[#007EA7] mb-3 mt-6">
-    Current AI Landscape... and Beyond
-  </h3>
-  <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-    Today's LLMs are powerful but highly siloed. While each technology is maturing rapidly, their lack of
-    integration limits their impact on real workflows:
-  </p>
+          {/* MCP Technical Foundation */}
+          <section className="mb-8 sm:mb-16">
+            <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-3 sm:mb-4 text-left">
+              The Technical Foundation: Model Context Protocol
+            </h3>
+            
+            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
+              When I designed Clara in 2024, this adaptive intelligence felt conceptually sound but technically complex. Model Context Protocol (MCP) changed that.
+            </p>
 
-  <ul className="font-montserrat text-base text-[#5f5f5f]/80 space-y-3 list-disc pl-6 mb-6 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
-    <li>
-      <strong>Advanced Language Models (GPT-4, Claude, Gemini):</strong>  Provide deep contextual
-      understanding but lack seamless enterprise orchestration.
-    </li>
-    <li>
-      <strong>Behavioral Analytics:</strong> Track work patterns, detect stress indicators, and measure
-      engagement, yet remain underutilized by end users.
-    </li>
-    <li>
-      <strong>Sentiment Analysis:</strong> Identifies emotional states in text-based communication but rarely
-      adapts responses accordingly.
-    </li>
-    <li>
-      <strong>Multi-Modal AI:</strong> Combines voice, video, text, and activity streams, unlocking more
-      holistic support scenarios.
-    </li>
-    <li>
-      <strong>Enterprise Copilot Systems:</strong> Increasingly common but still reactive, designed for task
-      execution rather than adaptive collaboration.
-    </li>
-  </ul>
+            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
+              MCP is an open standard that enables AI systems to request tools and data through secure, auditable gateways. Instead of giving AI access to everything or nothing, MCP supports the scoped, permission-based interactions Clara requires.
+            </p>
 
- {/* <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-6 italic">
-    UX Insight: Clara's vision goes beyond "smart tools" by designing adaptive interaction layers where these
-    capabilities are orchestrated around the user, not the enterprise.
-  </p>*/}
+            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
+              <strong>How MCP enables Clara's architecture:</strong>
+            </p>
 
-  <div className="w-full mb-6">
-    <div className="relative w-full">
-      <Image
-        src="/images/clara/AI_Timeline.png"
-        alt="AI Timeline showing the evolution of AI from 2020 to 2033+, including key milestones like DALL-E launch, ChatGPT releases, and future predictions about emotional intelligence, multi-agent systems, and privacy-preserving AI"
-        width={1200}
-        height={400}
-        className="w-full h-auto"
-        sizes="(max-width: 768px) 100vw, 1200px"
-      />
-    </div>
-  </div>
+            <ul className="font-montserrat text-base text-[#5f5f5f]/80 space-y-2 list-disc pl-6 mb-6 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
+              <li><strong>Bounded intelligence</strong> – Clara requests project context while teams control what she can access</li>
+              <li><strong>Transparent actions</strong> – Every tool use and data source is logged and auditable</li>
+              <li><strong>Permission-based automation</strong> – When Clara wants to act (schedule a meeting, update a doc), she requests approval through MCP</li>
+              <li><strong>Team-configured scope</strong> – The people using Clara define her boundaries, not management</li>
+            </ul>
 
-  <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-    Clara would require federated learning systems, privacy-preserving analytics, and robust ethical
-    guardrails, that are constantly monitored, providing a complex but increasingly feasible mature AI infrastructure.
-  </p>
-</section>
+            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80">
+              MCP transforms Clara from a speculative framework into a buildable system. The teammate philosophy now has technical infrastructure to support it.
+            </p>
+          </section>
 
           {/* UX Strategy & Core Flows*/}
           <section className="mb-8 sm:mb-16">
             <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-left">
               UX Strategy & Core Flows
             </h2>
+            <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-4">
+              Clara's interaction model is shaped by key UX principles: calm design, progressive disclosure, and role-aware personalization. Instead of bombarding users with features, she surfaces just enough guidance at the right moment. Her interventions are subtle, timely, and emotionally aware—designed to reduce friction rather than add to it.
+            </p>
+
+            <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-4">
+              In a real implementation, I would validate this adaptive approach through Wizard of Oz testing across all four personas, observing whether Clara's communication feels supportive or intrusive. Success metrics would focus on voluntary engagement rates, trust indicators, and role-based adoption patterns—proving Clara builds relationships, not dependency.
+            </p>
+
             <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-6">
-              Clara’s interaction model is shaped by key UX principles like calm design, progressive disclosure, and
-              role-aware personalization. Instead of bombarding users with every feature, she offers just enough
-              guidance, exactly when it’s needed. Her interventions are subtle, timely, and emotionally aware, designed
-              to reduce friction rather than add to it. Each scenario below demonstrates how she adapts across different
-              roles and goals, reflecting a broader UX strategy that blends trust, relevance, and quiet intelligence
-              into the flow of work.
+              Each scenario below demonstrates how Clara adapts across different roles and goals, reflecting a broader UX strategy that blends trust, relevance, and quiet intelligence into the flow of work.
             </p>
             <div className="w-full mb-8">
               <div className="relative w-full">
@@ -895,7 +580,6 @@ export default function ClaraProcessPage() {
                 <h3 className="font-space-grotesk text-lg sm:text-xl font-semibold text-[#007EA7] mb-3 sm:mb-4">
                   Clara's Interactive Presence
                 </h3>
-                {/* Reverting back to paragraph format instead of bullet points */}
                 <p className="font-montserrat text-base text-[#5f5f5f]/80 mb-6">
                   Clara appears as a subtle, ambient presence that integrates naturally into existing workflows. Rather
                   than competing for attention, she maintains a gentle glow in the interface periphery, indicating
@@ -946,11 +630,10 @@ export default function ClaraProcessPage() {
                 </p>
               </div>
             </div>
-            {/* Adding bottom margin for consistent spacing */}
             <div className="mb-6"></div>
 
             <div className="mb-6 sm:mb-8">
-              {/* Andre's expereince*/}
+              {/* Andre's experience*/}
               <h3 className="font-space-grotesk text-2xl font-medium text-[#007EA7] mb-4 text-left w-full">
                 Andre's Experience: Strategic, Empathetic Redirection
               </h3>
@@ -1001,7 +684,7 @@ export default function ClaraProcessPage() {
                 </div>
               </div>
             </div>
-            {/* Jamie's expereince*/}
+            {/* Jamie's experience*/}
             <div className="mb-6 sm:mb-8">
               <h3 className="font-space-grotesk text-2xl font-medium text-[#007EA7] mb-4 text-left w-full">
                 Jamie's Experience: Contextual, Momentum Building
@@ -1054,7 +737,7 @@ export default function ClaraProcessPage() {
                 </div>
               </div>
             </div>
-            {/* Kai's expereince*/}
+            {/* Kai's experience*/}
             <div className="mb-6 sm:mb-8">
               <h3 className="font-space-grotesk text-2xl font-medium text-[#007EA7] mb-4 text-left w-full">
                 Kai's Experience: Supportive, Knowledge Building & Recognition
@@ -1110,7 +793,7 @@ export default function ClaraProcessPage() {
 
             {/* Strategic Outcomes */}
             <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mt-16 mb-4 text-left">
-              Strategic Outcome, What If Clara Enterprise Software Was Reality
+              Strategic Outcome: What If Clara Enterprise Software Was Reality
             </h2>
 
             <div className="flex flex-col lg:flex-row gap-8 mb-8">
@@ -1118,12 +801,12 @@ export default function ClaraProcessPage() {
                 <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
                   I've presented the basis of a concept here. Based on real-world metrics showing that effective
                   onboarding can boost employee retention by 82% and productivity by 60%
-                  <a href="#ref13" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                    [13]
+                  <a href="#ref5" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
+                    [5]
                   </a>
                   , while AI automation saves workers up to 10 hours per week
-                  <a href="#ref14" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                    [14]
+                  <a href="#ref6" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
+                    [6]
                   </a>
                   , Clara represents a compelling business opportunity. Let's examine how empathetically designed AI
                   could deliver measurable value across key enterprise functions.
@@ -1159,26 +842,26 @@ export default function ClaraProcessPage() {
                 <ul className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80 list-disc pl-4 sm:pl-6 space-y-1 mb-4">
                   <li>
                     Average onboarding costs $1,830 per employee with 5-6 months to full productivity
-                    <a href="#ref15" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                      [15]
+                    <a href="#ref7" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
+                      [7]
                     </a>
                   </li>
                   <li>
                     Only 12% of employees feel their organization provides great onboarding
-                    <a href="#ref16" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                      [16]
+                    <a href="#ref8" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
+                      [8]
                     </a>
                   </li>
                   <li>
                     20.5% of new hires leave within the first 90 days
-                    <a href="#ref17" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                      [17]
+                    <a href="#ref9" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
+                      [9]
                     </a>
                   </li>
                   <li>
                     68% of employees feel disengaged at work
-                    <a href="#ref18" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                      [18]
+                    <a href="#ref10" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
+                      [10]
                     </a>
                   </li>
                 </ul>
@@ -1194,8 +877,8 @@ export default function ClaraProcessPage() {
                   through reduced turnover and faster productivity
                   <br />
                   2.5x revenue growth from effective employee engagement
-                  <a href="#ref21" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                    [21]
+                  <a href="#ref11" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
+                    [11]
                   </a>
                 </p>
               </div>
@@ -1210,26 +893,26 @@ export default function ClaraProcessPage() {
                 <ul className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80 list-disc pl-4 sm:pl-6 space-y-1 mb-4">
                   <li>
                     Workers spend 41% of time on manual, repetitive tasks
-                    <a href="#ref23" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                      [23]
+                    <a href="#ref12" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
+                      [12]
                     </a>
                   </li>
                   <li>
                     $37 billion lost annually due to poor task clarity
-                    <a href="#ref24" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                      [24]
+                    <a href="#ref13" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
+                      [13]
                     </a>
                   </li>
                   <li>
                     Knowledge workers spend 2.5 hours daily searching for information
-                    <a href="#ref25" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                      [25]
+                    <a href="#ref14" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
+                      [14]
                     </a>
                   </li>
                   <li>
                     Poor knowledge sharing costs Fortune 500 companies $31.5 billion annually
-                    <a href="#ref27" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                      [27]
+                    <a href="#ref15" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
+                      [15]
                     </a>
                   </li>
                 </ul>
@@ -1251,34 +934,19 @@ export default function ClaraProcessPage() {
             </div>
 
             <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mt-16 mb-4 text-left">
-              The Possibilities, What Clara Represents
+              The Possibilities: What Clara Represents for UX
             </h2>
+            
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              While this exercise represents a deep dive into what AI can accomplish when designed empathetically by UX
-              practitioners focused on human dignity, we're simply not there yet. Current AI systems reflect the biases,
-              surveillance capitalism, and engagement-optimization of their creators
-              <a href="#ref28" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                [28]
-              </a>
+              This page is a senior UX thought exercise about building AI that serves people. Many systems still reflect bias, engagement optimization, and surveillance incentives—we're not fully there yet. Progress will come from design choices and governance, not market forces alone.
             </p>
+
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              The problem is that big tech companies are neither self-regulating nor subject to adequate government
-              regulation, and we can't assume market forces will sort it out.
-              <a href="#ref29" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                [29]
-              </a>
+              MCP accelerates that progress. It enables the scoped, permission-based interactions Clara requires—letting designers specify consent flows, boundaries, and validation alongside interaction models.
             </p>
-            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">Change is</p>
+
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              inevitable and closer than we think. As designers, researchers, and human-centered technologists push for
-              ethical AI development, concepts like Clara's empathetic intelligence architecture will evolve from
-              speculative design to practical reality. The question isn't whether humane AI will emerge, but whether
-              we'll demand it before surveillance systems and basic tool interfaces become so normalized that we forget
-              what respectful technology looks like.
-            </p>
-            <p className="font-montserrat text-lg text-[#5f5f5f]/80">
-              Clara is a reminder that AI should serve human flourishing, not exploit human vulnerability. And that
-              future is coming sooner than we know.
+              <strong>Clara demonstrates a repeatable approach:</strong> define consent first, carry context across steps, design for corrections, measure trust, and orchestrate through protocols rather than surveillance. AI is arriving fast. With MCP, the path from ethical concept to production reality is clearer than ever.
             </p>
           </section>
 
@@ -1288,10 +956,12 @@ export default function ClaraProcessPage() {
               <a href="/contact">Let's Chat</a>
             </button>
           </div>
-          {/* 1 */}
+          
+          {/* References */}
           <section className="mb-16 pt-8 border-t border-[#F5F5F7]">
             <h3 className="font-space-grotesk text-xl font-semibold text-[#007EA7] mb-6 text-left">References</h3>
             <div className="space-y-4">
+              {/* 1 */}
               <div className="flex items-start gap-3" id="ref1">
                 <span className="font-verdana text-sm text-[#007EA7] font-medium">1</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
@@ -1305,7 +975,8 @@ export default function ClaraProcessPage() {
                   </a>
                 </p>
               </div>
-              {/*2 */}
+              
+              {/* 2 */}
               <div className="flex items-start gap-3" id="ref2">
                 <span className="font-verdana text-sm text-[#007EA7] font-medium">2</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
@@ -1334,6 +1005,7 @@ export default function ClaraProcessPage() {
                   </a>
                 </p>
               </div>
+              
               {/* 4 */}
               <div className="flex items-start gap-3" id="ref4">
                 <span className="font-verdana text-sm text-[#007EA7] font-medium">4</span>
@@ -1348,125 +1020,10 @@ export default function ClaraProcessPage() {
                   </a>
                 </p>
               </div>
+
               {/* 5 */}
               <div className="flex items-start gap-3" id="ref5">
                 <span className="font-verdana text-sm text-[#007EA7] font-medium">5</span>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <a
-                    href="https://constitutionaldiscourse.com/conditioned-for-servility-why-do-ai-models-flatter-us-at-the-expense-of-reality/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    Conditioned for servility – Why do AI models flatter us at the expense of reality?
-                  </a>
-                </p>
-              </div>
-              {/* 6 */}
-
-              <div className="flex items-start gap-3" id="ref6">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">6</span>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <a
-                    href="https://san.com/cc/openai-rolling-back-annoying-overly-validating-chatgpt-update/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    OpenAI rolling back ‘annoying,’ overly validating ChatGPT update
-                  </a>
-                </p>
-              </div>
-
-              {/* 7 */}
-              <div className="flex items-start gap-3" id="ref7">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">7</span>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <a
-                    href="https://nectarhr.com/blog/ai-in-employee-recognition"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    AI In Employee Recognition - Nectar
-                  </a>
-                </p>
-              </div>
-              {/* 8 */}
-              <div className="flex items-start gap-3" id="ref8">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">8</span>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <a
-                    href="https://medium.com/@lyx_62906/stop-telling-me-im-gold-why-honest-ai-feedback-beats-flattery-30835f58376a"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    Stop Telling Me I'm Gold: Why Honest AI Feedback Beats Flattery | Medium
-                  </a>
-                </p>
-              </div>
-
-              {/* 9 */}
-              <div className="flex items-start gap-3" id="ref9">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">9</span>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <a
-                    href="https://link.springer.com/article/10.007/s43681-023-00275-8"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    AI and Ethics - A policy primer and roadmap on AI worker surveillance
-                  </a>
-                </p>
-              </div>
-
-              {/* 10 */}
-              <div className="flex items-start gap-3" id="ref10">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">10</span>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <a
-                    href="https://www.niceactimize.com/blog/fmc-the-ethics-of-ai-in-monitoring-and-surveillance/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    The Ethics of AI in Monitoring and Surveillance | NICE Actimize
-                  </a>
-                </p>
-              </div>
-              {/* 11 */}
-              <div className="flex items-start gap-3" id="ref11">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">11</span>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <a
-                    href="https://link.springer.com/article/10.007/s43681-023-00275-8"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    AI and Ethics - A policy primer and roadmap on AI worker surveillance
-                  </a>
-                </p>
-              </div>
-              {/* 12 */}
-              <div className="flex items-start gap-3" id="ref12">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">12</span>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <a
-                    href="https://emtrain.com/blog/ethics-and-compliance/ai-surveillance-in-the-workplace/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    AI Surveillance in the Workplace - Emtrain
-                  </a>
-                </p>
-              </div>
-              {/* 13 */}
-              <div className="flex items-start gap-3" id="ref13">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">13</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://www.talmundo.com/blog/hr-metrics-for-employee-onboarding"
@@ -1478,9 +1035,10 @@ export default function ClaraProcessPage() {
                   </a>
                 </p>
               </div>
-              {/* 14 */}
-              <div className="flex items-start gap-3" id="ref14">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">14</span>
+
+              {/* 6 */}
+              <div className="flex items-start gap-3" id="ref6">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">6</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://aisera.com/blog/generative-ai-employee-productivity/"
@@ -1492,9 +1050,10 @@ export default function ClaraProcessPage() {
                   </a>
                 </p>
               </div>
-              {/* 15 */}
-              <div className="flex items-start gap-3" id="ref15">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">15</span>
+
+              {/* 7 */}
+              <div className="flex items-start gap-3" id="ref7">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">7</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://enboarder.com/blog/calculate-onboarding-roi/"
@@ -1506,10 +1065,10 @@ export default function ClaraProcessPage() {
                   </a>
                 </p>
               </div>
-              {/* 16 */}
 
-              <div className="flex items-start gap-3" id="ref16">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">16</span>
+              {/* 8 */}
+              <div className="flex items-start gap-3" id="ref8">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">8</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://www.devlinpeck.com/content/employee-onboarding-statistics"
@@ -1522,9 +1081,9 @@ export default function ClaraProcessPage() {
                 </p>
               </div>
 
-              {/* 17 */}
-              <div className="flex items-start gap-3" id="ref17">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">17</span>
+              {/* 9 */}
+              <div className="flex items-start gap-3" id="ref9">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">9</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://enboarder.com/blog/calculate-onboarding-roi/"
@@ -1537,9 +1096,9 @@ export default function ClaraProcessPage() {
                 </p>
               </div>
 
-              {/* 18 */}
-              <div className="flex items-start gap-3" id="ref18">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">18</span>
+              {/* 10 */}
+              <div className="flex items-start gap-3" id="ref10">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">10</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://www.deloitte.com/uk/en/services/consulting/blogs/2024/ai-powered-employee-experience.html"
@@ -1551,38 +1110,10 @@ export default function ClaraProcessPage() {
                   </a>
                 </p>
               </div>
-              {/* 19 */}
-              <div className="flex items-start gap-3" id="ref19">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">19</span>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <a
-                    href="https://peopleinsight.co.uk/ai-and-employee-engagement/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    AI and employee engagement: 7 game-changing integrations
-                  </a>
-                </p>
-              </div>
 
-              {/* 20 */}
-              <div className="flex items-start gap-3" id="ref20">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">20</span>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <a
-                    href="https://peopleinsight.co.uk/ai-and-employee-engagement/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    AI and employee engagement: 7 game-changing integrations
-                  </a>
-                </p>
-              </div>
-              {/* 21 */}
-              <div className="flex items-start gap-3" id="ref21">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">21</span>
+              {/* 11 */}
+              <div className="flex items-start gap-3" id="ref11">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">11</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://www.culturemonkey.io/guides/measuring-employee-engagement/metrics-for-employee-engagement/role-of-ai-in-analyzing-trends-and-patterns-in-employee-engagement/"
@@ -1594,23 +1125,10 @@ export default function ClaraProcessPage() {
                   </a>
                 </p>
               </div>
-              {/* 22 */}
-              <div className="flex items-start gap-3" id="ref22">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">22</span>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <a
-                    href="https://unmudl.com/blog/statistics-automation-is-boosting-workplace-productivity"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    15 Statistics That Show How Automation is Boosting Workplace Productivity
-                  </a>
-                </p>
-              </div>
-              {/* 23 */}
-              <div className="flex items-start gap-3" id="ref23">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">23</span>
+
+              {/* 12 */}
+              <div className="flex items-start gap-3" id="ref12">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">12</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://appinventiv.com/blog/ai-in-employee-engagement/"
@@ -1623,9 +1141,9 @@ export default function ClaraProcessPage() {
                 </p>
               </div>
 
-              {/* 24 */}
-              <div className="flex items-start gap-3" id="ref24">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">24</span>
+              {/* 13 */}
+              <div className="flex items-start gap-3" id="ref13">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">13</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://distantjob.com/blog/reduce-employee-onboarding-time/"
@@ -1638,9 +1156,9 @@ export default function ClaraProcessPage() {
                 </p>
               </div>
 
-              {/* 25 */}
-              <div className="flex items-start gap-3" id="ref25">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">25</span>
+              {/* 14 */}
+              <div className="flex items-start gap-3" id="ref14">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">14</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://www.yarooms.com/blog/ai-in-workplace-technology"
@@ -1652,24 +1170,10 @@ export default function ClaraProcessPage() {
                   </a>
                 </p>
               </div>
-              {/* 26 */}
-              <div className="flex items-start gap-3" id="ref26">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">26</span>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <a
-                    href="https://www.ibm.com/think/topics/ai-in-the-workplace"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    AI in the Workplace | IBM
-                  </a>
-                </p>
-              </div>
 
-              {/* 27 */}
-              <div className="flex items-start gap-3" id="ref27">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">27</span>
+              {/* 15 */}
+              <div className="flex items-start gap-3" id="ref15">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">15</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://ttms.com/boosting-productivity-using-ai-to-automate-routine-business-tasks/"
@@ -1678,78 +1182,6 @@ export default function ClaraProcessPage() {
                     className="text-[#007EA7] hover:underline"
                   >
                     Automating Repetitive Tasks with AI: Smarter Productivity
-                  </a>
-                </p>
-              </div>
-
-              {/* 28 */}
-              <div className="flex items-start gap-3" id="ref28">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">28</span>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <a
-                    href="https://towardsdatascience.com/the-ethics-of-ai-driven-workforce-surveillance-2bfaa57cc4a5/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    The Ethics of AI-driven Workforce Surveillance | Towards Data Science
-                  </a>
-                </p>
-              </div>
-
-              {/* 29 */}
-              <div className="flex items-start gap-3" id="ref29">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">29</span>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <a
-                    href="https://news.harvard.edu/gazette/story/2020/10/ethical-concerns-mount-as-ai-takes-bigger-decision-making-role/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    Ethical concerns mount as AI takes bigger decision-making role — Harvard Gazette
-                  </a>
-                </p>
-              </div>
-              {/* 30 */}
-              <div className="flex items-start gap-3" id="ref30">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">30</span>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <a
-                    href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    The state of AI: How organizations are rewiring to capture value
-                  </a>
-                </p>
-              </div>
-              {/* 31 */}
-              <div className="flex items-start gap-3" id="ref31">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">31</span>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <a
-                    href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/superagency-in-the-workplace-empowering-people-to-unlock-ais-full-potential-at-work"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    Superagency in the workplace: Empowering people to unlock AI's full potential
-                  </a>
-                </p>
-              </div>
-              {/* 32 */}
-              <div className="flex items-start gap-3" id="ref32">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">32</span>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <a
-                    href="https://investor.workday.com/2024-01-10-Workday-Global-Survey-Reveals-AI-Trust-Gap-in-the-Workplace"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    Workday Global Survey Reveals AI Trust Gap in the Workplace
                   </a>
                 </p>
               </div>
