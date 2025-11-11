@@ -96,28 +96,29 @@ export default function ClaraProcessPage() {
               The Teammate Philosophy
             </h2>
             <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-3 sm:mb-4 text-left">
-              Why Clara Works—For Everyone
+              Why Clara Works For Everyone
             </h3>
             
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              Most workplace AI operates at extremes: passive chatbots that wait for commands, or surveillance systems that monitor without consent. Clara represents a third path: collaborative intelligence that builds trust through boundaries, transparency, and respect for expertise.
-            </p>
+               Clara is collaborative intelligence that builds trust through camaraderie, one-to-one support, team
+              awareness, transparency, and respect for expertise.</p>
 
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              <strong>For employees:</strong> Context without intrusion. Clara understands your project and workflow without reading personal communications or tracking off-hours activity.
-            </p>
+               Clara's goal is context without intrusion. It understands the project, the workflow, and the current step,
+              bringing teams together and easing onboarding and training. Work becomes a single conversation across
+              tools instead of a series of resets. It also tracks whether blockers are resolving and whether handoffs
+              are improving, so leaders see movement where it matters.</p>
 
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              <strong>For teams:</strong> Connection without surveillance. Clara spots redundant work across departments and surfaces knowledge gaps by understanding workflow context, not monitoring individuals.
-            </p>
+             Clara strengthens collaboration without surveillance. It spots duplicate effort, reveals gaps in shared
+              knowledge, and improves handoffs by focusing on workflow. It guides progress without micromanagement. </p>
 
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              <strong>For leadership:</strong> Progress without micromanagement. Clara measures what matters—Are blockers resolving? Are handoffs improving?—instead of vanity metrics like clicks or time-in-seat.
-            </p>
+             With the advancement of MCP (Model Context Protocol), Clara can act like a real teammate integrating with
+              approved APIs and data sources. The system gains connectors, permissions, and logs in one place, which
+              turns "assistant" behaviors into reliable, coordinated workflows. </p>
 
-            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              <strong>The technical foundation:</strong> Model Context Protocol (MCP) makes this buildable. MCP enables scoped, auditable AI interactions. Clara can request project context while maintaining clear boundaries. What started as a speculative design exercise now has a real-world implementation path.
-            </p>
+            
           </section>
 
           {/* Personas */}
@@ -129,7 +130,10 @@ export default function ClaraProcessPage() {
               Four Enterprise Archetypes
             </h3>
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              To design Clara's adaptive intelligence across different workplace mindsets, I developed four enterprise archetypes. Using behavioral research on team dynamics, AI adoption patterns, and workplace stress, I created four personas representing different relationships with AI, support needs, and work styles. Each archetype shaped how Clara adjusts her communication, timing, and level of intervention.{" "}
+              To design the conceptual large language model for an AI that builds trust across enterprise environments,
+              I created four representative personas using a combination of web research, AI-assisted synthesis, and
+              behavioral pattern analysis. Drawing from published studies on team dynamics, customer service, enterprise
+              UX, and AI skepticism, I identified recurring themes and shaped them into clear user archetypes.{" "}
               <a href="#ref1" className="reference-number text-[#007EA7] hover:text-[#005f7f] no-underline">
                 [1]
               </a>
@@ -143,7 +147,10 @@ export default function ClaraProcessPage() {
                 [4]
               </a>
             </p>
-
+<p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-8">
+              Each persona represents a different user mindset toward AI, which helped define how the system adapts her
+              support, communication style, and presence within complex workflows.
+            </p>
             <div
               className="grid grid-cols-1 md:grid-cols-2 gap-8"
               style={{ gridTemplateRows: "auto auto", alignItems: "start" }}
@@ -473,19 +480,15 @@ export default function ClaraProcessPage() {
               Clara's Architecture
             </h2>
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              Clara was envisioned as an adaptive teammate whose artificial intelligence shifts to meet the needs of
-              diverse people in varied moments based on a self learning system model. Rather than relying on external
-              guardrails, she operates through moral reasoning, continuously learning and weighing human-centered values
-              through monitored checks and balances.
+              This conceptual mindmaping framework demonstrates how functional layers like pattern recognition, ethical
+              safeguards, and cultural health could work together. It's a strategic exploration of UX design principles
+              shaping adaptive AI systems, not a technical blueprint.
             </p>
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              This conceptual framework demonstrates how functional layers like pattern recognition, ethical safeguards,
-              and cultural health could work together. It's a strategic exploration of UX design principles shaping
-              adaptive AI systems, not a technical blueprint.
-            </p>
-            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              This system scales with organizational growth while remaining context-aware as a trusted colleague who
-              knows when to engage, when to listen, and how to adapt her support.
+               With the advancement of MCP, Clara can request scoped context, connect through OAuth to approved APIs, and
+              coordinate actions across tools with consent and an auditable record. MCP makes orchestration practical
+              while preserving the boundaries that build trust.
+            
             </p>
             <div className="flex flex-col lg:flex-row gap-8 items-start mb-6">
               <div className="flex-1 space-y-4">
@@ -498,10 +501,7 @@ export default function ClaraProcessPage() {
                   <li>Explains her thinking and maintains transparency in all decisions</li>
                 </ul>
 
-                <p className="font-montserrat text-lg text-[#5f5f5f]/80">
-                  This creates a balance between the complex diagram and digestible insights, while emphasizing Clara's
-                  unique moral architecture approach.
-                </p>
+               
               </div>
 
               <div className="flex-1 lg:flex-[2] -m-4 lg:m-0">
@@ -518,35 +518,7 @@ export default function ClaraProcessPage() {
             </div>
           </section>
 
-          {/* MCP Technical Foundation */}
-          <section className="mb-8 sm:mb-16">
-            <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-3 sm:mb-4 text-left">
-              The Technical Foundation: Model Context Protocol
-            </h3>
-            
-            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              When I designed Clara in 2024, this adaptive intelligence felt conceptually sound but technically complex. Model Context Protocol (MCP) changed that.
-            </p>
-
-            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              MCP is an open standard that enables AI systems to request tools and data through secure, auditable gateways. Instead of giving AI access to everything or nothing, MCP supports the scoped, permission-based interactions Clara requires.
-            </p>
-
-            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              <strong>How MCP enables Clara's architecture:</strong>
-            </p>
-
-            <ul className="font-montserrat text-base text-[#5f5f5f]/80 space-y-2 list-disc pl-6 mb-6 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
-              <li><strong>Bounded intelligence</strong> – Clara requests project context while teams control what she can access</li>
-              <li><strong>Transparent actions</strong> – Every tool use and data source is logged and auditable</li>
-              <li><strong>Permission-based automation</strong> – When Clara wants to act (schedule a meeting, update a doc), she requests approval through MCP</li>
-              <li><strong>Team-configured scope</strong> – The people using Clara define her boundaries, not management</li>
-            </ul>
-
-            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80">
-              MCP transforms Clara from a speculative framework into a buildable system. The teammate philosophy now has technical infrastructure to support it.
-            </p>
-          </section>
+        
 
           {/* UX Strategy & Core Flows*/}
           <section className="mb-8 sm:mb-16">
@@ -554,16 +526,18 @@ export default function ClaraProcessPage() {
               UX Strategy & Core Flows
             </h2>
             <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-4">
-              Clara's interaction model is shaped by key UX principles: calm design, progressive disclosure, and role-aware personalization. Instead of bombarding users with features, she surfaces just enough guidance at the right moment. Her interventions are subtle, timely, and emotionally aware—designed to reduce friction rather than add to it.
-            </p>
+              Clara's interaction model applies calm design, progressive disclosure, and role-aware personalization.
+              Instead of feature blasts, she offers the next helpful nudge only when context signals it. Interventions
+              are brief, explainable, and emotionally aware to lower friction. </p>
 
             <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-4">
-              In a real implementation, I would validate this adaptive approach through Wizard of Oz testing across all four personas, observing whether Clara's communication feels supportive or intrusive. Success metrics would focus on voluntary engagement rates, trust indicators, and role-based adoption patterns—proving Clara builds relationships, not dependency.
-            </p>
+             To validate this in a real build, I would run Wizard of Oz trials across the four personas and observe
+              whether messages feel supportive or intrusive. Success looks like higher voluntary engagement, stronger
+              trust indicators, and adoption patterns that make sense by role.</p>
 
             <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-6">
-              Each scenario below demonstrates how Clara adapts across different roles and goals, reflecting a broader UX strategy that blends trust, relevance, and quiet intelligence into the flow of work.
-            </p>
+              The scenarios below show how Clara adapts to different goals and constraints, bringing quiet intelligence
+              into the flow of work. </p>
             <div className="w-full mb-8">
               <div className="relative w-full">
                 <Image
@@ -813,7 +787,11 @@ export default function ClaraProcessPage() {
             <div className="flex flex-col lg:flex-row gap-8 mb-8">
               <div className="lg:w-1/2">
                 <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-                This concept shows how an AI teammate could deliver measurable value when trust is designed in. Evidence already points the way: better onboarding improves retention and productivity[13]and automation returns meaningful time to teams[14]With MCP, Clara has a practical path to orchestration: scoped access to approved APIs, clear consent, and an auditable trail that teams control.</p>
+                This concept shows how an AI teammate could deliver measurable value when trust is designed in. Evidence already points the way: better onboarding improves retention and productivity <a href="#ref13" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
+                    [13]
+                  </a> and automation returns meaningful time to teams <a href="#ref14" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
+                    [14]
+                  </a> With MCP, Clara has a practical path to orchestration: scoped access to approved APIs, clear consent, and an auditable trail that teams control.</p>
                 <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
                   Clara creates a continuous cycle of empowerment. Support adapts by role, so frontline work gets contextual coaching, creators get recognition and confidence building, design groups get strategic partnership and thoughtful automation, and operations gets alignment. The aim is collaboration, not control.
                 </p>
@@ -1066,20 +1044,7 @@ export default function ClaraProcessPage() {
                 </p>
               </div>
 
-              {/* 15 */}
-              <div className="flex items-start gap-3" id="ref15">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">15</span>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <a
-                    href="https://ttms.com/boosting-productivity-using-ai-to-automate-routine-business-tasks/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    Automating Repetitive Tasks with AI: Smarter Productivity
-                  </a>
-                </p>
-              </div>
+              
             </div>
           </section>
         </div>
