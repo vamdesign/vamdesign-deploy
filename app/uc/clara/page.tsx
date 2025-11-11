@@ -799,25 +799,9 @@ export default function ClaraProcessPage() {
             <div className="flex flex-col lg:flex-row gap-8 mb-8">
               <div className="lg:w-1/2">
                 <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-                  I've presented the basis of a concept here. Based on real-world metrics showing that effective
-                  onboarding can boost employee retention by 82% and productivity by 60%
-                  <a href="#ref5" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                    [5]
-                  </a>
-                  , while AI automation saves workers up to 10 hours per week
-                  <a href="#ref6" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                    [6]
-                  </a>
-                  , Clara represents a compelling business opportunity. Let's examine how empathetically designed AI
-                  could deliver measurable value across key enterprise functions.
-                </p>
+                This concept shows how an AI teammate could deliver measurable value when trust is designed in. Evidence already points the way: better onboarding improves retention and productivity[13]and automation returns meaningful time to teams[14]With MCP, Clara has a practical path to orchestration: scoped access to approved APIs, clear consent, and an auditable trail that teams control.</p>
                 <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-                  The circular framework illustrates how Clara's intelligence creates a continuous cycle of team
-                  empowerment. By adapting her support to the needs of each role, she delivers contextual coaching for
-                  frontline teams, confidence building and recognition for creators, strategic partnership and
-                  automation for design groups, and leadership alignment for operations. This balanced approach reframes
-                  AI as a collaborator rather than a controller, driving measurable outcomes such as higher retention,
-                  faster productivity gains, and more resilient organizational culture.
+                  Clara creates a continuous cycle of empowerment. Support adapts by role, so frontline work gets contextual coaching, creators get recognition and confidence building, design groups get strategic partnership and thoughtful automation, and operations gets alignment. The aim is collaboration, not control.
                 </p>
               </div>
 
@@ -831,123 +815,20 @@ export default function ClaraProcessPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-              <div className="bg-white p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
-                <h3 className="font-space-grotesk text-lg sm:text-xl font-semibold text-[#007EA7] mb-3 sm:mb-4">
-                  Human Flourishing at Scale
-                </h3>
-                <p className="font-montserrat text-sm text-[#5f5f5f]/80 mb-4">
-                  <strong>Current Enterprise Challenge:</strong>
-                </p>
-                <ul className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80 list-disc pl-4 sm:pl-6 space-y-1 mb-4">
-                  <li>
-                    Average onboarding costs $1,830 per employee with 5-6 months to full productivity
-                    <a href="#ref7" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                      [7]
-                    </a>
-                  </li>
-                  <li>
-                    Only 12% of employees feel their organization provides great onboarding
-                    <a href="#ref8" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                      [8]
-                    </a>
-                  </li>
-                  <li>
-                    20.5% of new hires leave within the first 90 days
-                    <a href="#ref9" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                      [9]
-                    </a>
-                  </li>
-                  <li>
-                    68% of employees feel disengaged at work
-                    <a href="#ref10" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                      [10]
-                    </a>
-                  </li>
-                </ul>
-                <p className="font-montserrat text-sm text-[#5f5f5f]/80 mb-4">
-                  <strong>Clara's Strategic Solution:</strong> Personalized, just-in-time learning that adapts to
-                  individual learning styles and role requirements + Contextual support that builds confidence,
-                  celebrates genuine achievements, and provides growth-focused feedback
-                </p>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <strong>Business Impact:</strong>
-                  <br />
-                  ROI Calculation: For a 1,000-employee company hiring 200 people annually: $273,000 annual savings
-                  through reduced turnover and faster productivity
-                  <br />
-                  2.5x revenue growth from effective employee engagement
-                  <a href="#ref11" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                    [11]
-                  </a>
-                </p>
-              </div>
-
-              <div className="bg-white p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
-                <h3 className="font-space-grotesk text-lg sm:text-xl font-semibold text-[#007EA7] mb-3 sm:mb-4">
-                  Trust Through Transparency
-                </h3>
-                <p className="font-montserrat text-sm text-[#5f5f5f]/80 mb-4">
-                  <strong>Current Enterprise Challenge:</strong>
-                </p>
-                <ul className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80 list-disc pl-4 sm:pl-6 space-y-1 mb-4">
-                  <li>
-                    Workers spend 41% of time on manual, repetitive tasks
-                    <a href="#ref12" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                      [12]
-                    </a>
-                  </li>
-                  <li>
-                    $37 billion lost annually due to poor task clarity
-                    <a href="#ref13" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                      [13]
-                    </a>
-                  </li>
-                  <li>
-                    Knowledge workers spend 2.5 hours daily searching for information
-                    <a href="#ref14" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                      [14]
-                    </a>
-                  </li>
-                  <li>
-                    Poor knowledge sharing costs Fortune 500 companies $31.5 billion annually
-                    <a href="#ref15" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                      [15]
-                    </a>
-                  </li>
-                </ul>
-                <p className="font-montserrat text-sm text-[#5f5f5f]/80 mb-4">
-                  <strong>Clara's Strategic Solution:</strong>
-                  <br />
-                  Intelligent automation that preserves human dignity while eliminating busywork
-                  <br />
-                  Contextual knowledge discovery and cross-team collaboration facilitation
-                </p>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <strong>Operational Impact:</strong>
-                  <br />
-                  $50 million annually for 10,000-employee organization
-                  <br />
-                  75% reduction in search time, 300% increase in internal resource usage
-                </p>
-              </div>
-            </div>
+           
 
             <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mt-16 mb-4 text-left">
               The Possibilities: What Clara Represents for UX
             </h2>
             
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              This page is a senior UX thought exercise about building AI that serves people. Many systems still reflect bias, engagement optimization, and surveillance incentives—we're not fully there yet. Progress will come from design choices and governance, not market forces alone.
-            </p>
+              This page is a senior UX thought exercise about building AI that serves people. Many systems still reflect bias, engagement optimization, and surveillance incentives, so we are not fully there yet. Progress will come from design choices and governance, not market forces alone.</p>
 
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              MCP accelerates that progress. It enables the scoped, permission-based interactions Clara requires—letting designers specify consent flows, boundaries, and validation alongside interaction models.
-            </p>
+              MCP accelerates feasibility. It gives Clara a clean way to request the right context, connect to approved systems, and make every action explainable and reviewable. That lets UX specify consent flows, boundaries, and evaluation plans alongside the interaction model. </p>
 
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              <strong>Clara demonstrates a repeatable approach:</strong> define consent first, carry context across steps, design for corrections, measure trust, and orchestrate through protocols rather than surveillance. AI is arriving fast. With MCP, the path from ethical concept to production reality is clearer than ever.
-            </p>
+           Clara demonstrates a repeatable approach: define consent first, carry context across steps, design for corrections, measure trust, and orchestrate through protocols rather than surveillance. AI is arriving fast. With MCP, the path from ethical concept to production reality is clearer than ever.</p>
           </section>
 
           {/* Call to Action */}
