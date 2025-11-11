@@ -29,20 +29,33 @@ export default function ClaraProcessPage() {
                 Clara: Designing AI as a Trusted Teammate, Not a Monitor
               </h1>
             </div>
-            <p className="font-montserrat text-lg text-[#2C3D4D] mt-8 text-left">
-              What if your AI assistant actually understood you? Not just your words, but your work style, your stress
-              patterns, when you need encouragement versus honest feedback, yet still was there as a teammate,
-              encouraging you on? Clara isn't another LLM, she's a well-rounded, thoughtfully designed AI that won't act
-              as Big Brother but will be a genuine asset to both employees and business outcomes.
-            </p>
+            <p className="text-lg text-[#2C3D4D] mt-8 text-left">
+  <strong className="font-space-grotesk text-[#007EA7]">The Challenge:</strong>{" "}
+  <span className="font-montserrat">
+    Enterprise AI is racing ahead while trust lags. Tool sprawl and quiet surveillance create fatigue and
+    resistance.
+  </span>
+</p>
 
-            <p className="font-montserrat text-lg text-[#2C3D4D] mt-4 text-left">
-              This speculative project was created as a thought exercise to explore how large language models could be
-              ethically and effectively integrated into real-world enterprise systems. This use-case blends UX strategy,
-              persona development, prompt design, and interaction modeling to demonstrate how AI might reduce friction,
-              support human resilience, and scale with care. Let's explore the UX strategy, user insights, and design
-              principles that drive this concept.
-            </p>
+<p className="text-lg text-[#2C3D4D] mt-4 text-left">
+  <strong className="font-space-grotesk text-[#007EA7]">My Approach:</strong>{" "}
+  <span className="font-montserrat">
+    Drawing from enterprise UX work at Apple, Wells Fargo, and Walmart, I've seen how tools ship for speed
+    instead of trust. Clara explores what happens when we design the opposite. I framed the problem,
+    synthesized research, modeled four enterprise archetypes, and designed an adaptive intelligence that
+    asks permission, explains itself, and respects expertise.
+  </span>
+</p>
+
+<p className="text-lg text-[#2C3D4D] mt-4 text-left">
+  <strong className="font-space-grotesk text-[#007EA7]">Outcome:</strong>{" "}
+  <span className="font-montserrat">
+    An example of how I think about LLMs in real workflows and translate ethics into interactions. This is a
+    thought exercise from a senior UX point of view that demonstrates strategy, architecture, and teammate
+    behaviors that improve adoption and outcomes.
+  </span>
+</p>
+            
           </div>
         </div>
 
