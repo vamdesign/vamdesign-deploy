@@ -40,9 +40,8 @@ export default function ClaraProcessPage() {
 <p className="text-lg text-[#2C3D4D] mt-4 text-left">
   <strong className="font-space-grotesk text-[#007EA7]">My Approach:</strong>{" "}
   <span className="font-montserrat">
-    Drawing from enterprise UX work at Apple, Wells Fargo, and Walmart, I've seen how tools ship for speed
-    instead of trust. Clara explores what happens when we design the opposite. I framed the problem,
-    synthesized research, modeled four enterprise archetypes, and designed an adaptive intelligence that
+     Drawing from enterprise UX work at Apple, Wells Fargo, and Walmart, I've seen how tools ship for speed
+    instead of trust. Clara explores what happens when we design the opposite. I framed the problem through research synthesis, developed four enterprise archetypes, and designed an adaptive intelligence that
     asks permission, explains itself, and respects expertise.
   </span>
 </p>
@@ -50,9 +49,7 @@ export default function ClaraProcessPage() {
 <p className="text-lg text-[#2C3D4D] mt-4 text-left">
   <strong className="font-space-grotesk text-[#007EA7]">Outcome:</strong>{" "}
   <span className="font-montserrat">
-    An example of how I think about LLMs in real workflows and translate ethics into interactions. This is a
-    thought exercise from a senior UX point of view that demonstrates strategy, architecture, and teammate
-    behaviors that improve adoption and outcomes.
+      A strategic framework showing how I translate AI ethics into interaction design through a UX lense, demonstrating the systems thinking, research, and business acumen that would improve both adoption and outcomes.
   </span>
 </p>
             
@@ -64,15 +61,13 @@ export default function ClaraProcessPage() {
           <section className="mb-8 sm:mb-16">
             <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-2 text-left">The Problem</h2>
             <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-3 sm:mb-4 text-left">
-              AI is Moving Too Fast Without Ethical Guardrails
-              <br />
-              Creating a Surveillance Experience
+              From Assistance to Oversight, Trust is Breaking
             </h3>
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div>
                 <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-                  Enterprise AI adoption is accelerating while trust for it lags behind. For example, teams use separate tools like ChatGPT, Claude, and Copilot, each AI operating in isolation. This causes lack of shared context, resulting in fractured workflows, cognitive overload, and tools that feel like friction instead of help.
-                </p>
+                                    Enterprise AI adoption is accelerating while trust principals lag behind. For example, teams use separate tools like ChatGPT, Claude, and Copilot, each AI operating in isolation. This creates a lack of shared context, resulting in fractured workflows, cognitive overload, and tools that feel like friction instead of help.
+</p>
                 <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
                   AI is quietly shifting from assistant to observer. Systems track behavior, score productivity, and surface insights to leadership often without employee consent or transparency. What's pitched as "support" lands as surveillance. The gap between what AI promises and what people experience is eroding trust faster than adoption can build it.
                 </p>
@@ -100,21 +95,19 @@ export default function ClaraProcessPage() {
             </h3>
             
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-               Clara is collaborative intelligence that builds trust through camaraderie, one-to-one support, team
-              awareness, transparency, and respect for expertise.</p>
+               Clara builds trust through what matters most to teams: genuine camaraderie, individualized support, organizational awareness, radical transparency, and deep respect for expertise.</p>
 
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
                Clara's goal is context without intrusion. It understands the project, the workflow, and the current step,
               bringing teams together and easing onboarding and training. Work becomes a single conversation across
-              tools instead of a series of resets. It also tracks whether blockers are resolving and whether handoffs
-              are improving, so leaders see movement where it matters.</p>
+              tools and tracks whether blockers are resolving and whether handoffs
+              are improving, so leaders see movement where it matters. It spots duplicate effort, reveals gaps in shared
+              knowledge, and improves handoffs by focusing on workflow. It guides progress without micromanagement.</p>
+
+          
 
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-             Clara strengthens collaboration without surveillance. It spots duplicate effort, reveals gaps in shared
-              knowledge, and improves handoffs by focusing on workflow. It guides progress without micromanagement. </p>
-
-            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-             With the advancement of MCP (Model Context Protocol), Clara can act like a real teammate integrating with
+             With the advancement of MCP (Model Context Protocol), a framework that lets AI systems request scoped context and coordinate actions across approved tools, Clara can act like a real teammate integrating with
               approved APIs and data sources. The system gains connectors, permissions, and logs in one place, which
               turns "assistant" behaviors into reliable, coordinated workflows. </p>
 
@@ -279,8 +272,7 @@ export default function ClaraProcessPage() {
                         <div>
                           <p className="font-montserrat text-sm font-semibold text-[#007EA7]">FRICTION</p>
                           <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                            When team pushback increases, Clara suggests "people solutions" that feel too soft for
-                            Andre's data-driven approach to management.
+                            When team pushback increases, Clara suggests collaborative approaches that feel disconnected from his metrics-driven worldview.
                           </p>
                         </div>
 
@@ -480,9 +472,9 @@ export default function ClaraProcessPage() {
               Clara's Architecture
             </h2>
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              This conceptual mindmaping framework demonstrates how functional layers like pattern recognition, ethical
+              This conceptual mind maping framework demonstrates how functional layers like pattern recognition, ethical
               safeguards, and cultural health could work together. It's a strategic exploration of UX design principles
-              shaping adaptive AI systems, not a technical blueprint.
+              shaping adaptive AI systems, not a technical blueprint. While implementing this would require close partnership with ML engineers and data scientists, it demonstrates how UX thinking can guide AI system design from the ground up by defining the 'what' and 'why' that engineering teams need to build the 'how'.
             </p>
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
                With the advancement of MCP, Clara can request scoped context, connect through OAuth to approved APIs, and
@@ -494,7 +486,7 @@ export default function ClaraProcessPage() {
               <div className="flex-1 space-y-4">
                 <ul className="font-montserrat text-base text-[#5f5f5f]/80 space-y-2 list-disc pl-6 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
                   <li>Clara makes ethical decisions, not just rule-based responses</li>
-                  <li>Understands team dynamics and organizational context natrually</li>
+                  <li>Understands team dynamics and organizational context naturally</li>
                   <li>Personalizes approach based on individual needs and moments</li>
                   <li>Knows the difference between helpful intervention and overreach</li>
                   <li>Learns through experience while maintaining core values</li>
@@ -613,8 +605,8 @@ export default function ClaraProcessPage() {
                     </div>
                   </div>
                 </div>
-                <p className="font-montserrat text-xs text-[#5f5f5f]/60 text-left mt-2">
-                  (Source: Zoho Desk Customer Support)
+                <p className="font-montserrat text-[0.625rem] text-[#5f5f5f]/60 text-left mt-2">
+                  (Image sources: Zoho Desktop Customer Support)
                 </p>
               </div>
             </div>
@@ -718,7 +710,7 @@ export default function ClaraProcessPage() {
                     />
                   </div>
                   <p className="font-montserrat text-sm text-[#5f5f5f]/80 mt-3">
-                    Clara reveals that email tickets at 15:05 average are the primary bottleneck, then immediately
+                    Clara reveals that email tickets average 15:05 which is the primary bottleneck, then immediately
                     celebrates Jamie's discovery with "you're on a roll!" This positive reinforcement maintains momentum
                     while suggesting the next logical optimization step: auto-routing for common email queries.
                   </p>
@@ -789,9 +781,9 @@ export default function ClaraProcessPage() {
                 <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
                 This concept shows how an AI teammate could deliver measurable value when trust is designed in. Evidence already points the way: better onboarding improves retention and productivity <a href="#ref13" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
                     [13]
-                  </a> and automation returns meaningful time to teams <a href="#ref14" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
+                  </a> , and automation returns meaningful time to teams <a href="#ref14" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
                     [14]
-                  </a> With MCP, Clara has a practical path to orchestration: scoped access to approved APIs, clear consent, and an auditable trail that teams control.</p>
+                  </a> . With MCP, Clara has a practical path to orchestration: scoped access to approved APIs, clear consent, and an auditable trail that teams control.</p>
                 <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
                   Clara creates a continuous cycle of empowerment. Support adapts by role, so frontline work gets contextual coaching, creators get recognition and confidence building, design groups get strategic partnership and thoughtful automation, and operations gets alignment. The aim is collaboration, not control.
                 </p>
@@ -820,8 +812,8 @@ export default function ClaraProcessPage() {
               MCP accelerates feasibility. It gives Clara a clean way to request the right context, connect to approved systems, and make every action explainable and reviewable. That lets UX specify consent flows, boundaries, and evaluation plans alongside the interaction model. </p>
 
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-           Clara demonstrates a repeatable approach: define consent first, carry context across steps, design for corrections, measure trust, and orchestrate through protocols rather than monitoring. AI is arriving fast. With MCP, the path from ethical concept to production reality is clearer than ever.</p>
-          </section>
+           Clara demonstrates a repeatable approach: define consent first, carry context across steps, design for corrections, measure trust, and orchestrate through protocols rather than monitoring. AI is alredy integrating into our lives quickly. With MCP, the path from ethical concept to production reality is clearer than ever.  The question is whether we'll design for people using empathy and human centered design, or settle for big brother.</p>
+          </section> 
 
           {/* Call to Action */}
           <div className="mt-16 flex flex-col items-center pb-12">
