@@ -49,7 +49,7 @@ export default function ClaraProcessPage() {
 <p className="text-lg text-[#2C3D4D] mt-4 text-left">
   <strong className="font-space-grotesk text-[#007EA7]">Outcome:</strong>{" "}
   <span className="font-montserrat">
-      A strategic framework showing how I translate AI ethics into interaction design through a UX lense, demonstrating the systems thinking, research, and business acumen that would improve both adoption and outcomes.
+      A strategic framework showing how I translate AI ethics into interaction design through a UX lens, demonstrating the systems thinking, research, and business acumen that would improve both adoption and outcomes.
   </span>
 </p>
             
@@ -66,7 +66,7 @@ export default function ClaraProcessPage() {
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div>
                 <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-                                    Enterprise AI adoption is accelerating while trust principals lag behind. For example, teams use separate tools like ChatGPT, Claude, and Copilot, each AI operating in isolation. This creates a lack of shared context, resulting in fractured workflows, cognitive overload, and tools that feel like friction instead of help.
+                                    Enterprise AI adoption is accelerating while trust principles lag behind. For example, teams use separate tools like ChatGPT, Claude, and Copilot, each AI operating in isolation. This creates a lack of shared context, resulting in fractured workflows, cognitive overload, and tools that feel like friction instead of help.
 </p>
                 <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
                   AI is quietly shifting from assistant to observer. Systems track behavior, score productivity, and surface insights to leadership often without employee consent or transparency. What's pitched as "support" lands as surveillance. The gap between what AI promises and what people experience is eroding trust faster than adoption can build it.
@@ -472,7 +472,7 @@ export default function ClaraProcessPage() {
               Clara's Architecture
             </h2>
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              This conceptual mind maping framework demonstrates how functional layers like pattern recognition, ethical
+              This conceptual mind mapping framework demonstrates how functional layers like pattern recognition, ethical
               safeguards, and cultural health could work together. It's a strategic exploration of UX design principles
               shaping adaptive AI systems, not a technical blueprint. While implementing this would require close partnership with ML engineers and data scientists, it demonstrates how UX thinking can guide AI system design from the ground up by defining the 'what' and 'why' that engineering teams need to build the 'how'.
             </p>
@@ -812,7 +812,7 @@ export default function ClaraProcessPage() {
               MCP accelerates feasibility. It gives Clara a clean way to request the right context, connect to approved systems, and make every action explainable and reviewable. That lets UX specify consent flows, boundaries, and evaluation plans alongside the interaction model. </p>
 
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-           Clara demonstrates a repeatable approach: define consent first, carry context across steps, design for corrections, measure trust, and orchestrate through protocols rather than monitoring. AI is alredy integrating into our lives quickly. With MCP, the path from ethical concept to production reality is clearer than ever.  The question is whether we'll design for people using empathy and human centered design, or settle for big brother.</p>
+           Clara demonstrates a repeatable approach: define consent first, carry context across steps, design for corrections, measure trust, and orchestrate through protocols rather than monitoring. AI is already integrating into our lives quickly. With MCP, the path from ethical concept to production reality is clearer than ever.  The question is whether we'll design for people using empathy and human-centered design, or settle for Big Brother.</p>
           </section> 
 
           {/* Call to Action */}
