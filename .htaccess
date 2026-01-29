@@ -1,3 +1,11 @@
+Options -MultiViews
+DirectoryIndex index.html
+
+RewriteEngine On
+
+# If someone visits /something, serve /something.html (NOT /something.txt)
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
 AuthUserFile /home1/vickimor/public_htlm/.htbluevam
 AuthType Basic
 AuthName "Guest"
