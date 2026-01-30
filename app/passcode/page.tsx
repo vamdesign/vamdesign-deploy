@@ -98,6 +98,7 @@ export default function PasswordProtect() {
   const [error, setError] = useState("")
   const [redirecting, setRedirecting] = useState(false)
   const [cookiesAccepted, setCookiesAccepted] = useState(false)
+  const [mounted, setMounted] = useState(false)
   const router = useRouter()
   const searchParams = useSearchParams()
   const returnUrl = searchParams.get("returnUrl") || "/uc/apple"
@@ -111,8 +112,9 @@ export default function PasswordProtect() {
   // Extract the UC name from the return URL for the cookie
   const ucCookieName = returnUrl.split("/")[2]
 
-  // Check if cookies are accepted on component mount
+  // Check if component is mounted and cookies are accepted
   useEffect(() => {
+    setMounted(true)
     const cookiesAccepted = areCookiesAccepted()
     setCookiesAccepted(cookiesAccepted)
   }, [])
@@ -174,6 +176,11 @@ export default function PasswordProtect() {
     Cookies.set("cookie-consent", "accepted", { expires: 30 })
     setCookiesAccepted(true)
     setError("") // Clear any error messages
+  }
+
+  // Don't render until mounted to prevent hydration mismatch
+  if (!mounted) {
+    return null
   }
 
   return (
