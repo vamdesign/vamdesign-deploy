@@ -26,22 +26,14 @@ export default function ClaraProcessPage() {
 
               {/* Title - Human Oversight */}
               <h1 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold text-[#007EA7] mb-4 sm:mb-8 text-center md:text-left">
-                Clara: Designing Trust for Human Oversight in Enterprise AI
+                Clara: A Vision for Human Oversight in Enterprise AI
               </h1>
             </div>
             <p className="text-lg text-[#2C3D4D] mt-8 text-left font-montserrat">
-              Clara is a conceptual exploration of how enterprise AI could support complex work while remaining understandable, permission-aware, and accountable to the people using it.
+              Clara is a conceptual exploration of how enterprise AI could support complex work while remaining understandable, permission-aware, and accountable to the people using it. Drawing from enterprise UX work across Apple, Wells Fargo, and Walmart, this case study explores what it looks like to design AI around trust, oversight, and respect for expertise rather than speed alone.
             </p>
 
-            <p className="text-lg text-[#2C3D4D] mt-4 text-left">
 
-              <span className="font-montserrat">
-                Drawing from enterprise UX work at Apple, Wells Fargo, and Walmart, I've seen how tools ship for speed
-                instead of trust. Clara explores what happens when we design the opposite. I framed the problem,
-                synthesized research, modeled four enterprise archetypes, and designed an adaptive intelligence that
-                asks permission, explains itself, and respects expertise.
-              </span>
-            </p>
 
 
           </div>
@@ -57,16 +49,10 @@ export default function ClaraProcessPage() {
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div>
                 <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-                  Enterprise AI adoption is accelerating while trust for it lags behind. For example, teams use separate
-                  tools like ChatGPT, Claude, and Copilot, each AI operating in isolation. This causes lack of shared
-                  context, resulting in fractured workflows, cognitive overload, and tools that feel like friction
-                  instead of help.
+                  Enterprise AI adoption is accelerating, but trust is not keeping pace. Teams use separate AI tools in parallel, each operating with limited shared context. The result is fractured workflows, more cognitive load, and support that often feels like extra work rather than real help.
                 </p>
                 <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-                  AI is quietly shifting from assistant to observer. Systems track behavior, score productivity, and
-                  surface insights to leadership often without employee consent or transparency. What's pitched as
-                  "support" lands as surveillance. The gap between what AI promises and what people experience is
-                  eroding trust faster than adoption can build it.
+                  At the same time, AI is shifting from assistant to observer. Systems summarize behavior, surface performance insights, and influence decisions with limited transparency. What is framed as support can quickly feel like surveillance. The gap between AI capability and human experience is where trust begins to break.
                 </p>
               </div>
               <div className="flex justify-center">
@@ -85,29 +71,28 @@ export default function ClaraProcessPage() {
           {/* The Teammate Philosophy */}
           <section className="mb-8 sm:mb-16">
             <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-left">
-              The Teammate Philosophy
+              The Teammate Philosophy: Why Clara Works for Everyone
             </h2>
-            <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-3 sm:mb-4 text-left">
-              Why Clara Works for Everyone
-            </h3>
+
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              Clara builds trust through what matters most to teams: genuine camaraderie, individualized support, organizational awareness, radical transparency, and deep respect for expertise.
+              Clara is built around a simple idea: enterprise AI should provide context without intrusion. It should explain before acting, respect role and expertise, and make support visible without becoming surveillance. These principles shape Clara’s behavior across workflows, from onboarding and guidance to escalation and collaboration.
             </p>
-            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              Clara's goal is context without intrusion. It understands the project, the workflow, and the current step,
-              bringing teams together and easing onboarding and training. Work becomes a single conversation across
-              tools instead of a series of resets. It also tracks whether blockers are resolving and whether handoffs
-              are improving, so leaders see movement where it matters.
-            </p>
-            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              Clara strengthens collaboration without surveillance. It spots duplicate effort, reveals gaps in shared
-              knowledge, and improves handoffs by focusing on workflow. It guides progress without micromanagement.
-            </p>
-            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              With the advancement of MCP (Model Context Protocol), Clara can act like a real teammate integrating with
-              approved APIs and data sources. The system gains connectors, permissions, and logs in one place, which
-              turns "assistant" behaviors into reliable, coordinated workflows.
-            </p>
+            <div className="flex flex-col lg:flex-row gap-8 items-start mb-6">
+              <div className="flex-1 space-y-4">
+                {/* Adding blue bullet points to Clara's capabilities list */}
+                <ul className="font-montserrat text-base text-[#5f5f5f]/80 space-y-2 list-disc pl-6 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
+                  <li>Context without intrusion</li>
+                  <li>Permission-aware support</li>
+                  <li>Explain before acting</li>
+                  <li>Respect for role and expertise</li>
+                  <li>Collaboration without surveillance</li>
+
+                </ul>
+              </div>
+
+
+
+
           </section>
 
           {/* Cards */}
