@@ -50,9 +50,7 @@ export default function ClaraProcessPage() {
             <p className="text-lg text-[#2C3D4D] mt-4 text-left">
               <strong className="font-space-grotesk text-[#007EA7]">Outcome:</strong>{" "}
               <span className="font-montserrat">
-                An example of how I think about LLMs in real workflows and translate ethics into interactions. This is a
-                thought exercise from a senior UX point of view that demonstrates strategy, architecture, and teammate
-                behaviors that improve adoption and outcomes.
+                A strategic framework showing how I translate AI ethics into interaction design through a UX lens, demonstrating the systems thinking, research, and business acumen that would improve both adoption and outcomes.
               </span>
             </p>
           </div>
