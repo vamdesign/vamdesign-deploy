@@ -32,8 +32,7 @@ export default function ClaraProcessPage() {
             <p className="text-lg text-[#2C3D4D] mt-8 text-left">
               <strong className="font-space-grotesk text-[#007EA7]">The Challenge:</strong>{" "}
               <span className="font-montserrat">
-                Enterprise AI is racing ahead while trust lags. Tool sprawl and quiet surveillance create fatigue and
-                resistance.
+                Clara is a conceptual exploration of how enterprise AI could support complex work while remaining understandable, permission-aware, and accountable to the people using it.
               </span>
             </p>
 
