@@ -29,11 +29,8 @@ export default function ClaraProcessPage() {
                 Clara: Designing Trust for Human Oversight in Enterprise AI
               </h1>
             </div>
-            <p className="text-lg text-[#2C3D4D] mt-8 text-left">
-              <strong className="font-space-grotesk text-[#007EA7]">The Challenge:</strong>{" "}
-              <span className="font-montserrat">
-                Clara is a conceptual exploration of how enterprise AI could support complex work while remaining understandable, permission-aware, and accountable to the people using it.
-              </span>
+            <p className="text-lg text-[#2C3D4D] mt-8 text-left font-montserrat">
+              Clara is a conceptual exploration of how enterprise AI could support complex work while remaining understandable, permission-aware, and accountable to the people using it.
             </p>
 
             <p className="text-lg text-[#2C3D4D] mt-4 text-left">
