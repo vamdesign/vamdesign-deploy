@@ -90,8 +90,7 @@ export default function Hero() {
         >
           <h1 className="mb-6 sm:mb-8">
             <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#007EA7] leading-tight mb-2 font-light">
-              Hello, I'm Vicki, I design intuitive UX<span className="text-[#007EA7]/30">*</span> that transforms
-              complexity into simplicity.
+              Hello, I'm Vicki, I design intuitive UX<span className="text-[#007EA7]/30">*</span> from complex workflows to the control layer behind AI actions.
             </span>
           </h1>
           <p className="text-sm sm:text-base text-[#007EA7]/30 mb-6 sm:mb-8">*UX so good, users won't even notice it.</p>
