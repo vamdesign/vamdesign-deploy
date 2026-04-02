@@ -6,6 +6,14 @@ import Link from "next/link"
 
 const projects = [
   {
+    id: "ai-design",
+    title: "Designing with AI",
+    description:
+      "This portfolio is the result of an exploration into AI-powered design, blending human imagination with AI-assisted tools. From initial concepts to final execution, I leveraged AI for ideation, prototyping, and visual storytelling, pushing the boundaries of UX/UI design.",
+    achievement: "Enhanced design efficiency by incorporating AI-assisted content and structure, enabling faster iteration and a refined user experience.",
+    image: "/images/landing/Portfolio.png",
+  },
+  {
     id: "apple",
     title: "Apple Internal Tools",
     description:
@@ -28,14 +36,6 @@ const projects = [
       "Advanced Walmart Fulfillment Service UX with research, prototyping, and design systems. Conducted comparative analysis, identified key opportunities, and developed an atomic design system to enhance third-party seller integration and usability.",
     achievement: "Defined foundational UX architecture and delivered a design system that improved seller clarity and adoption.",
     image: "/images/landing/WalmartFulfillment.png",
-  },
-  {
-    id: "ai-design",
-    title: "Designing with AI",
-    description:
-      "This portfolio is the result of an exploration into AI-powered design, blending human imagination with AI-assisted tools. From initial concepts to final execution, I leveraged AI for ideation, prototyping, and visual storytelling, pushing the boundaries of UX/UI design.",
-    achievement: "Enhanced design efficiency by incorporating AI-assisted content and structure, enabling faster iteration and a refined user experience.",
-    image: "/images/landing/Portfolio.png",
   },
 ]
 
