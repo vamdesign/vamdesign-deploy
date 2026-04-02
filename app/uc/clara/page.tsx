@@ -830,9 +830,7 @@ export default function ClaraProcessPage() {
             </p>
 
             <p className="font-montserrat text-lg text-[#5f5f5f]/80">
-              Clara demonstrates a repeatable approach: define consent first, carry context across steps, design for
-              corrections, measure trust, and orchestrate through protocols rather than surveillance. AI is arriving
-              fast. With MCP, the path from ethical concept to production reality is clearer than ever.
+              Clara demonstrates a repeatable approach: define consent first, carry context across steps, design for corrections, measure trust, and orchestrate through protocols rather than monitoring. AI is already integrating into our lives quickly. With MCP, the path from ethical concept to production reality is clearer than ever. The question is whether we'll design for people using empathy and human-centered design, or settle for Big Brother.
             </p>
           </section>
 
