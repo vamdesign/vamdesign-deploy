@@ -93,7 +93,7 @@ export default function Hero() {
               Hello, I'm Vicki, I design intuitive UX<span className="text-[#007EA7]/30">*</span> from complex workflows to the control layer behind AI actions.
             </span>
           </h1>
-          <p className="text-sm sm:text-base text-[#007EA7]/30 mb-6 sm:mb-8">*UX so good, users won't even notice it.</p>
+          <p className="text-sm sm:text-base text-[#007EA7]/30 mb-6 sm:mb-8">*UX so good, users won't even notice it. AI oversight so clear, you'll know exactly what happens next.</p>
 
           <div className="mt-8 sm:mt-12 space-y-4 sm:space-y-6 flex flex-col items-start">
             {[
