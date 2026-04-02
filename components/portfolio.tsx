@@ -95,30 +95,6 @@ export default function Portfolio() {
                       View Case Study
                     </Link>
                   </div>
-
-                  {project.id === "ai-design" && (
-                    <div className="flex items-center gap-3 mt-3">
-                      <div className="relative w-12 h-12 flex-shrink-0">
-                        <Image
-                          src="/images/landing/Vicki-Morawietz-ea17.png"
-                          alt="The Upgrade Badge"
-                          fill
-                          className="object-contain"
-                        />
-                      </div>
-                      <p className="text-sm text-[#2C3D4D] font-medium">
-                        <a
-                          href="https://www.theupgrade.ai/blog/breaking-the-template-ai-assisted-portfolio"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-[#007EA7] font-semibold hover:underline"
-                        >
-                          Featured by The Upgrade blog
-                        </a>{" "}
-                        for creating an innovative UX Porfolio using AI.
-                      </p>
-                    </div>
-                  )}
                 </div>
 
                 <Link
