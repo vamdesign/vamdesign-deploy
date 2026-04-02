@@ -7,7 +7,7 @@ import Link from "next/link"
 const projects = [
   {
     id: "ai-design",
-    title: "Designing with AI",
+    title: "AI Action Approval Layer",
     description:
       "This portfolio is the result of an exploration into AI-powered design, blending human imagination with AI-assisted tools. From initial concepts to final execution, I leveraged AI for ideation, prototyping, and visual storytelling, pushing the boundaries of UX/UI design.",
     achievement: "Enhanced design efficiency by incorporating AI-assisted content and structure, enabling faster iteration and a refined user experience.",
