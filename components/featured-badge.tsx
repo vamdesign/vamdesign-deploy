@@ -2,9 +2,9 @@ import Image from "next/image"
 
 export default function FeaturedBadge() {
   return (
-    <div className="fixed top-[64px] left-0 right-0 z-40 bg-[#007EA7]/5 backdrop-blur-sm border-b border-[#007EA7]/10">
+    <div className="fixed top-[64px] left-0 right-0 z-40">
       <div className="max-w-6xl mx-auto px-6 py-2">
-        <div className="flex items-center justify-center gap-2">
+        <div className="flex items-center justify-start gap-2">
           <div className="relative w-6 h-6 flex-shrink-0">
             <Image
               src="/images/landing/Vicki-Morawietz-ea17.png"
