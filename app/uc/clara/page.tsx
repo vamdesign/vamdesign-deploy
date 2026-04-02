@@ -613,7 +613,7 @@ export default function ClaraProcessPage() {
                   </div>
                 </div>
                 <p className="font-montserrat text-xs text-[#5f5f5f]/60 text-left mt-2">
-                  (Source: Zoho Desk Customer Support)
+                  (Image sources: Zoho Desktop Customer Support)
                 </p>
               </div>
             </div>
