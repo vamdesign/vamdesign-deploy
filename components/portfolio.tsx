@@ -9,8 +9,8 @@ const projects = [
     id: "ai-design",
     title: "AI Action Approval Layer",
     description:
-      "This portfolio is the result of an exploration into AI-powered design, blending human imagination with AI-assisted tools. From initial concepts to final execution, I leveraged AI for ideation, prototyping, and visual storytelling, pushing the boundaries of UX/UI design.",
-    achievement: "Enhanced design efficiency by incorporating AI-assisted content and structure, enabling faster iteration and a refined user experience.",
+      "I design the control layer between enterprise users and autonomous AI actions.",
+    achievement: "A focused workflow where AI proposes an action and the human reviews it before execution.",
     image: "/images/landing/Portfolio.png",
   },
   {
