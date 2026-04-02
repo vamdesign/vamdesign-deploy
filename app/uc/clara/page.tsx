@@ -24,9 +24,9 @@ export default function ClaraProcessPage() {
                 />
               </div>
 
-              {/* Title - Trusted Teammate */}
+              {/* Title - Human Oversight */}
               <h1 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold text-[#007EA7] mb-4 sm:mb-8 text-center md:text-left">
-                Clara: Designing AI as a Trusted Teammate, Not a Monitor
+                Clara: Designing Trust for Human Oversight in Enterprise AI
               </h1>
             </div>
             <p className="text-lg text-[#2C3D4D] mt-8 text-left">
