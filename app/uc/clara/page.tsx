@@ -100,8 +100,7 @@ export default function ClaraProcessPage() {
               Why Clara Works for Everyone
             </h3>
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              Clara is collaborative intelligence that builds trust through camaraderie, one-to-one support, team
-              awareness, transparency, and respect for expertise.
+              Clara builds trust through what matters most to teams: genuine camaraderie, individualized support, organizational awareness, radical transparency, and deep respect for expertise.
             </p>
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
               Clara's goal is context without intrusion. It understands the project, the workflow, and the current step,
