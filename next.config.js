@@ -4,8 +4,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Remove all path prefixing for custom domain
-  trailingSlash: true,
 };
 
 module.exports = nextConfig;
