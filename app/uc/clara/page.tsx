@@ -34,7 +34,7 @@ export default function ClaraProcessPage() {
             </p>
 
             <p className="text-lg text-[#2C3D4D] mt-4 text-left">
-              <strong className="font-space-grotesk text-[#007EA7]">My Approach:</strong>{" "}
+
               <span className="font-montserrat">
                 Drawing from enterprise UX work at Apple, Wells Fargo, and Walmart, I've seen how tools ship for speed
                 instead of trust. Clara explores what happens when we design the opposite. I framed the problem,
@@ -43,12 +43,7 @@ export default function ClaraProcessPage() {
               </span>
             </p>
 
-            <p className="text-lg text-[#2C3D4D] mt-4 text-left">
-              <strong className="font-space-grotesk text-[#007EA7]">Outcome:</strong>{" "}
-              <span className="font-montserrat">
-                A strategic framework showing how I translate AI ethics into interaction design through a UX lens, demonstrating the systems thinking, research, and business acumen that would improve both adoption and outcomes.
-              </span>
-            </p>
+
           </div>
         </div>
 
