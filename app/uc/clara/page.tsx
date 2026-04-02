@@ -61,8 +61,7 @@ export default function ClaraProcessPage() {
           <section className="mb-8 sm:mb-16">
             <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-2 text-left">The Problem</h2>
             <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-3 sm:mb-4 text-left">
-              AI is Moving Too Fast Without Ethical Guardrails
-              <br /> Creating a Surveillance Experience
+              From Assistance to Oversight, Trust is Breaking
             </h3>
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div>
