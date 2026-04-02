@@ -482,9 +482,7 @@ export default function ClaraProcessPage() {
               Clara's Architecture
             </h2>
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              This conceptual mindmaping framework demonstrates how functional layers like pattern recognition, ethical
-              safeguards, and cultural health could work together. It's a strategic exploration of UX design principles
-              shaping adaptive AI systems, not a technical blueprint.
+              This conceptual mind mapping framework demonstrates how functional layers like pattern recognition, ethical safeguards, and cultural health could work together. It's a strategic exploration of UX design principles shaping adaptive AI systems, not a technical blueprint. While implementing this would require close partnership with ML engineers and data scientists, it demonstrates how UX thinking can guide AI system design from the ground up by defining the 'what' and 'why' that engineering teams need to build the 'how'.
             </p>
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
               With the advancement of MCP, Clara can request scoped context, connect through OAuth to approved APIs, and
