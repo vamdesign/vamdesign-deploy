@@ -89,10 +89,7 @@ export default function ClaraProcessPage() {
 
                 </ul>
               </div>
-
-
-
-
+            </div>
           </section>
 
           {/* Cards */}
