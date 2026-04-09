@@ -88,13 +88,16 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="max-w-4xl"
         >
-          <h1 className="mb-6 sm:mb-8">
+           <h1 className="mb-6 sm:mb-8">
             <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#007EA7] leading-tight mb-2 font-light">
-              Hello, I'm Vicki, I design intuitive UX<span className="text-[#007EA7]/30">*</span> that transforms
-              complexity into simplicity.
+              Hello, I&apos;m Vicki. I design intuitive UX for complex systems and the control layer behind AI actions.
+              <span className="text-[#007EA7]/30">*</span>
             </span>
           </h1>
-          <p className="text-sm sm:text-base text-[#007EA7]/30 mb-6 sm:mb-8">*UX so good, users won't even notice it.</p>
+
+          <p className="text-sm sm:text-base text-[#007EA7]/30 mb-6 sm:mb-8">
+            *UX so good, users won&apos;t even notice it. AI oversight so clear, you&apos;ll always know what happens next.
+          </p>
 
           <div className="mt-8 sm:mt-12 space-y-4 sm:space-y-6 flex flex-col items-start">
             {[
