@@ -5,7 +5,8 @@
 "scripts": {
   "dev": "next dev",
   "build": "next build",
-  "start": "next start",
+  "start": "npx --yes serve@latest out -l 3000",
+  "preview": "npm run build && npx --yes serve@latest out -l 3000",
   "lint": "next lint"
 },
   "dependencies": {

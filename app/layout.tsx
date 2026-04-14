@@ -1,6 +1,7 @@
 // app/layout.tsx
 import "./globals.css"
 import { Space_Grotesk, Montserrat } from 'next/font/google'
+import type { Viewport } from "next"
 import type React from "react"
 import { ClientLayout } from './client-layout'
 import Script from 'next/script'
@@ -16,11 +17,15 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 })
 
-// app/layout.tsx
 export const metadata = {
   title: "VAM Design Portfolio",
   description: "VAM Design, Vicki Morawietz's cutting-edge UX portfolio showcasing innovative designs",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
+}
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 }
 
 export default function RootLayout({
