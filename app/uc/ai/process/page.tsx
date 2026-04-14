@@ -165,8 +165,8 @@ export default function AIProcessPage() {
           <li className="flex items-start justify-center md:justify-start">
             <span className="mr-2">•</span>
             <span>
-              Refined development workflows using Claude to optimize Vercel's codebase while simultaneously learning
-              React and working in Github, terminal and localhost3000
+              Refined development workflows using Claude to optimize this Next.js codebase while simultaneously learning
+              React and working in GitHub, the terminal, and localhost
             </span>
           </li>
           <li className="flex items-start justify-center md:justify-start">
@@ -266,8 +266,8 @@ export default function AIProcessPage() {
           <ul className="font-montserrat text-sm sm:text-md text-[#5f5f5f]/80 list-disc pl-4 sm:pl-6 space-y-2 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
             <li>Leveraging ChatGPT and Otter.ai to extract key data trends and reduce bias in user research.</li>
             <li>
-              Streamlined development by using Claude to refine Vercel's codebase while learning React through
-              iterative, AI-assisted problem-solving.
+              Streamlined development by using Claude to refine this codebase while learning React through iterative,
+              AI-assisted problem-solving.
             </li>
             <li>
               Leveraging AI-generated design suggestions while ensuring that new ideas remain intuitive and functional
@@ -295,7 +295,7 @@ export default function AIProcessPage() {
             </h2>
             <Image
               src="/images/vam_ai/AI_Ven_Diagram.png"
-              alt="AI-Enhanced UX Design Process Diagram showing the interconnection between Vercel, Claude, ChatGPT, Figma, and Midjourney"
+              alt="AI-Enhanced UX Design Process Diagram showing the interconnection between Next.js, Claude, ChatGPT, Figma, and Midjourney"
               width={600}
               height={300}
               className="w-full max-w-3xl"
@@ -306,16 +306,16 @@ export default function AIProcessPage() {
 
           {/* AI-Enhanced UX Design Process Cards - Made responsive */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mt-6 sm:mt-8 mb-2 max-w-full sm:max-w-[95%] mx-auto">
-            {/* Card 1 - Content & Layout (ChatGPT & Vercel) */}
+            {/* Card 1 - Content & Layout (ChatGPT & Next.js) */}
             <div className="bg-white p-4 sm:p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
               <h3 className="font-space-grotesk text-lg sm:text-xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-center">
-                Content & Layout (ChatGPT & Vercel)
+                Content & Layout (ChatGPT & Next.js)
               </h3>
               <ul className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80 list-disc pl-4 space-y-2 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
                 <li>Used AI to augment content, improving hierarchy and eliminating redundancy.</li>
                 <li>
-                  Utilized Vercel to refine and learn code, automate tasks, and optimize problem-solving to improve
-                  efficiency and save time.
+                  Used the local Next.js environment to refine and learn code, automate tasks, and optimize
+                  problem-solving to improve efficiency and save time.
                 </li>
                 <li>
                   Refined AI-assisted content generation workflows to maintain a cohesive narrative
@@ -484,7 +484,7 @@ export default function AIProcessPage() {
           {/* Problem Solving & Iteration Paragraph - Made responsive */}
           <div className="w-full mt-4 sm:mt-6">
             <p className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 mb-4 sm:mb-6">
-              Developing a custom AI-powered UX portfolio in Vercel required continuous testing and refinement to
+              Building this custom AI-powered UX portfolio with Next.js required continuous testing and refinement to
               balance AI efficiency with design integrity. I combined AI-generated outputs with hands-on UX adjustments
               to resolve limitations and ensure seamless integration. This adaptive process strengthened my ability to
               guide AI workflows, enhance usability, and push creative boundaries.
@@ -493,12 +493,12 @@ export default function AIProcessPage() {
             {/* Made list responsive */}
             <ul className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 list-disc pl-4 sm:pl-6 space-y-2 mb-4 sm:mb-6 [--bullet-color:#007EA7] [&>li]:marker:text-[--bullet-color]">
               <li>
-                Iterated through hundreds of design and code versions in V0, refining AI-generated layouts for usability
-                and visual consistency.
+                Iterated through hundreds of design and code versions using generative UI tooling, refining AI-generated
+                layouts for usability and visual consistency.
               </li>
               <li>
-                Solved challenges with V0's machine learning, version control conflicts, and AI's handling of complex
-                design inputs.
+                Solved challenges with AI-assisted layout tooling, version control conflicts, and AI&apos;s handling of
+                complex design inputs.
               </li>
               <li>
                 Applied UX best practices to optimize performance, improve accessibility, and create a user-centered

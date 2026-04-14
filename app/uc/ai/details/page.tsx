@@ -140,7 +140,7 @@ export default function AIDetailsPage() {
               <div className="flex justify-center mb-6">
                 <Image
                   src="/images/vam_ai/AI_Ven_Diagram.png"
-                  alt="AI-Enhanced UX Design Process Diagram showing the interconnection between Vercel, Claude, ChatGPT, Figma, and Midjourney"
+                  alt="AI-Enhanced UX Design Process Diagram showing the interconnection between Next.js, Claude, ChatGPT, Figma, and Midjourney"
                   width={600}
                   height={300}
                   className="w-full max-w-3xl"
@@ -154,13 +154,13 @@ export default function AIDetailsPage() {
                 {/* Card 1 - Content & Layout */}
                 <div className="bg-white p-4 sm:p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
                   <h4 className="font-space-grotesk text-lg sm:text-xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-center">
-                    Content & Layout (ChatGPT & Vercel)
+                    Content & Layout (ChatGPT & Next.js)
                   </h4>
                   <ul className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80 list-disc pl-4 space-y-2 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
                     <li>Used AI to augment content, improving hierarchy and eliminating redundancy.</li>
                     <li>
-                      Utilized Vercel to refine and learn code, automate tasks, and optimize problem-solving to improve
-                      efficiency and save time.
+                      Used the local Next.js environment to refine and learn code, automate tasks, and optimize
+                      problem-solving to improve efficiency and save time.
                     </li>
                     <li>
                       Refined AI-assisted content generation workflows to maintain a cohesive narrative

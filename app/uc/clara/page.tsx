@@ -26,32 +26,16 @@ export default function ClaraProcessPage() {
 
               {/* Title - Improved responsiveness */}
               <h1 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold text-[#007EA7] mb-4 sm:mb-8 text-center md:text-left">
-                Clara: Designing AI as a Trusted Teammate, Not a Monitor
+                Clara: Designing Trust for Agentic Enterprise Workflows
               </h1>
             </div>
             <p className="text-lg text-[#2C3D4D] mt-8 text-left">
-  <strong className="font-space-grotesk text-[#007EA7]">The Challenge:</strong>{" "}
+ 
   <span className="font-montserrat">
-    Enterprise AI is racing ahead while trust lags. Tool sprawl and quiet surveillance create fatigue and
-    resistance.
-  </span>
+  Clara is a conceptual exploration of how enterprise AI could support complex work while remaining understandable, permission-aware, and accountable to the people using it. Drawing from enterprise UX work across Apple, Wells Fargo, and Walmart, this case study explores what it looks like to design AI around trust, oversight, and respect for expertise rather than speed alone. </span>
 </p>
 
-<p className="text-lg text-[#2C3D4D] mt-4 text-left">
-  <strong className="font-space-grotesk text-[#007EA7]">My Approach:</strong>{" "}
-  <span className="font-montserrat">
-     Drawing from enterprise UX work at Apple, Wells Fargo, and Walmart, I've seen how tools ship for speed
-    instead of trust. Clara explores what happens when we design the opposite. I framed the problem through research synthesis, developed four enterprise archetypes, and designed an adaptive intelligence that
-    asks permission, explains itself, and respects expertise.
-  </span>
-</p>
 
-<p className="text-lg text-[#2C3D4D] mt-4 text-left">
-  <strong className="font-space-grotesk text-[#007EA7]">Outcome:</strong>{" "}
-  <span className="font-montserrat">
-      A strategic framework showing how I translate AI ethics into interaction design through a UX lens, demonstrating the systems thinking, research, and business acumen that would improve both adoption and outcomes.
-  </span>
-</p>
             
           </div>
         </div>
@@ -61,16 +45,15 @@ export default function ClaraProcessPage() {
           <section className="mb-8 sm:mb-16">
             <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-2 text-left">The Problem</h2>
             <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-3 sm:mb-4 text-left">
-              From Assistance to Oversight, Trust is Breaking
+              From Friction to Trust
             </h3>
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div>
                 <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-                                    Enterprise AI adoption is accelerating while trust principles lag behind. For example, teams use separate tools like ChatGPT, Claude, and Copilot, each AI operating in isolation. This creates a lack of shared context, resulting in fractured workflows, cognitive overload, and tools that feel like friction instead of help.
-</p>
-                <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-                  AI is quietly shifting from assistant to observer. Systems track behavior, score productivity, and surface insights to leadership often without employee consent or transparency. What's pitched as "support" lands as surveillance. The gap between what AI promises and what people experience is eroding trust faster than adoption can build it.
+                Enterprise AI adoption is accelerating, however trust is not keeping pace. Teams use separate AI tools in parallel, each operating with limited shared context. The result is fractured workflows and more cognitive load creating what feels like extra work rather than real help.
                 </p>
+                <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
+                AI is constantly evolving from assistant to observer to an embedded workflow actor. Through MCP-connected tools, these systems are becoming capable of influencing decisions and actions across the enterprise stack. Support can quickly feel like surveillance or overreach when transparency, consent, and boundaries are unclear. The growing gap between AI capability and human experience is where trust begins to break.  </p>
               </div>
               <div className="flex justify-center">
                 <Image
@@ -88,61 +71,30 @@ export default function ClaraProcessPage() {
           {/* Teammate Philosophy */}
           <section className="mb-8 sm:mb-16">
             <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-left">
-              The Teammate Philosophy
+              Clara is Built to Expand with Multi Context Protocol (MCP)
             </h2>
-            <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-3 sm:mb-4 text-left">
-              Why Clara Works For Everyone
-            </h3>
-            
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-               Clara builds trust through what matters most to teams: genuine camaraderie, individualized support, organizational awareness, radical transparency, and deep respect for expertise.</p>
-
+              Clara is built around a simple idea: an enterprise AI teammate that provides context with gentle nudges,
+              not intrusion. It explains the situation before acting, respects roles and expertise, and is not a
+              surveillance tool. These principles shape Clara&apos;s behavior across the user&apos;s workflows such as
+              onboarding and guidance to escalation and collaboration.
+            </p>
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-               Clara's goal is context without intrusion. It understands the project, the workflow, and the current step,
-              bringing teams together and easing onboarding and training. Work becomes a single conversation across
-              tools and tracks whether blockers are resolving and whether handoffs
-              are improving, so leaders see movement where it matters. It spots duplicate effort, reveals gaps in shared
-              knowledge, and improves handoffs by focusing on workflow. It guides progress without micromanagement.</p>
-
-          
-
-            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-             With the advancement of MCP (Model Context Protocol), a framework that lets AI systems request scoped context and coordinate actions across approved tools, Clara can act like a real teammate integrating with
-              approved APIs and data sources. The system gains connectors, permissions, and logs in one place, which
-              turns "assistant" behaviors into reliable, coordinated workflows. </p>
-
-            
+              With MCP, Clara has a more practical path to orchestration through approved tools, scoped permissions, and
+              auditable actions. That makes coordinated support more feasible while preserving the boundaries that build
+              trust.
+            </p>
           </section>
 
           {/* Personas */}
           <section className="mb-8 sm:mb-16">
-            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-2 text-left">
-              Understanding the Users
+            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-left">
+              Designing for Different AI Mindsets
             </h2>
-            <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-3 sm:mb-4 text-left">
-              Four Enterprise Archetypes
-            </h3>
-            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              To design the conceptual large language model for an AI that builds trust across enterprise environments,
-              I created four representative personas using a combination of web research, AI-assisted synthesis, and
-              behavioral pattern analysis. Drawing from published studies on team dynamics, customer service, enterprise
-              UX, and AI skepticism, I identified recurring themes and shaped them into clear user archetypes.{" "}
-              <a href="#ref1" className="reference-number text-[#007EA7] hover:text-[#005f7f] no-underline">
-                [1]
-              </a>
-              <a href="#ref2" className="reference-number text-[#007EA7] hover:text-[#005f7f] no-underline">
-                [2]
-              </a>
-              <a href="#ref3" className="reference-number text-[#007EA7] hover:text-[#005f7f] no-underline">
-                [3]
-              </a>
-              <a href="#ref4" className="reference-number text-[#007EA7] hover:text-[#005f7f] no-underline">
-                [4]
-              </a>
-            </p>
-<p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-8">
-              Each persona represents a different user mindset toward AI, which helped define how the system adapts her
-              support, communication style, and presence within complex workflows.
+            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-8">
+              Using Personas, I explored how trust and oversight might land across enterprise models. I researched and
+              created four user mindsets ranging from enthusiastic adopters to skeptical knowledge workers. These
+              archetypes helped shape how Clara adapts their tone, visibility, and support.
             </p>
             <div
               className="grid grid-cols-1 md:grid-cols-2 gap-8"
@@ -472,9 +424,8 @@ export default function ClaraProcessPage() {
               Clara's Architecture
             </h2>
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              This conceptual mind mapping framework demonstrates how functional layers like pattern recognition, ethical
-              safeguards, and cultural health could work together. It's a strategic exploration of UX design principles
-              shaping adaptive AI systems, not a technical blueprint. While implementing this would require close partnership with ML engineers and data scientists, it demonstrates how UX thinking can guide AI system design from the ground up by defining the 'what' and 'why' that engineering teams need to build the 'how'.
+              This framework is not a technical blueprint. It is a UX view of the behavioral layers needed to make
+              enterprise AI adaptive, explainable, and bounded by human control.
             </p>
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
                With the advancement of MCP, Clara can request scoped context, connect through OAuth to approved APIs, and
@@ -518,14 +469,12 @@ export default function ClaraProcessPage() {
               UX Strategy & Core Flows
             </h2>
             <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-4">
-              Clara's interaction model applies calm design, progressive disclosure, and role-aware personalization.
-              Instead of feature blasts, she offers the next helpful nudge only when context signals it. Interventions
-              are brief, explainable, and emotionally aware to lower friction. </p>
-
-            <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-4">
-             To validate this in a real build, I would run Wizard of Oz trials across the four personas and observe
-              whether messages feel supportive or intrusive. Success looks like higher voluntary engagement, stronger
-              trust indicators, and adoption patterns that make sense by role.</p>
+              Clara uses calm design, progressive disclosure, and role-aware personalization. It steps in when the
+              context supports it, not just because it can. The guidance is brief, clear, and meant to reduce friction. To
+              test this in a real product, I would run Wizard of Oz trials across the four personas and watch how people
+              respond. I would look for whether the guidance feels helpful or intrusive, whether people choose to engage
+              with it, and whether trust and adoption vary by role.
+            </p>
 
             <p className="font-montserrat text-lg text-[#5f5f5f]/80 mb-6">
               The scenarios below show how Clara adapts to different goals and constraints, bringing quiet intelligence
@@ -566,14 +515,10 @@ export default function ClaraProcessPage() {
                 </p>
                 <p className="font-montserrat text-base text-[#5f5f5f]/80 mb-4 mt-6">Key Interface Behaviors:</p>
                 <ul className="font-montserrat text-base text-[#5f5f5f]/80 list-disc pl-6 space-y-2 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
-                  <li>
-                    Ambient presence - Rests as a soft, pulsating element in the screen corner, present but unobtrusive
-                  </li>
-                  <li>Dashboard integration - Surfaces meaningful patterns without overwhelming users with raw data</li>
-                  <li>Actionable insights - Prioritizes relevant intelligence over vanity metrics</li>
-                  <li>
-                    Cognitive respect - Clean, accessible design that reduces mental load rather than adding to it
-                  </li>
+                  <li>Contextual visibility</li>
+                  <li>Embedded workflow support</li>
+                  <li>Actionable guidance</li>
+                  <li>Low cognitive load</li>
                 </ul>
               </div>
               <div className="md:col-span-2">
@@ -717,75 +662,19 @@ export default function ClaraProcessPage() {
                 </div>
               </div>
             </div>
-            {/* Kai's experience*/}
-            <div className="mb-6 sm:mb-8">
-              <h3 className="font-space-grotesk text-2xl font-medium text-[#007EA7] mb-4 text-left w-full">
-                Kai's Experience: Supportive, Knowledge Building & Recognition
-              </h3>
-
-              <p className="font-montserrat text-base text-[#5f5f5f]/80 mb-8">
-                Kai, a thoughtful content creator, often doubts the quality of his work despite strong skills. Clara's
-                emotional intelligence architecture validates his contributions while building both confidence and
-                institutional value through systematic recognition and skill tracking.
-              </p>
-
-              {/* Side-by-side images */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
-                {/* First image */}
-                <div className="relative w-full">
-                  <div className="relative w-full h-auto">
-                    <Image
-                      src="/images/clara/Clara_Kai1.png"
-                      alt="Clara recognizes Kai's editing work and offers to add it to the content style guide"
-                      width={800}
-                      height={600}
-                      className="w-full h-auto object-contain object-top"
-                      sizes="(max-width: 768px) 100vw, 600px"
-                    />
-                  </div>
-                  <p className="font-montserrat text-sm text-[#5f5f5f]/80 mt-3">
-                    Clara recognizes Kai's careful editing work and specifically calls out his "attention to clarity" -
-                    validating his natural strengths. She then offers to add his work to the content style guide,
-                    transforming his personal effort into valuable company knowledge.
-                  </p>
-                </div>
-
-                {/* Second image */}
-                <div className="relative w-full">
-                  <div className="relative w-full h-auto">
-                    <Image
-                      src="/images/clara/Clara_Kai2.png"
-                      alt="Clara confirms contribution was added and provides concrete metrics about Kai's monthly contributions"
-                      width={800}
-                      height={600}
-                      className="w-full h-auto object-contain object-top"
-                      sizes="(max-width: 768px) 100vw, 600px"
-                    />
-                  </div>
-                  <p className="font-montserrat text-sm text-[#5f5f5f]/80 mt-3">
-                    Clara confirms the contribution was added and provides concrete metrics: "12th quality contribution
-                    this month." This systematic tracking builds Kai's confidence while positioning his growth
-                    trajectory for his upcoming quarterly review, connecting daily work to career development.
-                  </p>
-                </div>
-              </div>
-            </div>
 
             {/* Strategic Outcomes */}
             <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mt-16 mb-4 text-left">
-              Strategic Outcome: What If Clara Enterprise Software Was Reality
+              Strategic Outcome
             </h2>
 
             <div className="flex flex-col lg:flex-row gap-8 mb-8">
               <div className="lg:w-1/2">
                 <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-                This concept shows how an AI teammate could deliver measurable value when trust is designed in. Evidence already points the way: better onboarding improves retention and productivity <a href="#ref13" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                    [13]
-                  </a> , and automation returns meaningful time to teams <a href="#ref14" className="reference-number text-[#007EA7] hover:text-[#007EA7] no-underline">
-                    [14]
-                  </a> . With MCP, Clara has a practical path to orchestration: scoped access to approved APIs, clear consent, and an auditable trail that teams control.</p>
-                <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-                  Clara creates a continuous cycle of empowerment. Support adapts by role, so frontline work gets contextual coaching, creators get recognition and confidence building, design groups get strategic partnership and thoughtful automation, and operations gets alignment. The aim is collaboration, not control.
+                  Clara suggests that enterprise AI becomes more valuable when trust is designed into the workflow itself.
+                  Incorporating MCP systems can connect to approved tools and context more reliably, but that makes
+                  oversight even more important. This possible use case is not just smarter AI. It is designing systems
+                  people can understand, question, and guide.
                 </p>
               </div>
 
@@ -802,24 +691,25 @@ export default function ClaraProcessPage() {
            
 
             <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mt-16 mb-4 text-left">
-              The Possibilities: What Clara Represents for UX
+              What this Means for UX
             </h2>
-            
-            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              This page is a senior UX thought exercise about building AI that serves people. Many systems still reflect bias, engagement optimization, and surveillance incentives, so we are not fully there yet. Progress will come from design choices and governance, not market forces alone.</p>
 
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-              MCP accelerates feasibility. It gives Clara a clean way to request the right context, connect to approved systems, and make every action explainable and reviewable. That lets UX specify consent flows, boundaries, and evaluation plans alongside the interaction model. </p>
-
-            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
-           Clara demonstrates a repeatable approach: define consent first, carry context across steps, design for corrections, measure trust, and orchestrate through protocols rather than monitoring. AI is already integrating into our lives quickly. With MCP, the path from ethical concept to production reality is clearer than ever.  The question is whether we'll design for people using empathy and human-centered design, or settle for Big Brother.</p>
+              Clara represents a strategic view of how UX can shape AI systems before they become products, especially as
+              MCP makes it more realistic for AI to connect to tools, context, and workflow actions. It leads directly
+              to a more grounded prototype focused on a narrower but urgent question: how should enterprise users
+              review, approve, and govern AI actions in real workflows?
+            </p>
           </section> 
 
           {/* Call to Action */}
           <div className="mt-16 flex flex-col items-center pb-12">
-            <button className="rounded-[100px] border border-[#F7F6F6] bg-white hover:bg-white/80 text-[#007EA7] px-8 py-2.5 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0.5">
-              <a href="/contact">Let's Chat</a>
-            </button>
+            <a
+              href="/contact"
+              className="rounded-[100px] border border-[#F7F6F6] bg-white hover:bg-white/80 text-[#007EA7] px-8 py-2.5 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0.5"
+            >
+              Let's Chat
+            </a>
           </div>
           
           {/* References */}
@@ -827,23 +717,8 @@ export default function ClaraProcessPage() {
             <h3 className="font-space-grotesk text-xl font-semibold text-[#007EA7] mb-6 text-left">References</h3>
             <div className="space-y-4">
               {/* 1 */}
-              <div className="flex items-start gap-3" id="ref1">
+              <div className="flex items-start gap-3">
                 <span className="font-verdana text-sm text-[#007EA7] font-medium">1</span>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <a
-                    href="https://www.socraticworks.com/methods/ai-will-retire-the-micromanager"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    AI will retire the micromanager
-                  </a>
-                </p>
-              </div>
-              
-              {/* 2 */}
-              <div className="flex items-start gap-3" id="ref2">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">2</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://natesnewsletter.substack.com/p/the-story-of-josh-an-ai-fable-for"
@@ -856,9 +731,9 @@ export default function ClaraProcessPage() {
                 </p>
               </div>
 
-              {/* 3 */}
-              <div className="flex items-start gap-3" id="ref3">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">3</span>
+              {/* 2 */}
+              <div className="flex items-start gap-3">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">2</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://medium.com/generative-ai-revolution-ai-native-transformation/why-agentic-ux-will-change-everything-you-know-about-design-0394486f5add"
@@ -871,9 +746,9 @@ export default function ClaraProcessPage() {
                 </p>
               </div>
               
-              {/* 4 */}
-              <div className="flex items-start gap-3" id="ref4">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">4</span>
+              {/* 3 */}
+              <div className="flex items-start gap-3">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">3</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://www.ibm.com/think/insights/customer-service-future"
@@ -886,9 +761,9 @@ export default function ClaraProcessPage() {
                 </p>
               </div>
 
-              {/* 5 */}
-              <div className="flex items-start gap-3" id="ref5">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">5</span>
+              {/* 4 */}
+              <div className="flex items-start gap-3">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">4</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://www.talmundo.com/blog/hr-metrics-for-employee-onboarding"
@@ -901,9 +776,9 @@ export default function ClaraProcessPage() {
                 </p>
               </div>
 
-              {/* 6 */}
-              <div className="flex items-start gap-3" id="ref6">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">6</span>
+              {/* 5 */}
+              <div className="flex items-start gap-3">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">5</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://aisera.com/blog/generative-ai-employee-productivity/"
@@ -916,9 +791,9 @@ export default function ClaraProcessPage() {
                 </p>
               </div>
 
-              {/* 7 */}
-              <div className="flex items-start gap-3" id="ref7">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">7</span>
+              {/* 6 */}
+              <div className="flex items-start gap-3">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">6</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://enboarder.com/blog/calculate-onboarding-roi/"
@@ -931,9 +806,9 @@ export default function ClaraProcessPage() {
                 </p>
               </div>
 
-              {/* 8 */}
-              <div className="flex items-start gap-3" id="ref8">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">8</span>
+              {/* 7 */}
+              <div className="flex items-start gap-3">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">7</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://www.devlinpeck.com/content/employee-onboarding-statistics"
@@ -946,24 +821,9 @@ export default function ClaraProcessPage() {
                 </p>
               </div>
 
-              {/* 9 */}
-              <div className="flex items-start gap-3" id="ref9">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">9</span>
-                <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
-                  <a
-                    href="https://enboarder.com/blog/calculate-onboarding-roi/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
-                  >
-                    Employee Onboarding ROI: How to Calculate & Prove It
-                  </a>
-                </p>
-              </div>
-
-              {/* 10 */}
-              <div className="flex items-start gap-3" id="ref10">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">10</span>
+              {/* 8 */}
+              <div className="flex items-start gap-3">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">8</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://www.deloitte.com/uk/en/services/consulting/blogs/2024/ai-powered-employee-experience.html"
@@ -976,9 +836,9 @@ export default function ClaraProcessPage() {
                 </p>
               </div>
 
-              {/* 11 */}
-              <div className="flex items-start gap-3" id="ref11">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">11</span>
+              {/* 9 */}
+              <div className="flex items-start gap-3">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">9</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://www.culturemonkey.io/guides/measuring-employee-engagement/metrics-for-employee-engagement/role-of-ai-in-analyzing-trends-and-patterns-in-employee-engagement/"
@@ -991,9 +851,9 @@ export default function ClaraProcessPage() {
                 </p>
               </div>
 
-              {/* 12 */}
-              <div className="flex items-start gap-3" id="ref12">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">12</span>
+              {/* 10 */}
+              <div className="flex items-start gap-3">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">10</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://appinventiv.com/blog/ai-in-employee-engagement/"
@@ -1006,9 +866,9 @@ export default function ClaraProcessPage() {
                 </p>
               </div>
 
-              {/* 13 */}
-              <div className="flex items-start gap-3" id="ref13">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">13</span>
+              {/* 11 */}
+              <div className="flex items-start gap-3">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">11</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://distantjob.com/blog/reduce-employee-onboarding-time/"
@@ -1021,9 +881,9 @@ export default function ClaraProcessPage() {
                 </p>
               </div>
 
-              {/* 14 */}
-              <div className="flex items-start gap-3" id="ref14">
-                <span className="font-verdana text-sm text-[#007EA7] font-medium">14</span>
+              {/* 12 */}
+              <div className="flex items-start gap-3">
+                <span className="font-verdana text-sm text-[#007EA7] font-medium">12</span>
                 <p className="font-montserrat text-xs sm:text-sm text-[#5f5f5f]/80">
                   <a
                     href="https://www.yarooms.com/blog/ai-in-workplace-technology"

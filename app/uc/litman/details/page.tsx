@@ -24,7 +24,7 @@ export default function LittlerDetailsPage() {
         {/* Prefetch other important images that will be needed soon */}
         <link 
           rel="prefetch" 
-          href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Littler_nav_bar-BtcRyn93GUuYRsVcoJaExXRVf4LW1t.png" 
+          href="/images/littler/blob/Littler_nav_bar-BtcRyn93GUuYRsVcoJaExXRVf4LW1t.png" 
           as="image"
         />
       </Head>
@@ -123,7 +123,7 @@ export default function LittlerDetailsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mb-8 sm:mb-12">
               <div className="relative w-full h-auto pt-6 sm:pt-8 mb-4 sm:mb-8 shadow-md">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Littler_nav_bar-BtcRyn93GUuYRsVcoJaExXRVf4LW1t.png"
+                  src="/images/littler/blob/Littler_nav_bar-BtcRyn93GUuYRsVcoJaExXRVf4LW1t.png"
                   alt="Littler CaseSmart navigation interface showing improved case phase navigation with clear visual hierarchy and numbered indicators"
                   width={600}
                   height={300}
@@ -139,7 +139,7 @@ export default function LittlerDetailsPage() {
                     <CarouselItem>
                       <div className="p-1">
                         <Image
-                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VirtualBinderTemplatev11_aProjectA_Page_01.jpg-6rJLUbwHVgD390hfmB7EM7LcTAWgqZ.jpeg"
+                          src="/images/littler/blob/VirtualBinderTemplatev11_aProjectA_Page_01.jpg-6rJLUbwHVgD390hfmB7EM7LcTAWgqZ.jpeg"
                           alt="Littler CaseSmart dashboard showing task list, document management, and budget tracking"
                           width={600}
                           height={300}
@@ -151,7 +151,7 @@ export default function LittlerDetailsPage() {
                     <CarouselItem>
                       <div className="p-1">
                         <Image
-                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VirtualBinderTemplatev11_aProjectA_Page_02.jpg-dSx1GgobWTN3gKsnDgUJuVkTpStrOM.jpeg"
+                          src="/images/littler/blob/VirtualBinderTemplatev11_aProjectA_Page_02.jpg-dSx1GgobWTN3gKsnDgUJuVkTpStrOM.jpeg"
                           alt="Littler CaseSmart navigation system with phase indicators and menu structure"
                           width={600}
                           height={300}
@@ -206,7 +206,7 @@ export default function LittlerDetailsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mb-8 sm:mb-12">
               <div className="relative w-full h-auto pt-6 sm:pt-8 mb-4 sm:mb-8 shadow-md">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Littler_message_Center-Vsy6FNY2mu964bQLR5VykACpxCAlNk.png"
+                  src="/images/littler/blob/Littler_message_Center-Vsy6FNY2mu964bQLR5VykACpxCAlNk.png"
                   alt="Littler CaseSmart Message Center interface with numbered annotations explaining key features like user identification, team collaboration, and phase-based organization"
                   width={600}
                   height={300}
@@ -221,7 +221,7 @@ export default function LittlerDetailsPage() {
                     <CarouselItem>
                       <div className="p-1">
                         <Image
-                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VirtualBinderTemplatev11_aProjectA_Page_03.jpg-MQrWRLdGInHUwmpPKBQG9CJyZKgjz3.jpeg"
+                          src="/images/littler/blob/VirtualBinderTemplatev11_aProjectA_Page_03.jpg-MQrWRLdGInHUwmpPKBQG9CJyZKgjz3.jpeg"
                           alt="Message Center showing team conversation thread and document sharing"
                           width={600}
                           height={300}
@@ -233,7 +233,7 @@ export default function LittlerDetailsPage() {
                     <CarouselItem>
                       <div className="p-1">
                         <Image
-                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VirtualBinderTemplatev11_aProjectA_Page_04.jpg-UFtzKIvE2OTVwAh0HTgJzZvmnIMl7h.jpeg"
+                          src="/images/littler/blob/VirtualBinderTemplatev11_aProjectA_Page_04.jpg-UFtzKIvE2OTVwAh0HTgJzZvmnIMl7h.jpeg"
                           alt="Message actions menu showing email and task creation options"
                           width={600}
                           height={300}
@@ -245,7 +245,7 @@ export default function LittlerDetailsPage() {
                     <CarouselItem>
                       <div className="p-1">
                         <Image
-                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VirtualBinderTemplatev11_aProjectA_Page_05.jpg-2Ubv3a6qrhVXSA2snxTHOrfS2T7s4Q.jpeg"
+                          src="/images/littler/blob/VirtualBinderTemplatev11_aProjectA_Page_05.jpg-2Ubv3a6qrhVXSA2snxTHOrfS2T7s4Q.jpeg"
                           alt="Message thread view with team discussion and document attachments"
                           width={600}
                           height={300}
@@ -257,7 +257,7 @@ export default function LittlerDetailsPage() {
                     <CarouselItem>
                       <div className="p-1">
                         <Image
-                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VirtualBinderTemplatev11_aProjectA_Page_08.jpg-f98aQd8pQfySBJCGG5baI6cvvLsbph.jpeg"
+                          src="/images/littler/blob/VirtualBinderTemplatev11_aProjectA_Page_08.jpg-f98aQd8pQfySBJCGG5baI6cvvLsbph.jpeg"
                           alt="Case inbox view showing organized communications and updates"
                           width={600}
                           height={300}
@@ -269,7 +269,7 @@ export default function LittlerDetailsPage() {
                     <CarouselItem>
                       <div className="p-1">
                         <Image
-                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VirtualBinderTemplatev11_aProjectA_Page_09.jpg-PwfUHPlDdezpp3AEbWMpR9FMJsNFRB.jpeg"
+                          src="/images/littler/blob/VirtualBinderTemplatev11_aProjectA_Page_09.jpg-PwfUHPlDdezpp3AEbWMpR9FMJsNFRB.jpeg"
                           alt="Email composition interface for case-related communications"
                           width={600}
                           height={300}
@@ -281,7 +281,7 @@ export default function LittlerDetailsPage() {
                     <CarouselItem>
                       <div className="p-1">
                         <Image
-                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VirtualBinderTemplatev11_aProjectA_Page_12.jpg-JC4s7DkMcLt32OEDRuF9psQscuY6q4.jpeg"
+                          src="/images/littler/blob/VirtualBinderTemplatev11_aProjectA_Page_12.jpg-JC4s7DkMcLt32OEDRuF9psQscuY6q4.jpeg"
                           alt="Task scheduling interface with calendar date picker"
                           width={600}
                           height={300}
@@ -293,7 +293,7 @@ export default function LittlerDetailsPage() {
                     <CarouselItem>
                       <div className="p-1">
                         <Image
-                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VirtualBinderTemplatev11_aProjectA_Page_13.jpg-piNK2HjxezyepRjw330EmHCFLHs9Fq.jpeg"
+                          src="/images/littler/blob/VirtualBinderTemplatev11_aProjectA_Page_13.jpg-piNK2HjxezyepRjw330EmHCFLHs9Fq.jpeg"
                           alt="Task creation interface with phase selection dropdown"
                           width={600}
                           height={300}
@@ -347,7 +347,7 @@ export default function LittlerDetailsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mb-8 sm:mb-12">
               <div className="relative w-full h-auto p-2 mb-4 sm:mb-8 shadow-md">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Littler_wireframe-pYlVtxu8KiXEIenune6ej90NRtOb5T.png"
+                  src="/images/littler/blob/Littler_wireframe-pYlVtxu8KiXEIenune6ej90NRtOb5T.png"
                   alt="Mobile app wireframe showing task management workflow with annotations explaining key features like task list view, task creation, and detailed task view"
                   width={600}
                   height={300}
@@ -362,7 +362,7 @@ export default function LittlerDetailsPage() {
                     <CarouselItem>
                       <div className="p-1">
                         <Image
-                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Littler_Mobile_Task_01-mapk7biIjqNeAaxYIh1GSmq4AAY1LK.png"
+                          src="/images/littler/blob/Littler_Mobile_Task_01-mapk7biIjqNeAaxYIh1GSmq4AAY1LK.png"
                           alt="Mobile app task management workflow showing task list, creation form, and task details views"
                           width={600}
                           height={300}
@@ -374,7 +374,7 @@ export default function LittlerDetailsPage() {
                     <CarouselItem>
                       <div className="p-1">
                         <Image
-                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Littler_Mobile_Case_02-CtInz7tbikXRyqRvjqumiLFl9NcmC6.png"
+                          src="/images/littler/blob/Littler_Mobile_Case_02-CtInz7tbikXRyqRvjqumiLFl9NcmC6.png"
                           alt="Mobile app case management workflow showing client list, case selection, and team chat interfaces"
                           width={600}
                           height={300}
