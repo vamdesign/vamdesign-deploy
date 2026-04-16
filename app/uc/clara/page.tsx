@@ -668,8 +668,8 @@ export default function ClaraProcessPage() {
               Strategic Outcome
             </h2>
 
-            <div className="flex flex-col lg:flex-row gap-8 mb-8">
-              <div className="lg:w-1/2">
+            <div className="flex flex-col lg:flex-row lg:items-start gap-8 mb-8">
+              <div className="lg:w-1/2 lg:min-w-0">
                 <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
                   Clara suggests that enterprise AI becomes more valuable when trust is designed into the workflow itself.
                   Incorporating MCP systems can connect to approved tools and context more reliably, but that makes
@@ -678,12 +678,12 @@ export default function ClaraProcessPage() {
                 </p>
               </div>
 
-              <div className="lg:w-1/2 flex justify-center lg:justify-end">
+              <div className="lg:w-1/2 flex justify-center lg:justify-end lg:pt-1">
                 <img
                   src="/images/clara/Clara_Solution.png"
                   alt="Empowering Teams with Clara's Intelligence - A circular diagram showing different aspects like Confidence Building, Skill Recognition, Strategic Partnership, Thoughtful Automation, Focus Realignment, Leadership Guidance, Efficiency Coaching, and Contextual Support"
-                  className="w-full object-contain"
-                  sizes="(max-width: 768px) 100vw, 600px"
+                  className="w-full max-w-[min(100%,22rem)] sm:max-w-[24rem] lg:max-w-[26rem] object-contain"
+                  sizes="(max-width: 768px) min(100vw, 384px), 416px"
                 />
               </div>
             </div>
