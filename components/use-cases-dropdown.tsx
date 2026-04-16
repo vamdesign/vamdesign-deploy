@@ -21,7 +21,7 @@ export const useCases: UseCase[] = [
   { name: "Littler – Management App", href: "/uc/litman/details", isProtected: true, cookieName: "auth-litman" },
   { name: "Riverbed – B2B UX Strategies", href: "/uc/river/details" },
   { name: "Clara – Ethical Enterprise AI", href: "/uc/clara" }, // no /details
-  { name: "The UX Gap with MCP", href: "/uc/mcp" },
+  { name: "Designing with AI – UX Portfolio", href: "/uc/ai/details" },
 ];
 
 export function UseCasesDropdown() {
