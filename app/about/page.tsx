@@ -7,7 +7,7 @@ import Footer from "@/components/footer"
 export const metadata: Metadata = {
   title: "About | VAM Design Portfolio",
   description:
-    "Learn more about VAM Design and Vicki Morawietz, a senior UX/UI designer specializing in innovative enterprise solutions.",
+    "Vicki Morawietz — senior UX and product designer turning complex enterprise systems into clear, trustworthy experiences.",
 }
 
 export default function AboutPage() {
@@ -37,25 +37,30 @@ export default function AboutPage() {
       className="rounded-full object-cover"
     />
   </div>
-  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center md:text-left">
-    Creating Seamless Experiences. No User Manual Required.
+  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white text-center md:text-left leading-tight max-w-3xl">
+    I design complex systems people can actually trust
   </h1>
 </div>
 
           <div className="space-y-6 text-lg text-[#007EA7] bg-white/80 p-8 rounded-md shadow-2xl">
-            <h2 className="text-2xl font-bold text-[#007EA7] mb-4">Why You'll Want Me on Your Team</h2>
-
             <p className="font-montserrat">
-            I’ve built UX for companies where the stakes were high, the systems were messy, and the outcomes had to be measurable. Usability is my superpower, and I wield it with intent. I’ve delivered thoughtful, high-impact design for companies of every scale—from startups to Fortune 500s. I thrive in collaborative teams as well as working independently,
-              quickly adapting to new challenges. Whether it's leading a product from inception or optimizing an
-              existing one, I approach each project with a strategic mindset to deliver impactful solutions.
+              I&apos;m Vicki Morawietz, a senior UX and product designer with a background in enterprise systems, internal
+              tools, and workflow-heavy products where clarity, trust, and edge cases matter.
             </p>
             <p className="font-montserrat">
-              My toolbox includes scalable design, research, strategy, and design systems, all aimed at crafting
-              solutions that drive engagement, improve efficiency, and directly impact revenue. I design with a purpose,
-              ensuring intuitive, user-friendly experiences that not only delight users but also meet KPIs, boost
-              conversions, and support business growth. I believe great design should be transparent and effortless,
-              allowing people to focus on what truly matters.
+              My experience spans Apple, Wells Fargo, Walmart, Riverbed, and Littler Mendelson, where I worked on design
+              systems, workflow modernization, research-led product improvements, and information-dense enterprise
+              tools. At Littler Mendelson, I helped design Virtual Binder, a legal management system that is still in
+              production and essentially unchanged, which is a rare kind of proof point in enterprise software.
+            </p>
+            <p className="font-montserrat">
+              Over the last three years, I have been building independently while the industry caught up to a problem I
+              already cared about. My recent work has focused on AI-assisted experiences, guardrails, latency states,
+              human fallback, and the UX patterns that make powerful systems feel dependable instead of opaque.
+            </p>
+            <p className="font-montserrat">
+              Today, I&apos;m especially interested in the UX layer around AI: the part where users need visibility,
+              review, boundaries, and a clear sense of what the system is doing on their behalf.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
