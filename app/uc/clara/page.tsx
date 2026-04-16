@@ -668,9 +668,9 @@ export default function ClaraProcessPage() {
               Strategic Outcome
             </h2>
 
-            <div className="flex flex-col lg:flex-row lg:items-start gap-8 mb-8">
-              <div className="lg:w-1/2 lg:min-w-0">
-                <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4">
+            <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_auto] gap-y-6 gap-x-6 lg:gap-x-8 lg:items-center mb-8">
+              <div className="min-w-0">
+                <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4 lg:mb-0">
                   Clara suggests that enterprise AI becomes more valuable when trust is designed into the workflow itself.
                   Incorporating MCP systems can connect to approved tools and context more reliably, but that makes
                   oversight even more important. This possible use case is not just smarter AI. It is designing systems
@@ -678,7 +678,7 @@ export default function ClaraProcessPage() {
                 </p>
               </div>
 
-              <div className="lg:w-1/2 flex justify-center lg:justify-end lg:pt-1">
+              <div className="flex justify-center lg:justify-center shrink-0">
                 <img
                   src="/images/clara/Clara_Solution.png"
                   alt="Empowering Teams with Clara's Intelligence - A circular diagram showing different aspects like Confidence Building, Skill Recognition, Strategic Partnership, Thoughtful Automation, Focus Realignment, Leadership Guidance, Efficiency Coaching, and Contextual Support"
