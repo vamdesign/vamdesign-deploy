@@ -14,14 +14,15 @@ export type UseCase = {
   cookieName?: string;
 };
 
+/** Must match next.config trailingSlash: true or client-side navigation can load RSC .txt payloads (e.g. Safari shows raw flight data). */
 export const useCases: UseCase[] = [
-  { name: "Apple – Internal Apps", href: "/uc/apple/details" },
-  { name: "Wells Fargo – Legacy Integration", href: "/uc/wellsf/details", isProtected: true, cookieName: "auth-wellsf" },
-  { name: "Walmart – Fulfillment App", href: "/uc/walmart/details" },
-  { name: "Littler – Management App", href: "/uc/litman/details", isProtected: true, cookieName: "auth-litman" },
-  { name: "Riverbed – B2B UX Strategies", href: "/uc/river/details" },
-  { name: "Clara – Ethical Enterprise AI", href: "/uc/clara" }, // no /details
-  { name: "Designing with AI – UX Portfolio", href: "/uc/ai/details" },
+  { name: "Apple – Internal Apps", href: "/uc/apple/details/" },
+  { name: "Wells Fargo – Legacy Integration", href: "/uc/wellsf/details/", isProtected: true, cookieName: "auth-wellsf" },
+  { name: "Walmart – Fulfillment App", href: "/uc/walmart/details/" },
+  { name: "Littler – Management App", href: "/uc/litman/details/", isProtected: true, cookieName: "auth-litman" },
+  { name: "Riverbed – B2B UX Strategies", href: "/uc/river/details/" },
+  { name: "Clara – Ethical Enterprise AI", href: "/uc/clara/" },
+  { name: "Designing with AI – UX Portfolio", href: "/uc/ai/details/" },
 ];
 
 export function UseCasesDropdown() {
@@ -83,7 +84,9 @@ export function UseCasesDropdown() {
                   uc.isProtected && !authed
                     ? `/passcode?returnUrl=${encodeURIComponent(uc.href)}&uc=${uc.href.split("/")[2]}`
                     : uc.href;
-                const active = pathname === uc.href;
+                const active =
+                  pathname === uc.href ||
+                  pathname.replace(/\/$/, "") === uc.href.replace(/\/$/, "");
 
                 return (
                   <li key={`usecase-${index}`} role="none">

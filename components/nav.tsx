@@ -22,8 +22,8 @@ export default function Nav() {
 
         <div className="hidden md:flex items-center space-x-8">
           <UseCasesDropdown />
-          <Link href="/about" className="text-[#007EA7] hover:text-[#005f7f] font-medium">About</Link>
-          <Link href="/contact" className="text-[#007EA7] hover:text-[#005f7f] font-medium">Let's Chat</Link>
+          <Link href="/about/" className="text-[#007EA7] hover:text-[#005f7f] font-medium">About</Link>
+          <Link href="/contact/" className="text-[#007EA7] hover:text-[#005f7f] font-medium">Let's Chat</Link>
           <a href="https://www.linkedin.com/in/vickimorawietz" target="_blank" rel="noopener noreferrer" className="text-[#007EA7] hover:text-[#005f7f]">
             <LinkedInIcon className="h-4 w-4" />
           </a>
@@ -64,8 +64,8 @@ export default function Nav() {
               })}
             </div>
 
-            <Link href="/about" className="text-[#007EA7] font-medium">About</Link>
-            <Link href="/contact" className="text-[#007EA7] font-medium">Let's Chat</Link>
+            <Link href="/about/" className="text-[#007EA7] font-medium">About</Link>
+            <Link href="/contact/" className="text-[#007EA7] font-medium">Let's Chat</Link>
             <a href="https://www.linkedin.com/in/vickimorawietz" target="_blank" rel="noopener noreferrer" className="flex items-center text-[#007EA7]">
               <LinkedInIcon className="h-4 w-4 mr-2" />
               <span>LinkedIn</span>
