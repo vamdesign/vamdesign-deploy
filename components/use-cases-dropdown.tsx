@@ -12,6 +12,7 @@ export type UseCase = {
   href: string;
   isProtected?: boolean;
   cookieName?: string;
+  isDraft?: boolean;
 };
 
 /** Must match next.config trailingSlash: true or client-side navigation can load RSC .txt payloads (e.g. Safari shows raw flight data). */
@@ -23,7 +24,11 @@ export const useCases: UseCase[] = [
   { name: "Riverbed – B2B UX Strategies", href: "/uc/river/details/" },
   { name: "Clara – Ethical Enterprise AI", href: "/uc/clara/" },
   { name: "Designing with AI – UX Portfolio", href: "/uc/ai/details/" },
+  { name: "The UX Gap with MCP", href: "/uc/mcp/", isDraft: true },
 ];
+
+export const showDraftUseCases = process.env.NEXT_PUBLIC_SHOW_DRAFTS === "true";
+export const visibleUseCases = showDraftUseCases ? useCases : useCases.filter((uc) => !uc.isDraft);
 
 export function UseCasesDropdown() {
   const [open, setOpen] = React.useState(false);
@@ -78,7 +83,7 @@ export function UseCasesDropdown() {
             className="absolute left-0 mt-2 w-80 rounded-xl bg-white/95 backdrop-blur-sm shadow-lg ring-1 ring-black/5 overflow-hidden z-50"
           >
             <ul className="py-2">
-              {useCases.map((uc, index) => {
+              {visibleUseCases.map((uc, index) => {
                 const authed = uc.cookieName ? Cookies.get(uc.cookieName) === "authenticated" : true;
                 const href =
                   uc.isProtected && !authed

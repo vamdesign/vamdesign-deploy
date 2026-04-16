@@ -6,7 +6,7 @@ import { useState } from "react"
 import { Lock } from "lucide-react"
 import { Logo } from "./logo"
 import { LinkedInIcon } from "./linkedin-icon"
-import { UseCasesDropdown, useCases } from "./use-cases-dropdown"
+import { UseCasesDropdown, visibleUseCases } from "./use-cases-dropdown"
 
 import Cookies from "js-cookie"
 
@@ -45,7 +45,7 @@ export default function Nav() {
             <div className="space-y-2">
               <h3 className="font-medium text-[#007EA7] border-b border-[#007EA7] pb-1">Use Cases</h3>
 
-              {useCases.map((uc, i) => {
+              {visibleUseCases.map((uc, i) => {
                 const authed = uc.cookieName ? Cookies.get(uc.cookieName) === "authenticated" : true
                 const href = uc.isProtected && !authed
                   ? `/passcode?returnUrl=${encodeURIComponent(uc.href)}&uc=${uc.href.split("/")[2]}`
