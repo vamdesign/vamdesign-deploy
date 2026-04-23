@@ -17,7 +17,7 @@ export type UseCase = {
 
 /** Must match next.config trailingSlash: true or client-side navigation can load RSC .txt payloads (e.g. Safari shows raw flight data). */
 export const useCases: UseCase[] = [
-  { name: "UX Guidance for AI and the MCP Layer", href: "/uc/mcp/" },
+  { name: "AI & MCP – UX Guidance", href: "/uc/mcp/" },
   { name: "Apple – Internal Apps", href: "/uc/apple/details/" },
   { name: "Wells Fargo – Legacy Integration", href: "/uc/wellsf/details/", isProtected: true, cookieName: "auth-wellsf" },
   { name: "Walmart – Fulfillment App", href: "/uc/walmart/details/" },
