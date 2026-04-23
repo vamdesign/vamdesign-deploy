@@ -9,7 +9,8 @@ export default function FeaturedBadge() {
             <Image
               src="/images/landing/Vicki-Morawietz-ea17.png"
               alt="The Upgrade Badge"
-              fill
+              width={24}
+              height={24}
               className="object-contain"
             />
           </div>

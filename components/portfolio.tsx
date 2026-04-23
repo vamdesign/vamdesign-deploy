@@ -7,11 +7,10 @@ import Link from "next/link"
 const projects = [
   {
     id: "ai-design",
-    title: "AI Action Approval Layer",
+    title: "UX guidance for AI and the MCP Layer",
     description:
-      "I design the control layer between enterprise users and autonomous AI actions.",
-    achievement: "A focused workflow where AI proposes an action and the human reviews it before execution.",
-    image: "/images/landing/Portfolio.png",
+      "As AI moves from answering questions to taking action, UX becomes the layer that makes those actions visible, governable, and trustworthy. This project looks ahead to the product patterns teams will need as AI starts doing more inside the tools people already use.",
+    image: "/images/MCP/policy_mediated_mcp_execution_flow.png",
   },
   {
     id: "apple",
@@ -76,13 +75,17 @@ export default function Portfolio() {
                   <p className="text-[#5f5f5f] text-base md:text-lg font-montserrat font-light">
                     {project.description}
                   </p>
-                  <p className="text-[#5f5f5f] text-sm md:text-base font-montserrat font-light">
-                    <span className="font-medium">Key Achievement:</span> {project.achievement}
-                  </p>
+                  {project.achievement && (
+                    <p className="text-[#5f5f5f] text-sm md:text-base font-montserrat font-light">
+                      <span className="font-medium">Key Achievement:</span> {project.achievement}
+                    </p>
+                  )}
                   <div className="text-right">
                     <Link 
                       href={
-                        project.id === "apple"
+                        project.id === "ai-design"
+                          ? "/uc/mcp/"
+                          : project.id === "apple"
                           ? "/uc/apple/details/"
                           : project.id === "wells-fargo"
                             ? "/uc/wellsf/details/"
@@ -99,7 +102,9 @@ export default function Portfolio() {
 
                 <Link
                   href={
-                    project.id === "apple"
+                    project.id === "ai-design"
+                      ? "/uc/mcp/"
+                      : project.id === "apple"
                       ? "/uc/apple/details/"
                       : project.id === "wells-fargo"
                         ? "/uc/wellsf/details/"
@@ -107,13 +112,16 @@ export default function Portfolio() {
                           ? "/uc/walmart/details/"
                           : "/lab/ux-portfolio/"
                   }
-                  className="relative aspect-[4/3] w-full overflow-hidden rounded-lg shadow-lg order-1 md:order-2"
+                  className={
+                    "relative aspect-[4/3] w-full overflow-hidden rounded-lg shadow-lg order-1 md:order-2 " +
+                    (project.id === "ai-design" ? "bg-white" : "")
+                  }
                 >
                   <Image 
                     src={project.image || "/placeholder.svg"} 
                     alt={project.title} 
                     fill 
-                    className="object-cover" 
+                    className={project.id === "ai-design" ? "object-contain" : "object-cover"}
                   />
                 </Link>
               </div>
