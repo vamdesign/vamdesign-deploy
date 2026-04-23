@@ -17,13 +17,13 @@ export type UseCase = {
 
 /** Must match next.config trailingSlash: true or client-side navigation can load RSC .txt payloads (e.g. Safari shows raw flight data). */
 export const useCases: UseCase[] = [
+  { name: "UX Guidance for AI and the MCP Layer", href: "/uc/mcp/" },
   { name: "Apple – Internal Apps", href: "/uc/apple/details/" },
   { name: "Wells Fargo – Legacy Integration", href: "/uc/wellsf/details/", isProtected: true, cookieName: "auth-wellsf" },
   { name: "Walmart – Fulfillment App", href: "/uc/walmart/details/" },
   { name: "Littler – Management App", href: "/uc/litman/details/", isProtected: true, cookieName: "auth-litman" },
   { name: "Riverbed – B2B UX Strategies", href: "/uc/river/details/" },
   { name: "Clara – Ethical Enterprise AI", href: "/uc/clara/" },
-  { name: "UX/MCP Guidance", href: "/uc/mcp/" },
 ];
 
 export const showDraftUseCases = process.env.NEXT_PUBLIC_SHOW_DRAFTS === "true";
