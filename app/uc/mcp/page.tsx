@@ -143,7 +143,7 @@ export default function MCPUseCasePage() {
           </header>
 
           {/* THE GAP */}
-          <section className="scroll-mt-24 mb-12 sm:mb-16 pt-8 sm:pt-12 border-t border-[#007EA7]/10">
+          <section className="scroll-mt-24 mb-12 sm:mb-16 pt-8 sm:pt-12">
             <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">
               The Gap
             </h2>
@@ -178,7 +178,7 @@ export default function MCPUseCasePage() {
           </section>
 
           {/* REAL INCIDENTS */}
-          <section className="scroll-mt-24 mb-12 sm:mb-16 pt-8 sm:pt-12 border-t border-[#007EA7]/10">
+          <section className="scroll-mt-24 mb-12 sm:mb-16 pt-8 sm:pt-12">
             <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">
               This Is Not Hypothetical
             </h2>
@@ -215,7 +215,7 @@ export default function MCPUseCasePage() {
           </section>
 
           {/* THE MOMENT OVERSIGHT BREAKS DOWN */}
-          <section className="scroll-mt-24 mb-12 sm:mb-16 pt-8 sm:pt-12 border-t border-[#007EA7]/10">
+          <section className="scroll-mt-24 mb-12 sm:mb-16 pt-8 sm:pt-12">
             <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">
               The Moment Oversight Breaks Down
             </h2>
@@ -247,7 +247,7 @@ export default function MCPUseCasePage() {
           </section>
 
           {/* WHY IT HAPPENED */}
-          <section className="scroll-mt-24 mb-12 sm:mb-16 pt-8 sm:pt-12 border-t border-[#007EA7]/10">
+          <section className="scroll-mt-24 mb-12 sm:mb-16 pt-8 sm:pt-12">
             <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">
               Why It Happened
             </h2>
@@ -292,7 +292,7 @@ export default function MCPUseCasePage() {
           </section>
 
           {/* THE FRAMEWORK */}
-          <section className="scroll-mt-24 mb-12 sm:mb-16 pt-8 sm:pt-12 border-t border-[#007EA7]/10">
+          <section className="scroll-mt-24 mb-12 sm:mb-16 pt-8 sm:pt-12">
             <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">
               Six Surfaces, Three Moments
             </h2>
@@ -391,7 +391,7 @@ export default function MCPUseCasePage() {
                 </h3>
                 <div className="w-full overflow-x-auto rounded-none bg-[#f3f4f6]">
                   <img
-                    src="/images/MCP/policy_mediated_mcp_execution_flow.svg"
+                    src="/images/MCP/policy_mediated_mcp_execution_flow.png"
                     alt="Policy-mediated MCP execution flow from natural-language request through tool calls and policy review to outcomes."
                     className="min-w-[920px] w-full h-auto block"
                     width={1630}
@@ -410,12 +410,12 @@ export default function MCPUseCasePage() {
           </section>
 
           {/* AUTHORIZATION IS NOT A USER EXPERIENCE */}
-          <section className="scroll-mt-24 mb-12 sm:mb-16 pt-8 sm:pt-12 border-t border-[#007EA7]/10">
+          <section className="scroll-mt-24 mb-12 sm:mb-16 pt-8 sm:pt-12">
             <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">
               Authorization Is Not a User Experience
             </h2>
             <div className="space-y-5 font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 leading-relaxed">
-              <div className="mx-auto w-full max-w-4xl overflow-x-auto bg-white p-5 sm:p-7 md:p-8 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
+              <div className="mx-auto w-full max-w-4xl overflow-x-auto bg-white p-6 sm:p-8 md:p-10 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
                 <div className="md:hidden">
                   <div className="flex flex-col gap-2 pb-5">
                     <h3 className={authorizationFlowHeading}>What engineering delivered</h3>
@@ -505,7 +505,7 @@ export default function MCPUseCasePage() {
           </section>
 
           {/* ROLE */}
-          <section className="scroll-mt-24 mb-12 sm:mb-16 pt-8 sm:pt-12 border-t border-[#007EA7]/10">
+          <section className="scroll-mt-24 mb-12 sm:mb-16 pt-8 sm:pt-12">
             <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">
               Role
             </h2>
@@ -517,7 +517,7 @@ export default function MCPUseCasePage() {
           </section>
 
           {/* REFLECTION */}
-          <section className="scroll-mt-24 mb-12 sm:mb-16 md:mb-20 pt-8 sm:pt-12 border-t border-[#007EA7]/10 rounded-lg border border-[#007EA7]/20 bg-[#007EA7]/[0.04] px-5 py-8 sm:px-8 w-full">
+          <section className="scroll-mt-24 mb-12 sm:mb-16 md:mb-20 pt-8 sm:pt-12 rounded-lg border border-[#007EA7]/20 bg-[#007EA7]/[0.04] px-5 py-8 sm:px-8 w-full">
             <h2 className="font-space-grotesk text-xl sm:text-2xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">
               Reflection
             </h2>
@@ -543,7 +543,7 @@ export default function MCPUseCasePage() {
           </section>
 
           {/* CTA */}
-          <div className="flex flex-col items-center pt-8 sm:pt-12 pb-8 border-t border-[#007EA7]/10">
+          <div className="flex flex-col items-center pt-8 sm:pt-12 pb-8">
             <a
               href="/contact/"
               className="rounded-[100px] border border-[#F7F6F6] bg-white/30 hover:bg-white/60 text-[#007ea7] px-8 py-2.5 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0.5"
