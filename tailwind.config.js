@@ -9,8 +9,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-space-grotesk)"],
-        montserrat: ["var(--font-montserrat)"],
+        sans: ["var(--font-space-grotesk)", "ui-sans-serif", "system-ui", "sans-serif"],
+        montserrat: ["var(--font-montserrat)", "ui-sans-serif", "system-ui", "sans-serif"],
+        "space-grotesk": ["var(--font-space-grotesk)", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

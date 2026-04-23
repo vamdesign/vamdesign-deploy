@@ -23,8 +23,7 @@ export const useCases: UseCase[] = [
   { name: "Littler – Management App", href: "/uc/litman/details/", isProtected: true, cookieName: "auth-litman" },
   { name: "Riverbed – B2B UX Strategies", href: "/uc/river/details/" },
   { name: "Clara – Ethical Enterprise AI", href: "/uc/clara/" },
-  { name: "Designing with AI – UX Portfolio", href: "/uc/ai/details/" },
-  { name: "The UX Gap with MCP", href: "/uc/mcp/", isDraft: true },
+  { name: "UX/MCP Guidance", href: "/uc/mcp/" },
 ];
 
 export const showDraftUseCases = process.env.NEXT_PUBLIC_SHOW_DRAFTS === "true";

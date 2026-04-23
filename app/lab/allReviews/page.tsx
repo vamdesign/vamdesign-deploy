@@ -1,7 +1,11 @@
 "use client"
 
+import type { FC } from "react"
 import Nav from "@/components/nav"
 import Footer from "@/components/footer"
+import AllReviewsAppUntyped from "./review-aggregator-v14"
+
+const AllReviewsApp = AllReviewsAppUntyped as FC<{ embedded?: boolean }>
 
 function PlaceholderImage({ label }: { label: string }) {
   return (
@@ -41,6 +45,18 @@ export default function AllReviewsLabPage() {
                 </p>
               </div>
               <PlaceholderImage label="Placeholder Image: Problem Context (mobile flows, 1200 x 750)" />
+            </div>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-4">Interactive prototype</h2>
+            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-6">
+              Embedded below: the in-progress All Reviews UI (mobile-first). Use it to explore flows while the case study copy is drafted.
+            </p>
+            <div className="w-full max-w-[440px] mx-auto rounded-2xl overflow-hidden border border-[#2d3a55] shadow-[0_20px_50px_rgba(0,0,0,0.35)] bg-[#0e1220] h-[min(78vh,820px)] min-h-[520px]">
+              <div className="h-full min-h-0 flex flex-col">
+                <AllReviewsApp embedded />
+              </div>
             </div>
           </section>
 
@@ -86,4 +102,3 @@ export default function AllReviewsLabPage() {
     </>
   )
 }
-

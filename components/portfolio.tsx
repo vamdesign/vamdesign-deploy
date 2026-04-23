@@ -81,15 +81,15 @@ export default function Portfolio() {
                   </p>
                   <div className="text-right">
                     <Link 
-                      href={`/uc/${
-                        project.id === "apple" 
-                          ? "apple/details/" 
-                          : project.id === "wells-fargo" 
-                          ? "wellsf/details/" 
-                          : project.id === "walmart" 
-                          ? "walmart/details/" 
-                          : "ai/details/"
-                      }`}
+                      href={
+                        project.id === "apple"
+                          ? "/uc/apple/details/"
+                          : project.id === "wells-fargo"
+                            ? "/uc/wellsf/details/"
+                            : project.id === "walmart"
+                              ? "/uc/walmart/details/"
+                              : "/lab/ux-portfolio/"
+                      }
                       className="text-lg md:text-xl font-medium text-[#007EA7] hover:text-[#005f7f] transition-colors inline-block"
                     >
                       View Case Study
@@ -98,15 +98,15 @@ export default function Portfolio() {
                 </div>
 
                 <Link
-                  href={`/uc/${
-                    project.id === "apple" 
-                      ? "apple/details/" 
-                      : project.id === "wells-fargo" 
-                      ? "wellsf/details/" 
-                      : project.id === "walmart" 
-                      ? "walmart/details/" 
-                      : "ai/details/"
-                  }`}
+                  href={
+                    project.id === "apple"
+                      ? "/uc/apple/details/"
+                      : project.id === "wells-fargo"
+                        ? "/uc/wellsf/details/"
+                        : project.id === "walmart"
+                          ? "/uc/walmart/details/"
+                          : "/lab/ux-portfolio/"
+                  }
                   className="relative aspect-[4/3] w-full overflow-hidden rounded-lg shadow-lg order-1 md:order-2"
                 >
                   <Image 

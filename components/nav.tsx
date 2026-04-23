@@ -22,8 +22,8 @@ export default function Nav() {
         </Link>
 
         <div className="hidden md:flex items-center space-x-8">
-          <LabDropdown />
           <UseCasesDropdown />
+          <LabDropdown />
           <Link href="/about/" className="text-[#007EA7] hover:text-[#005f7f] font-medium">About</Link>
           <Link href="/contact/" className="text-[#007EA7] hover:text-[#005f7f] font-medium">Let's Chat</Link>
           <a href="https://www.linkedin.com/in/vickimorawietz" target="_blank" rel="noopener noreferrer" className="text-[#007EA7] hover:text-[#005f7f]">
@@ -46,47 +46,40 @@ export default function Nav() {
           <div className="flex flex-col space-y-4">
             <div className="space-y-4">
               <div className="space-y-2">
-                <h3 className="font-medium text-[#007EA7] border-b border-[#007EA7] pb-1">Lab</h3>
-                {labItems.map((item, i) => {
-                  const active =
-                    pathname === item.href ||
-                    pathname.replace(/\/$/, "") === item.href.replace(/\/$/, "")
+                <h3 className="font-medium text-[#007EA7] border-b border-[#007EA7] pb-1">Use Cases</h3>
+
+                {visibleUseCases.map((uc, i) => {
+                  const authed = uc.cookieName ? Cookies.get(uc.cookieName) === "authenticated" : true
+                  const href = uc.isProtected && !authed
+                    ? `/passcode?returnUrl=${encodeURIComponent(uc.href)}&uc=${uc.href.split("/")[2]}`
+                    : uc.href
 
                   return (
                     <Link
-                      key={`mobile-lab-${i}`}
-                      href={item.href}
-                      className={`flex items-center justify-between pl-3 py-2 text-[#007EA7] hover:text-[#005f7f] ${
-                        active ? "bg-[#007EA7]/10" : ""
-                      }`}
+                      key={`mobile-uc-${i}`}
+                      href={href}
+                      className="flex items-center justify-between pl-3 py-2 text-[#007EA7] hover:text-[#005f7f]"
                     >
-                      <span>{item.name}</span>
+                      <span>{uc.name}</span>
+                      {uc.isProtected && <Lock className="h-3 w-3 ml-2 opacity-70" />}
                     </Link>
                   )
                 })}
               </div>
 
               <div className="space-y-2">
-              <h3 className="font-medium text-[#007EA7] border-b border-[#007EA7] pb-1">Use Cases</h3>
-
-              {visibleUseCases.map((uc, i) => {
-                const authed = uc.cookieName ? Cookies.get(uc.cookieName) === "authenticated" : true
-                const href = uc.isProtected && !authed
-                  ? `/passcode?returnUrl=${encodeURIComponent(uc.href)}&uc=${uc.href.split("/")[2]}`
-                  : uc.href
-
-                return (
+                <h3 className="font-medium text-[#007EA7] border-b border-[#007EA7] pb-1">Lab</h3>
+                {labItems.map((item, i) => (
                   <Link
-                    key={`mobile-uc-${i}`}
-                    href={href}
-                    className="flex items-center justify-between pl-3 py-2 text-[#007EA7] hover:text-[#005f7f]"
+                    key={`mobile-lab-${i}`}
+                    href={item.href}
+                    className="block pl-3 py-2 text-[#007EA7] hover:text-[#005f7f]"
                   >
-                    <span>{uc.name}</span>
-                    {uc.isProtected && <Lock className="h-3 w-3 ml-2 opacity-70" />}
+                    {item.name}
                   </Link>
-                )
-              })}
+                ))}
               </div>
+            </div>
 
             <Link href="/about/" className="text-[#007EA7] font-medium">About</Link>
             <Link href="/contact/" className="text-[#007EA7] font-medium">Let's Chat</Link>

@@ -9,6 +9,16 @@ export default function ClaraProcessPage() {
     <>
       <Nav />
       <main className="min-h-screen pt-24">
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+.clara-references a { color: #007EA7; text-decoration: none; }
+.clara-references a:visited { color: #007EA7; }
+.clara-references a:hover,
+.clara-references a:focus-visible { color: #007EA7; text-decoration: underline; }
+`,
+          }}
+        />
         <div className="max-w-6xl mx-auto px-4 py-12">
           <div>
             <div className="flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-12 mb-8">
@@ -712,8 +722,8 @@ export default function ClaraProcessPage() {
             </a>
           </div>
           
-          {/* References */}
-          <section className="mb-16 pt-8 border-t border-[#F5F5F7]">
+          {/* References — hover: underline only, no color change */}
+          <section className="clara-references mb-16 pt-8 border-t border-[#F5F5F7]">
             <h3 className="font-space-grotesk text-xl font-semibold text-[#007EA7] mb-6 text-left">References</h3>
             <div className="space-y-4">
               {/* 1 */}
@@ -724,7 +734,7 @@ export default function ClaraProcessPage() {
                     href="https://natesnewsletter.substack.com/p/the-story-of-josh-an-ai-fable-for"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
+                    className="font-montserrat"
                   >
                     The Story of Josh: An AI Fable for the New Economy
                   </a>
@@ -739,7 +749,7 @@ export default function ClaraProcessPage() {
                     href="https://medium.com/generative-ai-revolution-ai-native-transformation/why-agentic-ux-will-change-everything-you-know-about-design-0394486f5add"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
+                    className="font-montserrat"
                   >
                     Why Agentic UX Will Change Everything You Know About Design
                   </a>
@@ -754,7 +764,7 @@ export default function ClaraProcessPage() {
                     href="https://www.ibm.com/think/insights/customer-service-future"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
+                    className="font-montserrat"
                   >
                     The future of AI in customer service
                   </a>
@@ -769,7 +779,7 @@ export default function ClaraProcessPage() {
                     href="https://www.talmundo.com/blog/hr-metrics-for-employee-onboarding"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
+                    className="font-montserrat"
                   >
                     HR metrics: What to measure for successful employee onboarding?
                   </a>
@@ -784,7 +794,7 @@ export default function ClaraProcessPage() {
                     href="https://aisera.com/blog/generative-ai-employee-productivity/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
+                    className="font-montserrat"
                   >
                     Generative AI to Boost Productivity and Save Hours at Work
                   </a>
@@ -799,7 +809,7 @@ export default function ClaraProcessPage() {
                     href="https://enboarder.com/blog/calculate-onboarding-roi/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
+                    className="font-montserrat"
                   >
                     Employee Onboarding ROI: How to Calculate & Prove It
                   </a>
@@ -814,7 +824,7 @@ export default function ClaraProcessPage() {
                     href="https://www.devlinpeck.com/content/employee-onboarding-statistics"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
+                    className="font-montserrat"
                   >
                     Employee Onboarding Statistics: Top Trends & Insights (2025)
                   </a>
@@ -829,7 +839,7 @@ export default function ClaraProcessPage() {
                     href="https://www.deloitte.com/uk/en/services/consulting/blogs/2024/ai-powered-employee-experience.html"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
+                    className="font-montserrat"
                   >
                     AI-Powered Employee Experience | Deloitte UK
                   </a>
@@ -844,7 +854,7 @@ export default function ClaraProcessPage() {
                     href="https://www.culturemonkey.io/guides/measuring-employee-engagement/metrics-for-employee-engagement/role-of-ai-in-analyzing-trends-and-patterns-in-employee-engagement/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
+                    className="font-montserrat"
                   >
                     The role of AI in employee engagement
                   </a>
@@ -859,7 +869,7 @@ export default function ClaraProcessPage() {
                     href="https://appinventiv.com/blog/ai-in-employee-engagement/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
+                    className="font-montserrat"
                   >
                     AI in Employee Engagement: Boost Productivity & Retention 2025
                   </a>
@@ -874,7 +884,7 @@ export default function ClaraProcessPage() {
                     href="https://distantjob.com/blog/reduce-employee-onboarding-time/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
+                    className="font-montserrat"
                   >
                     How to Reduce Employee Onboarding Time: 6 Best Practices
                   </a>
@@ -889,7 +899,7 @@ export default function ClaraProcessPage() {
                     href="https://www.yarooms.com/blog/ai-in-workplace-technology"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#007EA7] hover:underline"
+                    className="font-montserrat"
                   >
                     AI in Workplace Technology: Improving Productivity
                   </a>

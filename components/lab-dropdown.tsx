@@ -9,11 +9,14 @@ import { usePathname } from "next/navigation";
 export type LabItem = {
   name: string;
   href: string;
+  /** When set, menu item is active for any path under this prefix (e.g. details + process). */
+  activePathPrefix?: string;
 };
 
 /** Lab prototypes. Trailing slashes must align with next.config trailingSlash: true. */
 export const labItems: LabItem[] = [
-  { name: "All Reviews – Mobile App", href: "/lab/allReviews/" },
+  { name: "UX Portfolio", href: "/lab/ux-portfolio/", activePathPrefix: "/lab/ux-portfolio" },
+  { name: "All Reviews – Mobile App", href: "/lab/coming-soon/" },
 ];
 
 export function LabDropdown() {
@@ -68,9 +71,12 @@ export function LabDropdown() {
           >
             <ul className="py-2">
               {labItems.map((item, index) => {
-                const active =
-                  pathname === item.href ||
-                  pathname.replace(/\/$/, "") === item.href.replace(/\/$/, "");
+                const pathNorm = pathname.replace(/\/$/, "");
+                const hrefNorm = item.href.replace(/\/$/, "");
+                const prefix = item.activePathPrefix?.replace(/\/$/, "");
+                const active = prefix
+                  ? pathNorm === prefix || pathNorm.startsWith(`${prefix}/`)
+                  : pathname === item.href || pathNorm === hrefNorm;
 
                 return (
                   <li key={`lab-${index}`} role="none">

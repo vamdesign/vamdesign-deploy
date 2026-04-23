@@ -9,6 +9,7 @@ import Script from 'next/script'
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  variable: "--font-space-grotesk",
 })
 
 const montserrat = Montserrat({
@@ -35,7 +36,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className="bg-white">
-      <body className={`${spaceGrotesk.className} ${montserrat.variable} bg-white`}>
+      <body
+        className={`${spaceGrotesk.className} ${spaceGrotesk.variable} ${montserrat.variable} bg-white`}
+      >
         <ClientLayout>{children}</ClientLayout>
         
         {/* GoatCounter Analytics */}
