@@ -393,7 +393,7 @@ export default function MCPUseCasePage() {
                   <img
                     src="/images/MCP/policy_mediated_mcp_execution_flow_f.jpg"
                     alt="Policy-mediated MCP execution flow from natural-language request through tool calls and policy review to outcomes."
-                    className="mx-auto block h-auto w-full min-w-[920px] max-w-[1024px]"
+                    className="min-w-[920px] w-full h-auto block"
                     width={1024}
                     height={542}
                     decoding="async"
