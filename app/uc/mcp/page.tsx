@@ -391,7 +391,7 @@ export default function MCPUseCasePage() {
                 </h3>
                 <div className="relative w-full aspect-[4092/2170] bg-white">
   <Image
-    src="/images/MCP/policy_mediated_mcp_execution_flow.png"
+    src="/images/MCP/policy_flow.png"
     alt="Policy-mediated MCP execution flow from natural-language request through tool calls and policy review to outcomes."
     fill
     className="object-contain"
