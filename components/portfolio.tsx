@@ -10,7 +10,7 @@ const projects = [
     title: "UX guidance for AI and the MCP Layer",
     description:
       "As AI moves from answering questions to taking action, UX becomes the layer that makes those actions visible, governable, and trustworthy. This project looks ahead to the product patterns teams will need as AI starts doing more inside the tools people already use.",
-    image: "/images/MCP/policy_mediated_mcp_execution_flow.png",
+    image: "/images/MCP/policy_mediated_mcp_execution_flow_f.png",
   },
   {
     id: "apple",
