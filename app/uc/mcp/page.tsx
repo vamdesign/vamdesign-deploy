@@ -394,8 +394,8 @@ export default function MCPUseCasePage() {
                     src="/images/MCP/policy_mediated_mcp_execution_flow.png"
                     alt="Policy-mediated MCP execution flow from natural-language request through tool calls and policy review to outcomes."
                     className="min-w-[920px] w-full h-auto block"
-                    width={1630}
-                    height={864}
+                    width={1024}
+                    height={542}
                     decoding="async"
                     loading="lazy"
                   />
@@ -529,10 +529,10 @@ export default function MCPUseCasePage() {
                 is a designed human experience around it.
               </p>
               <p>
-                Human oversight is not a checkbox. An engineer can add an approval prompt. A compliance team can require a
-                log. But whether a person actually understands what they are approving, whether the signal reaches the right
-                person, and whether the friction is proportional to the risk are design problems. That is the layer this
-                project works in.
+                The infrastructure for oversight exists. The experience around it is still largely undesigned. Engineers
+                can add approval prompts. Compliance teams can require logs. These are real contributions, and they
+                matter. But getting the signal to the right person, at the right moment, with friction that reflects the
+                actual risk, those are design problems. That is the layer this project works in.
               </p>
               <p>
                 The more I mapped the gap, the more I recognized it as the same trust and control problem I have been
