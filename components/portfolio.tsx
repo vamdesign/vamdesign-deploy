@@ -10,7 +10,7 @@ const projects = [
     title: "UX guidance for AI and the MCP Layer",
     description:
       "As AI moves from answering questions to taking action, UX becomes the layer that makes those actions visible, governable, and trustworthy. This project looks ahead to the product patterns teams will need as AI starts doing more inside the tools people already use.",
-    image: "/images/MCP/policy_mediated_mcp_execution_flow.svg",
+    image: "/images/MCP/policy_mediated_mcp_execution_flow.png",
   },
   {
     id: "apple",
@@ -81,17 +81,17 @@ export default function Portfolio() {
                     </p>
                   )}
                   <div className="text-right">
-                    <Link 
+                    <Link
                       href={
                         project.id === "ai-design"
                           ? "/uc/mcp/"
                           : project.id === "apple"
                           ? "/uc/apple/details/"
                           : project.id === "wells-fargo"
-                            ? "/uc/wellsf/details/"
-                            : project.id === "walmart"
-                              ? "/uc/walmart/details/"
-                              : "/lab/ux-portfolio/"
+                          ? "/uc/wellsf/details/"
+                          : project.id === "walmart"
+                          ? "/uc/walmart/details/"
+                          : "/lab/ux-portfolio/"
                       }
                       className="text-lg md:text-xl font-medium text-[#007EA7] hover:text-[#005f7f] transition-colors inline-block"
                     >
@@ -107,34 +107,22 @@ export default function Portfolio() {
                       : project.id === "apple"
                       ? "/uc/apple/details/"
                       : project.id === "wells-fargo"
-                        ? "/uc/wellsf/details/"
-                        : project.id === "walmart"
-                          ? "/uc/walmart/details/"
-                          : "/lab/ux-portfolio/"
+                      ? "/uc/wellsf/details/"
+                      : project.id === "walmart"
+                      ? "/uc/walmart/details/"
+                      : "/lab/ux-portfolio/"
                   }
                   className={
                     "relative aspect-[4/3] w-full overflow-hidden rounded-lg shadow-lg order-1 md:order-2 " +
                     (project.id === "ai-design" ? "bg-white" : "")
                   }
                 >
-                  {project.id === "ai-design" ? (
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      width={4092}
-                      height={2170}
-                      className="absolute inset-0 h-full w-full object-contain"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  ) : (
-                    <Image
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      fill
-                      className="object-cover"
-                    />
-                  )}
+                  <Image
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    fill
+                    className={project.id === "ai-design" ? "object-contain" : "object-cover"}
+                  />
                 </Link>
               </div>
             </motion.div>

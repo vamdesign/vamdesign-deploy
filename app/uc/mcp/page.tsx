@@ -389,17 +389,14 @@ export default function MCPUseCasePage() {
                 <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-4 text-left">
                   Governed Execution Flow
                 </h3>
-                <div className="w-full overflow-x-auto rounded-none bg-white">
-                  <img
-                    src="/images/MCP/policy_mediated_mcp_execution_flow.svg"
-                    alt="Policy-mediated MCP execution flow from natural-language request through tool calls and policy review to outcomes."
-                    className="min-w-[920px] w-full h-auto max-w-full block"
-                    width={4092}
-                    height={2170}
-                    decoding="async"
-                    loading="lazy"
-                  />
-                </div>
+                <div className="relative w-full aspect-[4092/2170] bg-white">
+  <Image
+    src="/images/MCP/policy_mediated_mcp_execution_flow.png"
+    alt="Policy-mediated MCP execution flow from natural-language request through tool calls and policy review to outcomes."
+    fill
+    className="object-contain"
+  />
+</div>
                 <p>
                   This flow addresses the gap between a user&apos;s natural-language request and the live tool calls an
                   AI agent generates, introducing a policy-aware review layer that can allow, narrow, deny, or escalate
