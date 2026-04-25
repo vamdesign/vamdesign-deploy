@@ -10,7 +10,7 @@ const projects = [
     title: "UX guidance for AI and the MCP Layer",
     description:
       "As AI moves from answering questions to taking action, UX becomes the layer that makes those actions visible, governable, and trustworthy. This project looks ahead to the product patterns teams will need as AI starts doing more inside the tools people already use.",
-    image: "/images/MCP/policy_mediated_mcp_execution_flow_f.jpg",
+    image: "/images/MCP/policy_mediated_mcp_execution_flow.svg",
   },
   {
     id: "apple",
@@ -117,12 +117,24 @@ export default function Portfolio() {
                     (project.id === "ai-design" ? "bg-white" : "")
                   }
                 >
-                  <Image 
-                    src={project.image || "/placeholder.svg"} 
-                    alt={project.title} 
-                    fill 
-                    className={project.id === "ai-design" ? "object-contain" : "object-cover"}
-                  />
+                  {project.id === "ai-design" ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      width={4092}
+                      height={2170}
+                      className="absolute inset-0 h-full w-full object-contain"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ) : (
+                    <Image
+                      src={project.image || "/placeholder.svg"}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                    />
+                  )}
                 </Link>
               </div>
             </motion.div>
