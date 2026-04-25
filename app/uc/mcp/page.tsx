@@ -389,9 +389,9 @@ export default function MCPUseCasePage() {
                 <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-4 text-left">
                   Governed Execution Flow
                 </h3>
-                <div className="w-full overflow-x-auto rounded-none bg-[#f3f4f6]">
+                <div className="w-full overflow-x-auto rounded-none bg-white">
                   <img
-                    src="/images/MCP/policy_mediated_mcp_execution_flow_f.png"
+                    src="/images/MCP/policy_mediated_mcp_execution_flow.jpg"
                     alt="Policy-mediated MCP execution flow from natural-language request through tool calls and policy review to outcomes."
                     className="min-w-[920px] w-full h-auto block"
                     width={1024}
