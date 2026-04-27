@@ -149,6 +149,10 @@ export default function MCPUseCasePage() {
             </h2>
             <div className="space-y-5 font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 leading-relaxed">
               <p>
+                The missing layer in MCP is the person sitting between the request and the execution who can&apos;t see
+                what the AI is doing, pause it, or audit it after.
+              </p>
+              <p>
                 With MCP, AI agents can translate a user&apos;s natural-language request into multiple tool calls across
                 connected enterprise systems. The infrastructure for action exists, but the UX around those actions is
                 still largely undesigned. Access may be technically valid, yet whether an action is appropriate or
@@ -219,23 +223,23 @@ export default function MCPUseCasePage() {
             <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">
               The Moment Oversight Breaks Down
             </h2>
-            <div className="flex flex-col md:flex-row md:items-start gap-6 md:gap-8 lg:gap-10">
-              <figure className="w-full md:w-[58%] md:max-w-none md:shrink-0 max-w-2xl mx-auto md:mx-0">
+            <div className="flex flex-col md:flex-row md:items-start gap-6 md:gap-6 lg:gap-8">
+              <figure className="w-full max-w-md mx-auto md:mx-0 md:w-[24rem] md:max-w-[24rem] md:shrink-0">
                 <Image
-                  src="/images/MCP/Accounts_Page2.png"
-                  alt="CRM accounts dashboard with AI chat showing a compliance prompt before sending a summary to external recipients"
-                  width={1440}
-                  height={816}
+                  src="/images/MCP/Accounts_CloseUP2.png"
+                  alt="CRM dashboard with AI chat and expanded view of workflow steps, blocked external send, and compliance prompt before sharing a board summary"
+                  width={1024}
+                  height={781}
                   className="w-full h-auto rounded-lg border border-[#007EA7]/15 shadow-[0_8px_30px_rgba(0,126,167,0.12)]"
-                  sizes="(max-width: 768px) 100vw, 58vw"
+                  sizes="(max-width: 768px) min(100vw, 28rem), 384px"
                 />
               </figure>
-              <div className="flex-1 min-w-0 space-y-5 font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 leading-relaxed">
+              <div className="min-w-0 flex-1 space-y-5 font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 leading-relaxed md:pt-0">
                 <p>
-                  A user typed, &ldquo;Prep a summary of all enterprise accounts for the board deck.&rdquo; The AI treated
-                  that as an end-to-end workflow, reading CRM records, accessing a strategy folder, and assembling the
-                  document before reaching a decision boundary. Some recipients were outside the organization, but the MCP
-                  client had no clear interaction pattern for what should happen next.
+                  A user typed, &ldquo;Prep a summary of all enterprise accounts for the board deck.&rdquo; in the AI
+                  chat. The AI treated that as an end-to-end workflow, reading CRM records, accessing a strategy folder,
+                  and assembling the document before reaching a decision boundary. Some recipients were outside the
+                  organization, but the MCP client had no clear interaction pattern for what should happen next.
                 </p>
                 <p>
                   The AI message visible in the chat panel is the intervention point. At this stage the system flagged that a compliance-sensitive action may be about to occur. By then, one request has already expanded into
