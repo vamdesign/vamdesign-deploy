@@ -68,7 +68,7 @@ interface NavItem {
 
 export default function Hero() {
   return (
-    <section className="h-[100svh] flex items-center relative bg-white overflow-hidden">
+    <section className="h-[70svh] min-h-[70svh] flex items-start relative bg-white overflow-hidden">
       <div className="absolute inset-0 z-0">
         {/* Reduced number of blobs on smaller screens */}
         <Blob color="#FF6700" initialX="5%" initialY="10%" />
@@ -81,28 +81,29 @@ export default function Hero() {
           <Blob color="#7209B7" initialX="50%" initialY="80%" />
         </div>
       </div>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20 relative z-10 mt-8 sm:mt-16">
+      <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 pt-[11svh] sm:pt-[13svh] md:pt-[15svh] pb-12 sm:pb-16 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-4xl"
         >
-           <h1 className="mb-6 sm:mb-8">
-            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#007EA7] leading-tight mb-2 font-light">
-              Hello, I&apos;m Vicki. I design intuitive UX for complex systems and the control layer behind AI actions.
-              <span className="text-[#007EA7]/30">*</span>
+          <h1 className="mb-3 sm:mb-4">
+            <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#007EA7] leading-snug sm:leading-tight font-light">
+              Hello, I&apos;m Vicki. I make complex software usable, and design AI experiences with clarity, trust, and human
+              control built in.
             </span>
           </h1>
 
-          <p className="text-sm sm:text-base text-[#007EA7]/30 mb-6 sm:mb-8">
-            *UX so good, users won&apos;t even notice it. AI oversight so clear, you&apos;ll always know what happens next.
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#007EA7] leading-snug sm:leading-tight font-semibold mb-6 sm:mb-8">
+            Senior UX &amp; Product Designer
           </p>
 
           <div className="mt-8 sm:mt-12 space-y-4 sm:space-y-6 flex flex-col items-start">
             {[
-              { text: "Innovative UX Design", href: "ux-portfolio" },
-              { text: "Measurable Impact", href: "impact" },
+               { text: "What I Offer", href: "ux-portfolio" },
+              { text: "Selected Work", href: "ux-portfolio" },
+              { text: "Impact", href: "impact" },
             ].map((item: NavItem) => (
               <motion.a
                 key={item.text}

@@ -36,26 +36,27 @@ export default function Impact() {
     >
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="font-bold text-4xl mb-4 text-[#007EA7]">Impact Through Design</h2>
-          <p className="text-xl text-[#007EA7]/70">Measurable results that drive business growth</p>
+          <h2 className="font-bold text-3xl md:text-[2rem] mb-4 text-[#007EA7]">Impact</h2>
+          <p className="text-xl text-[#007EA7]/70">
+            Measured outcomes and UX metrics that support real business goals
+          </p>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mb-16 -mt-4 max-w-3xl mx-auto"
         >
           <p className="text-lg text-[#007EA7] text-center font-montserrat font-light">
-            As a Senior UX/UI designer, I specialize in creating innovative enterprise solutions and comprehensive
-            design systems. My approach combines strategic design thinking with a keen focus on user needs, resulting in
-            experiences that not only delight users but also drive measurable improvements in retention and key business
-            metrics.
+           I specialize in enterprise workflows and design systems. I pair strategic design
+            thinking with baselines and follow-up measurement, so improvements in usability, retention, and core business
+            metrics are visible.
           </p>
         </motion.div>
 
@@ -63,7 +64,7 @@ export default function Impact() {
           {achievements.map((achievement, index) => (
             <motion.div
               key={achievement.label}
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}

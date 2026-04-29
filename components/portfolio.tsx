@@ -44,27 +44,27 @@ export default function Portfolio() {
       className="pt-12 pb-12 px-6 text-[#007EA7]"
       id="ux-portfolio"
       style={{
-        backgroundColor: "#D5DCE1",
-        backgroundImage: "linear-gradient(135deg, rgba(213, 220, 225, 0.9), rgba(213, 220, 225, 0.9))",
+        backgroundColor: "#EEF2F2",
+        backgroundImage: "linear-gradient(135deg, rgba(238, 242, 242, 0.9), rgba(238, 242, 242, 0.9))",
         backgroundSize: "200% 200%",
         animation: "gradientAnimation 15s ease infinite",
       }}
     >
       <div className="max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="font-bold text-4xl mb-4">Innovative UX Design Showcase</h2>
+          <h2 className="font-bold text-3xl md:text-[2rem] mb-4">Selected Work</h2>
         </motion.div>
 
         <div className="space-y-32">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 50 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
