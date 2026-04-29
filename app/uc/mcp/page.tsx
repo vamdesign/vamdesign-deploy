@@ -2,7 +2,6 @@ import Nav from "@/components/nav"
 import Footer from "@/components/footer"
 import Image from "next/image"
 import type { Metadata } from "next"
-import { Fragment } from "react"
 
 export const metadata: Metadata = {
   title: "UX guidance for AI and the MCP Layer | VAM Design",
@@ -43,7 +42,7 @@ const authorizationEngineeringToProductPairs = [
   },
   {
     engineering: "Token-scoped access",
-    product: "Visibility into what the AI is actually doing at runtime",
+    product: "Runtime visibility into what the AI is doing",
   },
   {
     engineering: "Tool execution",
@@ -51,16 +50,27 @@ const authorizationEngineeringToProductPairs = [
   },
   {
     engineering: "A log in a database",
-    product: "An audit surface a non-technical person can read and act on",
+    product: "A readable audit surface for non-technical users",
   },
 ] as const
 
 const mcpReferenceLinkClass =
   "text-[#007EA7] no-underline visited:text-[#007EA7] hover:underline focus-visible:underline outline-none"
 
-const authorizationFlowText = "font-montserrat text-sm sm:text-base text-[#5f5f5f]/85 whitespace-nowrap"
+const authorizationFlowTextBase = "font-montserrat text-sm sm:text-base text-[#5f5f5f]/85"
+const authorizationFlowTextLeft = `${authorizationFlowTextBase} md:whitespace-nowrap`
+const authorizationFlowTextRight = `${authorizationFlowTextBase} min-w-0 whitespace-normal`
 const authorizationFlowHeading =
-  "font-space-grotesk text-lg sm:text-xl font-medium text-[#007EA7] text-left tracking-tight whitespace-nowrap"
+  "font-space-grotesk text-lg sm:text-xl font-medium text-[#007EA7] text-left tracking-tight whitespace-normal md:whitespace-nowrap"
+
+const authorizationDesktopRightColClass =
+  "min-w-0 shrink-0 grow-0 basis-[min(26rem,100%)] text-left"
+
+const authorizationMobilePairCardClass =
+  "rounded-xl border border-[#007EA7]/15 bg-[#007EA7]/[0.045] px-4 py-4 sm:px-5 sm:py-5"
+
+const whyUxMobilePairCardClass =
+  "rounded-xl border border-[#007EA7]/15 bg-white px-4 py-4 sm:px-5 sm:py-5 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]"
 
 /** Horizontal connector: CSS line + border triangle; stem flexes per row */
 function AuthorizationFlowArrowHorizontal() {
@@ -71,15 +81,6 @@ function AuthorizationFlowArrowHorizontal() {
     >
       <span className="box-border h-0 min-w-[0.5rem] flex-1 border-0 border-t-[1.5px] border-solid border-[#007EA7]/50" />
       <span className="box-border h-0 w-0 shrink-0 border-y-[5px] border-y-transparent border-l-[7px] border-solid border-l-[#007EA7]/50 -ml-px" />
-    </div>
-  )
-}
-
-function AuthorizationFlowArrowVertical() {
-  return (
-    <div className="mx-auto flex w-full max-w-[2.5rem] flex-col items-center py-1 pointer-events-none" aria-hidden>
-      <span className="box-border min-h-[1.25rem] w-0 shrink-0 border-0 border-l-[1.5px] border-solid border-[#007EA7]/50" />
-      <span className="box-border h-0 w-0 shrink-0 border-x-[5px] border-x-transparent border-t-[7px] border-solid border-t-[#007EA7]/50" />
     </div>
   )
 }
@@ -416,37 +417,52 @@ export default function MCPUseCasePage() {
               Authorization Is Not a User Experience
             </h2>
             <div className="space-y-5 font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 leading-relaxed">
-              <div className="mx-auto w-full max-w-4xl overflow-x-auto bg-white p-6 sm:p-8 md:p-10 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
+              <div className="mx-auto w-full max-w-4xl bg-white p-6 sm:p-8 md:p-10 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
                 <div className="md:hidden">
-                  <div className="flex flex-col gap-2 pb-5">
-                    <h3 className={authorizationFlowHeading}>What engineering delivered</h3>
-                    <h3 className={authorizationFlowHeading}>What the product still needed</h3>
-                  </div>
-                  <ul className="m-0 list-none space-y-6 p-0" role="list">
+                  <ul
+                    className="m-0 list-none space-y-4 p-0"
+                    role="list"
+                    aria-label="Engineering deliverables and what each still needed"
+                  >
                     {authorizationEngineeringToProductPairs.map((pair) => (
-                      <li key={pair.engineering} className="flex flex-col gap-2">
-                        <p className={authorizationFlowText}>{pair.engineering}</p>
-                        <AuthorizationFlowArrowVertical />
-                        <p className={authorizationFlowText}>{pair.product}</p>
+                      <li
+                        key={pair.engineering}
+                        className={`m-0 min-w-0 list-none ${authorizationMobilePairCardClass}`}
+                      >
+                        <p className="font-space-grotesk text-base sm:text-lg font-semibold text-[#007EA7] leading-snug">
+                          {pair.engineering}
+                        </p>
+                        <p className="mt-3 font-montserrat text-sm sm:text-base text-[#5f5f5f]/85 leading-relaxed">
+                          <span className="font-semibold text-[#2C3D4D]">What it needed: </span>
+                          {pair.product}
+                        </p>
                       </li>
                     ))}
                   </ul>
                 </div>
 
                 <div
-                  className="hidden md:grid md:grid-cols-[max-content_minmax(1.25rem,1fr)_max-content] md:gap-x-3 md:gap-y-7 md:items-center"
+                  className="hidden md:flex md:min-w-0 md:flex-col md:gap-y-6 lg:gap-y-7"
                   aria-label="Engineering deliverables compared to product needs"
                 >
-                  <h3 className={authorizationFlowHeading}>What engineering delivered</h3>
-                  <span className="block min-w-[1rem]" aria-hidden />
-                  <h3 className={authorizationFlowHeading}>What the product still needed</h3>
-                  <div className="col-span-3 h-4 shrink-0" aria-hidden />
+                  <div className="flex w-full min-w-0 items-start gap-x-2">
+                    <h3 className={`${authorizationFlowHeading} shrink-0`}>What engineering delivered</h3>
+                    <span className="min-w-[0.5rem] flex-1" aria-hidden />
+                    <h3 className={`${authorizationFlowHeading} ${authorizationDesktopRightColClass}`}>
+                      What the product still needed
+                    </h3>
+                  </div>
+                  <div className="h-3 shrink-0" aria-hidden />
                   {authorizationEngineeringToProductPairs.map((pair) => (
-                    <Fragment key={pair.engineering}>
-                      <p className={authorizationFlowText}>{pair.engineering}</p>
-                      <AuthorizationFlowArrowHorizontal />
-                      <p className={authorizationFlowText}>{pair.product}</p>
-                    </Fragment>
+                    <div key={pair.engineering} className="flex w-full min-w-0 items-center gap-x-2">
+                      <p className={`${authorizationFlowTextLeft} shrink-0`}>{pair.engineering}</p>
+                      <div className="flex min-h-[1lh] min-w-4 flex-1 items-center">
+                        <AuthorizationFlowArrowHorizontal />
+                      </div>
+                      <p className={`${authorizationFlowTextRight} ${authorizationDesktopRightColClass}`}>
+                        {pair.product}
+                      </p>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -455,45 +471,67 @@ export default function MCPUseCasePage() {
                 determines when risk becomes visible, how severity is communicated, when the system stays quiet, when it
                 pauses, and how oversight reaches the right person at the right moment.
               </p>
-              <div className="overflow-x-auto my-6">
-                <div className="bg-white p-4 sm:p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff] min-w-[min(100%,520px)]">
-                  <div
-                    className="grid grid-cols-2 gap-x-6 sm:gap-x-10 font-montserrat text-sm"
-                    aria-label="What ships today compared to what this project adds"
+              <div className="my-6 space-y-4 md:space-y-0">
+                <div className="md:hidden space-y-4">
+                  <ul
+                    className="m-0 list-none space-y-4 p-0"
+                    role="list"
+                    aria-label="Typical baselines and what this project adds"
                   >
-                    <div className="flex min-w-0 flex-col">
-                      <div
-                        className={`py-3 pr-1 font-semibold text-[#007EA7] leading-snug ${whyUxRowRuleClass}`}
-                      >
-                        What ships today
-                      </div>
-                      {whyUxComparisonRows.map((row, i) => (
-                        <div
-                          key={row.today}
-                          className={`py-3 pr-1 text-[#5f5f5f]/80 leading-relaxed ${
-                            i < whyUxComparisonRows.length - 1 ? whyUxRowRuleClass : ""
-                          }`}
-                        >
+                    {whyUxComparisonRows.map((row) => (
+                      <li key={row.today} className={`m-0 min-w-0 list-none ${whyUxMobilePairCardClass}`}>
+                        <p className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/85 leading-relaxed">
+                          <span className="font-semibold text-[#007EA7]">Today: </span>
                           {row.today}
-                        </div>
-                      ))}
-                    </div>
-                    <div className="flex min-w-0 flex-col">
-                      <div
-                        className={`py-3 pl-1 font-semibold text-[#007EA7] leading-snug ${whyUxRowRuleClass}`}
-                      >
-                        What this project adds
-                      </div>
-                      {whyUxComparisonRows.map((row, i) => (
-                        <div
-                          key={row.adds}
-                          className={`py-3 pl-1 text-[#5f5f5f]/80 leading-relaxed ${
-                            i < whyUxComparisonRows.length - 1 ? whyUxRowRuleClass : ""
-                          }`}
-                        >
+                        </p>
+                        <p className="mt-3 font-montserrat text-sm sm:text-base text-[#5f5f5f]/85 leading-relaxed">
+                          <span className="font-semibold text-[#007EA7]">This project adds: </span>
                           {row.adds}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="hidden md:block overflow-x-auto">
+                  <div className="bg-white p-4 sm:p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff] min-w-[min(100%,520px)]">
+                    <div
+                      className="grid grid-cols-2 gap-x-6 sm:gap-x-10 font-montserrat text-sm"
+                      aria-label="What ships today compared to what this project adds"
+                    >
+                      <div className="flex min-w-0 flex-col">
+                        <div
+                          className={`py-3 pr-1 font-semibold text-[#007EA7] leading-snug ${whyUxRowRuleClass}`}
+                        >
+                          What ships today
                         </div>
-                      ))}
+                        {whyUxComparisonRows.map((row, i) => (
+                          <div
+                            key={row.today}
+                            className={`py-3 pr-1 text-[#5f5f5f]/80 leading-relaxed ${
+                              i < whyUxComparisonRows.length - 1 ? whyUxRowRuleClass : ""
+                            }`}
+                          >
+                            {row.today}
+                          </div>
+                        ))}
+                      </div>
+                      <div className="flex min-w-0 flex-col">
+                        <div
+                          className={`py-3 pl-1 font-semibold text-[#007EA7] leading-snug ${whyUxRowRuleClass}`}
+                        >
+                          What this project adds
+                        </div>
+                        {whyUxComparisonRows.map((row, i) => (
+                          <div
+                            key={row.adds}
+                            className={`py-3 pl-1 text-[#5f5f5f]/80 leading-relaxed ${
+                              i < whyUxComparisonRows.length - 1 ? whyUxRowRuleClass : ""
+                            }`}
+                          >
+                            {row.adds}
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
