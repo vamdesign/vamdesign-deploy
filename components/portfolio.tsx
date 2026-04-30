@@ -41,14 +41,8 @@ const projects = [
 export default function Portfolio() {
   return (
     <section
-      className="pt-12 pb-12 px-6 text-[#007EA7]"
+      className="pt-12 pb-12 px-6 text-[#007EA7] bg-[#ffffff]"
       id="ux-portfolio"
-      style={{
-        backgroundColor: "#EEF2F2",
-        backgroundImage: "linear-gradient(135deg, rgba(238, 242, 242, 0.9), rgba(238, 242, 242, 0.9))",
-        backgroundSize: "200% 200%",
-        animation: "gradientAnimation 15s ease infinite",
-      }}
     >
       <div className="max-w-6xl mx-auto">
         <motion.div

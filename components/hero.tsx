@@ -68,20 +68,9 @@ interface NavItem {
 
 export default function Hero() {
   return (
-    <section className="h-[70svh] min-h-[70svh] flex items-start relative bg-white overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        {/* Reduced number of blobs on smaller screens */}
-        <Blob color="#FF6700" initialX="5%" initialY="10%" />
-        <Blob color="#EF036C" initialX="60%" initialY="20%" />
-        <Blob color="#106EBE" initialX="70%" initialY="50%" />
-        <div className="hidden md:block">
-          <Blob color="#0FFCBE" initialX="30%" initialY="40%" />
-          <Blob color="#FFD60A" initialX="80%" initialY="70%" />
-          <Blob color="#D62828" initialX="10%" initialY="70%" />
-          <Blob color="#7209B7" initialX="50%" initialY="80%" />
-        </div>
-      </div>
-      <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 pt-[11svh] sm:pt-[13svh] md:pt-[15svh] pb-12 sm:pb-16 relative z-10">
+    <section className="h-[70svh] min-h-[70svh] flex items-start relative bg-transparent">
+     
+      <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 pt-[11svh] sm:pt-[13svh] md:pt-[15svh] pb-4 sm:pb-6 relative z-10">
         <motion.div
           initial={false}
           animate={{ opacity: 1, y: 0 }}
@@ -101,7 +90,7 @@ export default function Hero() {
 
           <div className="mt-8 sm:mt-12 space-y-4 sm:space-y-6 flex flex-col items-start">
             {[
-               { text: "What I Offer", href: "ux-portfolio" },
+               { text: "What I Offer", href: "what-i-offer" },
               { text: "Selected Work", href: "ux-portfolio" },
               { text: "Impact", href: "impact" },
             ].map((item: NavItem) => (
@@ -117,7 +106,9 @@ export default function Hero() {
             ))}
           </div>
         </motion.div>
-      </div>
+        </div>
+      {/* fade blobs into What I Offer */}
+      
     </section>
   )
 }
