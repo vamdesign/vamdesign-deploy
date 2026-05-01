@@ -15,15 +15,18 @@ const offers = [
       "I use AI as part of my daily design and development process, from research and UX writing to vibe coding, prototyping, testing flows, and refining product ideas.",
   },
   {
-    title: "AI Oversight and Control Layer",
+    title: "Agentic Experience (AX) Design",
     description:
-      "I’m building a point of view around the missing UX layer in AI: how people see, understand, approve, and control what AI does.",
+      "I'm exploring Agentic Experience (AX)* through AI and MCP concept work: how people delegate work, understand agent behavior, approve tool actions, create trust, and stay in control.",
   },
 ]
 
 export default function Offer() {
   return (
-    <section className="pt-24 pb-20 px-6 bg-transparent relative" id="what-i-offer">
+    <section
+      className="scroll-mt-12 md:scroll-mt-14 pt-14 sm:pt-16 pb-20 px-6 bg-transparent relative"
+      id="what-i-offer"
+    >
       
       <div className="max-w-6xl mx-auto">
         <motion.div

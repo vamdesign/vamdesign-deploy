@@ -88,6 +88,13 @@ export default function Home() {
 
       <Portfolio />
       <Impact />
+
+      <section className="bg-[#f8f9fa] px-6 py-8" aria-label="Agentic Experience note">
+        <p className="max-w-3xl mx-auto text-center font-montserrat text-[0.65rem] text-[#5f5f5f]/80 leading-relaxed">
+          *AX, or Agentic Experience, is an emerging term used by design leaders including John Maeda to describe the
+          shift from traditional UX toward experiences shaped by AI agents and autonomous outcomes.
+        </p>
+      </section>
     </main>
   )
 }

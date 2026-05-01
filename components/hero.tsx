@@ -79,7 +79,7 @@ export default function Hero() {
         >
           <h1 className="mb-3 sm:mb-4">
             <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#007EA7] leading-snug sm:leading-tight font-light">
-              Hello, I&apos;m Vicki. I make complex software usable, and design AI experiences with clarity, trust, and human
+              Hello, I&apos;m Vicki. I make complex software usable, and design AI and Agentic Experiences &#40;AX&#41;* with clarity, trust, and human
               control built in.
             </span>
           </h1>
