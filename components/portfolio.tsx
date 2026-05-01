@@ -20,11 +20,18 @@ const IMAGE_FRAME_INSET_APPLE = "box-border pt-[10px] pb-0 px-2 sm:px-3"
 /** Walmart: edge-to-edge (no lateral inset) so UI isn’t framed in navy; fills strip like the asset */
 const IMAGE_FRAME_INSET_WALMART = "box-border p-0"
 
+/** Short name for link accessible name (no visible title on card) */
+const CASE_STUDY_ARIA: Record<string, string> = {
+  "ai-design": "AI actions, approvals, and oversight",
+  apple: "Apple internal support tools",
+  "wells-fargo": "Salesforce CRM migration for small business bankers",
+  walmart: "Walmart Fulfillment Services",
+}
+
 type ImageAlign = "top" | "center"
 
 type PortfolioProject = {
   id: string
-  title: string
   tagline: string
   href: string
   image: string
@@ -36,9 +43,8 @@ type PortfolioProject = {
 const projects: PortfolioProject[] = [
   {
     id: "ai-design",
-    title: "UX guidance for AI and the MCP Layer",
     tagline:
-      "Designing clearer oversight for AI actions, approvals, and trust in enterprise tools.",
+      "Designing UX/AX guidance for AI actions, approvals, and oversight so enterprise users can see, understand, and control what happens before systems act.",
     href: "/uc/mcp/",
     image: "/images/MCP/policy_flow.jpg",
     imageBackdrop: "#fefefe",
@@ -46,9 +52,8 @@ const projects: PortfolioProject[] = [
   },
   {
     id: "apple",
-    title: "Apple Internal Tools",
     tagline:
-      "Improving internal support workflows so specialists can work faster and with less friction.",
+      "Improving internal Apple support tools so specialists can move through customer workflows faster, with clearer patterns and less friction.",
     href: "/uc/apple/details/",
     image: "/images/landing/AppleInternApps.png",
     imageBackdrop: "#ffffff",
@@ -56,8 +61,8 @@ const projects: PortfolioProject[] = [
   },
   {
     id: "wells-fargo",
-    title: "Wells Fargo CRM",
-    tagline: "Simplifying banker workflows during a large-scale Salesforce migration.",
+    tagline:
+      "Simplifying small business banker workflows during a large-scale Salesforce migration, with clearer task flows, data views, and system states.",
     href: "/uc/wellsf/details/",
     image: "/images/landing/WellsFargoCRM.png",
     imageBackdrop: "#ffffff",
@@ -65,9 +70,8 @@ const projects: PortfolioProject[] = [
   },
   {
     id: "walmart",
-    title: "Walmart Labs",
     tagline:
-      "Helping shape scalable seller tools through research, systems thinking, and design systems.",
+      "Helping shape Walmart Fulfillment Services through seller research, competitive analysis, scalable UX patterns, and design system work.",
     href: "/uc/walmart/details/",
     image: "/images/landing/WalmartFulfillment.png",
     imageBackdrop: "#041e42",
@@ -126,15 +130,13 @@ function ProjectCard({
 }) {
   const cardHref = useWellsFargoCaseStudyHref(project.href, project.id)
   const align = project.imageAlign === "top" ? "object-top" : "object-center"
-  const TRANSFORM =
-    "transform-gpu transition-transform duration-500 ease-out will-change-transform group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
   let imgClass: string
   if (project.id === "apple") {
-    imgClass = `object-cover object-top ${TRANSFORM}`
+    imgClass = "object-cover object-top"
   } else if (project.id === "walmart") {
-    imgClass = `object-contain object-bottom ${TRANSFORM}`
+    imgClass = "object-contain object-bottom"
   } else {
-    imgClass = `${align} object-contain ${TRANSFORM}`
+    imgClass = `${align} object-contain`
   }
 
   const wrapperStyle: CSSProperties = { backgroundColor: project.imageBackdrop }
@@ -177,7 +179,7 @@ function ProjectCard({
           </div>
           <div
             className={
-              "pointer-events-none absolute inset-0 bg-gradient-to-t from-[#007EA7]/[0.06] via-transparent to-transparent mix-blend-multiply " +
+              "pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-[#007EA7]/[0.06] via-transparent to-transparent mix-blend-multiply " +
               (project.id === "walmart" ? "opacity-35" : "opacity-80")
             }
             aria-hidden
@@ -185,9 +187,6 @@ function ProjectCard({
         </div>
 
         <div className="flex flex-1 flex-col gap-3 p-6 md:p-7">
-          <h3 className="font-bold text-xl leading-snug text-[#007EA7] md:text-[1.35rem]">
-            {project.title}
-          </h3>
           <p className="font-montserrat text-sm font-light leading-relaxed text-[#5f5f5f] md:text-[0.95rem]">
             {project.tagline}
           </p>
@@ -195,7 +194,7 @@ function ProjectCard({
             href={cardHref}
             prefetch={false}
             className="mt-auto inline-flex items-center justify-center self-center rounded-[100px] border border-[#007EA7] bg-white px-8 py-2.5 text-base font-semibold text-[#007EA7] transition-colors duration-300 ease-out hover:bg-[#007EA7]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#007EA7] focus-visible:ring-offset-2 motion-reduce:transition-none"
-            aria-label={`${project.title} — View case study`}
+            aria-label={`View case study: ${CASE_STUDY_ARIA[project.id] ?? project.id}`}
           >
             View Case Study
           </Link>
