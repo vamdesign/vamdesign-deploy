@@ -45,7 +45,7 @@ export default function WellsFargoDetailsPage() {
       
       {/* CHANGE 2: Updated navigation banner with new color and improved styling */}
       <div className="sticky top-16 mt-0 z-20 w-full bg-[#DE0C18]/20 backdrop-blur-sm border-y border-[#007EA7]/10">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center">
+        <div className="site-container px-4 py-3 flex items-center">
           <Link 
             href="/uc/wellsf/process" 
             className="text-[#B31E30] hover:text-[#76131F] font-medium text-sm flex items-center gap-2 transition-transform hover:translate-x-1"
@@ -59,7 +59,7 @@ export default function WellsFargoDetailsPage() {
       </div>
 
       {/* Content Section with Logo and Header */}
-      <div className="max-w-6xl mx-auto px-4 py-12 mt-16">
+      <div className="site-container px-4 py-12 mt-16">
         <div>
           {/* CHANGE 3: Made title and logo section responsive */}
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12 mb-8">
@@ -88,7 +88,7 @@ export default function WellsFargoDetailsPage() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="site-container px-4 py-8">
         <section className="mb-12 sm:mb-16">
           <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">Background</h2>
           <div>

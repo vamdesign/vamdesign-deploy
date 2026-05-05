@@ -33,7 +33,7 @@ export default function LittlerDetailsPage() {
       
       {/* Updated navigation banner with Littler's light green color */}
       <div className="sticky top-16 mt-0 z-20 w-full bg-[#E6FFEA]/50 backdrop-blur-sm border-y border-[#007EA7]/10">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center">
+        <div className="site-container px-4 py-3 flex items-center">
           <Link 
             href="/uc/litman/process" 
             className="text-[#6BC04B] hover:text-[#2E870D] font-medium text-sm flex items-center gap-2 transition-transform hover:translate-x-1"
@@ -47,7 +47,7 @@ export default function LittlerDetailsPage() {
       </div>
 
       {/* Made title and logo section responsive */}
-      <div className="max-w-6xl mx-auto px-4 py-12 mt-16">
+      <div className="site-container px-4 py-12 mt-16">
         <div>
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12 mb-8">
             {/* Littler Logo - Added responsive sizing */}
@@ -76,7 +76,7 @@ export default function LittlerDetailsPage() {
       </div>
       
       {/* Background section with improved responsive text */}
-      <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="site-container px-4 py-8">
         <section className="mb-12 sm:mb-16">
           <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8">Background</h2>
           <div>

@@ -28,7 +28,7 @@ const achievements = [
 export default function SocialProof() {
   return (
     <section className="py-20 bg-slate-900">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="site-container px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

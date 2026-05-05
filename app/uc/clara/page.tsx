@@ -19,7 +19,7 @@ export default function ClaraProcessPage() {
 `,
           }}
         />
-        <div className="max-w-6xl mx-auto px-4 py-12">
+        <div className="site-container px-4 py-12">
           <div>
             <div className="flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-12 mb-8">
               {/* Clara Logo - Added responsive sizing */}
@@ -50,7 +50,7 @@ export default function ClaraProcessPage() {
           </div>
         </div>
 
-        <div className="max-w-6xl mx-auto px-4 py-12">
+        <div className="site-container px-4 py-12">
           {/* the problem */}
           <section className="mb-8 sm:mb-16">
             <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-2 text-left">The Problem</h2>

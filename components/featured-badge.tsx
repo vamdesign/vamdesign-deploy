@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function FeaturedBadge() {
   return (
     <div className="relative z-10 pt-[64px]">
-      <div className="max-w-6xl mx-auto px-6 py-2">
+      <div className="site-container px-6 py-2">
         <div className="flex items-center justify-start gap-2">
           <div className="relative w-6 h-6 flex-shrink-0">
             <Image

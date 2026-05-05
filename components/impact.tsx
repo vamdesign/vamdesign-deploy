@@ -34,7 +34,7 @@ export default function Impact() {
         backgroundColor: "#f8f9fa",
       }}
     >
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="site-container relative z-10">
         <motion.div
           initial={false}
           whileInView={{ opacity: 1, y: 0 }}

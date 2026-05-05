@@ -92,7 +92,7 @@ export default function AIProcessPage() {
 
       {/* Updated navigation banner with AI's light purple color */}
       <div className="sticky top-16 mt-0 z-20 w-full bg-[#F0E6FF]/50 backdrop-blur-sm border-y border-[#007EA7]/10">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center">
+        <div className="site-container px-4 py-3 flex items-center">
           <Link 
             href="/lab/ux-portfolio/" 
             className="text-[#7209B7] hover:text-[#470672] font-medium text-sm flex items-center gap-2 transition-transform hover:translate-x-1"
@@ -106,7 +106,7 @@ export default function AIProcessPage() {
       </div>
 
       {/* Added logo to title section and made it responsive */}
-      <div className="max-w-6xl mx-auto px-4 py-12 mt-16">
+      <div className="site-container px-4 py-12 mt-16">
       <div className="flex items-center justify-center gap-3 mb-6">
   <div className="relative w-12 h-12 flex-shrink-0">
     <Image
@@ -197,7 +197,7 @@ export default function AIProcessPage() {
         </ul>
       </div>
 
-      <section className="max-w-6xl mx-auto px-4">
+      <section className="site-container px-4">
         {/* Use Case - Made responsive */}
         <section className="mb-6 sm:mb-8 mt-6 sm:mt-8 max-w-full sm:max-w-[95%] mx-auto">
           <h2 id="use-case" className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-left">
@@ -287,7 +287,7 @@ export default function AIProcessPage() {
       </section>
 
 {/* AI-Enhanced UX Design Process - Made responsive */}
-<section id="process" className="max-w-6xl mx-auto px-4">
+<section id="process" className="site-container px-4">
         <div className="my-8 sm:my-10 pt-6 max-w-full sm:max-w-[95%] mx-auto border-t border-[#007EA7]/10">
           <div className="flex flex-col items-center mb-4 sm:mb-6">
             <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-center">
@@ -379,7 +379,7 @@ export default function AIProcessPage() {
       </section>
       
       {/* WHAT I DID - Made responsive */}
-      <section id="what-i-did" className="max-w-6xl mx-auto px-4">
+      <section id="what-i-did" className="site-container px-4">
         <div className="mb-4 sm:mb-6 mt-6 sm:mt-8 pt-6 max-w-full sm:max-w-[95%] mx-auto border-t border-[#007EA7]/10">
           <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-3 sm:mb-4 text-left">What I Did</h2>
 

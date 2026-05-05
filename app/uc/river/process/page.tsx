@@ -166,7 +166,7 @@ return (
 
    {/* CHANGE 4: Updated navigation banner with Riverbed's light orange color */}
    <div className="sticky top-16 mt-0 z-20 w-full bg-[#FFE8CC]/50 backdrop-blur-sm border-y border-[#007EA7]/10">
-     <div className="max-w-6xl mx-auto px-4 py-3 flex items-center">
+     <div className="site-container px-4 py-3 flex items-center">
        <Link 
          href="/uc/river/details" 
          className="text-[#F2581A] hover:text-[#C04310] font-medium text-sm flex items-center gap-2 transition-transform hover:translate-x-1"
@@ -180,7 +180,7 @@ return (
    </div>
 
    {/* CHANGE 5: Made title and logo section responsive */}
-   <div className="max-w-6xl mx-auto px-4 py-12 mt-16">
+   <div className="site-container px-4 py-12 mt-16">
      <div className="w-full">
        <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12 mb-8">
          {/* Riverbed Logo - Added responsive sizing */}
@@ -234,7 +234,7 @@ return (
    </div>
 
 
-   <div className="max-w-6xl mx-auto px-4 pt-4 pb-0">
+   <div className="site-container px-4 pt-4 pb-0">
      {/* CHANGE 9: Made Use Case section responsive */}
      <section className="mb-12 sm:mb-16 mt-6 sm:mt-8">
        <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-4 sm:mb-6 text-left">Use Case</h2>
@@ -613,7 +613,7 @@ return (
       </div>
 {/* BEGIN SECTION 3*/}
       {/* Outcome & Impact Section */}
-      <div className="max-w-6xl mx-auto px-4 pt-4 pb-8">
+      <div className="site-container px-4 pt-4 pb-8">
         <section className="mb-6 sm:mb-8">
           <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-4 sm:mb-6 text-left">Outcome & Impact</h2>
           <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-4 sm:mb-6">

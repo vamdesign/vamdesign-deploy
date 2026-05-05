@@ -13,7 +13,7 @@ export default function WalmartDetailsPage() {
 
       {/* Navigation banner - ONLY this section has the light blue background */}
       <div className="sticky top-16 mt-0 z-20 w-full bg-[#E6F0FF] backdrop-blur-sm border-y border-[#FFC220]/10">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center">
+        <div className="site-container px-4 py-3 flex items-center">
           <Link
             href="/uc/walmart/process"
             className="text-[#FFC220] hover:text-[#C29009] font-medium text-sm flex items-center gap-2 transition-transform hover:translate-x-1">
@@ -26,7 +26,7 @@ export default function WalmartDetailsPage() {
       </div>
 
       {/* Content Section - Plain white background, NO colored background */}
-      <div className="max-w-6xl mx-auto px-4 py-12 mt-16">
+      <div className="site-container px-4 py-12 mt-16">
         <div>
           {/* Logo and title section */}
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12 mb-8">
@@ -50,7 +50,7 @@ export default function WalmartDetailsPage() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="site-container px-4 py-8">
         <section className="mb-8 md:mb-16">
           <h2 className="font-space-grotesk text-2xl md:text-3xl font-semibold text-[#007EA7] mb-4 md:mb-8 text-center md:text-left">Background</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">

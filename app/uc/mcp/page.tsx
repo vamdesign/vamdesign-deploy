@@ -123,7 +123,7 @@ export default function MCPUseCasePage() {
     <>
       <Nav />
       <main className="min-h-screen pt-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4 py-12">
+        <div className="site-container px-4 py-12">
           {/* HEADER */}
           <header className="mb-12 sm:mb-16">
             <h1 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold text-[#007EA7] leading-tight mb-4 sm:mb-6 text-left">

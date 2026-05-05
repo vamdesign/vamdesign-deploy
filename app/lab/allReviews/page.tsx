@@ -20,7 +20,7 @@ export default function AllReviewsLabPage() {
     <>
       <Nav />
       <main className="min-h-screen pt-24">
-        <div className="max-w-6xl mx-auto px-4 py-12">
+        <div className="site-container px-4 py-12">
           <header className="mb-12">
             <h1 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold text-[#007EA7] mb-4">
               All Reviews Mobile App

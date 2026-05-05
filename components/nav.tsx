@@ -16,7 +16,7 @@ export default function Nav() {
 
   return (
     <nav className="fixed w-full z-50 bg-white/70 backdrop-blur-md shadow-md">
-      <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+      <div className="site-container flex justify-between items-center px-6 py-4">
         <Link href="/">
           <Logo className="h-8 w-auto text-[#007EA7]" />
         </Link>

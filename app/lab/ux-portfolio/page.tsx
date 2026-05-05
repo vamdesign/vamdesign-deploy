@@ -40,7 +40,7 @@ export default function AIDetailsPage() {
       
       {/* Updated navigation banner with AI's light purple color */}
       <div className="sticky top-16 mt-0 z-20 w-full bg-[#F0E6FF]/50 backdrop-blur-sm border-y border-[#007EA7]/10">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center">
+        <div className="site-container px-4 py-3 flex items-center">
           <Link 
             href="/lab/ux-portfolio/process/" 
             className="text-[#7209B7] hover:text-[#470672] font-medium text-sm flex items-center gap-2 transition-transform hover:translate-x-1"
@@ -54,7 +54,7 @@ export default function AIDetailsPage() {
       </div>
 
       {/* Added logo to title section and made it responsive */}
-      <div className="max-w-6xl mx-auto px-4 py-12 mt-16">
+      <div className="site-container px-4 py-12 mt-16">
         <div>
         <div className="flex items-center justify-center gap-3 mb-6">
   <div className="relative w-12 h-12 flex-shrink-0">
@@ -107,7 +107,7 @@ export default function AIDetailsPage() {
       </div>
 
       {/* Remaining content with responsive improvements */}
-      <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="site-container px-4 py-8">
         <section className="mb-12 sm:mb-16">
           <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">Background</h2>
           <div>

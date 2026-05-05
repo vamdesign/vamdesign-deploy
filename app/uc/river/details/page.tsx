@@ -169,7 +169,7 @@ export default function RiverbedDetailsPage() {
       
       {/* CHANGE 2: Updated navigation banner with Riverbed's light orange color */}
       <div className="sticky top-16 mt-0 z-20 w-full bg-[#FFE8CC]/50 backdrop-blur-sm border-y border-[#007EA7]/10">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center">
+        <div className="site-container px-4 py-3 flex items-center">
           <Link 
             href="/uc/river/process" 
             className="text-[#F2581A] hover:text-[#C04310] font-medium text-sm flex items-center gap-2 transition-transform hover:translate-x-1"
@@ -183,7 +183,7 @@ export default function RiverbedDetailsPage() {
       </div>
 
       {/* CHANGE 3: Made title and logo section responsive */}
-      <div className="max-w-6xl mx-auto px-4 py-12 mt-16">
+      <div className="site-container px-4 py-12 mt-16">
         <div>
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12 mb-8">
             {/* Riverbed Logo - Added responsive sizing */}
@@ -211,7 +211,7 @@ export default function RiverbedDetailsPage() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="site-container px-4 py-8">
         <section className="mb-16">
           <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">Background</h2>
           {/* CHANGE 6: Improved paragraph responsiveness */}

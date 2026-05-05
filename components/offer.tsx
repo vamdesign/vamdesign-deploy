@@ -28,7 +28,7 @@ export default function Offer() {
       id="what-i-offer"
     >
       
-      <div className="max-w-6xl mx-auto">
+      <div className="site-container">
         <motion.div
           initial={false}
           whileInView={{ opacity: 1, y: 0 }}

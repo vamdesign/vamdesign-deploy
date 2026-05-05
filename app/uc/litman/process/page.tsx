@@ -13,7 +13,7 @@ export default function LittlerProcessPage() {
       <Nav />
 
       <div className="sticky top-16 mt-0 z-20 w-full bg-white/50 backdrop-blur-sm border-y border-[#007EA7]/10">
-        <div className="max-w-6xl mx-auto px-4 py-2 flex items-center">
+        <div className="site-container px-4 py-2 flex items-center">
           <Link
             href="/uc/litman/details"
             className="text-[#6BC04B] hover:text-[#2E870D] text-sm flex items-center gap-2"
@@ -25,7 +25,7 @@ export default function LittlerProcessPage() {
       </div>
 
      {/* Content Section - Moved up to replace hero */}
-     <div className="max-w-6xl mx-auto px-4 py-12 mt-16">
+     <div className="site-container px-4 py-12 mt-16">
         <div>
           <div className="flex items-center gap-12 mb-8">
             {/* Littler Logo */}
@@ -79,7 +79,7 @@ export default function LittlerProcessPage() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 py-2">
+      <div className="site-container px-4 py-2">
         {/* Use Case */}
         <section className="mb-8 mt-8">
           <h2 className="font-space-grotesk text-3xl font-semibold text-[#007EA7] mb-2 text-left">Use Case</h2>
@@ -170,7 +170,7 @@ export default function LittlerProcessPage() {
 {/* END SECTION 1*/}
 {/* BEGIN SECTION 2*/}
       {/* UX Process */}
-      <section className="mb-0 mt-8 max-w-6xl mx-auto px-8 border-t border-[#007EA7]/10 pb-8">
+      <section className="mb-0 mt-8 site-container px-8 border-t border-[#007EA7]/10 pb-8">
         <div className="flex justify-center mb-8">
           <Image
             src="/images/littler/LM_ux_process.svg"

@@ -39,7 +39,7 @@ export function CookieConsent({ className = "", onAccept, fixedPosition = true }
     <div
       className={`bg-white/95 backdrop-blur-sm shadow-lg p-4 border-t border-gray-200 ${positionClasses} ${className}`}
     >
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="site-container flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="text-sm text-gray-700 flex-1 font-['Montserrat']">
           <p>
             This website uses cookies solely to grant temporary access to password-protected pages. No personal data is collected or stored. By continuing to use this site, you consent to this use of cookies.
