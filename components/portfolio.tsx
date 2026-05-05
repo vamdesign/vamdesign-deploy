@@ -7,7 +7,6 @@ import Cookies from "js-cookie"
 import { useEffect, useLayoutEffect, useState } from "react"
 import type { CSSProperties } from "react"
 
-/** Taller image frame now that cards are image-only */
 const IMAGE_FRAME_SIZE =
   "relative h-[380px] w-full shrink-0 sm:h-[420px] md:h-[460px] lg:h-[500px]"
 
@@ -140,7 +139,6 @@ function ProjectCard({
       >
         <article className="group relative overflow-hidden rounded-2xl border border-black/[0.07] bg-white shadow-[0_4px_24px_-4px_rgba(0,62,82,0.12)] transition-[box-shadow,transform] duration-300 ease-out hover:scale-[1.02] hover:border-[#007EA7]/15 hover:shadow-[0_20px_40px_-12px_rgba(0,62,82,0.22)] motion-reduce:hover:scale-100 motion-reduce:transition-shadow">
 
-          {/* Image frame */}
           <div
             className={`${IMAGE_FRAME_SIZE} ${
               project.id === "walmart" ? "overflow-visible" : "overflow-hidden"
@@ -163,7 +161,7 @@ function ProjectCard({
               />
             </div>
 
-            {/* Subtle base gradient */}
+            {/* Subtle base tint — always present */}
             <div
               className={
                 "pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-[#007EA7]/[0.06] via-transparent to-transparent mix-blend-multiply " +
@@ -172,14 +170,17 @@ function ProjectCard({
               aria-hidden
             />
 
-            {/* Hover title overlay */}
-            <div className="pointer-events-none absolute inset-0 z-[2] flex items-end bg-gradient-to-t from-black/65 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out p-6">
-              <h3 className="text-white font-semibold text-lg leading-tight tracking-wide">
+            {/* Hover: centered title, no background, strong text shadow for legibility */}
+            <div className="pointer-events-none absolute inset-0 z-[2] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out">
+              <h3
+                className="font-sans font-semibold text-xl sm:text-2xl text-white text-center px-8 leading-snug"
+                style={{ textShadow: "0 2px 12px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.95)" }}
+              >
                 {project.hoverTitle}
               </h3>
             </div>
-          </div>
 
+          </div>
         </article>
       </Link>
     </motion.div>
@@ -194,7 +195,7 @@ export default function Portfolio() {
       className="bg-[#ffffff] py-14 px-5 text-[#007EA7] sm:px-6 md:py-16"
       id="ux-portfolio"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="site-container">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-8 lg:gap-10">
           {projects.map((project, index) => (
             <ProjectCard

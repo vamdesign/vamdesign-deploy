@@ -1,6 +1,5 @@
 import Nav from "@/components/nav"
 import Image from "next/image"
-
 import type { Metadata } from "next"
 import Footer from "@/components/footer"
 
@@ -28,19 +27,19 @@ export default function AboutPage() {
 
       <section className="relative pt-24 pb-16 px-6">
         <div className="max-w-4xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
-  <div className="relative aspect-square w-32 sm:w-40 md:w-48">
-    <Image
-      src="/images/backgrounds/human01.jpg"
-      alt="Senior UX Designer human photo"
-      fill
-      className="rounded-full object-cover"
-    />
-  </div>
-  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white text-center md:text-left leading-tight max-w-3xl">
-    I design complex systems people can actually trust
-  </h1>
-</div>
+          <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
+            <div className="relative aspect-square w-32 sm:w-40 md:w-48">
+              <Image
+                src="/images/backgrounds/human01.jpg"
+                alt="Senior UX Designer human photo"
+                fill
+                className="rounded-full object-cover"
+              />
+            </div>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white text-center md:text-left leading-tight max-w-3xl">
+              I design complex systems people can actually trust
+            </h1>
+          </div>
 
           <div className="space-y-6 text-lg text-[#007EA7] bg-white/80 p-8 rounded-md shadow-2xl">
             <p className="font-montserrat">
@@ -64,16 +63,22 @@ export default function AboutPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
-  <button className="rounded-[100px] border border-white bg-white/30 hover:bg-white/60 text-[#007ea7] px-8 py-2.5 transition-all duration-300">
-    <a href="/assets/VMorawietz_2026_CV.pdf" download>
-      Download CV
-    </a>
-  </button>
-  <button className="rounded-[100px] border border-white bg-white/30 hover:bg-white/60 text-[#007ea7] px-8 py-2.5 transition-all duration-300">
-    <a href="/contact/">Let's Chat</a>
-  </button>
-</div>
+              <a
+                href="/VMorawietz_2026_CV.pdf"
+                download
+                className="rounded-[100px] border border-white bg-white/30 hover:bg-white/60 text-[#007ea7] px-8 py-2.5 transition-all duration-300 text-center"
+              >
+                Download CV
+              </a>
+              <a
+                href="/contact/"
+                className="rounded-[100px] border border-white bg-white/30 hover:bg-white/60 text-[#007ea7] px-8 py-2.5 transition-all duration-300 text-center"
+              >
+                Let&apos;s Chat
+              </a>
+            </div>
           </div>
+
           <p className="text-[10px] font-montserrat text-white/70 text-center mt-8">
             Image created with the aid of MidJourney AI.
           </p>
