@@ -11,14 +11,14 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="mb-4 sm:mb-6">
+          <h1 className="mb-4 sm:mb-5">
             <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#007EA7] leading-tight font-light">
-              Hello, I&apos;m Vicki. I make complex software usable, and design AI and Agentic Experiences &#40;AX&#41;* with clarity, trust, and human control built in.
+              Hello, I&apos;m Vicki. I design the human layer of complex software.
             </span>
           </h1>
 
-          <p className="text-lg sm:text-xl md:text-2xl text-[#007EA7] font-semibold">
-            Senior UX &amp; Product Designer
+          <p className="text-3xl md:text-[2rem] text-[#007EA7] font-semibold leading-relaxed">
+            From enterprise tools to AI-assisted workflows, I help teams create experiences that are clear, trustworthy, and built around how people actually work.
           </p>
         </motion.div>
       </div>

@@ -15,9 +15,9 @@ const offers = [
       "I use AI as part of my daily design and development process, from research and UX writing to vibe coding, prototyping, testing flows, and refining product ideas.",
   },
   {
-    title: "Agentic Experience (AX) Design",
+    title: "Agentic Experience Design",
     description:
-      "I'm exploring Agentic Experience (AX)* through AI and MCP concept work: how people delegate work, understand agent behavior, approve tool actions, create trust, and stay in control.",
+      "I'm exploring how people delegate work to AI, understand agent behavior, approve tool actions, and stay in control across AI-assisted workflows.",
   },
 ]
 
@@ -35,7 +35,9 @@ export default function Offer() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <h2 className="font-bold text-3xl md:text-[2rem] mb-2 text-[#007EA7]">What I Offer</h2>
+          <h2 className="font-bold text-lg sm:text-xl md:text-2xl mb-2 text-[#007EA7]">
+            As a Senior UX &amp; Product Designer, I help teams with:
+          </h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-20">
