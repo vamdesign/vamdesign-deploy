@@ -4,20 +4,20 @@ import { motion } from "framer-motion"
 
 const offers = [
   {
-    title: "Complex Enterprise Systems",
+    title: "Enterprise UX",
     description:
-      "I design clear flows, prototypes, and build-ready specs for internal tools, platform migrations, integrations, and data-heavy systems.",
+      "Designing scalable tools, dashboards, migrations, and internal platforms for teams managing complex information.",
   },
-  
+
   {
-    title: "AI-Ready Product Design",
+    title: "Product Clarity",
     description:
-      "I use AI as part of my daily design and development process, from research and UX writing to vibe coding, prototyping, testing flows, and refining product ideas.",
+      "I turn complex requirements into clear journeys, prototypes, and build-ready product decisions for teams.",
   },
   {
-    title: "Agentic Experience Design",
+    title: "AI Experience Design",
     description:
-      "I'm exploring how people delegate work to AI, understand agent behavior, approve tool actions, and stay in control across AI-assisted workflows.",
+      "I'm exploring how people delegate work to AI, understand agent behavior, approve tool actions, and stay in control.",
   },
 ]
 

@@ -27,14 +27,6 @@ type PortfolioProject = {
 
 const projects: PortfolioProject[] = [
   {
-    id: "ai-design",
-    hoverTitle: "UX/AX Guidance for AI Actions",
-    href: "/uc/mcp/",
-    image: "/images/MCP/policy_flow.jpg",
-    imageBackdrop: "#fefefe",
-    imageAlign: "center",
-  },
-  {
     id: "apple",
     hoverTitle: "Apple: Internal Support Tools",
     href: "/uc/apple/details/",
@@ -48,6 +40,14 @@ const projects: PortfolioProject[] = [
     href: "/uc/wellsf/details/",
     image: "/images/landing/WellsFargoCRM.png",
     imageBackdrop: "#ffffff",
+    imageAlign: "center",
+  },
+  {
+    id: "ai-design",
+    hoverTitle: "UX/AX Guidance for AI Actions",
+    href: "/uc/mcp/",
+    image: "/images/MCP/policy_flow.jpg",
+    imageBackdrop: "#fefefe",
     imageAlign: "center",
   },
   {
