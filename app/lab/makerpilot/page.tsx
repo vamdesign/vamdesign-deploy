@@ -368,25 +368,16 @@ export default function MakerPilotPage() {
                           </div>
                         </div>
 
-                        {/* iframe — swap placeholder for real URL when /demo route is live */}
-                        <div
+                        <iframe
+                          src="/makerpilot/demo/"
                           style={{
                             flex: 1,
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
+                            width: '100%',
+                            border: 'none',
+                            background: '#0f1e1c',
                           }}
-                        >
-                          {/* PLACEHOLDER — replace this div with the iframe below once /demo is deployed:
-                          <iframe
-                            src="https://YOUR_DEPLOYED_URL/demo"
-                            style={{ width: '100%', height: '100%', border: 'none' }}
-                            title="MakerPilot live demo"
-                          /> */}
-                          <p style={{ fontSize: '9px', color: 'rgba(255,255,255,0.12)', letterSpacing: '0.08em' }}>
-                            DEMO LOADS HERE
-                          </p>
-                        </div>
+                          title="MakerPilot live demo"
+                        />
 
                       </div>
 
