@@ -15,6 +15,7 @@ export type LabItem = {
 
 /** Lab prototypes. Trailing slashes must align with next.config trailingSlash: true. */
 export const labItems: LabItem[] = [
+  { name: "MakerPilot — Mobile Inventory App", href: "/lab/makerpilot/", activePathPrefix: "/lab/makerpilot" },
   { name: "UX Portfolio", href: "/lab/ux-portfolio/", activePathPrefix: "/lab/ux-portfolio" },
   { name: "All Reviews – Mobile App", href: "/lab/coming-soon/" },
 ];
