@@ -99,44 +99,84 @@ export default function MakerPilotPage() {
 
             <div className="font-montserrat text-lg text-[#2C3D4D] leading-relaxed space-y-4 mb-8">
               <p>
-                85% of independent makers handcraft every item they sell. More than half sell across multiple channels,
-                online shops, craft shows, weekend markets. Production may take weeks. Most are tracking inventory in a
-                spreadsheet, a notes app, or not at all. MakerPilot brings it together: one place to track sales across
-                channels, stay ahead of lead times, and know what to make next.
+                Many makers handcraft every item they sell while managing sales across online shops, craft shows, and
+                weekend markets. Production can take weeks, yet inventory is often tracked through spreadsheets, notes
+                apps, desktop tools, or not at all. MakerPilot keeps inventory within reach wherever makers sell, helping
+                them record sales, see what is running low, plan around lead times, and know what to make next.
               </p>
             </div>
           </header>
 
-          {/* ── LIVE DEMO ───────────────────────────────────────────────── */}
+          {/* ── TRY MAKERPILOT ──────────────────────────────────────────── */}
           <section className="scroll-mt-24 mb-12 sm:mb-16 pt-8 sm:pt-12 border-t border-[#007EA7]/10">
-            <div className="max-w-3xl mx-auto">
+            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">
+              Try MakerPilot
+            </h2>
+            <div className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 leading-relaxed space-y-4">
+              <p>
+                The product is the quickest way to understand the problem it solves. Explore the live demo, record a
+                sale, and see how MakerPilot turns an inventory update into a clear next step. Then continue through the
+                case study to see the research, product thinking, and design decisions behind it.
+              </p>
+            </div>
+          </section>
+
+          {/* ── LIVE DEMO ───────────────────────────────────────────────── */}
+          <section className="scroll-mt-24 mb-12 sm:mb-16">
+            <div className="max-w-4xl mx-auto">
               <div
-                className="flex flex-col md:flex-row items-center gap-8 sm:gap-10 md:gap-14 px-5 sm:px-10 pt-10 sm:pt-12 pb-10"
+                className="flex flex-col md:flex-row items-center md:items-start gap-8 sm:gap-10 md:gap-14 px-5 sm:px-10 pt-10 sm:pt-12 pb-10"
                 style={{ background: '#0a0a0a', borderRadius: '16px' }}
               >
 
                 {/* Left column — text */}
-                <div className="w-full md:flex-1 flex flex-col justify-center">
+                <div className="w-full md:flex-1 flex flex-col justify-start">
                   <h2
                     className="font-space-grotesk text-2xl sm:text-3xl font-bold leading-tight mb-4"
                     style={{ color: '#ffffff' }}
                   >
                     Live Demo
                   </h2>
-                  <p
-                    className="font-montserrat text-sm leading-relaxed mb-6"
-                    style={{ color: '#a8a8a8', maxWidth: '320px' }}
+                  <div
+                    className="font-montserrat text-sm leading-relaxed space-y-4 mb-6"
+                    style={{ color: '#a8a8a8' }}
                   >
-                    Loads with seed inventory data. No sign-up needed, jump straight into the app.
-                  </p>
-                  <ul className="flex flex-col gap-3 mb-8" style={{ listStyle: 'none', padding: 0 }}>
+                    <p>
+                      Tory sells handmade ceramic mugs through Etsy and weekend craft shows. Each piece takes three to
+                      four weeks to make, so every sale affects what she needs to produce next.
+                    </p>
+                    <p>
+                      For the past six months, she has been using MakerPilot to track inventory, spot shifts in demand,
+                      and plan production before stock runs out.
+                    </p>
+                    <p>Here are a few ways to explore the demo:</p>
+                  </div>
+                  <ul className="flex flex-col gap-3" style={{ listStyle: 'none', padding: 0 }}>
                     {[
-                      'Tap the Needs Making strip to see lead time in action',
-                      'Record a sale and watch stock update instantly',
-                      'Open any item to adjust the alert threshold or lead time',
-                    ].map((item) => (
+                      <>
+                        Tap <strong className="font-semibold text-[#c8c8c8]">Get Started</strong> or{' '}
+                        <strong className="font-semibold text-[#c8c8c8]">Sign In</strong> and go through the
+                        quick setup. Choose your channel, and see Tory&apos;s current inventory.
+                      </>,
+                      <>
+                        Choose your Channel and Connect. Continue to the Inventory Page to see Tory&apos;s work.
+                      </>,
+                      <>
+                        Tap on the <strong className="font-semibold text-[#c8c8c8]">Studio</strong> tab first for her
+                        six month snapshot: what needs making, and what is climbing or cooling.
+                      </>,
+                      <>
+                        Now explore Tory&apos;s <strong className="font-semibold text-[#c8c8c8]">Inventory</strong>. Tap
+                        on any item to update its stock, adjust its low-stock alert, or change its production lead time.
+                        You can also add a new product, import one from a connected sales channel, or remove an item.
+                      </>,
+                      <>
+                        Return to the <strong className="font-semibold text-[#c8c8c8]">Studio</strong> and see how the
+                        new data informs you, telling you what has shifted and what to make next.
+                      </>,
+                    ].map((item, i) => (
                       <li
-                        key={item}
+                        key={i}
                         className="font-montserrat text-sm leading-snug flex items-start gap-3"
                         style={{ color: '#a8a8a8' }}
                       >
@@ -150,117 +190,113 @@ export default function MakerPilotPage() {
                             background: '#1A9E8F',
                           }}
                         />
-                        {item}
+                        <span>{item}</span>
                       </li>
                     ))}
                   </ul>
-
-                  <ResetDemoButton />
-
-                  <p
-                    className="font-montserrat mt-6"
-                    style={{ fontSize: '11px', color: '#707070', lineHeight: '1.6' }}
-                  >
-                    Built with Cursor, Claude Code, Figma Make, and Figma.
-                  </p>
                 </div>
 
-                {/* Right column — iPhone SVG includes side buttons; do NOT clip the outer shell */}
-                <div
-                  className="flex-shrink-0 relative"
-                  style={{
-                    width: PHONE_FRAME_W,
-                    height: PHONE_FRAME_H,
-                    // overflow visible so left/right hardware buttons are not cut off
-                    overflow: 'visible',
-                    background: 'transparent',
-                    boxShadow: 'none',
-                    filter: 'none',
-                  }}
-                >
-                  {/* Screen only — clipped to the display hole; SVG frame paints bezel + buttons on top */}
+                {/* Right column — phone + reset */}
+                <div className="flex-shrink-0 flex flex-col items-center gap-5">
+                  {/* iPhone SVG includes side buttons; do NOT clip the outer shell */}
                   <div
+                    className="relative"
                     style={{
-                      position: 'absolute',
-                      left: PHONE_SCREEN_LEFT,
-                      top: PHONE_SCREEN_TOP,
-                      width: PHONE_SCREEN_W,
-                      height: PHONE_SCREEN_H,
-                      overflow: 'hidden',
-                      borderRadius: PHONE_SCREEN_RADIUS,
-                      clipPath: `inset(0 round ${PHONE_SCREEN_RADIUS}px)`,
-                      WebkitClipPath: `inset(0 round ${PHONE_SCREEN_RADIUS}px)`,
-                      background: '#E5F0F0',
-                      zIndex: 1,
-                    }}
-                  >
-                    <iframe
-                      src={DEMO_SRC}
-                      title="MakerPilot live demo"
-                      style={{
-                        position: 'absolute',
-                        top: PHONE_APP_OFFSET_Y,
-                        left: PHONE_APP_OFFSET_X,
-                        width: PHONE_APP_W,
-                        height: PHONE_APP_H,
-                        border: 'none',
-                        background: '#E5F0F0',
-                        transform: `scale(${PHONE_SCALE})`,
-                        transformOrigin: 'top left',
-                      }}
-                    />
-
-                    {/* Status bar — Figma Appearance asset */}
-                    <img
-                      src="/images/makerpilot/Appearance_Dark.svg"
-                      alt=""
-                      style={{
-                        position: 'absolute',
-                        top: '4px',
-                        left: '11px',
-                        width: 'calc(100% - 22px)',
-                        height: '14px',
-                        objectFit: 'contain',
-                        zIndex: 9,
-                        pointerEvents: 'none',
-                        background: 'transparent',
-                        display: 'block',
-                      }}
-                    />
-
-                    {/* Dynamic Island */}
-                    <div
-                      style={{
-                        position: 'absolute',
-                        top: '7px',
-                        left: '50%',
-                        transform: 'translateX(-50%)',
-                        width: '60px',
-                        height: '15px',
-                        background: '#000',
-                        borderRadius: '20px',
-                        zIndex: 10,
-                        pointerEvents: 'none',
-                      }}
-                    />
-                  </div>
-
-                  {/* Full device chrome (bezel + volume/power buttons) above the screen */}
-                  <img
-                    src={`/images/makerpilot/iPhone_16_Light.svg?v=frame3`}
-                    alt=""
-                    width={PHONE_FRAME_W}
-                    height={PHONE_FRAME_H}
-                    className="pointer-events-none absolute inset-0 z-20 select-none"
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'fill',
+                      width: PHONE_FRAME_W,
+                      height: PHONE_FRAME_H,
+                      // overflow visible so left/right hardware buttons are not cut off
+                      overflow: 'visible',
+                      background: 'transparent',
                       boxShadow: 'none',
                       filter: 'none',
                     }}
-                    draggable={false}
-                  />
+                  >
+                    {/* Screen only — clipped to the display hole; SVG frame paints bezel + buttons on top */}
+                    <div
+                      style={{
+                        position: 'absolute',
+                        left: PHONE_SCREEN_LEFT,
+                        top: PHONE_SCREEN_TOP,
+                        width: PHONE_SCREEN_W,
+                        height: PHONE_SCREEN_H,
+                        overflow: 'hidden',
+                        borderRadius: PHONE_SCREEN_RADIUS,
+                        clipPath: `inset(0 round ${PHONE_SCREEN_RADIUS}px)`,
+                        WebkitClipPath: `inset(0 round ${PHONE_SCREEN_RADIUS}px)`,
+                        background: '#E5F0F0',
+                        zIndex: 1,
+                      }}
+                    >
+                      <iframe
+                        src={DEMO_SRC}
+                        title="MakerPilot live demo"
+                        style={{
+                          position: 'absolute',
+                          top: PHONE_APP_OFFSET_Y,
+                          left: PHONE_APP_OFFSET_X,
+                          width: PHONE_APP_W,
+                          height: PHONE_APP_H,
+                          border: 'none',
+                          background: '#E5F0F0',
+                          transform: `scale(${PHONE_SCALE})`,
+                          transformOrigin: 'top left',
+                        }}
+                      />
+
+                      {/* Status bar — Figma Appearance asset */}
+                      <img
+                        src="/images/makerpilot/Appearance_Dark.svg"
+                        alt=""
+                        style={{
+                          position: 'absolute',
+                          top: '4px',
+                          left: '11px',
+                          width: 'calc(100% - 22px)',
+                          height: '14px',
+                          objectFit: 'contain',
+                          zIndex: 9,
+                          pointerEvents: 'none',
+                          background: 'transparent',
+                          display: 'block',
+                        }}
+                      />
+
+                      {/* Dynamic Island */}
+                      <div
+                        style={{
+                          position: 'absolute',
+                          top: '7px',
+                          left: '50%',
+                          transform: 'translateX(-50%)',
+                          width: '60px',
+                          height: '15px',
+                          background: '#000',
+                          borderRadius: '20px',
+                          zIndex: 10,
+                          pointerEvents: 'none',
+                        }}
+                      />
+                    </div>
+
+                    {/* Full device chrome (bezel + volume/power buttons) above the screen */}
+                    <img
+                      src={`/images/makerpilot/iPhone_16_Light.svg?v=frame3`}
+                      alt=""
+                      width={PHONE_FRAME_W}
+                      height={PHONE_FRAME_H}
+                      className="pointer-events-none absolute inset-0 z-20 select-none"
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'fill',
+                        boxShadow: 'none',
+                        filter: 'none',
+                      }}
+                      draggable={false}
+                    />
+                  </div>
+
+                  <ResetDemoButton />
                 </div>
 
               </div>
