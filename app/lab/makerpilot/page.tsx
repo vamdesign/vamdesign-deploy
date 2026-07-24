@@ -3,6 +3,7 @@ import Footer from "@/components/footer"
 import Image from "next/image"
 import type { Metadata } from "next"
 import { Check, X, Smartphone } from "lucide-react"
+import ResetDemoButton, { DEMO_SRC } from "./ResetDemoButton"
 
 export const metadata: Metadata = {
   title: "MakerPilot — Mobile Inventory App | VAM Design Lab",
@@ -26,6 +27,33 @@ const pricingTiers = [
   { name: "Studio",     price: "$24/mo", color: "#007EA7", borderColor: "border-[#007EA7]",   who: "Serious side hustlers",     items: "100 items",   channels: "3 channels + variants" },
   { name: "Pilot Pro",  price: "$59/mo", color: "#FF6600", borderColor: "border-[#FF6600]",   who: "Full-time makers",          items: "Unlimited",   channels: "All channels + AI" },
 ]
+
+/** Lab phone — iPhone 16 Light SVG overlay (asset 383×785, screen hole 7,4 369×777 rx=58) */
+const PHONE_ASSET_W = 383
+const PHONE_ASSET_H = 785
+const PHONE_SCREEN_INSET = { left: 7, top: 4, right: 7, bottom: 4 } as const
+const PHONE_HOLE_RX = 58
+const PHONE_FRAME_W = 248
+const PHONE_FRAME_H = Math.round((PHONE_FRAME_W * PHONE_ASSET_H) / PHONE_ASSET_W)
+const PHONE_SCREEN_W =
+  PHONE_FRAME_W *
+  ((PHONE_ASSET_W - PHONE_SCREEN_INSET.left - PHONE_SCREEN_INSET.right) / PHONE_ASSET_W)
+const PHONE_SCREEN_H =
+  PHONE_FRAME_H *
+  ((PHONE_ASSET_H - PHONE_SCREEN_INSET.top - PHONE_SCREEN_INSET.bottom) / PHONE_ASSET_H)
+const PHONE_SCREEN_LEFT = (PHONE_FRAME_W * PHONE_SCREEN_INSET.left) / PHONE_ASSET_W
+const PHONE_SCREEN_TOP = (PHONE_FRAME_H * PHONE_SCREEN_INSET.top) / PHONE_ASSET_H
+/** Clip only the screen hole — never the outer shell (side buttons sit outside the body curve) */
+const PHONE_SCREEN_RADIUS = (PHONE_HOLE_RX * PHONE_FRAME_W) / PHONE_ASSET_W
+/**
+ * Fill screen width exactly (no side gaps under bottom bars).
+ * Slight top crop is OK — Lab paints its own status bar.
+ */
+const PHONE_APP_W = 393
+const PHONE_APP_H = 852
+const PHONE_SCALE = PHONE_SCREEN_W / PHONE_APP_W
+const PHONE_APP_OFFSET_X = 0
+const PHONE_APP_OFFSET_Y = PHONE_SCREEN_H - PHONE_APP_H * PHONE_SCALE
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -127,20 +155,7 @@ export default function MakerPilotPage() {
                     ))}
                   </ul>
 
-                  {/* Reset button */}
-                  <button
-                    type="button"
-                    className="font-montserrat text-xs w-fit px-6 py-2.5 transition-colors"
-                    style={{
-                      background: 'transparent',
-                      border: '1px solid rgba(255,255,255,0.35)',
-                      color: '#888888',
-                      borderRadius: '9999px',
-                      letterSpacing: '0.02em',
-                    }}
-                  >
-                    ↺ &nbsp;Reset demo
-                  </button>
+                  <ResetDemoButton />
 
                   <p
                     className="font-montserrat mt-6"
@@ -150,260 +165,102 @@ export default function MakerPilotPage() {
                   </p>
                 </div>
 
-                {/* Right column — iPhone 16 Pro frame */}
-                <div className="flex-shrink-0" style={{ width: '248px' }}>
-
-                  {/* Outer titanium bezel */}
+                {/* Right column — iPhone SVG includes side buttons; do NOT clip the outer shell */}
+                <div
+                  className="flex-shrink-0 relative"
+                  style={{
+                    width: PHONE_FRAME_W,
+                    height: PHONE_FRAME_H,
+                    // overflow visible so left/right hardware buttons are not cut off
+                    overflow: 'visible',
+                    background: 'transparent',
+                    boxShadow: 'none',
+                    filter: 'none',
+                  }}
+                >
+                  {/* Screen only — clipped to the display hole; SVG frame paints bezel + buttons on top */}
                   <div
                     style={{
-                      width: '248px',
-                      height: '536px',
-                      position: 'relative',
-                      borderRadius: '44px',
-                      background: 'linear-gradient(145deg, #3a3a3c 0%, #1c1c1e 40%, #2a2a2c 100%)',
-                      padding: '2px',
+                      position: 'absolute',
+                      left: PHONE_SCREEN_LEFT,
+                      top: PHONE_SCREEN_TOP,
+                      width: PHONE_SCREEN_W,
+                      height: PHONE_SCREEN_H,
+                      overflow: 'hidden',
+                      borderRadius: PHONE_SCREEN_RADIUS,
+                      clipPath: `inset(0 round ${PHONE_SCREEN_RADIUS}px)`,
+                      WebkitClipPath: `inset(0 round ${PHONE_SCREEN_RADIUS}px)`,
+                      background: '#E5F0F0',
+                      zIndex: 1,
                     }}
                   >
-                    {/* Side buttons — left: action + volume rocker, right: power */}
-                    {/* Action button (left, top) */}
-                    <div
+                    <iframe
+                      src={DEMO_SRC}
+                      title="MakerPilot live demo"
                       style={{
                         position: 'absolute',
-                        left: '-2px',
-                        top: '96px',
-                        width: '3px',
-                        height: '20px',
-                        background: 'linear-gradient(90deg, #0e0e0f 0%, #3a3a3c 100%)',
-                        borderRadius: '2px 0 0 2px',
-                        zIndex: 1,
-                      }}
-                    />
-                    {/* Volume up (left) */}
-                    <div
-                      style={{
-                        position: 'absolute',
-                        left: '-2px',
-                        top: '132px',
-                        width: '3px',
-                        height: '34px',
-                        background: 'linear-gradient(90deg, #0e0e0f 0%, #3a3a3c 100%)',
-                        borderRadius: '2px 0 0 2px',
-                        zIndex: 1,
-                      }}
-                    />
-                    {/* Volume down (left) */}
-                    <div
-                      style={{
-                        position: 'absolute',
-                        left: '-2px',
-                        top: '174px',
-                        width: '3px',
-                        height: '34px',
-                        background: 'linear-gradient(90deg, #0e0e0f 0%, #3a3a3c 100%)',
-                        borderRadius: '2px 0 0 2px',
-                        zIndex: 1,
-                      }}
-                    />
-                    {/* Side/power button (right) */}
-                    <div
-                      style={{
-                        position: 'absolute',
-                        right: '-2px',
-                        top: '152px',
-                        width: '3px',
-                        height: '58px',
-                        background: 'linear-gradient(90deg, #3a3a3c 0%, #0e0e0f 100%)',
-                        borderRadius: '0 2px 2px 0',
-                        zIndex: 1,
+                        top: PHONE_APP_OFFSET_Y,
+                        left: PHONE_APP_OFFSET_X,
+                        width: PHONE_APP_W,
+                        height: PHONE_APP_H,
+                        border: 'none',
+                        background: '#E5F0F0',
+                        transform: `scale(${PHONE_SCALE})`,
+                        transformOrigin: 'top left',
                       }}
                     />
 
-                    {/* Edge highlight ring */}
-                    <div
+                    {/* Status bar — Figma Appearance asset */}
+                    <img
+                      src="/images/makerpilot/Appearance_Dark.svg"
+                      alt=""
                       style={{
                         position: 'absolute',
-                        inset: 0,
-                        borderRadius: '44px',
-                        border: '1px solid transparent',
-                        background: 'linear-gradient(145deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.10) 100%) border-box',
-                        WebkitMask: 'linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)',
-                        WebkitMaskComposite: 'destination-out',
-                        maskComposite: 'exclude',
+                        top: '4px',
+                        left: '11px',
+                        width: 'calc(100% - 22px)',
+                        height: '14px',
+                        objectFit: 'contain',
+                        zIndex: 9,
                         pointerEvents: 'none',
-                        zIndex: 2,
+                        background: 'transparent',
+                        display: 'block',
                       }}
                     />
 
-                    {/* Inner frame */}
+                    {/* Dynamic Island */}
                     <div
                       style={{
-                        width: '100%',
-                        height: '100%',
+                        position: 'absolute',
+                        top: '7px',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        width: '60px',
+                        height: '15px',
                         background: '#000',
-                        borderRadius: '42px',
-                        overflow: 'hidden',
-                        position: 'relative',
-                        display: 'flex',
-                        flexDirection: 'column',
+                        borderRadius: '20px',
+                        zIndex: 10,
+                        pointerEvents: 'none',
                       }}
-                    >
-                      {/* Screen area */}
-                      <div
-                        style={{
-                          flex: 1,
-                          background: '#0f1e1c',
-                          position: 'relative',
-                          display: 'flex',
-                          flexDirection: 'column',
-                          overflow: 'hidden',
-                        }}
-                      >
-                        {/* Dynamic Island */}
-                        <div
-                          style={{
-                            position: 'absolute',
-                            top: '8px',
-                            left: '50%',
-                            transform: 'translateX(-50%)',
-                            width: '72px',
-                            height: '18px',
-                            background: '#000',
-                            borderRadius: '16px',
-                            zIndex: 10,
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'flex-end',
-                            paddingRight: '5px',
-                          }}
-                        >
-                          <div
-                            style={{
-                              width: '6px',
-                              height: '6px',
-                              background: '#1a1a1a',
-                              borderRadius: '50%',
-                              border: '1px solid #0a0a0a',
-                            }}
-                          />
-                        </div>
-
-                        {/* Status bar */}
-                        <div
-                          style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'space-between',
-                            padding: '0 18px',
-                            height: '34px',
-                            flexShrink: 0,
-                            position: 'relative',
-                            zIndex: 5,
-                          }}
-                        >
-                          <span
-                            style={{
-                              fontSize: '10px',
-                              fontWeight: 600,
-                              color: '#ffffff',
-                              fontFamily: '-apple-system, sans-serif',
-                              letterSpacing: '0.01em',
-                              paddingLeft: '4px',
-                            }}
-                          >
-                            9:41
-                          </span>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                            {/* Signal bars */}
-                            <div style={{ display: 'flex', alignItems: 'flex-end', gap: '1px', height: '8px' }}>
-                              {[3, 5, 6.5, 8].map((h, i) => (
-                                <span
-                                  key={i}
-                                  style={{
-                                    display: 'block',
-                                    width: '2.5px',
-                                    height: `${h}px`,
-                                    background: '#ffffff',
-                                    borderRadius: '0.5px',
-                                  }}
-                                />
-                              ))}
-                            </div>
-                            {/* Wifi */}
-                            <svg width="12" height="9" viewBox="0 0 15 11" fill="none">
-                              <path d="M7.5 2.5C9.5 2.5 11.3 3.3 12.6 4.6L14 3.2C12.3 1.5 10 0.5 7.5 0.5C5 0.5 2.7 1.5 1 3.2L2.4 4.6C3.7 3.3 5.5 2.5 7.5 2.5Z" fill="#ffffff"/>
-                              <path d="M7.5 5.5C8.8 5.5 10 6 10.9 6.9L12.3 5.5C11 4.2 9.3 3.5 7.5 3.5C5.7 3.5 4 4.2 2.7 5.5L4.1 6.9C5 6 6.2 5.5 7.5 5.5Z" fill="#ffffff"/>
-                              <circle cx="7.5" cy="9.5" r="1.5" fill="#ffffff"/>
-                            </svg>
-                            {/* Battery */}
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '1px' }}>
-                              <div
-                                style={{
-                                  width: '18px',
-                                  height: '9px',
-                                  border: '1px solid rgba(255,255,255,0.6)',
-                                  borderRadius: '2.5px',
-                                  display: 'flex',
-                                  alignItems: 'center',
-                                  padding: '1.5px',
-                                }}
-                              >
-                                <div
-                                  style={{
-                                    height: '100%',
-                                    width: '80%',
-                                    background: '#ffffff',
-                                    borderRadius: '1px',
-                                  }}
-                                />
-                              </div>
-                              <div
-                                style={{
-                                  width: '1.5px',
-                                  height: '4px',
-                                  background: 'rgba(255,255,255,0.5)',
-                                  borderRadius: '0 1px 1px 0',
-                                }}
-                              />
-                            </div>
-                          </div>
-                        </div>
-
-                        <iframe
-                          src="/makerpilot/demo/"
-                          style={{
-                            flex: 1,
-                            width: '100%',
-                            border: 'none',
-                            background: '#0f1e1c',
-                          }}
-                          title="MakerPilot live demo"
-                        />
-
-                      </div>
-
-                      {/* Home bar */}
-                      <div
-                        style={{
-                          height: '26px',
-                          background: '#000',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          flexShrink: 0,
-                        }}
-                      >
-                        <div
-                          style={{
-                            width: '80px',
-                            height: '3.5px',
-                            background: 'rgba(255,255,255,0.28)',
-                            borderRadius: '3px',
-                          }}
-                        />
-                      </div>
-
-                    </div>
+                    />
                   </div>
+
+                  {/* Full device chrome (bezel + volume/power buttons) above the screen */}
+                  <img
+                    src={`/images/makerpilot/iPhone_16_Light.svg?v=frame3`}
+                    alt=""
+                    width={PHONE_FRAME_W}
+                    height={PHONE_FRAME_H}
+                    className="pointer-events-none absolute inset-0 z-20 select-none"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'fill',
+                      boxShadow: 'none',
+                      filter: 'none',
+                    }}
+                    draggable={false}
+                  />
                 </div>
 
               </div>
