@@ -59,12 +59,18 @@ const PHONE_APP_OFFSET_Y = PHONE_SCREEN_H - PHONE_APP_H * PHONE_SCALE
 
 function Pill({ yes }: { yes: boolean }) {
   return yes ? (
-    <span className="inline-flex items-center gap-1 bg-[#E6F4F1] text-[#0F6E56] text-xs font-semibold px-2.5 py-1 rounded-full">
-      <Check className="w-3 h-3" strokeWidth={3} /> Yes
+    <span
+      className="inline-flex items-center justify-center bg-[#E6F4F1] text-[#0F6E56] w-6 h-6 rounded-full"
+      aria-label="Yes"
+    >
+      <Check className="w-3 h-3" strokeWidth={3} />
     </span>
   ) : (
-    <span className="inline-flex items-center gap-1 bg-[#F3F4F6] text-[#9CA3AF] text-xs font-medium px-2.5 py-1 rounded-full">
-      <X className="w-3 h-3" strokeWidth={2} /> No
+    <span
+      className="inline-flex items-center justify-center bg-[#F3F4F6] text-[#9CA3AF] w-6 h-6 rounded-full"
+      aria-label="No"
+    >
+      <X className="w-3 h-3" strokeWidth={2} />
     </span>
   )
 }
@@ -80,30 +86,72 @@ export default function MakerPilotPage() {
 
           {/* ── HERO ──────────────────────────────────────────────────────── */}
           <header className="mb-12 sm:mb-16">
-            {/* Logo + title */}
-            <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10 mb-8">
-              <div className="relative w-36 h-12 sm:w-48 sm:h-16 flex-shrink-0">
-                <Image
-                  src="/images/makerpilot/MakerLogo.png"
-                  alt="MakerPilot logo"
-                  fill
-                  sizes="(min-width: 640px) 192px, 144px"
-                  className="object-contain object-left"
-                  priority
-                />
-              </div>
-              <h1 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold text-[#007EA7] leading-tight">
-                Inventory management for independent makers
-              </h1>
-            </div>
+            <div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-10">
+              <div className="min-w-0 flex-1">
+                {/* Logo + title */}
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10 mb-8">
+                  <div className="relative w-36 h-12 sm:w-48 sm:h-16 flex-shrink-0">
+                    <Image
+                      src="/images/makerpilot/MakerLogo.png"
+                      alt="MakerPilot logo"
+                      fill
+                      sizes="(min-width: 640px) 192px, 144px"
+                      className="object-contain object-left"
+                      priority
+                    />
+                  </div>
+                  <h1 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold text-[#007EA7] leading-tight">
+                    Inventory management for independent makers
+                  </h1>
+                </div>
 
-            <div className="font-montserrat text-lg text-[#2C3D4D] leading-relaxed space-y-4 mb-8">
-              <p>
-                Many makers handcraft every item they sell while managing sales across online shops, craft shows, and
-                weekend markets. Production can take weeks, yet inventory is often tracked through spreadsheets, notes
-                apps, desktop tools, or not at all. MakerPilot keeps inventory within reach wherever makers sell, helping
-                them record sales, see what is running low, plan around lead times, and know what to make next.
-              </p>
+                <div className="font-montserrat text-lg text-[#2C3D4D] leading-relaxed space-y-4">
+                  <p>
+                    Many makers handcraft every item they sell while managing sales across online shops, craft shows, and
+                    weekend markets. Production can take weeks, yet inventory is often tracked through spreadsheets, notes
+                    apps, desktop tools, or not at all. MakerPilot keeps inventory within reach wherever makers sell, helping
+                    them record sales, see what is running low, plan around lead times, and know what to make next.
+                  </p>
+                </div>
+              </div>
+
+              {/* Project meta card */}
+              <aside className="w-full md:w-56 lg:w-64 flex-shrink-0 bg-white p-4 sm:p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
+                <dl className="space-y-5">
+                  <div>
+                    <dt className="font-space-grotesk text-[11px] font-bold uppercase tracking-wide text-[#007EA7] mb-1">
+                      Role
+                    </dt>
+                    <dd className="font-montserrat text-sm text-[#2C3D4D]">
+                      Senior UX Product Designer + Front-End Developer
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="font-space-grotesk text-[11px] font-bold uppercase tracking-wide text-[#007EA7] mb-1">
+                      Timeline
+                    </dt>
+                    <dd className="font-montserrat text-sm text-[#2C3D4D]">
+                      ~1 month of active work
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="font-space-grotesk text-[11px] font-bold uppercase tracking-wide text-[#007EA7] mb-1">
+                      Platform
+                    </dt>
+                    <dd className="font-montserrat text-sm text-[#2C3D4D]">
+                      iOS-first mobile
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="font-space-grotesk text-[11px] font-bold uppercase tracking-wide text-[#007EA7] mb-1">
+                      Tools
+                    </dt>
+                    <dd className="font-montserrat text-sm text-[#2C3D4D]">
+                      Figma, Cursor, React + TypeScript
+                    </dd>
+                  </div>
+                </dl>
+              </aside>
             </div>
           </header>
 
@@ -303,24 +351,31 @@ export default function MakerPilotPage() {
             </div>
           </section>
 
-          {/* ── THE PROBLEM WORTH SOLVING ───────────────────────────────── */}
+          {/* ── MEET THE MAKER ──────────────────────────────────────────── */}
           <section className="scroll-mt-24 mb-12 sm:mb-16">
             <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">
-              The Problem Worth Solving
+              Meet the Maker
             </h2>
             <div className="flex flex-col lg:flex-row lg:items-start gap-6 lg:gap-10">
               <div className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 leading-relaxed space-y-4 lg:flex-1 lg:min-w-0">
                 <p>
-                  Tory&apos;s day job is project manager, but her hobby is ceramics. She sells on Etsy, does up to 6 craft shows a year, and stock pieces through a local cafe. Everything is handmade with a 3 to 4 week production cycle.
+                  Tory pilots a one-woman ceramics studio between a day job, weekend craft shows, and an Etsy shop.
+                  Everything is handmade on a three to four week cycle.
                 </p>
                 <p>
-                  After a show she does not always update her online inventory. She gets an online order and it&apos;s sold out. With a 3 to 4 week production cycle, finding out too late is a lost sale.
+                  After shows she doesn&apos;t always update her online inventory. If an online order comes in for a piece
+                  that has already sold out, that is a lost sale.
                 </p>
                 <p>
-                  Like her, thousands of independent makers juggle art fairs, online shops, and production pieces without easy to access, consistent inventory updates.
+                  Thousands of independent makers work this way, juggling art fairs, online shops, and production pieces
+                  without an easy, consistent way to keep inventory current.
                 </p>
                 <p>
-                  MakerPilot was built to solve that dilemma, app open, sale recorded and inventory updated and synced in moments.
+                  MakerPilot was built for that gap. App open, sale recorded, inventory updated and synced in moments.
+                </p>
+                <p>
+                  The problem is one I know firsthand as I make ceramics and sell through Etsy and craft shows, the
+                  inspiration for this app came from real life pain points.
                 </p>
               </div>
               <div className="w-full min-w-0 max-w-2xl lg:flex-shrink-0">
@@ -336,80 +391,91 @@ export default function MakerPilotPage() {
             </div>
           </section>
 
-          {/* ── COMPETITIVE GAP ─────────────────────────────────────────── */}
+          {/* ── WHERE EXISTING TOOLS FALL SHORT ─────────────────────────── */}
           <section className="scroll-mt-24 mb-12 sm:mb-16">
-            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-2 text-left">
-              The Competitive Gap
+            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">
+              Where Existing Tools Fall Short
             </h2>
-            <div className="overflow-x-auto mb-4">
-              <p className="font-montserrat text-base text-[#5f5f5f]/80 whitespace-nowrap">
-                The gap is not features. It is context. No existing tool treats the craft show floor as a primary use case.
-              </p>
-            </div>
-            <div className="overflow-x-auto -mx-4 px-4">
-              <table className="w-full min-w-[640px] font-montserrat text-sm border-collapse">
-                <thead>
-                  <tr className="border-b border-[#007EA7]/10">
-                    {["Tool", "Mobile App", "Point of Sale", "Lead Time Alerts", "Channel Integration", "Target User", "Pricing"].map((h) => (
-                      <th key={h} className="text-[10px] uppercase tracking-widest text-[#9CA3AF] font-semibold text-left pb-3 pr-4">
-                        {h}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {competitors.map((c) => (
-                    <tr key={c.name} className={c.hero ? "bg-[#E6F4F1]" : "border-b border-[#007EA7]/05"}>
-                      <td className={`py-3 pr-4 font-space-grotesk font-bold text-sm ${c.hero ? "text-[#0F6E56] pl-3" : "text-[#2C3D4D]"}`}>
-                        {c.name}
-                        {c.hero && (
-                          <span className="ml-2 text-[10px] bg-[#1A9E8F] text-white px-2 py-0.5 rounded-full font-montserrat font-semibold uppercase tracking-wide">
-                            This project
-                          </span>
-                        )}
-                      </td>
-                      <td className="py-3 pr-4"><Pill yes={c.mobile} /></td>
-                      <td className="py-3 pr-4"><Pill yes={c.showSale} /></td>
-                      <td className="py-3 pr-4"><Pill yes={c.leadTime} /></td>
-                      <td className="py-3 pr-4"><Pill yes={c.etsy} /></td>
-                      <td className={`py-3 pr-4 text-xs ${c.hero ? "text-[#0F6E56] font-semibold" : "text-[#5f5f5f]/80"}`}>{c.target}</td>
-                      <td className={`py-3 text-xs ${c.hero ? "text-[#0F6E56] font-semibold pr-3" : "text-[#5f5f5f]/80"}`}>{c.pricing}</td>
+            <div className="flex flex-col lg:flex-row lg:items-start gap-6 lg:gap-8">
+              <div className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 leading-relaxed space-y-4 lg:w-[34%] lg:flex-shrink-0">
+                <p>
+                  Inventory platforms are built for a desktop, and for businesses with more complex operations.
+                  Craftybase and Inventora handle materials tracking and order management for production makers; Katana
+                  MRP reaches further into manufacturing. General mobile apps like Sortly are easier to use on the go, but
+                  they track items rather than multichannel craft sales or handmade production cycles.
+                </p>
+                <p>
+                  The gap was never more features. It was the maker whose whole business lives on her phone: selling in
+                  the moment, syncing across channels, and catching what is running low before it sells out again,
+                  especially when a platform like Etsy sells a piece without ever signaling that stock has run low.
+                </p>
+              </div>
+              <div className="w-full lg:flex-1 min-w-0 rounded-lg border border-[#007EA7]/20 p-3 sm:p-4">
+                <table className="w-full font-montserrat text-sm border-collapse table-fixed">
+                  <thead>
+                    <tr className="border-b border-[#007EA7]/15">
+                      {["Tool", "Mobile App", "Point of Sale", "Lead Time Alerts", "Channel Integration", "Target User", "Pricing"].map((h) => (
+                        <th
+                          key={h}
+                          className={`text-[9px] uppercase tracking-widest text-[#9CA3AF] font-semibold text-left pb-3 pr-2 leading-tight ${
+                            h === "Tool" ? "w-[18%]" : h === "Target User" || h === "Pricing" ? "w-[14%]" : "w-[10%]"
+                          }`}
+                        >
+                          {h}
+                        </th>
+                      ))}
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {competitors.map((c, i) => (
+                      <tr
+                        key={c.name}
+                        className={`${c.hero ? "bg-[#E6F4F1]" : ""} ${
+                          i < competitors.length - 1 ? "border-b border-[#007EA7]/10" : ""
+                        }`}
+                      >
+                        <td className={`py-3 pr-2 font-space-grotesk font-bold text-xs sm:text-sm ${c.hero ? "text-[#0F6E56] pl-2" : "text-[#2C3D4D]"}`}>
+                          {c.name}
+                          {c.hero && (
+                            <span className="mt-1 block w-fit text-[9px] bg-[#1A9E8F] text-white px-1.5 py-0.5 rounded-full font-montserrat font-semibold uppercase tracking-wide">
+                              This project
+                            </span>
+                          )}
+                        </td>
+                        <td className="py-3 pr-2"><Pill yes={c.mobile} /></td>
+                        <td className="py-3 pr-2"><Pill yes={c.showSale} /></td>
+                        <td className="py-3 pr-2"><Pill yes={c.leadTime} /></td>
+                        <td className="py-3 pr-2"><Pill yes={c.etsy} /></td>
+                        <td className={`py-3 pr-2 text-[11px] leading-snug ${c.hero ? "text-[#0F6E56] font-semibold" : "text-[#5f5f5f]/80"}`}>{c.target}</td>
+                        <td className={`py-3 text-[11px] leading-snug ${c.hero ? "text-[#0F6E56] font-semibold pr-2" : "text-[#5f5f5f]/80"}`}>{c.pricing}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <p className="font-montserrat text-base text-[#5f5f5f]/80 leading-relaxed mt-6 w-full">
-              Sortly is the only mobile tool in this space, however it targets medium to large businesses, has no channel integration, and does not capture show sales. MakerPilot fills every column Sortly misses, for a fraction of the price, built specifically for independent makers.
-            </p>
           </section>
 
-          {/* ── KEY SCREENS ─────────────────────────────────────────────── */}
+          {/* ── FROM LIVED PROBLEM TO WORKING PRODUCT ───────────────────── */}
           <section className="scroll-mt-24 mb-12 sm:mb-16">
-            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-2 text-left">
-              Key Screens
+            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">
+              From Lived Problem to Working Product
             </h2>
-            <p className="font-montserrat text-sm text-[#9CA3AF] mb-6">
-              Screenshots coming — Chrome DevTools device emulator + Figma iPhone 16 mockup
-            </p>
-            <div className="flex gap-4 overflow-x-auto pb-4 -mx-4 px-4 snap-x snap-mandatory">
-              {[
-                { label: "Welcome",        desc: "Onboarding entry point" },
-                { label: "Home Dashboard", desc: "Needs Making + Top Sellers" },
-                { label: "Inventory",      desc: "List view + swipe actions" },
-                { label: "Edit Item",      desc: "Stepper controls + lead time" },
-              ].map(({ label, desc }) => (
-                <div key={label} className="flex-shrink-0 snap-start w-[160px] sm:w-[180px]">
-                  <div className="aspect-[9/19.5] rounded-[24px] bg-gradient-to-b from-[#E6F4F1] to-[#C7EDE8] border border-[#007EA7]/15 flex flex-col items-center justify-center mb-3 shadow-sm">
-                    <Smartphone className="w-8 h-8 text-[#007EA7]/30 mb-2" />
-                    <span className="font-montserrat text-[10px] text-[#007EA7]/50 font-medium text-center px-3">
-                      Screenshot coming
-                    </span>
-                  </div>
-                  <p className="font-space-grotesk text-sm font-semibold text-[#2C3D4D] text-center">{label}</p>
-                  <p className="font-montserrat text-xs text-[#9CA3AF] text-center mt-0.5">{desc}</p>
-                </div>
-              ))}
+            <div className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 leading-relaxed space-y-4">
+              <p>
+                MakerPilot began with a problem I knew firsthand: selling ceramics across Etsy and craft shows while
+                inventory gradually stopped matching what was actually available.
+              </p>
+              <p>
+                Early flows established the concept, but building a working mobile app exposed the decisions that static
+                screens could not. Navigation was reduced from four tabs to three, overlapping stock states were combined,
+                and desktop conventions were replaced with mobile-first interactions.
+              </p>
+              <p>
+                The scope stayed focused on the core workflow: keeping inventory current wherever a maker sells and
+                turning those updates into clearer production decisions. More complex channel management, Etsy variations,
+                and multi-user functionality were intentionally deferred while the foundation was refined.
+              </p>
             </div>
           </section>
 
@@ -448,6 +514,35 @@ export default function MakerPilotPage() {
                   <div className="font-space-grotesk font-bold text-[#2C3D4D] text-sm">{decision}</div>
                   <div className="font-montserrat text-xs text-[#9CA3AF]">{considered}</div>
                   <div className="font-montserrat text-sm text-[#5f5f5f]/80">{why}</div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* ── KEY SCREENS ─────────────────────────────────────────────── */}
+          <section className="scroll-mt-24 mb-12 sm:mb-16">
+            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-2 text-left">
+              Key Screens
+            </h2>
+            <p className="font-montserrat text-sm text-[#9CA3AF] mb-6">
+              Screenshots coming — Chrome DevTools device emulator + Figma iPhone 16 mockup
+            </p>
+            <div className="flex gap-4 overflow-x-auto pb-4 -mx-4 px-4 snap-x snap-mandatory">
+              {[
+                { label: "Welcome",        desc: "Onboarding entry point" },
+                { label: "Home Dashboard", desc: "Needs Making + Top Sellers" },
+                { label: "Inventory",      desc: "List view + swipe actions" },
+                { label: "Edit Item",      desc: "Stepper controls + lead time" },
+              ].map(({ label, desc }) => (
+                <div key={label} className="flex-shrink-0 snap-start w-[160px] sm:w-[180px]">
+                  <div className="aspect-[9/19.5] rounded-[24px] bg-gradient-to-b from-[#E6F4F1] to-[#C7EDE8] border border-[#007EA7]/15 flex flex-col items-center justify-center mb-3 shadow-sm">
+                    <Smartphone className="w-8 h-8 text-[#007EA7]/30 mb-2" />
+                    <span className="font-montserrat text-[10px] text-[#007EA7]/50 font-medium text-center px-3">
+                      Screenshot coming
+                    </span>
+                  </div>
+                  <p className="font-space-grotesk text-sm font-semibold text-[#2C3D4D] text-center">{label}</p>
+                  <p className="font-montserrat text-xs text-[#9CA3AF] text-center mt-0.5">{desc}</p>
                 </div>
               ))}
             </div>
