@@ -807,26 +807,27 @@ export default function MakerPilotPage() {
               MakerPilot: From Concept to Launch
             </h2>
             <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 leading-relaxed mb-8">
-              MakerPilot is a working prototype, not a shipped product. But every design decision was made with a real
-              launch path in mind. If this were the real thing, here is how I would move it forward.
+              The next phase focuses on validating the core experience, reducing product risk, and protecting simplicity
+              as MakerPilot grows. The priority is to prove that the product fits naturally into a maker&apos;s workflow
+              before expanding the feature set.
             </p>
             <ul className="font-montserrat text-base text-[#5f5f5f]/80 list-disc pl-6 space-y-2 leading-relaxed [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
               {[
                 {
-                  lead: "Validate with real makers first.",
-                  body: "Recruit ten to fifteen independent makers across ceramics, jewelry, and textiles for two-week diary studies. Watch how the app fits into their actual sales weeks, where the friction lives, and which of my assumptions do not survive contact with a real inventory.",
+                  lead: "Validate the core behavioral model.",
+                  body: "Test whether makers naturally think in the same loop MakerPilot is built around: sell, assess stock, decide what to make, replenish. Research would focus on where that model breaks across different types of makers, production cycles, and sales channels.",
                 },
                 {
-                  lead: "Ship the smallest version that proves the loop.",
-                  body: "A closed beta with the core loop working end-to-end: onboarding, Add Item, sale recording, and the make-decision alert. Etsy sync stays manual in this phase; real API integration comes after the loop itself is proven.",
+                  lead: "De-risk the highest-value workflow first.",
+                  body: "The first release would center on the smallest end-to-end experience that proves MakerPilot's value: getting inventory in, recording a sale, and turning that change into a meaningful production decision. Deeper integrations would come only after that loop proves useful on its own.",
                 },
                 {
-                  lead: "Instrument the moments that matter.",
-                  body: "Time-to-first-value, seven-day return rate, and the alert-to-action conversion (does a maker actually start a batch when MakerPilot tells her to?). These three numbers say whether the product works, not vanity metrics like downloads.",
+                  lead: "Measure whether the experience changes behavior.",
+                  body: "Success would be defined by signals such as time to first value, repeat use, and whether makers act on production recommendations. The goal is not simply engagement, but evidence that MakerPilot helps people make better inventory decisions.",
                 },
                 {
-                  lead: "Grow from the maker community outward.",
-                  body: "Independent makers talk to each other on Reddit, in Discord servers, at craft fairs. The go-to-market is not paid ads, it is showing up where makers already trade tips and letting the product speak for itself.",
+                  lead: "Scale the product without scaling the complexity.",
+                  body: "Future integrations, variants, automation, and multi-channel support would be introduced only where they reduce work for the maker. The design challenge is to expand capability without turning MakerPilot into the kind of inventory system it was created to avoid.",
                 },
               ].map(({ lead, body }) => (
                 <li key={lead}>
@@ -870,9 +871,6 @@ export default function MakerPilotPage() {
 
           {/* ── CTA ─────────────────────────────────────────────────────── */}
           <div className="flex flex-col items-center pt-8 sm:pt-12 pb-8">
-            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-6 text-center">
-              Interested in mobile-first design or designer-developer hybrid work?
-            </p>
             <a
               href="/contact/"
               className="rounded-[100px] border border-[#F7F6F6] bg-white/30 hover:bg-white/60 text-[#007ea7] px-8 py-2.5 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0.5"
