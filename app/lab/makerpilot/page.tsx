@@ -2,7 +2,7 @@ import Nav from "@/components/nav"
 import Footer from "@/components/footer"
 import Image from "next/image"
 import type { Metadata } from "next"
-import { Check, X, Smartphone } from "lucide-react"
+import { Check, X } from "lucide-react"
 import ResetDemoButton, { DEMO_SRC } from "./ResetDemoButton"
 
 export const metadata: Metadata = {
@@ -19,13 +19,6 @@ const competitors = [
   { name: "KatanaMRP",   mobile: false, showSale: false, leadTime: false, etsy: true,  target: "Small business",             pricing: "Free–$899/mo", hero: false },
   { name: "Sortly",      mobile: true,  showSale: false, leadTime: true,  etsy: false, target: "Medium–Large business",      pricing: "Free–$149/mo", hero: false },
   { name: "MakerPilot",  mobile: true,  showSale: true,  leadTime: true,  etsy: true,  target: "Independent makers",   pricing: "Free–$59/mo",  hero: true },
-]
-
-const pricingTiers = [
-  { name: "Starter",    price: "$0",     color: "#6B7280", borderColor: "border-gray-300",    who: "Just getting started",      items: "10 items",    channels: "1 channel sync" },
-  { name: "Maker",      price: "$9/mo",  color: "#1A9E8F", borderColor: "border-[#1A9E8F]",   who: "Tory's entry point",        items: "50 items",    channels: "2 channel sync", popular: true },
-  { name: "Studio",     price: "$24/mo", color: "#007EA7", borderColor: "border-[#007EA7]",   who: "Serious side hustlers",     items: "100 items",   channels: "3 channels + variants" },
-  { name: "Pilot Pro",  price: "$59/mo", color: "#FF6600", borderColor: "border-[#FF6600]",   who: "Full-time makers",          items: "Unlimited",   channels: "All channels + AI" },
 ]
 
 /** Lab phone — iPhone 16 Light SVG overlay (asset 383×785, screen hole 7,4 369×777 rx=58) */
@@ -54,6 +47,101 @@ const PHONE_APP_H = 852
 const PHONE_SCALE = PHONE_SCREEN_W / PHONE_APP_W
 const PHONE_APP_OFFSET_X = 0
 const PHONE_APP_OFFSET_Y = PHONE_SCREEN_H - PHONE_APP_H * PHONE_SCALE
+
+/** Plans mirrored from makerpilot_current Pricing.tsx for the Lab case study. */
+const PRICING_PLANS = [
+  {
+    name: "Starter",
+    price: "$0",
+    priceColor: "#373737",
+    borderColor: "border-gray-400",
+    headerBg: "bg-[#F9FAFB]",
+    badge: { label: "Free forever", className: "bg-gray-200 text-gray-600" },
+    accent: "#1A9E8F",
+    features: [
+      { text: "Up to 10 inventory items", included: true },
+      { text: "Low-stock alerts", included: true },
+      { text: "1 channel sync", included: true },
+      { text: "No variant tracking", included: false },
+      { text: "No AI pilot", included: false },
+    ],
+    footer: { type: "badge" as const, label: "Your current plan" },
+  },
+  {
+    name: "Maker",
+    price: "$9/mo",
+    priceColor: "#1A9E8F",
+    borderColor: "border-[#1A9E8F]",
+    headerBg: "bg-[#EAF4F2]",
+    badge: { label: "Most popular", className: "bg-[#1A9E8F] text-white" },
+    accent: "#1A9E8F",
+    features: [
+      { text: "Up to 50 inventory items", included: true },
+      { text: "Low-stock alerts", included: true },
+      { text: "2 channel sync", included: true },
+      { text: "No variant tracking", included: false },
+      { text: "No AI pilot", included: false },
+    ],
+    footer: { type: "button" as const, label: "Upgrade to Maker", className: "bg-[#1A9E8F]" },
+  },
+  {
+    name: "Studio",
+    price: "$24/mo",
+    priceColor: "#534AB7",
+    borderColor: "border-[#534AB7]",
+    headerBg: "bg-[#F5F3FF]",
+    badge: null,
+    accent: "#534AB7",
+    features: [
+      { text: "Up to 100 inventory items", included: true },
+      { text: "Low-stock alerts", included: true },
+      { text: "3 channel sync", included: true },
+      { text: "Variant tracking", included: true },
+      { text: "No AI pilot", included: false },
+    ],
+    footer: { type: "button" as const, label: "Upgrade to Studio", className: "bg-[#534AB7]" },
+  },
+  {
+    name: "Pilot Pro",
+    price: "$59/mo",
+    priceColor: "#FF6600",
+    borderColor: "border-[#FF6600]",
+    headerBg: "bg-[#FDF0E6]",
+    badge: null,
+    accent: "#FF6600",
+    features: [
+      { text: "Unlimited inventory items", included: true },
+      { text: "Low-stock alerts", included: true },
+      { text: "All channel sync", included: true },
+      { text: "Variant tracking", included: true },
+      { text: "AI pilot", included: true },
+    ],
+    footer: { type: "button" as const, label: "Upgrade to Pilot Pro", className: "bg-[#FF6600]" },
+  },
+]
+
+const CORE_LOOP_NODES = [
+  {
+    verb: "Sell",
+    desc: "record a show sale in three taps, or let an Etsy sync log it automatically.",
+  },
+  {
+    verb: "See",
+    desc: "the Needs Making strip surfaces items where stock is running out faster than the maker can remake them.",
+  },
+  {
+    verb: "Plan",
+    desc: "batch suggestions use sales velocity and lead time to answer one question: how many to make.",
+  },
+  {
+    verb: "Make",
+    desc: "one tap marks a batch in progress, so the app knows what is on its way.",
+  },
+  {
+    verb: "Restock",
+    desc: "stock updates in seconds. Etsy reflects the new count. The loop starts again.",
+  },
+] as const
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -105,14 +193,12 @@ export default function MakerPilotPage() {
                   </h1>
                 </div>
 
-                <div className="font-montserrat text-lg text-[#2C3D4D] leading-relaxed space-y-4">
-                  <p>
-                    Many makers handcraft every item they sell while managing sales across online shops, craft shows, and
-                    weekend markets. Production can take weeks, yet inventory is often tracked through spreadsheets, notes
-                    apps, desktop tools, or not at all. MakerPilot keeps inventory within reach wherever makers sell, helping
-                    them record sales, see what is running low, plan around lead times, and know what to make next.
-                  </p>
-                </div>
+                <p className="font-montserrat text-lg text-[#2C3D4D] leading-relaxed">
+                  Many makers handcraft every item they sell while managing sales across online shops, craft shows, and
+                  weekend markets. Production can take weeks, yet inventory is often tracked through spreadsheets, notes
+                  apps, desktop tools, or not at all. MakerPilot keeps inventory within reach wherever makers sell, helping
+                  them record sales, see what is running low, plan around lead times, and know what to make next.
+                </p>
               </div>
 
               {/* Project meta card */}
@@ -160,7 +246,7 @@ export default function MakerPilotPage() {
             <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">
               Try MakerPilot
             </h2>
-            <div className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 leading-relaxed space-y-4">
+            <div className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 leading-relaxed space-y-4">
               <p>
                 The product is the quickest way to understand the problem it solves. Explore the live demo, record a
                 sale, and see how MakerPilot turns an inventory update into a clear next step. Then continue through the
@@ -199,7 +285,7 @@ export default function MakerPilotPage() {
                     </p>
                     <p>Here are a few ways to explore the demo:</p>
                   </div>
-                  <ul className="flex flex-col gap-3" style={{ listStyle: 'none', padding: 0 }}>
+                  <ul className="font-montserrat text-sm leading-snug list-disc pl-4 sm:pl-6 space-y-2 sm:space-y-3 [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]" style={{ color: '#a8a8a8' }}>
                     {[
                       <>
                         Tap <strong className="font-semibold text-[#c8c8c8]">Get Started</strong> or{' '}
@@ -223,23 +309,7 @@ export default function MakerPilotPage() {
                         new data informs you, telling you what has shifted and what to make next.
                       </>,
                     ].map((item, i) => (
-                      <li
-                        key={i}
-                        className="font-montserrat text-sm leading-snug flex items-start gap-3"
-                        style={{ color: '#a8a8a8' }}
-                      >
-                        <span
-                          className="flex-shrink-0 mt-[5px]"
-                          style={{
-                            display: 'block',
-                            width: '5px',
-                            height: '5px',
-                            borderRadius: '50%',
-                            background: '#1A9E8F',
-                          }}
-                        />
-                        <span>{item}</span>
-                      </li>
+                      <li key={i}>{item}</li>
                     ))}
                   </ul>
                 </div>
@@ -357,7 +427,7 @@ export default function MakerPilotPage() {
               Meet the Maker
             </h2>
             <div className="flex flex-col lg:flex-row lg:items-start gap-6 lg:gap-10">
-              <div className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 leading-relaxed space-y-4 lg:flex-1 lg:min-w-0">
+              <div className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 leading-relaxed space-y-4 lg:flex-1 lg:min-w-0">
                 <p>
                   Tory pilots a one-woman ceramics studio between a day job, weekend craft shows, and an Etsy shop.
                   Everything is handmade on a three to four week cycle.
@@ -397,7 +467,7 @@ export default function MakerPilotPage() {
               Where Existing Tools Fall Short
             </h2>
             <div className="flex flex-col lg:flex-row lg:items-start gap-6 lg:gap-8">
-              <div className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 leading-relaxed space-y-4 lg:w-[34%] lg:flex-shrink-0">
+              <div className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 leading-relaxed space-y-4 lg:w-[34%] lg:flex-shrink-0">
                 <p>
                   Inventory platforms are built for a desktop, and for businesses with more complex operations.
                   Craftybase and Inventora handle materials tracking and order management for production makers; Katana
@@ -456,76 +526,57 @@ export default function MakerPilotPage() {
             </div>
           </section>
 
-          {/* ── FROM LIVED PROBLEM TO WORKING PRODUCT ───────────────────── */}
-          <section className="scroll-mt-24 mb-12 sm:mb-16">
-            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">
-              From Lived Problem to Working Product
-            </h2>
-            <div className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 leading-relaxed space-y-4">
-              <p>
-                MakerPilot began with a problem I knew firsthand: selling ceramics across Etsy and craft shows while
-                inventory gradually stopped matching what was actually available.
-              </p>
-              <p>
-                Early flows established the concept, but building a working mobile app exposed the decisions that static
-                screens could not. Navigation was reduced from four tabs to three, overlapping stock states were combined,
-                and desktop conventions were replaced with mobile-first interactions.
-              </p>
-              <p>
-                The scope stayed focused on the core workflow: keeping inventory current wherever a maker sells and
-                turning those updates into clearer production decisions. More complex channel management, Etsy variations,
-                and multi-user functionality were intentionally deferred while the foundation was refined.
-              </p>
-            </div>
-          </section>
-
           {/* ── DESIGN DECISIONS ────────────────────────────────────────── */}
           <section className="scroll-mt-24 mb-12 sm:mb-16">
             <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">
               Design Decisions
             </h2>
-            <div className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 leading-relaxed space-y-4 mb-8 max-w-3xl">
+            <div className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 leading-relaxed space-y-4 mb-10">
               <p>
-                MakerPilot was built as a working app, not static screens, and that choice drove every decision. A
-                running product pushes back. It shows you where your design is speaking the wrong language, promising
-                things it cannot do, or solving a problem the maker does not actually have.
+                MakerPilot evolved as a working product rather than a set of static screens. Starting with a coded
+                foundation, I used Figma Make alongside Figma to explore the functioning experience and iterate the UI as
+                the product took shape. Evaluating each change in context exposed gaps in language, interaction patterns,
+                and product logic that weren&apos;t as apparent in static designs.
               </p>
               <p>
-                Over about a month of building, the app kept correcting me, and the story of MakerPilot is really the
-                story of those corrections.
+                Building the product exposed issues that static screens couldn&apos;t, driving refinements to navigation,
+                interaction patterns, and the core workflow.
               </p>
             </div>
 
-            <div className="relative border-l-2 border-[#007EA7]/25 ml-3 pl-8 sm:pl-10 space-y-10 mb-8">
+            <div className="relative border-l-2 border-[#007EA7]/25 ml-3 pl-8 sm:pl-10 space-y-10 sm:space-y-12">
               {[
                 {
-                  num: "01",
-                  title: "Learning to speak the maker's language.",
-                  intro: "The earliest decisions were about stripping developer thinking out of the interface.",
+                  num: "1",
+                  title: "Framing what MakerPilot would be",
+                  intro:
+                    "Before designing a single screen, three product-shaping calls set the terms for everything that followed.",
                   bullets: [
-                    "A center action button looked like Add but recorded a sale, so it went. Navigation dropped from four tabs to three.",
-                    "Two inventory states, sold-out and low-stock, collapsed into one, because stock at zero and stock below threshold call for the same action: make more.",
-                    "A cryptic @ 4 became Make more @ 4, language that reads as a production reminder rather than a database rule.",
+                    "Defined the primary success metric as time to first value: a new maker should move from install to first saved inventory item in under three minutes. That constraint shaped onboarding, field requirements, and the amount of information introduced upfront.",
+                    "Reframed the primary user goal from inventory tracking to production planning. Instead of centering the experience on what had already sold, the information hierarchy prioritizes stock level, sales velocity, and lead time so the maker can answer: what do I need to make next?",
+                    "Chose a mobile-first interaction model rather than adapting a desktop workflow. The core tasks were designed around short, one-handed interactions at shows, in the studio, or between sales, which drove tighter navigation, fewer required actions, and stronger prioritization of what appears on screen.",
                   ],
                 },
                 {
-                  num: "02",
-                  title: "Making it behave like a real app.",
-                  intro: "Once the foundation held, the decisions turned to how the app feels under a thumb.",
+                  num: "2",
+                  title: "Designing for how a maker actually thinks",
+                  intro:
+                    "The consistent test was whether the interface matched the maker's mental model or exposed the underlying data model. When the two conflicted, the experience followed the maker.",
                   bullets: [
-                    "Delete moved to the far left of the edit screen, deliberate friction opposite the resting thumb, while duplicate stayed one tap away.",
-                    "Browser-style popups and toasts were refused in favor of confirmations that slide in place, because a maker glancing at her phone between sales should never meet a web pattern.",
-                    "A select-all was left out of listings import on purpose, because bulk-adding would quietly undercut the free tier the product depends on.",
+                    "Replaced a static reorder threshold with a context-aware production signal that considers whether there is enough time to remake an item before stock is likely to run out.",
+                    "Elevated lead time from secondary metadata into the primary information hierarchy, because production time directly affects what a maker needs to act on.",
+                    "Collapsed system-level inventory states into a smaller set of user-facing states when they resulted in the same maker action, reducing cognitive load without removing underlying data fidelity.",
                   ],
                 },
                 {
-                  num: "03",
-                  title: "Reframing what the app is for.",
-                  intro: "The largest turn came last, when the app's purpose itself shifted.",
+                  num: "3",
+                  title: "Deciding what not to build",
+                  intro:
+                    "Scope discipline is a design skill, and the decisions I am proudest of are the ones I refused to make. It is easy to add another field, another tab, another integration. It is harder to hold the surface small enough that a busy maker can actually use it in the five-minute windows she has.",
                   bullets: [
-                    "Home had been a rear-view sales dashboard. Reframed around stock, velocity, and lead time, it became Studio: a forward-looking answer to what do I make next.",
-                    "Adding an item split into two paths, because makers on Etsy already have listings. The real job was importing what exists, not creating from scratch.",
-                    "Required fields on the Add form dropped from a competitor's eight to three.",
+                    "The Add Item form asks for three required fields, not eight; the rest sit behind progressive disclosure so first entry stays fast.",
+                    "Add Item splits into two paths, import an Etsy listing or create a manual entry, because a single universal form was quietly making both jobs slower.",
+                    'Etsy variants, multi-user support, and richer channel management were deferred and made visible on the pricing page rather than hidden behind a "coming soon" chip.',
                   ],
                 },
               ].map(({ num, title, intro, bullets }) => (
@@ -533,67 +584,26 @@ export default function MakerPilotPage() {
                   <div className="absolute -left-[41px] sm:-left-[49px] top-0 w-8 h-8 bg-white border border-[#007EA7] flex items-center justify-center">
                     <span className="font-space-grotesk text-xs font-bold text-[#007EA7]">{num}</span>
                   </div>
-                  <h3 className="font-space-grotesk text-base sm:text-lg font-bold text-[#2C3D4D] mb-2">
+                  <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-4 text-left">
                     {title}
                   </h3>
-                  <p className="font-montserrat text-sm sm:text-base italic text-[#007EA7] mb-4 leading-relaxed">
+                  <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 leading-relaxed mb-4 sm:mb-6">
                     {intro}
                   </p>
-                  <ul className="flex flex-col gap-3" style={{ listStyle: "none", padding: 0 }}>
+                  <ul className="font-montserrat text-base text-[#5f5f5f]/80 list-disc pl-6 space-y-2 leading-relaxed [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
                     {bullets.map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <span
-                          className="flex-shrink-0 mt-[7px]"
-                          style={{
-                            display: "block",
-                            width: "5px",
-                            height: "5px",
-                            background: "#007EA7",
-                          }}
-                        />
-                        <span className="font-montserrat text-sm text-[#5f5f5f]/80 leading-relaxed">
-                          {item}
-                        </span>
-                      </li>
+                      <li key={item}>{item}</li>
                     ))}
                   </ul>
                 </div>
               ))}
             </div>
 
-            <p className="font-montserrat text-sm sm:text-base italic text-[#5f5f5f]/80 leading-relaxed max-w-3xl">
-              None of this came from a research budget or an A/B test. It came from building the thing, watching it
-              behave, and knowing the maker firsthand.
+            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 leading-relaxed mt-10">
+              None of these decisions came from an A/B test. They came from being the maker, seeing the gap no one else
+              was building for, and designing a product whose every screen could answer one question: what do I need to
+              make next?
             </p>
-          </section>
-
-          {/* ── KEY SCREENS ─────────────────────────────────────────────── */}
-          <section className="scroll-mt-24 mb-12 sm:mb-16">
-            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-2 text-left">
-              Key Screens
-            </h2>
-            <p className="font-montserrat text-sm text-[#9CA3AF] mb-6">
-              Screenshots coming — Chrome DevTools device emulator + Figma iPhone 16 mockup
-            </p>
-            <div className="flex gap-4 overflow-x-auto pb-4 -mx-4 px-4 snap-x snap-mandatory">
-              {[
-                { label: "Welcome",        desc: "Onboarding entry point" },
-                { label: "Home Dashboard", desc: "Needs Making + Top Sellers" },
-                { label: "Inventory",      desc: "List view + swipe actions" },
-                { label: "Edit Item",      desc: "Stepper controls + lead time" },
-              ].map(({ label, desc }) => (
-                <div key={label} className="flex-shrink-0 snap-start w-[160px] sm:w-[180px]">
-                  <div className="aspect-[9/19.5] rounded-[24px] bg-gradient-to-b from-[#E6F4F1] to-[#C7EDE8] border border-[#007EA7]/15 flex flex-col items-center justify-center mb-3 shadow-sm">
-                    <Smartphone className="w-8 h-8 text-[#007EA7]/30 mb-2" />
-                    <span className="font-montserrat text-[10px] text-[#007EA7]/50 font-medium text-center px-3">
-                      Screenshot coming
-                    </span>
-                  </div>
-                  <p className="font-space-grotesk text-sm font-semibold text-[#2C3D4D] text-center">{label}</p>
-                  <p className="font-montserrat text-xs text-[#9CA3AF] text-center mt-0.5">{desc}</p>
-                </div>
-              ))}
-            </div>
           </section>
 
           {/* ── THE CORE LOOP ───────────────────────────────────────────── */}
@@ -601,178 +611,256 @@ export default function MakerPilotPage() {
             <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">
               The Core Loop
             </h2>
-            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 leading-relaxed max-w-2xl mb-8">
-              Most inventory apps are built around adding items. MakerPilot is built around a loop: sell something, know what to make next, make it, sell it again. This is the returning user journey that drove every screen decision.
+            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 leading-relaxed mb-10">
+              Most inventory apps are built around adding items. MakerPilot is built around a loop.
             </p>
-            <div className="relative border-l-2 border-[#007EA7]/20 ml-3 pl-8 space-y-8">
-              {[
-                {
-                  title: "Open the app",
-                  desc: "The home screen loads in under a second. One glance shows what needs attention: items below threshold, top sellers, recent income. No navigation required.",
-                },
-                {
-                  title: "Record a show sale",
-                  desc: "Three taps: pick the item, set the quantity, confirm. Stock updates instantly. If the item is shared across Etsy and in-person, both channels reflect the change.",
-                },
-                {
-                  title: "See what needs making",
-                  desc: "The Needs Making strip surfaces items where stock has dropped below the alert threshold. The clock icon shows the lead time. Tory knows exactly when to start the next batch without doing any math.",
-                },
-                {
-                  title: "Start production",
-                  desc: "MakerPilot suggests batch quantities based on sales velocity and upcoming shows. One tap marks a batch as in progress.",
-                },
-                {
-                  title: "Back in stock",
-                  desc: "When the batch is done, stock is updated in seconds. Etsy reflects the new count. The cycle starts again.",
-                },
-              ].map(({ title, desc }, i) => (
-                <div key={title} className="relative">
-                  <div className="absolute -left-[41px] w-7 h-7 rounded-full bg-[#E6F4F1] border-2 border-[#1A9E8F] flex items-center justify-center">
-                    <span className="font-space-grotesk text-xs font-bold text-[#1A9E8F]">{i + 1}</span>
-                  </div>
-                  <h3 className="font-space-grotesk text-base font-bold text-[#2C3D4D] mb-1">{title}</h3>
+
+            {/* Mobile: vertical stack + return indicator */}
+            <div className="sm:hidden relative border-l-2 border-[#007EA7]/40 ml-3 pl-8 space-y-8">
+              {CORE_LOOP_NODES.map(({ verb, desc }) => (
+                <div key={verb} className="relative">
+                  <div className="absolute -left-[41px] top-1.5 w-[5px] h-[5px] bg-[#007EA7]" />
+                  <p className="font-space-grotesk font-bold text-base text-[#2C3D4D] mb-1">{verb}</p>
                   <p className="font-montserrat text-sm text-[#5f5f5f]/80 leading-relaxed">{desc}</p>
                 </div>
               ))}
+              <div className="relative pt-1">
+                <div className="absolute -left-[44px] top-0 flex flex-col items-center text-[#007EA7]/70">
+                  <svg width="14" height="28" viewBox="0 0 14 28" fill="none" aria-hidden>
+                    <path d="M7 26 V4" stroke="#007EA7" strokeOpacity="0.4" strokeWidth="1.5" />
+                    <path d="M3 8 L7 3 L11 8" stroke="#007EA7" strokeOpacity="0.7" strokeWidth="1.5" fill="none" />
+                  </svg>
+                </div>
+                <p className="font-montserrat text-xs text-[#007EA7]/70">loops back to Sell</p>
+              </div>
+            </div>
+
+            {/* sm+: horizontal flow with loop-back path */}
+            <div className="hidden sm:block relative w-full pt-2 pb-14">
+              {/* Connecting line through markers + return curve underneath */}
+              <svg
+                className="absolute inset-0 w-full h-full pointer-events-none"
+                viewBox="0 0 1000 220"
+                preserveAspectRatio="none"
+                aria-hidden
+              >
+                {/* Forward line through step markers */}
+                <line
+                  x1="100"
+                  y1="18"
+                  x2="900"
+                  y2="18"
+                  stroke="#007EA7"
+                  strokeOpacity="0.4"
+                  strokeWidth="2"
+                />
+                {/* Loop back: down, across, up to Sell with arrow */}
+                <path
+                  d="M 900 18
+                     C 960 18, 970 50, 970 90
+                     L 970 150
+                     C 970 190, 940 200, 900 200
+                     L 100 200
+                     C 60 200, 30 190, 30 150
+                     L 30 50
+                     C 30 28, 55 18, 100 18"
+                  stroke="#007EA7"
+                  strokeOpacity="0.35"
+                  strokeWidth="2"
+                  fill="none"
+                />
+                <polygon points="100,18 86,11 86,25" fill="#007EA7" fillOpacity="0.55" />
+              </svg>
+
+              <div className="relative z-10 grid grid-cols-5 gap-3 w-full">
+                {CORE_LOOP_NODES.map(({ verb, desc }) => (
+                  <div key={verb} className="flex flex-col items-center text-center px-1">
+                    <span className="w-[5px] h-[5px] bg-[#007EA7] mb-3" />
+                    <p className="font-space-grotesk font-bold text-base sm:text-lg text-[#2C3D4D] mb-2">
+                      {verb}
+                    </p>
+                    <p className="font-montserrat text-sm text-[#5f5f5f]/80 leading-relaxed max-w-[140px]">
+                      {desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </section>
 
           {/* ── PRICING AND PRODUCT THINKING ────────────────────────────── */}
           <section className="scroll-mt-24 mb-12 sm:mb-16">
             <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">
-              Pricing and Product Thinking
+              Pricing &amp; Product Thinking
             </h2>
-            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 leading-relaxed max-w-2xl mb-8">
-              Pricing for a side hustle maker is a UX problem. Charge too much and Tory uses a spreadsheet. Charge too little and the AI features cannot cover their own infrastructure cost. Every tier was designed around a specific moment in her journey.
-            </p>
-            {/* Tier cards */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10">
-              {pricingTiers.map(({ name, price, color, borderColor, who, items, channels, popular }) => (
-                <div key={name} className={`rounded-2xl border-2 p-4 relative bg-white ${borderColor}`}>
-                  {popular && (
-                    <span
-                      className="absolute -top-3 left-1/2 -translate-x-1/2 text-white text-[10px] font-bold px-3 py-1 rounded-full font-montserrat uppercase tracking-wide whitespace-nowrap"
-                      style={{ backgroundColor: color }}
-                    >
-                      Tory&apos;s plan
+
+            <div className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 leading-relaxed space-y-6 mb-8">
+              <div>
+                <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-4 text-left">
+                  Pricing built for how independent makers actually spend.
+                </h3>
+                <p>
+                  Most Etsy sellers already pay ten to fifteen dollars a month for tools they only half-use.
+                  MakerPilot&apos;s Maker tier at nine dollars sits inside that habit, not above it. Free stays
+                  generous enough for someone testing the app, capped tight enough that a serious side hustler feels
+                  the pull to upgrade.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-4 text-left">
+                  A model with a clear break-even point.
+                </h3>
+                <p>
+                  At one thousand signups and a five percent free-to-paid conversion, that is fifty Maker subscribers
+                  and $450 in monthly recurring revenue. Conservative on purpose. If conversion drops below two
+                  percent, the free tier is doing too much of the work, and the tier boundaries need retuning. That
+                  is the guardrail, not the goal.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-4 text-left">
+                  Each tier is designed to move a maker forward.
+                </h3>
+                <p>
+                  Free is a portfolio demo and a signup driver. Maker is the conversion goal. Studio unlocks Shopify
+                  sync, which is the single feature most likely to justify the jump on its own. Pilot Pro adds AI
+                  planning at a price that covers real Claude API costs while preserving margin. Every tier has one
+                  reason a maker outgrows it.
+                </p>
+              </div>
+            </div>
+
+            {/* Plan cards from MakerPilot Pricing.tsx — horizontal row under KPI copy */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              {PRICING_PLANS.map((plan) => (
+                <div
+                  key={plan.name}
+                  className={`bg-white rounded-xl border-2 ${plan.borderColor} p-3`}
+                >
+                  <div
+                    className={`${plan.headerBg} -mx-3 -mt-3 px-3 py-2 rounded-t-xl mb-2 flex items-center justify-between gap-1`}
+                  >
+                    <span className="font-montserrat font-bold text-sm text-[#373737]">
+                      {plan.name}
                     </span>
+                    {plan.badge && (
+                      <span
+                        className={`${plan.badge.className} px-2 py-0.5 rounded-full text-[9px] font-montserrat font-semibold whitespace-nowrap`}
+                      >
+                        {plan.badge.label}
+                      </span>
+                    )}
+                  </div>
+
+                  <p
+                    className="font-montserrat font-bold text-xl mb-2"
+                    style={{ color: plan.priceColor }}
+                  >
+                    {plan.price}
+                  </p>
+
+                  <div className="space-y-1 mb-2">
+                    {plan.features.map((feature) => (
+                      <div key={feature.text} className="flex items-start gap-2">
+                        {feature.included ? (
+                          <Check
+                            size={12}
+                            className="mt-0.5 flex-shrink-0"
+                            style={{ color: plan.accent }}
+                            strokeWidth={3}
+                          />
+                        ) : (
+                          <X size={12} className="text-gray-400 mt-0.5 flex-shrink-0" strokeWidth={2} />
+                        )}
+                        <span
+                          className={`font-montserrat text-xs leading-snug ${
+                            feature.included ? "text-gray-700" : "text-gray-400"
+                          }`}
+                        >
+                          {feature.text}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {plan.footer.type === "badge" ? (
+                    <div className="flex justify-end">
+                      <span className="bg-gray-100 text-gray-600 px-2.5 py-1 rounded-full text-[10px] font-montserrat font-semibold">
+                        {plan.footer.label}
+                      </span>
+                    </div>
+                  ) : (
+                    <div
+                      className={`w-full ${plan.footer.className} text-white py-2 rounded-lg font-montserrat font-semibold text-xs text-center`}
+                    >
+                      {plan.footer.label}
+                    </div>
                   )}
-                  <p className="font-space-grotesk font-bold text-sm mb-0.5" style={{ color }}>{name}</p>
-                  <p className="font-space-grotesk text-xl font-bold text-[#2C3D4D] mb-1">{price}</p>
-                  <p className="font-montserrat text-[11px] text-[#9CA3AF] mb-3 italic">{who}</p>
-                  <p className="font-montserrat text-xs text-[#5f5f5f]/80">{items}</p>
-                  <p className="font-montserrat text-xs text-[#5f5f5f]/80">{channels}</p>
                 </div>
               ))}
-            </div>
-            {/* Pricing insights */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-              <div className="bg-white border border-[#007EA7]/10 rounded-2xl p-5 shadow-sm">
-                <h4 className="font-space-grotesk text-sm font-bold text-[#007EA7] mb-2">Free tier drives the demo</h4>
-                <p className="font-montserrat text-sm text-[#5f5f5f]/80">
-                  The free tier exists for two reasons: portfolio demos and new maker signups. A 10 item cap is a real constraint Tory hits quickly with 100 listings — creating natural upgrade pressure without feeling punitive.
-                </p>
-              </div>
-              <div className="bg-white border border-[#007EA7]/10 rounded-2xl p-5 shadow-sm">
-                <h4 className="font-space-grotesk text-sm font-bold text-[#007EA7] mb-2">$9 is the conversion goal</h4>
-                <p className="font-montserrat text-sm text-[#5f5f5f]/80">
-                  Most Etsy sellers already pay $10 to $15 a month for tools like Canva, Later, or Marmalead. The Maker tier at $9 sits below that threshold. It feels like a utility bill, not a software subscription.
-                </p>
-              </div>
-              <div className="bg-white border border-[#007EA7]/10 rounded-2xl p-5 shadow-sm">
-                <h4 className="font-space-grotesk text-sm font-bold text-[#007EA7] mb-2">AI at $59 preserves margin</h4>
-                <p className="font-montserrat text-sm text-[#5f5f5f]/80">
-                  Claude API calls and MCP server hosting run $8 to $12 a month at light usage. A $39 tier barely covers costs. $59 preserves margin while remaining well below competitor AI tiers that start at $99.
-                </p>
-              </div>
             </div>
           </section>
 
-          {/* ── WHAT'S NEXT ─────────────────────────────────────────────── */}
+          {/* ── MAKERPILOT: FROM CONCEPT TO LAUNCH ── */}
           <section className="scroll-mt-24 mb-12 sm:mb-16">
-            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-2 text-left">
-              What&apos;s Next
+            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">
+              MakerPilot: From Concept to Launch
             </h2>
-            <p className="font-montserrat text-sm text-[#9CA3AF] mb-8">
-              MakerPilot is in active development. Here is what comes next, in order.
+            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 leading-relaxed mb-8">
+              MakerPilot is a working prototype, not a shipped product. But every design decision was made with a real
+              launch path in mind. If this were the real thing, here is how I would move it forward.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <ul className="font-montserrat text-base text-[#5f5f5f]/80 list-disc pl-6 space-y-2 leading-relaxed [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]">
               {[
                 {
-                  tag: "Now",
-                  tagClass: "bg-[#E6F4F1] text-[#0F6E56]",
-                  title: "/demo route with seed data",
-                  desc: "A dedicated route that skips onboarding, loads realistic inventory data, and launches the full app experience for portfolio embeds and hiring manager demos.",
+                  lead: "Validate with real makers first.",
+                  body: "Recruit ten to fifteen independent makers across ceramics, jewelry, and textiles for two-week diary studies. Watch how the app fits into their actual sales weeks, where the friction lives, and which of my assumptions do not survive contact with a real inventory.",
                 },
                 {
-                  tag: "Now",
-                  tagClass: "bg-[#E6F4F1] text-[#0F6E56]",
-                  title: "Key screen screenshots",
-                  desc: "Chrome DevTools device emulator at 393x852, imported into a Figma iPhone 16 mockup frame, exported as PNG for the Key Screens section above.",
+                  lead: "Ship the smallest version that proves the loop.",
+                  body: "A closed beta with the core loop working end-to-end: onboarding, Add Item, sale recording, and the make-decision alert. Etsy sync stays manual in this phase; real API integration comes after the loop itself is proven.",
                 },
                 {
-                  tag: "Phase 2",
-                  tagClass: "bg-[#EEEDFE] text-[#534AB7]",
-                  title: "Etsy webhook sync",
-                  desc: "Real-time sale to auto-decrement. When an Etsy order comes in, stock updates instantly without any manual action from Tory.",
+                  lead: "Instrument the moments that matter.",
+                  body: "Time-to-first-value, seven-day return rate, and the alert-to-action conversion (does a maker actually start a batch when MakerPilot tells her to?). These three numbers say whether the product works, not vanity metrics like downloads.",
                 },
                 {
-                  tag: "Phase 2",
-                  tagClass: "bg-[#EEEDFE] text-[#534AB7]",
-                  title: "Make-list and batch planning",
-                  desc: "Batch quantity suggestions driven by sales velocity and lead time. MakerPilot tells Tory not just what to make, but how much.",
+                  lead: "Grow from the maker community outward.",
+                  body: "Independent makers talk to each other on Reddit, in Discord servers, at craft fairs. The go-to-market is not paid ads, it is showing up where makers already trade tips and letting the product speak for itself.",
                 },
-                {
-                  tag: "Phase 3",
-                  tagClass: "bg-[#FFF0E8] text-[#FF6600]",
-                  title: "AI restocking assistant",
-                  desc: "Natural language restocking suggestions. Ask MakerPilot what to prioritize before an upcoming show and get a ranked make-list based on your sales history.",
-                },
-                {
-                  tag: "Phase 3",
-                  tagClass: "bg-[#FFF0E8] text-[#FF6600]",
-                  title: "Craft show mode",
-                  desc: "Offline-first bulk sale recording for shows with poor signal. Record all sales during the show, sync everything when back online.",
-                },
-              ].map(({ tag, tagClass, title, desc }) => (
-                <div key={title} className="bg-white border border-[#007EA7]/10 rounded-2xl p-5 shadow-sm">
-                  <span className={`inline-block text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full font-montserrat mb-3 ${tagClass}`}>
-                    {tag}
-                  </span>
-                  <h3 className="font-space-grotesk text-sm font-bold text-[#2C3D4D] mb-1">{title}</h3>
-                  <p className="font-montserrat text-xs text-[#5f5f5f]/80 leading-relaxed">{desc}</p>
-                </div>
+              ].map(({ lead, body }) => (
+                <li key={lead}>
+                  <span className="font-semibold text-[#2C3D4D]">{lead}</span> {body}
+                </li>
               ))}
-            </div>
+            </ul>
           </section>
 
           {/* ── SKILLS ──────────────────────────────────────────────────── */}
           <section className="scroll-mt-24 mb-12 sm:mb-16">
-            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-8 text-left">
+            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">
               Skills Demonstrated
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
                 {
                   title: "UX Design",
-                  color: "#1A9E8F",
                   items: ["User research & personas", "Competitive analysis", "iOS design conventions", "WCAG AAA accessibility", "Component systems", "Pricing strategy"],
                 },
                 {
                   title: "Front-End Build",
-                  color: "#C2590A",
                   items: ["React + TypeScript", "Tailwind CSS v3", "Mobile-first layout", "Vite + react-router-dom", "Shared component patterns", "Git / VS Code"],
                 },
-              ].map(({ title, color, items }) => (
+              ].map(({ title, items }) => (
                 <div key={title} className="bg-white p-6 shadow-[5px_5px_15px_#d1d9e6,-5px_-5px_15px_#ffffff]">
-                  <h3 className="font-space-grotesk text-sm font-bold text-[#007EA7] uppercase tracking-wider mb-4">{title}</h3>
-                  <ul className="space-y-2">
+                  <h3 className="font-space-grotesk text-xl sm:text-2xl font-medium text-[#007EA7] mb-4 text-left">
+                    {title}
+                  </h3>
+                  <ul
+                    className="font-montserrat text-base text-[#5f5f5f]/80 list-disc pl-6 space-y-2 leading-relaxed [--bullet-color:#007ea7] [&>li]:marker:text-[--bullet-color]"
+                  >
                     {items.map((s) => (
-                      <li key={s} className="font-montserrat text-sm text-[#5f5f5f]/80 flex gap-2 items-center">
-                        <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: color }} />
-                        {s}
-                      </li>
+                      <li key={s}>{s}</li>
                     ))}
                   </ul>
                 </div>
@@ -782,7 +870,7 @@ export default function MakerPilotPage() {
 
           {/* ── CTA ─────────────────────────────────────────────────────── */}
           <div className="flex flex-col items-center pt-8 sm:pt-12 pb-8">
-            <p className="font-montserrat text-base text-[#5f5f5f]/80 mb-6 text-center">
+            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 mb-6 text-center">
               Interested in mobile-first design or designer-developer hybrid work?
             </p>
             <a
