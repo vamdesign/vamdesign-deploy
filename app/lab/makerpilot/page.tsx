@@ -481,42 +481,90 @@ export default function MakerPilotPage() {
 
           {/* ── DESIGN DECISIONS ────────────────────────────────────────── */}
           <section className="scroll-mt-24 mb-12 sm:mb-16">
-            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-2 text-left">
+            <h2 className="font-space-grotesk text-2xl sm:text-3xl font-semibold text-[#007EA7] mb-6 sm:mb-8 text-left">
               Design Decisions
             </h2>
-            <p className="font-montserrat text-base sm:text-lg text-[#5f5f5f]/80 leading-relaxed max-w-2xl mb-8">
-              Every decision in MakerPilot came from a constraint. Mobile only. Five minute windows. One hand on the phone. These are not edge cases — they are the primary use case. Here are the four decisions that shaped the product most.
-            </p>
-            <div className="divide-y divide-[#007EA7]/10">
+            <div className="font-montserrat text-sm sm:text-base text-[#5f5f5f]/80 leading-relaxed space-y-4 mb-8 max-w-3xl">
+              <p>
+                MakerPilot was built as a working app, not static screens, and that choice drove every decision. A
+                running product pushes back. It shows you where your design is speaking the wrong language, promising
+                things it cannot do, or solving a problem the maker does not actually have.
+              </p>
+              <p>
+                Over about a month of building, the app kept correcting me, and the story of MakerPilot is really the
+                story of those corrections.
+              </p>
+            </div>
+
+            <div className="relative border-l-2 border-[#007EA7]/25 ml-3 pl-8 sm:pl-10 space-y-10 mb-8">
               {[
                 {
-                  decision: "One status state, not two",
-                  considered: "Separate sold-out (red) and low-stock (orange clock) states",
-                  why: "From a maker's perspective stock at zero and stock below threshold require the same action: make more. Two states create hesitation. One creates action. Red retired permanently.",
+                  num: "01",
+                  title: "Learning to speak the maker's language.",
+                  intro: "The earliest decisions were about stripping developer thinking out of the interface.",
+                  bullets: [
+                    "A center action button looked like Add but recorded a sale, so it went. Navigation dropped from four tabs to three.",
+                    "Two inventory states, sold-out and low-stock, collapsed into one, because stock at zero and stock below threshold call for the same action: make more.",
+                    "A cryptic @ 4 became Make more @ 4, language that reads as a production reminder rather than a database rule.",
+                  ],
                 },
                 {
-                  decision: "Record Sale in 3 taps",
-                  considered: "A dedicated Record Sale tab in the nav",
-                  why: "A sale is a task, not a destination. It lives on the Home dashboard as a primary CTA. Putting it in the nav as a tab made it feel like a screen to navigate to, not an action to take.",
+                  num: "02",
+                  title: "Making it behave like a real app.",
+                  intro: "Once the foundation held, the decisions turned to how the app feels under a thumb.",
+                  bullets: [
+                    "Delete moved to the far left of the edit screen, deliberate friction opposite the resting thumb, while duplicate stayed one tap away.",
+                    "Browser-style popups and toasts were refused in favor of confirmations that slide in place, because a maker glancing at her phone between sales should never meet a web pattern.",
+                    "A select-all was left out of listings import on purpose, because bulk-adding would quietly undercut the free tier the product depends on.",
+                  ],
                 },
                 {
-                  decision: "Lead time as a first-class field",
-                  considered: "Burying lead time in item settings",
-                  why: "A 3 to 4 week production cycle means Tory needs to start making before stock hits zero. Lead time is not a setting. It is the core decision driver. It lives on every inventory card in bold teal.",
+                  num: "03",
+                  title: "Reframing what the app is for.",
+                  intro: "The largest turn came last, when the app's purpose itself shifted.",
+                  bullets: [
+                    "Home had been a rear-view sales dashboard. Reframed around stock, velocity, and lead time, it became Studio: a forward-looking answer to what do I make next.",
+                    "Adding an item split into two paths, because makers on Etsy already have listings. The real job was importing what exists, not creating from scratch.",
+                    "Required fields on the Add form dropped from a competitor's eight to three.",
+                  ],
                 },
-                {
-                  decision: "Bottom nav only, no FAB",
-                  considered: "A center floating action button for quick add",
-                  why: "A FAB competes with the nav for thumb attention and implies the wrong action. Craft show makers are glancing at their phone between sales. Every extra tap costs a customer.",
-                },
-              ].map(({ decision, considered, why }) => (
-                <div key={decision} className="grid grid-cols-1 sm:grid-cols-[200px_1fr_1fr] gap-4 py-5">
-                  <div className="font-space-grotesk font-bold text-[#2C3D4D] text-sm">{decision}</div>
-                  <div className="font-montserrat text-xs text-[#9CA3AF]">{considered}</div>
-                  <div className="font-montserrat text-sm text-[#5f5f5f]/80">{why}</div>
+              ].map(({ num, title, intro, bullets }) => (
+                <div key={num} className="relative">
+                  <div className="absolute -left-[41px] sm:-left-[49px] top-0 w-8 h-8 bg-white border border-[#007EA7] flex items-center justify-center">
+                    <span className="font-space-grotesk text-xs font-bold text-[#007EA7]">{num}</span>
+                  </div>
+                  <h3 className="font-space-grotesk text-base sm:text-lg font-bold text-[#2C3D4D] mb-2">
+                    {title}
+                  </h3>
+                  <p className="font-montserrat text-sm sm:text-base italic text-[#007EA7] mb-4 leading-relaxed">
+                    {intro}
+                  </p>
+                  <ul className="flex flex-col gap-3" style={{ listStyle: "none", padding: 0 }}>
+                    {bullets.map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <span
+                          className="flex-shrink-0 mt-[7px]"
+                          style={{
+                            display: "block",
+                            width: "5px",
+                            height: "5px",
+                            background: "#007EA7",
+                          }}
+                        />
+                        <span className="font-montserrat text-sm text-[#5f5f5f]/80 leading-relaxed">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
+
+            <p className="font-montserrat text-sm sm:text-base italic text-[#5f5f5f]/80 leading-relaxed max-w-3xl">
+              None of this came from a research budget or an A/B test. It came from building the thing, watching it
+              behave, and knowing the maker firsthand.
+            </p>
           </section>
 
           {/* ── KEY SCREENS ─────────────────────────────────────────────── */}
