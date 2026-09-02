@@ -17,7 +17,6 @@ export type LabItem = {
 export const labItems: LabItem[] = [
   { name: "MakerPilot — Mobile Inventory App", href: "/lab/makerpilot/", activePathPrefix: "/lab/makerpilot" },
   { name: "UX Portfolio", href: "/lab/ux-portfolio/", activePathPrefix: "/lab/ux-portfolio" },
-  { name: "All Reviews – Mobile App", href: "/lab/coming-soon/" },
 ];
 
 export function LabDropdown() {
