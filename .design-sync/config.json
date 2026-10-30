@@ -1,0 +1,225 @@
+{
+  "projectId": "61953805-9606-48b0-b5dc-2fe3fb2a07d8",
+  "shape": "package",
+  "pkg": "vamdesign-portfolio",
+  "globalName": "VAMDesign",
+  "buildCmd": "npx tailwindcss -c .design-sync/tailwind.config.cjs -i app/globals.css -o .design-sync/.cache/site.css --minify && cat .design-sync/site-root.css >> .design-sync/.cache/site.css",
+  "srcDir": "components",
+  "tsconfig": "tsconfig.json",
+  "cssEntry": ".design-sync/.cache/site.css",
+  "extraFonts": [
+    ".design-sync/fonts.css"
+  ],
+  "libOverrides": {
+    "source-kit.mjs": "synth entry: re-export default-exported site components by name, skip duplicate components/ui/sheet.tsx, import .design-sync/next-shim.mjs first, group ui/ vs site, find compound parts in their parent file"
+  },
+  "componentSrcMap": {
+    "Button": null,
+    "Card": null,
+    "CardContent": null,
+    "CardDescription": null,
+    "CardFooter": null,
+    "CardHeader": null,
+    "CardTitle": null,
+    "Command": null,
+    "CommandDialog": null,
+    "CommandEmpty": null,
+    "CommandGroup": null,
+    "CommandInput": null,
+    "CommandItem": null,
+    "CommandList": null,
+    "CommandSeparator": null,
+    "CommandShortcut": null,
+    "ContextMenu": null,
+    "ContextMenuCheckboxItem": null,
+    "ContextMenuContent": null,
+    "ContextMenuGroup": null,
+    "ContextMenuItem": null,
+    "ContextMenuLabel": null,
+    "ContextMenuPortal": null,
+    "ContextMenuRadioGroup": null,
+    "ContextMenuRadioItem": null,
+    "ContextMenuSeparator": null,
+    "ContextMenuShortcut": null,
+    "ContextMenuSub": null,
+    "ContextMenuSubContent": null,
+    "ContextMenuSubTrigger": null,
+    "ContextMenuTrigger": null,
+    "DialogDescription": null,
+    "DialogFooter": null,
+    "DialogHeader": null,
+    "DialogOverlay": null,
+    "DialogPortal": null,
+    "DialogTrigger": null,
+    "DropdownMenu": null,
+    "DropdownMenuCheckboxItem": null,
+    "DropdownMenuContent": null,
+    "DropdownMenuGroup": null,
+    "DropdownMenuItem": null,
+    "DropdownMenuLabel": null,
+    "DropdownMenuPortal": null,
+    "DropdownMenuRadioGroup": null,
+    "DropdownMenuRadioItem": null,
+    "DropdownMenuSeparator": null,
+    "DropdownMenuShortcut": null,
+    "DropdownMenuSub": null,
+    "DropdownMenuSubContent": null,
+    "DropdownMenuSubTrigger": null,
+    "DropdownMenuTrigger": null,
+    "Form": null,
+    "FormControl": null,
+    "FormDescription": null,
+    "FormField": null,
+    "FormItem": null,
+    "FormLabel": null,
+    "FormMessage": null,
+    "HoverCard": null,
+    "HoverCardContent": null,
+    "HoverCardTrigger": null,
+    "InputOTP": null,
+    "InputOTPGroup": null,
+    "InputOTPSeparator": null,
+    "InputOTPSlot": null,
+    "Label": null,
+    "Menubar": null,
+    "MenubarCheckboxItem": null,
+    "MenubarContent": null,
+    "MenubarGroup": null,
+    "MenubarItem": null,
+    "MenubarLabel": null,
+    "MenubarMenu": null,
+    "MenubarPortal": null,
+    "MenubarRadioGroup": null,
+    "MenubarRadioItem": null,
+    "MenubarSeparator": null,
+    "MenubarShortcut": null,
+    "MenubarSub": null,
+    "MenubarSubContent": null,
+    "MenubarSubTrigger": null,
+    "MenubarTrigger": null,
+    "ModeToggle": null,
+    "NavigationMenu": null,
+    "NavigationMenuContent": null,
+    "NavigationMenuIndicator": null,
+    "NavigationMenuItem": null,
+    "NavigationMenuLink": null,
+    "NavigationMenuList": null,
+    "NavigationMenuTrigger": null,
+    "NavigationMenuViewport": null,
+    "SectionAuth": null,
+    "SocialProof": null,
+    "SubpageAuth": null,
+    "Table": null,
+    "TableBody": null,
+    "TableCaption": null,
+    "TableCell": null,
+    "TableFooter": null,
+    "TableHead": null,
+    "TableHeader": null,
+    "TableRow": null,
+    "Tabs": null,
+    "TabsContent": null,
+    "TabsList": null,
+    "TabsTrigger": null,
+    "ThemeProvider": null,
+    "Toast": null,
+    "ToastAction": null,
+    "ToastClose": null,
+    "ToastDescription": null,
+    "ToastProvider": null,
+    "ToastTitle": null,
+    "ToastViewport": null,
+    "Toaster": null
+  },
+  "overrides": {
+    "Nav": {
+      "cardMode": "single",
+      "viewport": "1200x120"
+    },
+    "Impact": {
+      "cardMode": "single",
+      "viewport": "1200x900"
+    },
+    "Hero": {
+      "cardMode": "single",
+      "viewport": "1200x520"
+    },
+    "Offer": {
+      "cardMode": "single",
+      "viewport": "1200x700"
+    },
+    "Portfolio": {
+      "cardMode": "single",
+      "viewport": "1200x1300"
+    },
+    "FeaturedBadge": {
+      "cardMode": "single",
+      "viewport": "1200x140"
+    },
+    "CookieConsent": {
+      "cardMode": "single",
+      "viewport": "1100x200"
+    },
+    "Footer": {
+      "cardMode": "single",
+      "viewport": "1200x120"
+    },
+    "Dialog": {
+      "cardMode": "single",
+      "viewport": "900x620"
+    },
+    "BackgroundOpacityControl": {
+      "cardMode": "single",
+      "primaryStory": "Default",
+      "viewport": "820x140"
+    },
+    "CookieReset": {
+      "cardMode": "single"
+    },
+    "Textarea": {
+      "cardMode": "column"
+    },
+    "DialogContent": {
+      "cardMode": "single",
+      "viewport": "900x620"
+    },
+    "DialogClose": {
+      "cardMode": "single",
+      "viewport": "900x620"
+    },
+    "DialogTitle": {
+      "cardMode": "single",
+      "viewport": "900x620"
+    },
+    "Carousel": {
+      "cardMode": "single",
+      "viewport": "760x640"
+    },
+    "CarouselContent": {
+      "cardMode": "single",
+      "viewport": "760x640"
+    },
+    "CarouselItem": {
+      "cardMode": "single",
+      "viewport": "760x640"
+    },
+    "CarouselNext": {
+      "cardMode": "single",
+      "viewport": "760x640"
+    },
+    "CarouselPrevious": {
+      "cardMode": "single",
+      "viewport": "760x640"
+    },
+    "Input": {
+      "cardMode": "column"
+    }
+  },
+  "extraEntries": [
+    "./.design-sync/next-provider.tsx"
+  ],
+  "provider": {
+    "component": "SiteRouteProvider"
+  },
+  "readmeHeader": ".design-sync/conventions.md"
+}
