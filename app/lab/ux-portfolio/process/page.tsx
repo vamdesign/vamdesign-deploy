@@ -4,6 +4,7 @@ import Nav from "@/components/nav"
 import Image from "next/image"
 import Link from "next/link"
 import Footer from "@/components/footer"
+import ProjectMetaCard from "@/components/project-meta-card"
 import { ArrowLeft } from "lucide-react"
 import { useState } from "react"
 import { Dialog, DialogContent, DialogClose, DialogTitle } from "@/components/ui/dialog"
@@ -129,6 +130,8 @@ export default function AIProcessPage() {
   </p>
 </div>
 
+      <div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-10">
+      <div className="min-w-0 flex-1">
       <div className="flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-12 mb-8">
           {/* AI Logo - Added responsive sizing */}
           <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 flex-shrink-0">
@@ -195,6 +198,19 @@ export default function AIProcessPage() {
             </span>
           </li>
         </ul>
+      </div>
+      <ProjectMetaCard
+        items={[
+          { label: "Role", value: "Senior UX Product Designer, Front-End Developer + Visual Design" },
+          { label: "Timeline", value: "3+ months of work" },
+          { label: "Platform", value: "Responsive web" },
+          {
+            label: "Tools",
+            value: "Figma, v0, Cursor, Next.js, React, Tailwind CSS, GitHub, Vercel, Claude, ChatGPT, Midjourney",
+          },
+        ]}
+      />
+      </div>
       </div>
 
       <section className="site-container px-4">
